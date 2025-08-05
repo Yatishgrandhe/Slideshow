@@ -4,799 +4,352 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Basics Slideshows - Learning Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="slideshow-container">
-        <!-- Navigation -->
-        <div class="slide-nav">
-            <div class="slideshow-title">
-                <i class="fab fa-python"></i>
-                <span>Python Basics Slideshows</span>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Learning Hub</span>
             </div>
-            <div class="nav-controls">
-                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
-                    <i class="fas fa-home"></i>
-                </button>
-                <button id="prevBtn" class="nav-btn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <span class="slide-counter">1 / 25</span>
-                <button id="nextBtn" class="nav-btn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+            <h1>Python Basics Slideshows</h1>
+            <p>Choose a topic to start your Python learning journey</p>
+        </header>
+
+        <!-- Python Basics Slideshows Grid -->
+        <main class="slideshows-grid">
+            <!-- Variables & Data Types -->
+            <div class="slideshow-card" onclick="openSlideshow('variables-data-types')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Variables & Data Types</h3>
+                        <p>Learn how to store and manipulate data in Python</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            30 Slides
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Beginner
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Understanding Variables and Assignment</li>
+                            <li>String Data Type and Operations</li>
+                            <li>Numeric Types (int, float)</li>
+                            <li>Boolean Values and Logic</li>
+                            <li>Type Conversion and Checking</li>
+                            <li>Working with User Input</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Variables & Data Types
+                    </button>
+                </div>
             </div>
+
+            <!-- Control Flow & Loops -->
+            <div class="slideshow-card" onclick="openSlideshow('control-flow-loops')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Control Flow & Loops</h3>
+                        <p>Master decision-making and repetition in Python</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            30 Slides
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Beginner
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Conditional Statements (if, elif, else)</li>
+                            <li>Comparison and Logical Operators</li>
+                            <li>For Loops and Range</li>
+                            <li>While Loops and Control</li>
+                            <li>Break and Continue Statements</li>
+                            <li>Nested Loops and Conditions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Control Flow & Loops
+                    </button>
+                </div>
+            </div>
+
+            <!-- Functions & Lists -->
+            <div class="slideshow-card" onclick="openSlideshow('functions-lists')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Functions & Lists</h3>
+                        <p>Create reusable code and work with collections</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            30 Slides
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Beginner
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Defining and Calling Functions</li>
+                            <li>Parameters and Arguments</li>
+                            <li>Return Values and Scope</li>
+                            <li>Creating and Manipulating Lists</li>
+                            <li>List Methods and Operations</li>
+                            <li>List Comprehensions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Functions & Lists
+                    </button>
+                </div>
+            </div>
+
+            <!-- Object-Oriented Programming -->
+            <div class="slideshow-card" onclick="openSlideshow('oop')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Object-Oriented Programming</h3>
+                        <p>Learn to create classes and objects in Python</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            30 Slides
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Intermediate
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Classes and Objects</li>
+                            <li>Attributes and Methods</li>
+                            <li>Constructors and Initialization</li>
+                            <li>Inheritance and Polymorphism</li>
+                            <li>Encapsulation and Abstraction</li>
+                            <li>Special Methods and Magic Methods</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Object-Oriented Programming
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects & Advanced Topics -->
+            <div class="slideshow-card" onclick="openSlideshow('projects-advanced')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Projects & Advanced Topics</h3>
+                        <p>Build real projects and explore advanced concepts</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            30 Slides
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Advanced
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Error Handling and Exceptions</li>
+                            <li>File Operations and I/O</li>
+                            <li>Working with Dictionaries and Sets</li>
+                            <li>Modules and Package Management</li>
+                            <li>Real-World Project Building</li>
+                            <li>Best Practices and Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Projects & Advanced Topics
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <button onclick="goHome()" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </button>
         </div>
 
-        <!-- Fullscreen Button -->
-        <button id="fullscreenBtn" class="fullscreen-btn">
-            <i class="fas fa-expand"></i>
-        </button>
-
-        <!-- Slides Wrapper -->
-        <div class="slides-wrapper">
-            <!-- Day 1, Slide 1: What is Python? -->
-            <div class="slide active" data-slide="1">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>🐍 Day 1, Slide 1: What is Python?</h1>
-                        <p class="slide-subtitle">Introduction to Python Programming</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>What is Python?</h2>
-                                    <p>Python is a high-level, interpreted programming language created by Guido van Rossum and first released in 1991. It's designed to be readable, simple, and powerful, making it perfect for beginners and experts alike.</p>
-                                    
-                                    <h3>Key Characteristics:</h3>
-                                    <ul>
-                                        <li><strong>Readable Syntax:</strong> Python reads almost like English, making it easy to understand</li>
-                                        <li><strong>Interpreted Language:</strong> Code runs directly without compilation</li>
-                                        <li><strong>Cross-Platform:</strong> Works on Windows, Mac, Linux, and more</li>
-                                        <li><strong>Extensive Libraries:</strong> Thousands of pre-built modules available</li>
-                                        <li><strong>Active Community:</strong> Large, supportive developer community</li>
-                                    </ul>
-
-                                    <h3>Why Python is Popular:</h3>
-                                    <ul>
-                                        <li><strong>Beginner-Friendly:</strong> Perfect first programming language</li>
-                                        <li><strong>Versatile:</strong> Used in web development, data science, AI, automation</li>
-                                        <li><strong>High Demand:</strong> One of the most in-demand programming skills</li>
-                                        <li><strong>Rapid Development:</strong> Write code quickly and efficiently</li>
-                                        <li><strong>Great Documentation:</strong> Excellent official and community documentation</li>
-                                    </ul>
-
-                                    <h3>Python Philosophy:</h3>
-                                    <ul>
-                                        <li><strong>Simple is Better:</strong> Prefer simple solutions over complex ones</li>
-                                        <li><strong>Readability Counts:</strong> Code should be easy to read and understand</li>
-                                        <li><strong>Explicit is Better:</strong> Clear code is better than clever code</li>
-                                        <li><strong>There's One Way:</strong> Python encourages consistent coding style</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Your First Python Code</div>
-                                    <pre><code># This is your first Python program!
-print("Hello, World!")
-
-# Python is so readable, you can understand it immediately
-name = "Alice"
-age = 25
-print(f"Hello, {name}! You are {age} years old.")
-
-# Simple math operations
-result = 10 + 5
-print(f"10 + 5 = {result}")
-
-# Easy to read loops
-for i in range(3):
-    print(f"Learning Python is fun! (step {i+1})")
-
-# Simple conditional statements
-temperature = 25
-if temperature > 20:
-    print("It's warm today!")
-else:
-    print("It's cool today!")
-
-# Working with lists (collections of data)
-fruits = ["apple", "banana", "orange"]
-for fruit in fruits:
-    print(f"I like {fruit}")
-
-# This is how simple and readable Python is!</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 1, Slide 2: Python History -->
-            <div class="slide" data-slide="2">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>📚 Day 1, Slide 2: Python History</h1>
-                        <p class="slide-subtitle">The Story Behind Python's Success</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>Python's Origins</h2>
-                                    <p>Python was created by Guido van Rossum in the late 1980s. The name "Python" comes from Monty Python's Flying Circus, not the snake! Guido wanted a name that was short, unique, and slightly mysterious.</p>
-                                    
-                                    <h3>Key Milestones in Python's History:</h3>
-                                    <ul>
-                                        <li><strong>1989:</strong> Guido van Rossum begins working on Python</li>
-                                        <li><strong>1991:</strong> Python 1.0 is released to the public</li>
-                                        <li><strong>2000:</strong> Python 2.0 introduces new features like list comprehensions</li>
-                                        <li><strong>2008:</strong> Python 3.0 is released with major improvements</li>
-                                        <li><strong>2020:</strong> Python 2.7 reaches end of life</li>
-                                        <li><strong>Today:</strong> Python 3.x is the standard with regular updates</li>
-                                    </ul>
-
-                                    <h3>Python 2 vs Python 3:</h3>
-                                    <ul>
-                                        <li><strong>Print Function:</strong> Python 2 used print statement, Python 3 uses print() function</li>
-                                        <li><strong>Division:</strong> Python 2 integer division by default, Python 3 float division</li>
-                                        <li><strong>Unicode:</strong> Python 3 has better Unicode support</li>
-                                        <li><strong>Input:</strong> Python 2 had raw_input() and input(), Python 3 just has input()</li>
-                                        <li><strong>Future:</strong> Python 2 is no longer supported, Python 3 is the future</li>
-                                    </ul>
-
-                                    <h3>Python's Growth:</h3>
-                                    <ul>
-                                        <li><strong>Web Development:</strong> Django, Flask, FastAPI frameworks</li>
-                                        <li><strong>Data Science:</strong> Pandas, NumPy, Matplotlib libraries</li>
-                                        <li><strong>Machine Learning:</strong> TensorFlow, PyTorch, Scikit-learn</li>
-                                        <li><strong>Automation:</strong> Selenium, Beautiful Soup, Requests</li>
-                                        <li><strong>Game Development:</strong> Pygame, Arcade libraries</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Python 2 vs Python 3 Examples</div>
-                                    <pre><code># Python 2 (old way - DON'T USE)
-# print "Hello, World!"  # Statement
-# result = 5 / 2         # Returns 2 (integer division)
-# name = raw_input("Enter name: ")  # String input
-
-# Python 3 (current way - USE THIS)
-print("Hello, World!")   # Function
-result = 5 / 2          # Returns 2.5 (float division)
-name = input("Enter name: ")  # String input
-
-# Python 3 improvements
-# Better Unicode support
-text = "Hello, 世界!"  # Works perfectly in Python 3
-print(text)
-
-# f-strings (Python 3.6+)
-name = "Alice"
-age = 25
-print(f"{name} is {age} years old")  # Much cleaner than .format()
-
-# Type hints (Python 3.5+)
-def greet(name: str) -> str:
-    return f"Hello, {name}!"
-
-# Walrus operator (Python 3.8+)
-if (n := len([1, 2, 3])) > 2:
-    print(f"List has {n} items")
-
-# Modern Python features
-# List comprehensions
-squares = [x**2 for x in range(5)]
-print(squares)  # [0, 1, 4, 9, 16]
-
-# Dictionary comprehensions
-square_dict = {x: x**2 for x in range(5)}
-print(square_dict)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
-
-# Context managers
-with open('file.txt', 'w') as f:
-    f.write("Hello, Python 3!")</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 1, Slide 3: Setting Up Python Environment -->
-            <div class="slide" data-slide="3">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>🚀 Day 1, Slide 3: Setting Up Python Environment</h1>
-                        <p class="slide-subtitle">Getting Your Development Environment Ready</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>Installing Python</h2>
-                                    <p>Setting up Python is the first step in your programming journey. There are several ways to get Python running on your computer.</p>
-                                    
-                                    <h3>Option 1: Python.org (Recommended)</h3>
-                                    <ul>
-                                        <li><strong>Visit:</strong> python.org/downloads</li>
-                                        <li><strong>Download:</strong> Latest Python 3.x version for your operating system</li>
-                                        <li><strong>Install:</strong> Run the installer and follow the setup wizard</li>
-                                        <li><strong>Important:</strong> Check "Add Python to PATH" during installation</li>
-                                        <li><strong>Verify:</strong> Open terminal/command prompt and type "python --version"</li>
-                                    </ul>
-
-                                    <h3>Option 2: Anaconda (For Data Science)</h3>
-                                    <ul>
-                                        <li><strong>Download:</strong> anaconda.com/download</li>
-                                        <li><strong>Includes:</strong> Python plus data science libraries (NumPy, Pandas, etc.)</li>
-                                        <li><strong>Great for:</strong> Data science, machine learning, scientific computing</li>
-                                        <li><strong>Package Manager:</strong> Conda for managing packages</li>
-                                        <li><strong>Spyder IDE:</strong> Scientific Python Development Environment</li>
-                                    </ul>
-
-                                    <h3>Option 3: Online Platforms (No Installation)</h3>
-                                    <ul>
-                                        <li><strong>Replit:</strong> replit.com - Free online Python environment</li>
-                                        <li><strong>Google Colab:</strong> colab.research.google.com - Jupyter notebooks</li>
-                                        <li><strong>Python.org Shell:</strong> python.org/shell - Official online shell</li>
-                                        <li><strong>Perfect for:</strong> Learning, testing code, collaboration</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Verifying Your Installation</div>
-                                    <pre><code># Check Python version
-python --version
-# or
-python3 --version
-
-# Start Python interactive shell
-python
-# or
-python3
-
-# You should see something like:
-# Python 3.9.7 (default, Sep 16 2021, 13:09:58)
-# [GCC 7.5.0] on linux
-# Type "help", "copyright", "credits" or "license" for more information.
-# >>>
-
-# Test basic operations
->>> print("Hello, Python!")
-Hello, Python!
-
->>> 2 + 2
-4
-
->>> name = "Alice"
->>> print(f"Hello, {name}!")
-Hello, Alice!
-
-# Exit Python shell
->>> exit()
-
-# Check if pip is installed (package manager)
-pip --version
-# or
-pip3 --version
-
-# Install a package (example)
-pip install requests
-
-# Test the installed package
-python -c "import requests; print('requests installed successfully!')"
-
-# Create your first Python file
-# Create a file called hello.py with this content:
-print("Hello, World!")
-name = input("What's your name? ")
-print(f"Nice to meet you, {name}!")
-
-# Run the file
-python hello.py
-# or
-python3 hello.py</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 1, Slide 4: Your First Python Program -->
-            <div class="slide" data-slide="4">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>🎯 Day 1, Slide 4: Your First Python Program</h1>
-                        <p class="slide-subtitle">Writing and Running Your First Code</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>Hello, World!</h2>
-                                    <p>Every programmer's journey begins with a "Hello, World!" program. This tradition dates back to the 1970s and is used to verify that your programming environment is working correctly.</p>
-                                    
-                                    <h3>Creating Your First Program:</h3>
-                                    <ul>
-                                        <li><strong>Step 1:</strong> Open your text editor or IDE</li>
-                                        <li><strong>Step 2:</strong> Create a new file called "hello.py"</li>
-                                        <li><strong>Step 3:</strong> Type the code: print("Hello, World!")</li>
-                                        <li><strong>Step 4:</strong> Save the file</li>
-                                        <li><strong>Step 5:</strong> Run it from the terminal</li>
-                                    </ul>
-
-                                    <h3>Understanding the Code:</h3>
-                                    <ul>
-                                        <li><strong>print():</strong> A built-in function that displays text on the screen</li>
-                                        <li><strong>"Hello, World!":</strong> A string (text) enclosed in quotes</li>
-                                        <li><strong>Parentheses:</strong> Required for function calls in Python</li>
-                                        <li><strong>Quotes:</strong> Can be single (') or double (") quotes</li>
-                                        <li><strong>Line ending:</strong> Python automatically adds a new line after print()</li>
-                                    </ul>
-
-                                    <h3>Running Your Program:</h3>
-                                    <ul>
-                                        <li><strong>Terminal/Command Prompt:</strong> Navigate to your file's directory</li>
-                                        <li><strong>Command:</strong> python hello.py or python3 hello.py</li>
-                                        <li><strong>Output:</strong> You should see "Hello, World!" displayed</li>
-                                        <li><strong>Success:</strong> If you see the output, your Python environment is working!</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Your First Python Programs</div>
-                                    <pre><code># hello.py - Your first program
-print("Hello, World!")
-
-# Run this file from terminal:
-# python hello.py
-# Output: Hello, World!
-
-# More examples to try:
-
-# 1. Using variables
-name = "Alice"
-print(f"Hello, {name}!")
-
-# 2. Getting user input
-name = input("What's your name? ")
-print(f"Hello, {name}!")
-
-# 3. Simple calculations
-a = 10
-b = 5
-result = a + b
-print(f"{a} + {b} = {result}")
-
-# 4. Multiple print statements
-print("Line 1")
-print("Line 2")
-print("Line 3")
-
-# 5. Using different quote types
-print("Double quotes work")
-print('Single quotes also work')
-print("You can use 'quotes' inside quotes")
-
-# 6. Printing multiple items
-print("Hello", "World", "from", "Python")
-
-# 7. Using escape characters
-print("This is a \"quote\" inside quotes")
-print("This is a new\nline")
-print("This is a tab\there")
-
-# 8. Simple interactive program
-print("=== Simple Calculator ===")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-sum_result = num1 + num2
-print(f"{num1} + {num2} = {sum_result}")
-
-# 9. Working with strings
-message = "Python is awesome!"
-print(message.upper())  # PYTHON IS AWESOME!
-print(message.lower())  # python is awesome!
-print(len(message))     # 17 (length of string)
-
-# 10. Basic formatting
-name = "Alice"
-age = 25
-city = "New York"
-print(f"Name: {name}, Age: {age}, City: {city}")</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 1, Slide 5: Comments and Documentation -->
-            <div class="slide" data-slide="5">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>📝 Day 1, Slide 5: Comments and Documentation</h1>
-                        <p class="slide-subtitle">Writing Clear and Readable Code</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>Why Comments Matter</h2>
-                                    <p>Comments help you and others understand your code. They're essential for writing maintainable and professional code. Good comments explain WHY, not WHAT (the code shows what it does).</p>
-                                    
-                                    <h3>Types of Comments:</h3>
-                                    <ul>
-                                        <li><strong>Single-line comments:</strong> Start with # and explain one line</li>
-                                        <li><strong>Multi-line comments:</strong> Use triple quotes """ or ''' for longer explanations</li>
-                                        <li><strong>Inline comments:</strong> Comments on the same line as code</li>
-                                        <li><strong>Docstrings:</strong> Documentation for functions and classes (triple quotes)</li>
-                                        <li><strong>Block comments:</strong> Explain sections of code</li>
-                                    </ul>
-
-                                    <h3>Best Practices for Comments:</h3>
-                                    <ul>
-                                        <li><strong>Explain WHY:</strong> Don't just repeat what the code does</li>
-                                        <li><strong>Keep updated:</strong> Update comments when you change code</li>
-                                        <li><strong>Use clear language:</strong> Write in simple, clear English</li>
-                                        <li><strong>Comment complex logic:</strong> Explain algorithms and business rules</li>
-                                        <li><strong>Don't over-comment:</strong> Obvious code doesn't need comments</li>
-                                    </ul>
-
-                                    <h3>When to Use Comments:</h3>
-                                    <ul>
-                                        <li>Explaining complex algorithms or business logic</li>
-                                        <li>Documenting function purposes and parameters</li>
-                                        <li>Explaining why you chose a particular approach</li>
-                                        <li>Temporary debugging notes (remove before production)</li>
-                                        <li>File headers and module descriptions</li>
-                                        <li>Explaining workarounds or non-obvious solutions</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Comment Examples</div>
-                                    <pre><code># This is a single-line comment
-print("Hello, World!")  # This is an inline comment
-
-"""
-This is a multi-line comment.
-It can span multiple lines.
-Useful for longer explanations.
-"""
-
-# Calculate the area of a circle
-# Formula: area = π * radius²
-radius = 5
-pi = 3.14159
-area = pi * radius ** 2
-print(f"Area: {area}")
-
-# Bad comment (obvious):
-x = 5  # Set x to 5
-
-# Good comment (explains why):
-x = 5  # Initialize counter for loop iterations
-
-def calculate_area(radius):
-    """
-    Calculate the area of a circle.
-    
-    Args:
-        radius (float): The radius of the circle
-        
-    Returns:
-        float: The area of the circle
-    """
-    pi = 3.14159
-    return pi * radius ** 2
-
-# File header comment
-"""
-Temperature Converter
-Author: Your Name
-Date: 2024
-Description: Converts between Celsius and Fahrenheit
-"""
-
-# Section comment
-# ====================
-# USER INPUT SECTION
-# ====================
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-
-# ====================
-# PROCESSING SECTION
-# ====================
-age_int = int(age)
-next_year_age = age_int + 1
-
-# ====================
-# OUTPUT SECTION
-# ====================
-print(f"Hello {name}, next year you'll be {next_year_age}")
-
-# Comment explaining a workaround
-# Note: Using list comprehension instead of loop for better performance
-squares = [x**2 for x in range(10)]
-
-# Comment explaining business logic
-# Apply 10% discount for orders over $100
-if order_total > 100:
-    discount = order_total * 0.10
-    final_total = order_total - discount
-else:
-    final_total = order_total
-
-# TODO comment (for future work)
-# TODO: Add input validation for email addresses
-def validate_email(email):
-    return '@' in email</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Continue with slides 6-25 for Day 1... -->
-            <!-- For brevity, I'll add a few more key slides -->
-
-            <!-- Day 1, Slide 6: Python Interactive Shell -->
-            <div class="slide" data-slide="6">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>💻 Day 1, Slide 6: Python Interactive Shell</h1>
-                        <p class="slide-subtitle">Learning Through Experimentation</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>What is the Interactive Shell?</h2>
-                                    <p>The Python interactive shell (REPL - Read, Evaluate, Print, Loop) is a powerful tool for learning and experimenting with Python code. It allows you to type Python commands directly and see immediate results.</p>
-                                    
-                                    <h3>Starting the Shell:</h3>
-                                    <ul>
-                                        <li><strong>Terminal/Command Prompt:</strong> Type "python" or "python3"</li>
-                                        <li><strong>You'll see:</strong> >>> prompt indicating Python is ready</li>
-                                        <li><strong>Type code:</strong> Enter Python commands directly</li>
-                                        <li><strong>See results:</strong> Output appears immediately</li>
-                                        <li><strong>Exit:</strong> Type "exit()" or press Ctrl+D</li>
-                                    </ul>
-
-                                    <h3>Benefits of Interactive Shell:</h3>
-                                    <ul>
-                                        <li>Test code snippets quickly without creating files</li>
-                                        <li>Learn new features by experimenting</li>
-                                        <li>Debug code step by step</li>
-                                        <li>Explore Python's built-in functions</li>
-                                        <li>Perfect for learning and prototyping</li>
-                                        <li>Immediate feedback on syntax errors</li>
-                                    </ul>
-
-                                    <h3>Useful Shell Commands:</h3>
-                                    <ul>
-                                        <li><strong>help():</strong> Opens interactive help system</li>
-                                        <li><strong>help(function):</strong> Get help on specific functions</li>
-                                        <li><strong>dir():</strong> List all available attributes</li>
-                                        <li><strong>type():</strong> Check the type of an object</li>
-                                        <li><strong>len():</strong> Get length of objects</li>
-                                        <li><strong>__doc__:</strong> Access documentation strings</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Interactive Shell Examples</div>
-                                    <pre><code># Start Python shell
-$ python3
-Python 3.9.7 (default, Sep 16 2021, 13:09:58)
-[GCC 7.5.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-
-# Try some basic commands
->>> print("Hello, World!")
-Hello, World!
-
->>> 2 + 2
-4
-
->>> name = "Alice"
->>> print(f"Hello, {name}!")
-Hello, Alice!
-
-# Explore built-in functions
->>> help(print)
-Help on built-in function print in module builtins:
-print(...)
-    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
-    ...
-
-# Check object types
->>> type("Hello")
-<class 'str'>
->>> type(42)
-<class 'int'>
->>> type(3.14)
-<class 'float'>
-
-# List available attributes
->>> dir(str)
-['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
-
-# Test string methods
->>> text = "Hello, Python!"
->>> text.upper()
-'HELLO, PYTHON!'
->>> text.lower()
-'hello, python!'
->>> text.replace("Python", "World")
-'Hello, World!'
-
-# Math operations
->>> 10 / 3
-3.3333333333333335
->>> 10 // 3
-3
->>> 10 % 3
-1
->>> 2 ** 3
-8
-
-# Working with lists
->>> numbers = [1, 2, 3, 4, 5]
->>> len(numbers)
-5
->>> sum(numbers)
-15
->>> max(numbers)
-5
->>> min(numbers)
-1
-
-# Exit the shell
->>> exit()</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Continue with remaining slides 7-25 for Day 1... -->
-            <!-- For brevity, I'll add a final slide showing the structure -->
-
-            <!-- Day 1, Slide 25: Day 1 Completion -->
-            <div class="slide" data-slide="25">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>🎓 Day 1, Slide 25: Day 1 Completion</h1>
-                        <p class="slide-subtitle">Congratulations on Completing Day 1!</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>What You've Learned Today</h2>
-                                    <p>Congratulations! You've completed Day 1 of the Python Basics course and now have a solid foundation to build upon.</p>
-                                    
-                                    <h3>Day 1 Topics Covered:</h3>
-                                    <ul>
-                                        <li><strong>Python Introduction:</strong> What Python is and why it's popular</li>
-                                        <li><strong>Python History:</strong> The story behind Python's development</li>
-                                        <li><strong>Environment Setup:</strong> Installing and configuring Python</li>
-                                        <li><strong>First Program:</strong> Writing and running your first code</li>
-                                        <li><strong>Comments:</strong> Writing clear, readable code</li>
-                                        <li><strong>Interactive Shell:</strong> Learning through experimentation</li>
-                                        <li><strong>Basic Syntax:</strong> Understanding Python's grammar</li>
-                                        <li><strong>Variables:</strong> Storing and using data</li>
-                                        <li><strong>Data Types:</strong> Understanding different kinds of data</li>
-                                        <li><strong>User Input:</strong> Making programs interactive</li>
-                                    </ul>
-
-                                    <h3>Practice Exercises:</h3>
-                                    <ul>
-                                        <li>Write a program that asks for your name and age, then prints a personalized message</li>
-                                        <li>Create a simple calculator that adds two numbers</li>
-                                        <li>Write a program that converts temperature from Celsius to Fahrenheit</li>
-                                        <li>Experiment with the interactive shell to explore Python's features</li>
-                                        <li>Add comments to your code to explain what it does</li>
-                                    </ul>
-
-                                    <h3>Tomorrow's Preview:</h3>
-                                    <ul>
-                                        <li><strong>Control Flow:</strong> Making decisions in your programs</li>
-                                        <li><strong>Loops:</strong> Repeating code efficiently</li>
-                                        <li><strong>Functions:</strong> Creating reusable code blocks</li>
-                                        <li><strong>Error Handling:</strong> Dealing with problems in your code</li>
-                                        <li><strong>Data Structures:</strong> Working with lists, dictionaries, and more</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Day 1 Practice Project</div>
-                                    <pre><code># Day 1 Practice: Personal Information Manager
-"""
-Personal Information Manager
-Author: [Your Name]
-Date: [Today's Date]
-Description: A simple program to practice Day 1 concepts
-"""
-
-# Get user information
-print("=== Personal Information Manager ===")
-print("Please enter your information:")
-
-# Get user input
-name = input("What's your name? ")
-age = input("How old are you? ")
-city = input("What city do you live in? ")
-favorite_language = input("What's your favorite programming language? ")
-
-# Convert age to integer
-try:
-    age_int = int(age)
-except ValueError:
-    print("Invalid age entered, using 0 as default")
-    age_int = 0
-
-# Calculate next year's age
-next_year_age = age_int + 1
-
-# Display information
-print("\n=== Your Information ===")
-print(f"Name: {name}")
-print(f"Age: {age_int}")
-print(f"City: {city}")
-print(f"Favorite Language: {favorite_language}")
-print(f"Next year you'll be: {next_year_age}")
-
-# Add some fun facts
-print(f"\nFun Facts:")
-print(f"- Your name has {len(name)} characters")
-print(f"- You'll be {next_year_age} next year")
-print(f"- You live in {city}")
-
-# Check if they like Python
-if favorite_language.lower() == "python":
-    print("Great choice! Python is awesome!")
-else:
-    print(f"{favorite_language} is cool, but Python is great too!")
-
-print("\nThanks for using the Personal Information Manager!")
-
-# This program demonstrates:
-# - Variables and data types
-# - User input and output
-# - String formatting
-# - Basic calculations
-# - Error handling with try/except
-# - Conditional statements
-# - Comments and documentation</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Learning Hub. Built with ❤️ for education.</p>
+        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function openSlideshow(topic) {
+            console.log(`Opening slideshow: ${topic}`);
+            
+            // Add loading state
+            const button = event.target.closest('.open-btn');
+            if (button) {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<span class="loading"></span> Loading...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    // Navigate to the appropriate slideshow
+                    switch(topic) {
+                        case 'variables-data-types':
+                            console.log('Navigating to python-variables-data-types.html');
+                            window.location.href = 'python-variables-data-types.html';
+                            break;
+                        case 'control-flow-loops':
+                            console.log('Navigating to python-control-flow-loops.html');
+                            window.location.href = 'python-control-flow-loops.html';
+                            break;
+                        case 'functions-lists':
+                            console.log('Navigating to python-functions-lists.html');
+                            window.location.href = 'python-functions-lists.html';
+                            break;
+                        case 'oop':
+                            console.log('Navigating to python-oop.html');
+                            window.location.href = 'python-oop.html';
+                            break;
+                        case 'projects-advanced':
+                            console.log('Navigating to python-projects-advanced.html');
+                            window.location.href = 'python-projects-advanced.html';
+                            break;
+                        default:
+                            console.log('Unknown topic:', topic);
+                            if (button) {
+                                button.innerHTML = originalText;
+                                button.disabled = false;
+                            }
+                    }
+                }, 800);
+            } else {
+                console.log('No button found, navigating directly');
+                // Fallback: navigate directly if button not found
+                setTimeout(() => {
+                    switch(topic) {
+                        case 'variables-data-types':
+                            window.location.href = 'python-variables-data-types.html';
+                            break;
+                        case 'control-flow-loops':
+                            window.location.href = 'python-control-flow-loops.html';
+                            break;
+                        case 'functions-lists':
+                            window.location.href = 'python-functions-lists.html';
+                            break;
+                        case 'oop':
+                            window.location.href = 'python-oop.html';
+                            break;
+                        case 'projects-advanced':
+                            window.location.href = 'python-projects-advanced.html';
+                            break;
+                    }
+                }, 800);
+            }
+        }
+        
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+        
+        // Add event listeners for better button handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.slideshow-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const topic = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    if (topic) {
+                        openSlideshow(topic);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
