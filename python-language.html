@@ -23,7 +23,7 @@
         <!-- Python Learning Path -->
         <main class="slideshows-grid">
             <!-- Python Basics -->
-            <div class="slideshow-card" onclick="openSlideshow('python-basics', event)">
+            <div class="slideshow-card" data-course="python-basics" onclick="openSlideshow('python-basics', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-play"></i>
@@ -68,7 +68,7 @@
             </div>
 
             <!-- Python for Data Science -->
-            <div class="slideshow-card" onclick="openSlideshow('python-control-flow', event)">
+            <div class="slideshow-card" data-course="python-control-flow" onclick="openSlideshow('python-control-flow', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-chart-bar"></i>
@@ -113,7 +113,7 @@
             </div>
 
             <!-- Python Web Development -->
-            <div class="slideshow-card" onclick="openSlideshow('python-functions', event)">
+            <div class="slideshow-card" data-course="python-functions" onclick="openSlideshow('python-functions', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-globe"></i>
@@ -158,7 +158,7 @@
             </div>
 
             <!-- Python Automation -->
-            <div class="slideshow-card" onclick="openSlideshow('python-oop', event)">
+            <div class="slideshow-card" data-course="python-oop" onclick="openSlideshow('python-oop', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-robot"></i>
@@ -220,9 +220,12 @@
     <script>
         function openSlideshow(course, event) {
             console.log(`Opening course: ${course}`);
+            console.log('Event target:', event.target);
             
             // Add loading state
             const button = event.target.closest('.open-btn');
+            console.log('Found button:', button);
+            
             if (button) {
                 const originalText = button.innerHTML;
                 button.innerHTML = '<span class="loading"></span> Loading...';
@@ -230,6 +233,32 @@
                 
                 setTimeout(() => {
                     // Navigate to the appropriate slideshow
+                    switch(course) {
+                        case 'python-basics':
+                            console.log('Navigating to python-variables-data-types.html');
+                            window.location.href = 'python-variables-data-types.html';
+                            break;
+                        case 'python-control-flow':
+                            console.log('Navigating to python-control-flow-loops.html');
+                            window.location.href = 'python-control-flow-loops.html';
+                            break;
+                        case 'python-functions':
+                            console.log('Navigating to python-functions-lists.html');
+                            window.location.href = 'python-functions-lists.html';
+                            break;
+                        case 'python-oop':
+                            console.log('Navigating to python-oop.html');
+                            window.location.href = 'python-oop.html';
+                            break;
+                        default:
+                            console.log('Navigating to python-projects-advanced.html');
+                            window.location.href = 'python-projects-advanced.html';
+                    }
+                }, 800);
+            } else {
+                console.log('No button found, navigating directly');
+                // Fallback: navigate directly if button not found
+                setTimeout(() => {
                     switch(course) {
                         case 'python-basics':
                             window.location.href = 'python-variables-data-types.html';
@@ -253,6 +282,19 @@
         function goHome() {
             window.location.href = 'index.html';
         }
+        
+        // Add event listeners for better button handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.slideshow-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    const course = this.getAttribute('data-course');
+                    if (course) {
+                        openSlideshow(course, e);
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html> 
