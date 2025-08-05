@@ -23,7 +23,7 @@
         <!-- Python Learning Path -->
         <main class="slideshows-grid">
             <!-- Python Basics -->
-            <div class="slideshow-card" onclick="openSlideshow('python-basics')">
+            <div class="slideshow-card" onclick="openSlideshow('python-basics', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-play"></i>
@@ -68,7 +68,7 @@
             </div>
 
             <!-- Python for Data Science -->
-            <div class="slideshow-card" onclick="openSlideshow('python-control-flow')">
+            <div class="slideshow-card" onclick="openSlideshow('python-control-flow', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-chart-bar"></i>
@@ -113,7 +113,7 @@
             </div>
 
             <!-- Python Web Development -->
-            <div class="slideshow-card" onclick="openSlideshow('python-functions')">
+            <div class="slideshow-card" onclick="openSlideshow('python-functions', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-globe"></i>
@@ -158,7 +158,7 @@
             </div>
 
             <!-- Python Automation -->
-            <div class="slideshow-card" onclick="openSlideshow('python-oop')">
+            <div class="slideshow-card" onclick="openSlideshow('python-oop', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-robot"></i>
@@ -218,7 +218,7 @@
     </div>
 
     <script>
-        function openSlideshow(course) {
+        function openSlideshow(course, event) {
             console.log(`Opening course: ${course}`);
             
             // Add loading state
