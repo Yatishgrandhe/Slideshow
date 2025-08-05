@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Object-Oriented Programming - Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Object-Oriented Programming</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 25</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: Introduction -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 1: Introduction to Object-Oriented Programming</h1>
+                        <p class="slide-subtitle">Classes, Objects, and Beyond</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Welcome to Object-Oriented Programming!</h2>
+                                    <p>This course will teach you how to create classes and objects, organize code into reusable components, and build more complex and maintainable programs.</p>
+                                    
+                                    <h3>What You'll Learn:</h3>
+                                    <ul>
+                                        <li><strong>Classes:</strong> Blueprints for creating objects</li>
+                                        <li><strong>Objects:</strong> Instances of classes</li>
+                                        <li><strong>Attributes:</strong> Data stored in objects</li>
+                                        <li><strong>Methods:</strong> Functions that belong to objects</li>
+                                        <li><strong>Inheritance:</strong> Creating new classes from existing ones</li>
+                                        <li><strong>Polymorphism:</strong> Using objects of different types</li>
+                                    </ul>
+
+                                    <h3>Course Structure:</h3>
+                                    <ul>
+                                        <li><strong>Slides 1-5:</strong> Introduction and Class Basics</li>
+                                        <li><strong>Slides 6-10:</strong> Objects and Attributes</li>
+                                        <li><strong>Slides 11-15:</strong> Methods and Constructors</li>
+                                        <li><strong>Slides 16-20:</strong> Inheritance and Polymorphism</li>
+                                        <li><strong>Slides 21-25:</strong> Advanced OOP Concepts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">OOP Examples</div>
+                                    <pre><code># Class definition
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def greet(self):
+        return f"Hello, I'm {self.name}"
+
+# Creating objects
+person1 = Person("Alice", 25)
+person2 = Person("Bob", 30)
+
+# Using object methods
+print(person1.greet())
+print(person2.greet())
+
+# Inheritance
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+    
+    def study(self):
+        return f"{self.name} is studying"
+
+# Polymorphism
+def introduce(person):
+    return person.greet()
+
+student = Student("Charlie", 20, "12345")
+print(introduce(student))</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with slides 2-25... -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
