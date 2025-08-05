@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming - Learning Hub</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-python"></i>
+                <span>Python Programming</span>
+            </div>
+            <h1>Master Python Programming</h1>
+            <p>Learn Python from basics to advanced concepts with interactive slideshows</p>
+        </header>
+
+        <!-- Python Learning Path -->
+        <main class="slideshows-grid">
+            <!-- Python Basics -->
+            <div class="slideshow-card" onclick="openSlideshow('python-basics')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Python Basics</h3>
+                        <p>Complete 25-day Python fundamentals course</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            25 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Beginner
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>Complete Course:</h4>
+                        <ul>
+                            <li>Variables & Data Types</li>
+                            <li>Control Flow & Loops</li>
+                            <li>Functions & Lists</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>Projects & Advanced Topics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Python Course
+                    </button>
+                </div>
+            </div>
+
+            <!-- Python for Data Science -->
+            <div class="slideshow-card" onclick="openSlideshow('python-data-science')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Python for Data Science</h3>
+                        <p>Learn data analysis, visualization, and machine learning</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            20 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            45-60 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Intermediate
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Pandas & NumPy</li>
+                            <li>Data Visualization</li>
+                            <li>Machine Learning Basics</li>
+                            <li>Statistical Analysis</li>
+                            <li>Real-world Projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Data Science Course
+                    </button>
+                </div>
+            </div>
+
+            <!-- Python Web Development -->
+            <div class="slideshow-card" onclick="openSlideshow('python-web-dev')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Python Web Development</h3>
+                        <p>Build web applications with Django and Flask</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            30 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            60-90 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Intermediate
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Django Framework</li>
+                            <li>Flask Applications</li>
+                            <li>Database Integration</li>
+                            <li>API Development</li>
+                            <li>Deployment & Hosting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Web Development Course
+                    </button>
+                </div>
+            </div>
+
+            <!-- Python Automation -->
+            <div class="slideshow-card" onclick="openSlideshow('python-automation')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>Python Automation</h3>
+                        <p>Automate tasks and workflows with Python</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            15 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            30-45 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Beginner
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>File & Folder Automation</li>
+                            <li>Web Scraping</li>
+                            <li>Email Automation</li>
+                            <li>Task Scheduling</li>
+                            <li>Desktop Automation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Automation Course
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <button onclick="goHome()" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Learning Hub. Built with ❤️ for education.</p>
+        </footer>
+    </div>
+
+    <script>
+        function openSlideshow(course) {
+            console.log(`Opening course: ${course}`);
+            
+            // Add loading state
+            const button = event.target.closest('.open-btn');
+            if (button) {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<span class="loading"></span> Loading...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    // Navigate to the appropriate slideshow
+                    switch(course) {
+                        case 'python-basics':
+                            window.location.href = 'python-slideshow.html';
+                            break;
+                        case 'python-data-science':
+                            alert('Python Data Science course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        case 'python-web-dev':
+                            alert('Python Web Development course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        case 'python-automation':
+                            alert('Python Automation course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        default:
+                            alert('Course not available yet!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                    }
+                }, 800);
+            }
+        }
+        
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html> 

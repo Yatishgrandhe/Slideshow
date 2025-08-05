@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Development - Learning Hub</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-react"></i>
+                <span>React Development</span>
+            </div>
+            <h1>Master React Development</h1>
+            <p>Learn React from basics to advanced application development</p>
+        </header>
+
+        <!-- React Learning Path -->
+        <main class="slideshows-grid">
+            <!-- React Fundamentals -->
+            <div class="slideshow-card" onclick="openSlideshow('react-basics')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>React Fundamentals</h3>
+                        <p>Complete 35-day React basics course</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            35 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            60-90 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Intermediate
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>Complete Course:</h4>
+                        <ul>
+                            <li>Components & Props</li>
+                            <li>State Management</li>
+                            <li>Hooks & Lifecycle</li>
+                            <li>Routing & API Integration</li>
+                            <li>Deployment & Advanced Patterns</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start React Course
+                    </button>
+                </div>
+            </div>
+
+            <!-- React Hooks -->
+            <div class="slideshow-card" onclick="openSlideshow('react-hooks')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>React Hooks</h3>
+                        <p>Master modern React with hooks and functional components</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            20 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            45-60 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Intermediate
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>useState & useEffect</li>
+                            <li>useContext & useReducer</li>
+                            <li>Custom Hooks</li>
+                            <li>useMemo & useCallback</li>
+                            <li>Hook Best Practices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Hooks Course
+                    </button>
+                </div>
+            </div>
+
+            <!-- React State Management -->
+            <div class="slideshow-card" onclick="openSlideshow('react-state')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>React State Management</h3>
+                        <p>Learn Redux, Context API, and state management patterns</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            25 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            60-90 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Advanced
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Redux Toolkit</li>
+                            <li>Context API</li>
+                            <li>Zustand & Recoil</li>
+                            <li>State Patterns</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start State Management Course
+                    </button>
+                </div>
+            </div>
+
+            <!-- React Testing -->
+            <div class="slideshow-card" onclick="openSlideshow('react-testing')">
+                <div class="card-header">
+                    <div class="slideshow-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="slideshow-info">
+                        <h3>React Testing</h3>
+                        <p>Learn testing React applications with Jest and React Testing Library</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="slideshow-stats">
+                        <span class="stat">
+                            <i class="fas fa-layer-group"></i>
+                            15 Days
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-clock"></i>
+                            45-60 min/day
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Advanced
+                        </span>
+                    </div>
+                    <div class="slideshow-topics">
+                        <h4>What You'll Learn:</h4>
+                        <ul>
+                            <li>Jest Framework</li>
+                            <li>React Testing Library</li>
+                            <li>Component Testing</li>
+                            <li>Integration Testing</li>
+                            <li>Mocking & Stubbing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="open-btn">
+                        <i class="fas fa-play"></i>
+                        Start Testing Course
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <button onclick="goHome()" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Learning Hub. Built with ❤️ for education.</p>
+        </footer>
+    </div>
+
+    <script>
+        function openSlideshow(course) {
+            console.log(`Opening course: ${course}`);
+            
+            // Add loading state
+            const button = event.target.closest('.open-btn');
+            if (button) {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<span class="loading"></span> Loading...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    // Navigate to the appropriate slideshow
+                    switch(course) {
+                        case 'react-basics':
+                            alert('React Fundamentals course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        case 'react-hooks':
+                            alert('React Hooks course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        case 'react-state':
+                            alert('React State Management course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        case 'react-testing':
+                            alert('React Testing course coming soon!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                            break;
+                        default:
+                            alert('Course not available yet!');
+                            button.innerHTML = originalText;
+                            button.disabled = false;
+                    }
+                }, 800);
+            }
+        }
+        
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html> 

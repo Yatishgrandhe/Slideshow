@@ -156,29 +156,25 @@ function openLanguage(language) {
     const languageName = event.target.closest('.slideshow-card').querySelector('h3').textContent;
     console.log(`User selected: ${languageName}`);
     
-    // Navigate to the appropriate language slideshow
+    // Navigate to the appropriate language page
     switch(language) {
         case 'python':
             // Add a small delay for better UX
             setTimeout(() => {
-                window.location.href = 'python-slideshow.html';
+                window.location.href = 'python-language.html';
             }, 800);
             break;
         case 'javascript':
             // Add a small delay for better UX
             setTimeout(() => {
-                window.location.href = 'javascript-slideshow.html';
+                window.location.href = 'javascript-language.html';
             }, 800);
             break;
         case 'react':
-            // For future slideshows
-            console.log('React Development coming soon!');
+            // Add a small delay for better UX
             setTimeout(() => {
-                if (button) {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                }
-            }, 1000);
+                window.location.href = 'react-language.html';
+            }, 800);
             break;
         default:
             console.log('Unknown language:', language);
