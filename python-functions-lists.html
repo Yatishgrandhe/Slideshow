@@ -22,7 +22,7 @@
                 <button id="prevBtn" class="nav-btn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <span class="slide-counter">1 / 5</span>
+                <span class="slide-counter">1 / 300</span>
                 <button id="nextBtn" class="nav-btn">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -36,11 +36,11 @@
 
         <!-- Slides Wrapper -->
         <div class="slides-wrapper">
-            <!-- Day 1: Functions Basics -->
+            <!-- Day 1, Slide 1: Functions Basics -->
             <div class="slide active" data-slide="1">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>🔧 Day 1: Functions Basics</h1>
+                        <h1>🔧 Day 1, Slide 1: Functions Basics</h1>
                         <p class="slide-subtitle">Creating Reusable Code Blocks</p>
                     </div>
                     <div class="slide-body">
@@ -65,14 +65,6 @@
                                         <li><strong>Organization:</strong> Break code into logical pieces</li>
                                         <li><strong>Maintainability:</strong> Easier to fix and update</li>
                                         <li><strong>Testing:</strong> Test individual pieces of code</li>
-                                    </ul>
-
-                                    <h3>Function Components:</h3>
-                                    <ul>
-                                        <li><strong>Parameters:</strong> Input values the function receives</li>
-                                        <li><strong>Function body:</strong> Code that runs when function is called</li>
-                                        <li><strong>Return statement:</strong> Output value the function sends back</li>
-                                        <li><strong>Function call:</strong> How you use the function</li>
                                     </ul>
                                 </div>
                             </div>
@@ -100,19 +92,22 @@ def say_hello():
 
 say_hello()  # Hello, World!
 
-# Function with default parameters
-def greet_user(name="Guest"):
-    return f"Welcome, {name}!"
+# Function with no return value
+def print_info(name, age):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
 
-print(greet_user("Bob"))  # Welcome, Bob!
-print(greet_user())       # Welcome, Guest!
+print_info("Bob", 30)
+# Output:
+# Name: Bob
+# Age: 30
 
-# Function with multiple return values
-def get_name_and_age():
-    return "Alice", 25
+# Function with default parameter
+def greet_with_title(name, title="Mr."):
+    return f"Hello, {title} {name}!"
 
-name, age = get_name_and_age()
-print(f"{name} is {age} years old")</code></pre>
+print(greet_with_title("Smith"))  # Hello, Mr. Smith!
+print(greet_with_title("Johnson", "Dr."))  # Hello, Dr. Johnson!</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -120,42 +115,465 @@ print(f"{name} is {age} years old")</code></pre>
                 </div>
             </div>
 
-            <!-- Day 2: Function Parameters -->
+            <!-- Day 1, Slide 2: Function Components -->
             <div class="slide" data-slide="2">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>📝 Day 2: Function Parameters</h1>
-                        <p class="slide-subtitle">Understanding Function Inputs</p>
+                        <h1>🏗️ Day 1, Slide 2: Function Components</h1>
+                        <p class="slide-subtitle">Understanding Function Structure</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
-                                    <h2>Function Parameters</h2>
-                                    <p>Parameters are the input values that functions receive. They allow functions to work with different data.</p>
+                                    <h2>Function Anatomy</h2>
+                                    <p>Every function has specific components that work together to create reusable code.</p>
                                     
-                                    <h3>Types of Parameters:</h3>
+                                    <h3>Function Header:</h3>
                                     <ul>
-                                        <li><strong>Required parameters:</strong> Must be provided when calling function</li>
-                                        <li><strong>Default parameters:</strong> Have default values if not provided</li>
-                                        <li><strong>Keyword arguments:</strong> Specify parameters by name</li>
-                                        <li><strong>Variable arguments:</strong> Accept any number of arguments</li>
+                                        <li><strong>def keyword:</strong> Tells Python this is a function</li>
+                                        <li><strong>Function name:</strong> How you call the function</li>
+                                        <li><strong>Parameters:</strong> Variables that receive input values</li>
+                                        <li><strong>Colon:</strong> Marks the end of the header</li>
                                     </ul>
 
-                                    <h3>Parameter Best Practices:</h3>
+                                    <h3>Function Body:</h3>
                                     <ul>
-                                        <li>Use descriptive parameter names</li>
-                                        <li>Provide default values when appropriate</li>
-                                        <li>Document what each parameter does</li>
-                                        <li>Keep functions focused on one task</li>
+                                        <li><strong>Indented code:</strong> All code inside the function</li>
+                                        <li><strong>Logic:</strong> The actual work the function does</li>
+                                        <li><strong>Variables:</strong> Can create local variables</li>
+                                        <li><strong>Control flow:</strong> Can use if, loops, etc.</li>
                                     </ul>
 
-                                    <h3>Common Patterns:</h3>
+                                    <h3>Return Statement:</h3>
                                     <ul>
-                                        <li>Functions that calculate values</li>
-                                        <li>Functions that process data</li>
-                                        <li>Functions that format output</li>
-                                        <li>Functions that validate input</li>
+                                        <li><strong>return keyword:</strong> Sends value back to caller</li>
+                                        <li><strong>Optional:</strong> Functions can have no return</li>
+                                        <li><strong>Multiple returns:</strong> Can have multiple return statements</li>
+                                        <li><strong>Early exit:</strong> Return can exit function early</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Function Component Examples</div>
+                                    <pre><code># Function with all components
+def calculate_area(length, width):  # Header with parameters
+    area = length * width           # Body: calculation
+    return area                     # Return statement
+
+# Function with multiple returns
+def check_number(num):
+    if num > 0:
+        return "Positive"           # Early return
+    elif num < 0:
+        return "Negative"           # Early return
+    else:
+        return "Zero"               # Default return
+
+# Function with no return (returns None)
+def print_square(n):
+    result = n ** 2
+    print(f"{n} squared is {result}")
+    # No return statement
+
+# Function with local variables
+def calculate_tax(income, rate):
+    taxable_income = income - 10000  # Local variable
+    tax = taxable_income * rate       # Local variable
+    return tax
+
+# Function with multiple calculations
+def process_data(x, y, z):
+    # Multiple local variables
+    sum_xy = x + y
+    product_yz = y * z
+    average = (x + y + z) / 3
+    
+    return {
+        'sum_xy': sum_xy,
+        'product_yz': product_yz,
+        'average': average
+    }
+
+# Testing the functions
+print(calculate_area(5, 3))        # 15
+print(check_number(5))             # Positive
+print_square(4)                    # 4 squared is 16
+print(calculate_tax(50000, 0.2))   # 8000.0
+print(process_data(1, 2, 3))       # Dictionary with results</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 3: Function Naming -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📝 Day 1, Slide 3: Function Naming</h1>
+                        <p class="slide-subtitle">Best Practices for Function Names</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Function Naming Conventions</h2>
+                                    <p>Good function names make your code more readable and maintainable. Follow these conventions for professional code.</p>
+                                    
+                                    <h3>Naming Rules:</h3>
+                                    <ul>
+                                        <li><strong>snake_case:</strong> Use lowercase with underscores</li>
+                                        <li><strong>Descriptive:</strong> Name should describe what it does</li>
+                                        <li><strong>Verbs:</strong> Start with action words</li>
+                                        <li><strong>Consistent:</strong> Use same style throughout</li>
+                                    </ul>
+
+                                    <h3>Good vs Bad Names:</h3>
+                                    <ul>
+                                        <li><strong>Good:</strong> calculate_area, get_user_info, validate_email</li>
+                                        <li><strong>Bad:</strong> calc, func1, x, do_stuff</li>
+                                        <li><strong>Specific:</strong> calculate_circle_area vs calculate_area</li>
+                                        <li><strong>Clear:</strong> is_valid_email vs check_email</li>
+                                    </ul>
+
+                                    <h3>Naming Patterns:</h3>
+                                    <ul>
+                                        <li><strong>get_*:</strong> Retrieve data (get_user_name)</li>
+                                        <li><strong>set_*:</strong> Set values (set_user_age)</li>
+                                        <li><strong>is_*:</strong> Boolean checks (is_valid)</li>
+                                        <li><strong>has_*:</strong> Boolean checks (has_permission)</li>
+                                        <li><strong>calculate_*:</strong> Math operations (calculate_total)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Function Naming Examples</div>
+                                    <pre><code># Good function names
+def calculate_area(length, width):
+    return length * width
+
+def get_user_name(user_id):
+    return f"User {user_id}"
+
+def is_valid_email(email):
+    return '@' in email and '.' in email
+
+def has_permission(user, action):
+    return user.can_perform(action)
+
+def set_user_age(user, age):
+    user.age = age
+
+# Bad function names (avoid these)
+def calc(a, b):  # Too short, unclear
+    return a * b
+
+def func1():     # Not descriptive
+    print("Hello")
+
+def x(y):        # Meaningless names
+    return y * 2
+
+def do_stuff():  # Vague description
+    pass
+
+# Better naming examples
+def calculate_circle_area(radius):
+    import math
+    return math.pi * radius ** 2
+
+def calculate_rectangle_area(length, width):
+    return length * width
+
+def validate_user_input(input_data):
+    return len(input_data) > 0
+
+def format_currency(amount):
+    return f"${amount:.2f}"
+
+def convert_temperature(celsius):
+    return celsius * 9/5 + 32
+
+# Testing the well-named functions
+print(calculate_circle_area(5))      # 78.54...
+print(calculate_rectangle_area(4, 6)) # 24
+print(validate_user_input("hello"))   # True
+print(format_currency(19.99))        # $19.99
+print(convert_temperature(25))       # 77.0</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 4: Function Documentation -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📚 Day 1, Slide 4: Function Documentation</h1>
+                        <p class="slide-subtitle">Writing Clear Function Documentation</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Docstrings and Comments</h2>
+                                    <p>Good documentation helps others (and yourself) understand what your functions do and how to use them.</p>
+                                    
+                                    <h3>Docstrings:</h3>
+                                    <ul>
+                                        <li><strong>Triple quotes:</strong> """ or ''' for multi-line strings</li>
+                                        <li><strong>First line:</strong> Brief description of what function does</li>
+                                        <li><strong>Parameters:</strong> Describe each parameter and its type</li>
+                                        <li><strong>Returns:</strong> Describe what the function returns</li>
+                                        <li><strong>Examples:</strong> Show how to use the function</li>
+                                    </ul>
+
+                                    <h3>Accessing Documentation:</h3>
+                                    <ul>
+                                        <li><strong>help():</strong> help(function_name)</li>
+                                        <li><strong>__doc__:</strong> function_name.__doc__</li>
+                                        <li><strong>IDE support:</strong> Most IDEs show docstrings</li>
+                                        <li><strong>Documentation generators:</strong> Tools like Sphinx</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Write docstrings for all functions</li>
+                                        <li>Keep them up to date with code changes</li>
+                                        <li>Use clear, concise language</li>
+                                        <li>Include examples for complex functions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Documentation Examples</div>
+                                    <pre><code>def calculate_area(length, width):
+    """
+    Calculate the area of a rectangle.
+    
+    Args:
+        length (float): The length of the rectangle
+        width (float): The width of the rectangle
+        
+    Returns:
+        float: The area of the rectangle
+        
+    Examples:
+        >>> calculate_area(5, 3)
+        15.0
+        >>> calculate_area(2.5, 4)
+        10.0
+    """
+    return length * width
+
+def validate_email(email):
+    """
+    Check if an email address is valid.
+    
+    Args:
+        email (str): The email address to validate
+        
+    Returns:
+        bool: True if email is valid, False otherwise
+        
+    Examples:
+        >>> validate_email("user@example.com")
+        True
+        >>> validate_email("invalid-email")
+        False
+    """
+    return '@' in email and '.' in email
+
+def format_currency(amount, currency="USD"):
+    """
+    Format a number as currency.
+    
+    Args:
+        amount (float): The amount to format
+        currency (str): The currency code (default: "USD")
+        
+    Returns:
+        str: Formatted currency string
+        
+    Examples:
+        >>> format_currency(19.99)
+        '$19.99'
+        >>> format_currency(100, "EUR")
+        '€100.00'
+    """
+    if currency == "USD":
+        return f"${amount:.2f}"
+    elif currency == "EUR":
+        return f"€{amount:.2f}"
+    else:
+        return f"{amount:.2f} {currency}"
+
+# Accessing documentation
+print(calculate_area.__doc__)
+
+# Using help()
+# help(calculate_area)
+
+# Testing the documented functions
+print(calculate_area(5, 3))           # 15.0
+print(validate_email("test@example.com"))  # True
+print(format_currency(19.99))         # $19.99
+print(format_currency(100, "EUR"))    # €100.00</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 5: Function Scope -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎯 Day 1, Slide 5: Function Scope</h1>
+                        <p class="slide-subtitle">Understanding Variable Scope</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Variable Scope in Functions</h2>
+                                    <p>Scope determines where variables can be accessed. Understanding scope prevents errors and helps write better code.</p>
+                                    
+                                    <h3>Local Scope:</h3>
+                                    <ul>
+                                        <li><strong>Function variables:</strong> Created inside functions</li>
+                                        <li><strong>Local access:</strong> Only accessible within the function</li>
+                                        <li><strong>Parameter variables:</strong> Also have local scope</li>
+                                        <li><strong>Destroyed after:</strong> Variables disappear when function ends</li>
+                                    </ul>
+
+                                    <h3>Global Scope:</h3>
+                                    <ul>
+                                        <li><strong>Module variables:</strong> Created at file level</li>
+                                        <li><strong>Global access:</strong> Accessible throughout the module</li>
+                                        <li><strong>global keyword:</strong> Modify global variables from function</li>
+                                        <li><strong>Built-in names:</strong> print, len, etc. are global</li>
+                                    </ul>
+
+                                    <h3>Scope Rules:</h3>
+                                    <ul>
+                                        <li>Local variables hide global variables</li>
+                                        <li>Functions can read global variables</li>
+                                        <li>Functions can't modify global variables without global keyword</li>
+                                        <li>Nested functions have access to outer function variables</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Scope Examples</div>
+                                    <pre><code># Global variable
+global_counter = 0
+
+def increment_counter():
+    """Increment the global counter."""
+    global global_counter  # Declare we want to modify global
+    global_counter += 1
+    print(f"Counter: {global_counter}")
+
+def create_local_variable():
+    """Create a local variable."""
+    local_var = "I'm local"
+    print(local_var)
+    # local_var is destroyed when function ends
+
+def demonstrate_scope():
+    """Show how scope works."""
+    x = 10  # Local variable
+    
+    def inner_function():
+        y = 20  # Local to inner_function
+        print(f"x from outer: {x}")  # Can access outer x
+        print(f"y from inner: {y}")  # Can access inner y
+    
+    inner_function()
+    # print(y)  # Error: y is not accessible here
+
+# Testing scope
+print(f"Global counter: {global_counter}")  # 0
+increment_counter()  # Counter: 1
+increment_counter()  # Counter: 2
+
+create_local_variable()  # I'm local
+# print(local_var)  # Error: local_var doesn't exist here
+
+demonstrate_scope()
+# Output:
+# x from outer: 10
+# y from inner: 20
+
+# Example with variable hiding
+global_var = "I'm global"
+
+def test_scope():
+    global_var = "I'm local"  # Hides global variable
+    print(global_var)  # I'm local
+
+def test_global():
+    global global_var  # Access global variable
+    global_var = "Modified global"
+    print(global_var)  # Modified global
+
+print(global_var)  # I'm global
+test_scope()       # I'm local
+print(global_var)  # I'm global
+test_global()      # Modified global
+print(global_var)  # Modified global</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 6: Function Parameters -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📥 Day 1, Slide 6: Function Parameters</h1>
+                        <p class="slide-subtitle">Passing Data to Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Types of Parameters</h2>
+                                    <p>Parameters allow functions to receive data and make them more flexible and reusable.</p>
+                                    
+                                    <h3>Required Parameters:</h3>
+                                    <ul>
+                                        <li><strong>Positional:</strong> Must be provided in order</li>
+                                        <li><strong>No defaults:</strong> Function won't work without them</li>
+                                        <li><strong>Clear purpose:</strong> Essential for function operation</li>
+                                    </ul>
+
+                                    <h3>Default Parameters:</h3>
+                                    <ul>
+                                        <li><strong>Optional:</strong> Have default values</li>
+                                        <li><strong>Can be omitted:</strong> Function uses default if not provided</li>
+                                        <li><strong>Must come last:</strong> After required parameters</li>
+                                        <li><strong>Mutable defaults:</strong> Be careful with lists/dicts</li>
+                                    </ul>
+
+                                    <h3>Parameter Types:</h3>
+                                    <ul>
+                                        <li><strong>Positional:</strong> Passed by position</li>
+                                        <li><strong>Keyword:</strong> Passed by name</li>
+                                        <li><strong>Arbitrary:</strong> *args for variable number</li>
+                                        <li><strong>Keyword arbitrary:</strong> **kwargs for named arguments</li>
                                     </ul>
                                 </div>
                             </div>
@@ -163,49 +581,57 @@ print(f"{name} is {age} years old")</code></pre>
                                 <div class="code-example">
                                     <div class="code-header">Parameter Examples</div>
                                     <pre><code># Required parameters
-def calculate_area(width, height):
-    return width * height
+def greet(name, age):
+    return f"Hello {name}, you are {age} years old"
 
-area = calculate_area(10, 5)
-print(f"Area: {area}")  # Area: 50
+print(greet("Alice", 25))  # Hello Alice, you are 25 years old
 
 # Default parameters
-def greet(name="Guest", greeting="Hello"):
-    return f"{greeting}, {name}!"
+def greet_with_title(name, title="Mr.", greeting="Hello"):
+    return f"{greeting} {title} {name}!"
 
-print(greet("Alice"))           # Hello, Alice!
-print(greet("Bob", "Hi"))       # Hi, Bob!
-print(greet())                  # Hello, Guest!
+print(greet_with_title("Smith"))                    # Hello Mr. Smith!
+print(greet_with_title("Johnson", "Dr."))          # Hello Dr. Johnson!
+print(greet_with_title("Brown", "Ms.", "Goodbye")) # Goodbye Ms. Brown!
 
 # Keyword arguments
-def create_profile(name, age, city, occupation):
-    return f"{name}, {age}, from {city}, works as {occupation}"
+def create_profile(name, age, city, country="USA"):
+    return f"Name: {name}, Age: {age}, City: {city}, Country: {country}"
 
-profile = create_profile(
-    name="Alice",
-    age=25,
-    city="New York",
-    occupation="Developer"
-)
-print(profile)
+# Using keyword arguments (order doesn't matter)
+profile1 = create_profile(name="Alice", age=25, city="New York")
+profile2 = create_profile(city="London", name="Bob", age=30, country="UK")
 
-# Variable arguments (*args)
+print(profile1)  # Name: Alice, Age: 25, City: New York, Country: USA
+print(profile2)  # Name: Bob, Age: 30, City: London, Country: UK
+
+# Arbitrary arguments (*args)
 def sum_all(*numbers):
     return sum(numbers)
 
-total = sum_all(1, 2, 3, 4, 5)
-print(f"Sum: {total}")  # Sum: 15
+print(sum_all(1, 2, 3))        # 6
+print(sum_all(1, 2, 3, 4, 5))  # 15
 
-# Variable keyword arguments (**kwargs)
-def create_person(**details):
-    return details
+# Keyword arbitrary arguments (**kwargs)
+def create_person(**attributes):
+    return attributes
 
-person = create_person(
-    name="Alice",
-    age=25,
-    city="New York"
-)
-print(person)  # {'name': 'Alice', 'age': 25, 'city': 'New York'}</code></pre>
+person = create_person(name="Alice", age=25, city="New York", job="Engineer")
+print(person)  # {'name': 'Alice', 'age': 25, 'city': 'New York', 'job': 'Engineer'}
+
+# Mixed parameter types
+def complex_function(required, optional="default", *args, **kwargs):
+    print(f"Required: {required}")
+    print(f"Optional: {optional}")
+    print(f"Args: {args}")
+    print(f"Kwargs: {kwargs}")
+
+complex_function("hello", "world", 1, 2, 3, name="Alice", age=25)
+# Output:
+# Required: hello
+# Optional: world
+# Args: (1, 2, 3)
+# Kwargs: {'name': 'Alice', 'age': 25}</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -213,291 +639,513 @@ print(person)  # {'name': 'Alice', 'age': 25, 'city': 'New York'}</code></pre>
                 </div>
             </div>
 
-            <!-- Day 3: Lists Introduction -->
-            <div class="slide" data-slide="3">
+            <!-- Day 1, Slide 7: Return Values -->
+            <div class="slide" data-slide="7">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>📋 Day 3: Lists Introduction</h1>
-                        <p class="slide-subtitle">Working with Collections of Data</p>
+                        <h1>📤 Day 1, Slide 7: Return Values</h1>
+                        <p class="slide-subtitle">Getting Data Back from Functions</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
-                                    <h2>What are Lists?</h2>
-                                    <p>Lists are ordered collections of items. They can hold multiple values of different types and are one of Python's most versatile data structures.</p>
+                                    <h2>Returning Data from Functions</h2>
+                                    <p>Return values allow functions to send data back to the calling code, making them useful for calculations and data processing.</p>
                                     
-                                    <h3>Creating Lists:</h3>
+                                    <h3>Return Statement:</h3>
                                     <ul>
-                                        <li><strong>Square brackets:</strong> [item1, item2, item3]</li>
-                                        <li><strong>Empty list:</strong> []</li>
-                                        <li><strong>Mixed types:</strong> Can contain different data types</li>
-                                        <li><strong>Nested lists:</strong> Lists inside lists</li>
+                                        <li><strong>return keyword:</strong> Sends value back to caller</li>
+                                        <li><strong>Immediate exit:</strong> Function stops executing</li>
+                                        <li><strong>Any data type:</strong> Can return numbers, strings, lists, etc.</li>
+                                        <li><strong>Multiple values:</strong> Can return tuples, lists, dictionaries</li>
                                     </ul>
 
-                                    <h3>Accessing List Elements:</h3>
+                                    <h3>Return Types:</h3>
                                     <ul>
-                                        <li><strong>Indexing:</strong> Use [index] to access elements</li>
-                                        <li><strong>Zero-based:</strong> First element is at index 0</li>
-                                        <li><strong>Negative indexing:</strong> -1 is last element</li>
-                                        <li><strong>Slicing:</strong> Get multiple elements with [start:end]</li>
-                                    </ul>
-
-                                    <h3>List Characteristics:</h3>
-                                    <ul>
-                                        <li><strong>Ordered:</strong> Elements maintain their order</li>
-                                        <li><strong>Mutable:</strong> Can change elements after creation</li>
-                                        <li><strong>Dynamic:</strong> Can add or remove elements</li>
-                                        <li><strong>Heterogeneous:</strong> Can contain different types</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">List Examples</div>
-                                    <pre><code># Creating lists
-fruits = ["apple", "banana", "orange"]
-numbers = [1, 2, 3, 4, 5]
-mixed = [1, "hello", 3.14, True]
-
-# Empty list
-empty_list = []
-
-# Accessing elements
-print(fruits[0])      # apple
-print(fruits[-1])     # orange
-print(fruits[1:3])    # ['banana', 'orange']
-
-# Modifying lists
-fruits[1] = "grape"
-print(fruits)         # ['apple', 'grape', 'orange']
-
-# Adding elements
-fruits.append("mango")
-print(fruits)         # ['apple', 'grape', 'orange', 'mango']
-
-# Removing elements
-fruits.remove("grape")
-print(fruits)         # ['apple', 'orange', 'mango']
-
-# List length
-print(len(fruits))    # 3
-
-# Checking if item exists
-if "apple" in fruits:
-    print("Apple is in the list!")
-
-# Looping through lists
-for fruit in fruits:
-    print(f"I like {fruit}")
-
-# List comprehension
-squares = [x**2 for x in range(5)]
-print(squares)        # [0, 1, 4, 9, 16]
-
-# Nested lists
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-print(matrix[1][1])   # 5</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 4: List Methods -->
-            <div class="slide" data-slide="4">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>🔧 Day 4: List Methods</h1>
-                        <p class="slide-subtitle">Built-in Functions for Lists</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>List Methods</h2>
-                                    <p>Python provides many built-in methods to work with lists. These methods make it easy to manipulate and analyze list data.</p>
-                                    
-                                    <h3>Adding Elements:</h3>
-                                    <ul>
-                                        <li><strong>.append(item):</strong> Add item to end of list</li>
-                                        <li><strong>.insert(index, item):</strong> Insert item at specific position</li>
-                                        <li><strong>.extend(iterable):</strong> Add all items from another list</li>
-                                    </ul>
-
-                                    <h3>Removing Elements:</h3>
-                                    <ul>
-                                        <li><strong>.remove(item):</strong> Remove first occurrence of item</li>
-                                        <li><strong>.pop(index):</strong> Remove and return item at index</li>
-                                        <li><strong>.clear():</strong> Remove all elements</li>
-                                        <li><strong>del statement:</strong> Remove by index</li>
-                                    </ul>
-
-                                    <h3>Finding Elements:</h3>
-                                    <ul>
-                                        <li><strong>.index(item):</strong> Find position of item</li>
-                                        <li><strong>.count(item):</strong> Count occurrences of item</li>
-                                        <li><strong>in operator:</strong> Check if item exists</li>
-                                    </ul>
-
-                                    <h3>Sorting and Reversing:</h3>
-                                    <ul>
-                                        <li><strong>.sort():</strong> Sort list in place</li>
-                                        <li><strong>.reverse():</strong> Reverse list in place</li>
-                                        <li><strong>sorted():</strong> Return new sorted list</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">List Method Examples</div>
-                                    <pre><code># Adding elements
-fruits = ["apple", "banana"]
-fruits.append("orange")
-print(fruits)  # ['apple', 'banana', 'orange']
-
-fruits.insert(1, "grape")
-print(fruits)  # ['apple', 'grape', 'banana', 'orange']
-
-more_fruits = ["mango", "kiwi"]
-fruits.extend(more_fruits)
-print(fruits)  # ['apple', 'grape', 'banana', 'orange', 'mango', 'kiwi']
-
-# Removing elements
-fruits.remove("grape")
-print(fruits)  # ['apple', 'banana', 'orange', 'mango', 'kiwi']
-
-last_fruit = fruits.pop()
-print(last_fruit)  # kiwi
-print(fruits)      # ['apple', 'banana', 'orange', 'mango']
-
-# Finding elements
-print(fruits.index("banana"))  # 1
-print(fruits.count("apple"))   # 1
-print("orange" in fruits)      # True
-
-# Sorting
-numbers = [3, 1, 4, 1, 5, 9, 2, 6]
-numbers.sort()
-print(numbers)  # [1, 1, 2, 3, 4, 5, 6, 9]
-
-numbers.reverse()
-print(numbers)  # [9, 6, 5, 4, 3, 2, 1, 1]
-
-# Creating sorted copy
-original = [3, 1, 4, 1, 5]
-sorted_list = sorted(original)
-print(original)    # [3, 1, 4, 1, 5]
-print(sorted_list) # [1, 1, 3, 4, 5]
-
-# List operations
-numbers = [1, 2, 3, 4, 5]
-print(len(numbers))     # 5
-print(max(numbers))     # 5
-print(min(numbers))     # 1
-print(sum(numbers))     # 15
-
-# Copying lists
-original = [1, 2, 3]
-copy1 = original.copy()
-copy2 = original[:]
-copy3 = list(original)</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 5: List Comprehensions -->
-            <div class="slide" data-slide="5">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>⚡ Day 5: List Comprehensions</h1>
-                        <p class="slide-subtitle">Creating Lists Efficiently</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>What are List Comprehensions?</h2>
-                                    <p>List comprehensions are a concise way to create lists based on existing sequences or other iterable objects. They're more readable and often faster than traditional loops.</p>
-                                    
-                                    <h3>Basic Syntax:</h3>
-                                    <ul>
-                                        <li><strong>Basic:</strong> [expression for item in iterable]</li>
-                                        <li><strong>With condition:</strong> [expression for item in iterable if condition]</li>
-                                        <li><strong>Nested:</strong> [expression for item in iterable for subitem in item]</li>
-                                    </ul>
-
-                                    <h3>Advantages:</h3>
-                                    <ul>
-                                        <li><strong>Readability:</strong> More concise than loops</li>
-                                        <li><strong>Performance:</strong> Often faster than loops</li>
-                                        <li><strong>Functional style:</strong> More Pythonic</li>
-                                        <li><strong>Less code:</strong> Fewer lines to write</li>
-                                    </ul>
-
-                                    <h3>When to Use:</h3>
-                                    <ul>
-                                        <li>Creating lists from existing sequences</li>
-                                        <li>Filtering data</li>
-                                        <li>Transforming data</li>
-                                        <li>Simple mathematical operations</li>
+                                        <li><strong>Single value:</strong> return 42</li>
+                                        <li><strong>Multiple values:</strong> return x, y, z</li>
+                                        <li><strong>None:</strong> Functions without return return None</li>
+                                        <li><strong>Complex data:</strong> Lists, dictionaries, objects</li>
                                     </ul>
 
                                     <h3>Best Practices:</h3>
                                     <ul>
-                                        <li>Keep comprehensions simple and readable</li>
-                                        <li>Use loops for complex logic</li>
-                                        <li>Don't nest too deeply</li>
-                                        <li>Consider readability over brevity</li>
+                                        <li>Return early for simple cases</li>
+                                        <li>Use descriptive return values</li>
+                                        <li>Be consistent with return types</li>
+                                        <li>Document what your function returns</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
-                                    <div class="code-header">List Comprehension Examples</div>
-                                    <pre><code># Basic list comprehension
-squares = [x**2 for x in range(5)]
-print(squares)  # [0, 1, 4, 9, 16]
+                                    <div class="code-header">Return Value Examples</div>
+                                    <pre><code># Single return value
+def square(number):
+    return number ** 2
 
-# With condition (filtering)
-even_squares = [x**2 for x in range(10) if x % 2 == 0]
-print(even_squares)  # [0, 4, 16, 36, 64]
+result = square(5)
+print(result)  # 25
 
-# Transforming strings
-words = ["hello", "world", "python"]
-upper_words = [word.upper() for word in words]
-print(upper_words)  # ['HELLO', 'WORLD', 'PYTHON']
+# Multiple return values (as tuple)
+def get_name_and_age():
+    return "Alice", 25
 
-# Working with numbers
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-even_numbers = [x for x in numbers if x % 2 == 0]
-print(even_numbers)  # [2, 4, 6, 8, 10]
+name, age = get_name_and_age()
+print(f"Name: {name}, Age: {age}")  # Name: Alice, Age: 25
 
-# Creating pairs
-pairs = [(x, y) for x in range(3) for y in range(3)]
-print(pairs)  # [(0,0), (0,1), (0,2), (1,0), (1,1), (1,2), (2,0), (2,1), (2,2)]
+# Return different types based on conditions
+def process_number(num):
+    if num > 0:
+        return "positive"
+    elif num < 0:
+        return "negative"
+    else:
+        return "zero"
 
-# Dictionary comprehension
-squares_dict = {x: x**2 for x in range(5)}
-print(squares_dict)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+print(process_number(5))   # positive
+print(process_number(-3))  # negative
+print(process_number(0))   # zero
 
-# Set comprehension
-unique_squares = {x**2 for x in range(10)}
-print(unique_squares)  # {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}
+# Return complex data structures
+def get_user_info(user_id):
+    return {
+        "id": user_id,
+        "name": "Alice",
+        "email": "alice@example.com",
+        "age": 25
+    }
 
-# Nested comprehension
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-flattened = [item for row in matrix for item in row]
-print(flattened)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+user = get_user_info(123)
+print(user["name"])  # Alice
 
-# Practical example
-names = ["alice", "bob", "charlie"]
-formatted_names = [name.title() for name in names if len(name) > 3]
-print(formatted_names)  # ['Alice', 'Charlie']</code></pre>
+# Early return for simple cases
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
+
+# Same as above, but more concise
+def is_even_concise(number):
+    return number % 2 == 0
+
+print(is_even(4))      # True
+print(is_even(7))      # False
+
+# Function with no return (returns None)
+def print_greeting(name):
+    print(f"Hello, {name}!")
+
+result = print_greeting("Alice")
+print(result)  # None
+
+# Return with calculations
+def calculate_stats(numbers):
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    maximum = max(numbers)
+    minimum = min(numbers)
+    
+    return {
+        "total": total,
+        "count": count,
+        "average": average,
+        "max": maximum,
+        "min": minimum
+    }
+
+stats = calculate_stats([1, 2, 3, 4, 5])
+print(f"Average: {stats['average']}")  # Average: 3.0</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 8: Function Practice -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>💪 Day 1, Slide 8: Function Practice</h1>
+                        <p class="slide-subtitle">Reinforcing Function Concepts</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Practice Exercises</h2>
+                                    <p>Complete these exercises to reinforce your understanding of functions.</p>
+                                    
+                                    <h3>Exercise 1: Temperature Converter</h3>
+                                    <ul>
+                                        <li>Create a function that converts Celsius to Fahrenheit</li>
+                                        <li>Formula: F = C × 9/5 + 32</li>
+                                        <li>Test with 0°C, 25°C, 100°C</li>
+                                    </ul>
+
+                                    <h3>Exercise 2: Grade Calculator</h3>
+                                    <ul>
+                                        <li>Create a function that calculates letter grade</li>
+                                        <li>90+ = A, 80-89 = B, 70-79 = C, 60-69 = D, <60 = F</li>
+                                        <li>Return both letter grade and percentage</li>
+                                    </ul>
+
+                                    <h3>Exercise 3: String Processor</h3>
+                                    <ul>
+                                        <li>Create a function that processes strings</li>
+                                        <li>Count characters, words, and sentences</li>
+                                        <li>Return a dictionary with statistics</li>
+                                    </ul>
+
+                                    <h3>Exercise 4: Number Analyzer</h3>
+                                    <ul>
+                                        <li>Create a function that analyzes a list of numbers</li>
+                                        <li>Find sum, average, min, max, count</li>
+                                        <li>Return all statistics in a dictionary</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Exercise Solutions</div>
+                                    <pre><code># Exercise 1: Temperature Converter
+def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return celsius * 9/5 + 32
+
+# Test the function
+temperatures = [0, 25, 100]
+for temp in temperatures:
+    fahrenheit = celsius_to_fahrenheit(temp)
+    print(f"{temp}°C = {fahrenheit}°F")
+
+# Exercise 2: Grade Calculator
+def calculate_grade(score):
+    """Calculate letter grade from numerical score."""
+    if score >= 90:
+        letter = "A"
+    elif score >= 80:
+        letter = "B"
+    elif score >= 70:
+        letter = "C"
+    elif score >= 60:
+        letter = "D"
+    else:
+        letter = "F"
+    
+    return {"letter": letter, "percentage": score}
+
+# Test the function
+scores = [95, 85, 75, 65, 55]
+for score in scores:
+    grade = calculate_grade(score)
+    print(f"Score: {score}% = {grade['letter']}")
+
+# Exercise 3: String Processor
+def analyze_string(text):
+    """Analyze a string and return statistics."""
+    characters = len(text)
+    words = len(text.split())
+    sentences = len([s for s in text.split('.') if s.strip()])
+    
+    return {
+        "characters": characters,
+        "words": words,
+        "sentences": sentences
+    }
+
+# Test the function
+sample_text = "Hello world. This is a test. Python is fun!"
+stats = analyze_string(sample_text)
+print(f"Characters: {stats['characters']}")
+print(f"Words: {stats['words']}")
+print(f"Sentences: {stats['sentences']}")
+
+# Exercise 4: Number Analyzer
+def analyze_numbers(numbers):
+    """Analyze a list of numbers and return statistics."""
+    if not numbers:
+        return {"error": "Empty list"}
+    
+    return {
+        "sum": sum(numbers),
+        "average": sum(numbers) / len(numbers),
+        "min": min(numbers),
+        "max": max(numbers),
+        "count": len(numbers)
+    }
+
+# Test the function
+test_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+analysis = analyze_numbers(test_numbers)
+print(f"Sum: {analysis['sum']}")
+print(f"Average: {analysis['average']}")
+print(f"Min: {analysis['min']}")
+print(f"Max: {analysis['max']}")
+print(f"Count: {analysis['count']}")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 9: Function Debugging -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🐛 Day 1, Slide 9: Function Debugging</h1>
+                        <p class="slide-subtitle">Finding and Fixing Function Errors</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common Function Errors</h2>
+                                    <p>Understanding common function errors helps you write more robust code and debug problems quickly.</p>
+                                    
+                                    <h3>Syntax Errors:</h3>
+                                    <ul>
+                                        <li><strong>Missing colons:</strong> After def and function body</li>
+                                        <li><strong>Wrong indentation:</strong> Function body must be indented</li>
+                                        <li><strong>Missing parentheses:</strong> Around function calls</li>
+                                        <li><strong>Unmatched quotes:</strong> In docstrings or strings</li>
+                                    </ul>
+
+                                    <h3>Runtime Errors:</h3>
+                                    <ul>
+                                        <li><strong>TypeError:</strong> Wrong number or type of arguments</li>
+                                        <li><strong>NameError:</strong> Undefined variables in function</li>
+                                        <li><strong>AttributeError:</strong> Calling methods on wrong objects</li>
+                                        <li><strong>ZeroDivisionError:</strong> Division by zero</li>
+                                    </ul>
+
+                                    <h3>Logic Errors:</h3>
+                                    <ul>
+                                        <li><strong>Wrong return value:</strong> Function returns unexpected result</li>
+                                        <li><strong>Side effects:</strong> Function modifies global state unexpectedly</li>
+                                        <li><strong>Infinite loops:</strong> Function never returns</li>
+                                        <li><strong>Off-by-one errors:</strong> Common in loops and indexing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Debugging Examples</div>
+                                    <pre><code># Syntax Error examples
+# def greet(name)  # Missing colon
+#     print(f"Hello {name}")
+
+# Fixed:
+def greet(name):
+    print(f"Hello {name}")
+
+# TypeError examples
+def add_numbers(a, b):
+    return a + b
+
+# This will cause TypeError:
+# add_numbers("hello", 5)
+
+# Fix: add type checking
+def add_numbers_safe(a, b):
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return a + b
+    else:
+        return "Error: Both arguments must be numbers"
+
+# NameError examples
+def calculate_area(length, width):
+    # area = length * width  # This would work
+    return area  # NameError: area is not defined
+
+# Fixed:
+def calculate_area_fixed(length, width):
+    area = length * width
+    return area
+
+# Logic Error example
+def is_adult(age):
+    if age >= 18:  # This is correct
+        return True
+    else:
+        return False
+
+# Better version:
+def is_adult_better(age):
+    return age >= 18
+
+# Debugging function
+def debug_function(func, *args, **kwargs):
+    """Debug a function by printing its inputs and outputs."""
+    print(f"Calling {func.__name__} with args: {args}, kwargs: {kwargs}")
+    
+    try:
+        result = func(*args, **kwargs)
+        print(f"Result: {result}")
+        return result
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+# Test the debug function
+debug_function(add_numbers_safe, 5, 3)
+debug_function(add_numbers_safe, "hello", 5)
+
+# Common debugging patterns
+def safe_divide(numerator, denominator):
+    """Safely divide two numbers."""
+    try:
+        return numerator / denominator
+    except ZeroDivisionError:
+        return "Error: Division by zero"
+    except TypeError:
+        return "Error: Both arguments must be numbers"
+
+print(safe_divide(10, 2))   # 5.0
+print(safe_divide(10, 0))   # Error: Division by zero
+print(safe_divide("10", 2)) # Error: Both arguments must be numbers</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 10: Function Review -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Day 1, Slide 10: Function Review</h1>
+                        <p class="slide-subtitle">Testing Your Function Knowledge</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Day 1 Function Quiz</h2>
+                                    <p>Test your understanding of Python functions with these questions.</p>
+                                    
+                                    <h3>Quiz Questions:</h3>
+                                    <ol>
+                                        <li>What keyword is used to define a function?</li>
+                                        <li>What is the purpose of the return statement?</li>
+                                        <li>What happens if a function has no return statement?</li>
+                                        <li>How do you call a function with keyword arguments?</li>
+                                        <li>What is the difference between parameters and arguments?</li>
+                                        <li>How do you access a function's documentation?</li>
+                                        <li>What is the scope of variables created inside a function?</li>
+                                        <li>How do you modify a global variable inside a function?</li>
+                                        <li>What is the purpose of the *args parameter?</li>
+                                        <li>What is the purpose of the **kwargs parameter?</li>
+                                    </ol>
+
+                                    <h3>Key Concepts Review:</h3>
+                                    <ul>
+                                        <li><strong>Function definition:</strong> def keyword, name, parameters, body</li>
+                                        <li><strong>Parameters:</strong> Required, default, keyword, arbitrary</li>
+                                        <li><strong>Return values:</strong> Single, multiple, None</li>
+                                        <li><strong>Scope:</strong> Local vs global variables</li>
+                                        <li><strong>Documentation:</strong> Docstrings and comments</li>
+                                    </ul>
+
+                                    <h3>Next Steps:</h3>
+                                    <ul>
+                                        <li>Practice writing functions for real problems</li>
+                                        <li>Learn about lambda functions</li>
+                                        <li>Explore function decorators</li>
+                                        <li>Move on to list operations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Quiz Answers</div>
+                                    <pre><code># Quiz Answers:
+
+# 1. def keyword
+def my_function():
+    pass
+
+# 2. Return statement sends value back to caller
+def add(a, b):
+    return a + b  # Sends result back
+
+# 3. Function returns None
+def no_return():
+    print("Hello")
+    # Returns None automatically
+
+# 4. Keyword arguments
+def greet(name, age):
+    return f"Hello {name}, age {age}"
+
+greet(name="Alice", age=25)  # Keyword arguments
+
+# 5. Parameters vs Arguments
+def function(param1, param2):  # Parameters (in definition)
+    pass
+
+function(arg1, arg2)  # Arguments (when calling)
+
+# 6. Access documentation
+help(function_name)
+function_name.__doc__
+
+# 7. Local scope
+def test():
+    x = 10  # Local variable
+    # x only exists inside this function
+
+# 8. Modify global variable
+global_var = 0
+def modify_global():
+    global global_var  # Declare global
+    global_var = 1
+
+# 9. *args for variable arguments
+def sum_all(*args):
+    return sum(args)
+
+# 10. **kwargs for keyword arguments
+def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+# Comprehensive function example
+def comprehensive_function(required, optional="default", *args, **kwargs):
+    """
+    A function demonstrating all concepts.
+    
+    Args:
+        required: Required parameter
+        optional: Optional parameter with default
+        *args: Variable positional arguments
+        **kwargs: Variable keyword arguments
+    
+    Returns:
+        dict: Summary of all arguments
+    """
+    result = {
+        "required": required,
+        "optional": optional,
+        "args": args,
+        "kwargs": kwargs
+    }
+    return result
+
+# Test the comprehensive function
+result = comprehensive_function(
+    "hello",           # required
+    "world",           # optional
+    1, 2, 3,          # *args
+    name="Alice",      # **kwargs
+    age=25
+)
+print(result)</code></pre>
                                 </div>
                             </div>
                         </div>
