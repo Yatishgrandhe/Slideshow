@@ -23,7 +23,7 @@
         <!-- React Learning Path -->
         <main class="slideshows-grid">
             <!-- React Fundamentals -->
-            <div class="slideshow-card" onclick="openSlideshow('react-basics')">
+            <div class="slideshow-card" onclick="openSlideshow('react-basics', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-play"></i>
@@ -68,7 +68,7 @@
             </div>
 
             <!-- React Hooks -->
-            <div class="slideshow-card" onclick="openSlideshow('react-hooks')">
+            <div class="slideshow-card" onclick="openSlideshow('react-hooks', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-link"></i>
@@ -113,7 +113,7 @@
             </div>
 
             <!-- React State Management -->
-            <div class="slideshow-card" onclick="openSlideshow('react-state')">
+            <div class="slideshow-card" onclick="openSlideshow('react-state', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-database"></i>
@@ -158,7 +158,7 @@
             </div>
 
             <!-- React Testing -->
-            <div class="slideshow-card" onclick="openSlideshow('react-testing')">
+            <div class="slideshow-card" onclick="openSlideshow('react-testing', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-vial"></i>
@@ -218,7 +218,7 @@
     </div>
 
     <script>
-        function openSlideshow(course) {
+        function openSlideshow(course, event) {
             console.log(`Opening course: ${course}`);
             
             // Add loading state
@@ -228,35 +228,25 @@
                 button.innerHTML = '<span class="loading"></span> Loading...';
                 button.disabled = true;
                 
-                setTimeout(() => {
-                    // Navigate to the appropriate slideshow
-                    switch(course) {
-                        case 'react-basics':
-                            alert('React Fundamentals course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
-                            break;
-                        case 'react-hooks':
-                            alert('React Hooks course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
-                            break;
-                        case 'react-state':
-                            alert('React State Management course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
-                            break;
-                        case 'react-testing':
-                            alert('React Testing course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
-                            break;
-                        default:
-                            alert('Course not available yet!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
-                    }
-                }, 800);
+                                    setTimeout(() => {
+                        // Navigate to the appropriate slideshow
+                        switch(course) {
+                            case 'react-basics':
+                                window.location.href = 'react-slideshow.html';
+                                break;
+                            case 'react-hooks':
+                                window.location.href = 'react-slideshow.html';
+                                break;
+                            case 'react-state':
+                                window.location.href = 'react-slideshow.html';
+                                break;
+                            case 'react-testing':
+                                window.location.href = 'react-slideshow.html';
+                                break;
+                            default:
+                                window.location.href = 'react-slideshow.html';
+                        }
+                    }, 800);
             }
         }
         

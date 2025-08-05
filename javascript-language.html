@@ -23,7 +23,7 @@
         <!-- JavaScript Learning Path -->
         <main class="slideshows-grid">
             <!-- JavaScript Fundamentals -->
-            <div class="slideshow-card" onclick="openSlideshow('javascript-basics')">
+            <div class="slideshow-card" onclick="openSlideshow('javascript-basics', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-play"></i>
@@ -68,7 +68,7 @@
             </div>
 
             <!-- JavaScript ES6+ -->
-            <div class="slideshow-card" onclick="openSlideshow('javascript-es6')">
+            <div class="slideshow-card" onclick="openSlideshow('javascript-es6', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-code"></i>
@@ -113,7 +113,7 @@
             </div>
 
             <!-- JavaScript APIs -->
-            <div class="slideshow-card" onclick="openSlideshow('javascript-apis')">
+            <div class="slideshow-card" onclick="openSlideshow('javascript-apis', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-plug"></i>
@@ -158,7 +158,7 @@
             </div>
 
             <!-- JavaScript Testing -->
-            <div class="slideshow-card" onclick="openSlideshow('javascript-testing')">
+            <div class="slideshow-card" onclick="openSlideshow('javascript-testing', event)">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-vial"></i>
@@ -218,7 +218,7 @@
     </div>
 
     <script>
-        function openSlideshow(course) {
+        function openSlideshow(course, event) {
             console.log(`Opening course: ${course}`);
             
             // Add loading state
