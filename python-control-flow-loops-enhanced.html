@@ -184,7 +184,1592 @@ print("Loop finished")</code></pre>
                 </div>
             </div>
 
-            <!-- Continue with slides 3-25... -->
+            <!-- Slide 3: Conditional Statements -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔀 Slide 3: Conditional Statements</h1>
+                        <p class="slide-subtitle">Making Decisions in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Conditional Statements?</h2>
+                                    <p>Conditional statements allow your program to make decisions and execute different code based on whether certain conditions are true or false.</p>
+                                    
+                                    <h3>Basic if Statement:</h3>
+                                    <ul>
+                                        <li><strong>if:</strong> Execute code if condition is True</li>
+                                        <li><strong>elif:</strong> Check another condition if first is False</li>
+                                        <li><strong>else:</strong> Execute code if all conditions are False</li>
+                                        <li><strong>Indentation:</strong> Code blocks must be indented</li>
+                                    </ul>
+
+                                    <h3>Conditional Structure:</h3>
+                                    <ul>
+                                        <li>Start with <code>if</code> condition</li>
+                                        <li>Use <code>elif</code> for additional conditions</li>
+                                        <li>End with <code>else</code> for default case</li>
+                                        <li>Only one block executes</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Use clear, descriptive conditions</li>
+                                        <li>Keep conditions simple and readable</li>
+                                        <li>Use proper indentation (4 spaces)</li>
+                                        <li>Test all possible conditions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Conditional Examples</div>
+                                    <pre><code># Basic if statement
+age = 18
+if age >= 18:
+    print("You are an adult")
+
+# if-else statement
+temperature = 25
+if temperature > 30:
+    print("It's hot!")
+else:
+    print("It's not too hot")
+
+# if-elif-else statement
+score = 85
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+else:
+    grade = "F"
+print(f"Your grade: {grade}")
+
+# Nested conditions
+name = "Alice"
+age = 25
+if name == "Alice":
+    if age >= 18:
+        print("Welcome, adult Alice!")
+    else:
+        print("Welcome, young Alice!")
+else:
+    print("Hello, stranger!")
+
+# Multiple conditions
+username = "admin"
+password = "12345"
+if username == "admin" and password == "12345":
+    print("Login successful!")
+else:
+    print("Login failed!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Comparison Operators -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚖️ Slide 4: Comparison Operators</h1>
+                        <p class="slide-subtitle">Comparing Values in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Comparison Operators</h2>
+                                    <p>Comparison operators are used to compare values and return True or False. They're essential for creating conditions in your programs.</p>
+                                    
+                                    <h3>Basic Comparison Operators:</h3>
+                                    <ul>
+                                        <li><code>==</code> - Equal to</li>
+                                        <li><code>!=</code> - Not equal to</li>
+                                        <li><code>&lt;</code> - Less than</li>
+                                        <li><code>&gt;</code> - Greater than</li>
+                                        <li><code>&lt;=</code> - Less than or equal to</li>
+                                        <li><code>&gt;=</code> - Greater than or equal to</li>
+                                    </ul>
+
+                                    <h3>String Comparisons:</h3>
+                                    <ul>
+                                        <li>Strings are compared alphabetically</li>
+                                        <li>Case matters ("A" != "a")</li>
+                                        <li>Longer strings are "greater" than shorter ones</li>
+                                        <li>Use <code>.lower()</code> for case-insensitive comparison</li>
+                                    </ul>
+
+                                    <h3>Important Notes:</h3>
+                                    <ul>
+                                        <li>Use <code>==</code> for equality, not <code>=</code></li>
+                                        <li>Comparisons return boolean values (True/False)</li>
+                                        <li>You can chain comparisons: <code>1 &lt; x &lt; 10</code></li>
+                                        <li>Floating point comparisons can be tricky</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Comparison Examples</div>
+                                    <pre><code># Numeric comparisons
+x = 5
+y = 10
+
+print(x == y)   # False
+print(x != y)   # True
+print(x < y)    # True
+print(x > y)    # False
+print(x <= y)   # True
+print(x >= y)   # False
+
+# String comparisons
+name1 = "Alice"
+name2 = "Bob"
+name3 = "alice"
+
+print(name1 == name2)     # False
+print(name1 == name3)     # False (case sensitive)
+print(name1.lower() == name3.lower())  # True
+
+# Alphabetical comparison
+print("Alice" < "Bob")    # True
+print("Zebra" > "Apple")  # True
+
+# Chained comparisons
+age = 25
+if 18 <= age <= 65:
+    print("Working age")
+
+# Floating point comparison
+a = 0.1 + 0.2
+b = 0.3
+print(a == b)  # False (precision issue)
+print(abs(a - b) < 0.0001)  # True (better approach)
+
+# Practical examples
+password = "secret123"
+user_input = "secret123"
+if password == user_input:
+    print("Access granted!")
+else:
+    print("Access denied!")
+
+# Temperature example
+temp = 25
+if temp < 0:
+    print("Freezing!")
+elif temp < 20:
+    print("Cold")
+elif temp < 30:
+    print("Comfortable")
+else:
+    print("Hot!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Logical Operators -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔗 Slide 5: Logical Operators</h1>
+                        <p class="slide-subtitle">Combining Conditions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Logical Operators</h2>
+                                    <p>Logical operators allow you to combine multiple conditions to create more complex decision-making logic in your programs.</p>
+                                    
+                                    <h3>Three Main Logical Operators:</h3>
+                                    <ul>
+                                        <li><code>and</code> - Both conditions must be True</li>
+                                        <li><code>or</code> - At least one condition must be True</li>
+                                        <li><code>not</code> - Inverts the condition (True becomes False)</li>
+                                    </ul>
+
+                                    <h3>Truth Tables:</h3>
+                                    <ul>
+                                        <li><strong>AND:</strong> True only if both are True</li>
+                                        <li><strong>OR:</strong> True if at least one is True</li>
+                                        <li><strong>NOT:</strong> Inverts the value</li>
+                                    </ul>
+
+                                    <h3>Operator Precedence:</h3>
+                                    <ul>
+                                        <li><code>not</code> has highest precedence</li>
+                                        <li><code>and</code> has medium precedence</li>
+                                        <li><code>or</code> has lowest precedence</li>
+                                        <li>Use parentheses for clarity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Logical Operator Examples</div>
+                                    <pre><code># AND operator
+age = 25
+income = 50000
+if age >= 18 and income >= 30000:
+    print("Eligible for loan")
+
+# OR operator
+weather = "rainy"
+temperature = 15
+if weather == "rainy" or temperature < 20:
+    print("Bring a jacket")
+
+# NOT operator
+is_logged_in = False
+if not is_logged_in:
+    print("Please log in")
+
+# Complex conditions
+username = "admin"
+password = "12345"
+is_active = True
+
+if username == "admin" and password == "12345" and is_active:
+    print("Login successful!")
+
+# Using parentheses for clarity
+age = 25
+has_ticket = True
+is_vip = False
+
+if (age >= 18 and has_ticket) or is_vip:
+    print("Access granted")
+
+# Multiple OR conditions
+day = "Monday"
+if day == "Saturday" or day == "Sunday":
+    print("Weekend!")
+else:
+    print("Weekday")
+
+# NOT with comparison
+is_raining = True
+if not is_raining:
+    print("Let's go outside!")
+else:
+    print("Stay inside")
+
+# Complex logical expression
+temperature = 25
+humidity = 80
+is_sunny = False
+
+if (temperature > 30 and humidity > 70) or (not is_sunny and temperature < 20):
+    print("Uncomfortable weather")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Complex Conditions -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🧩 Slide 6: Complex Conditions</h1>
+                        <p class="slide-subtitle">Building Advanced Logic</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Complex Conditional Logic</h2>
+                                    <p>Real-world programs often need to check multiple conditions and handle complex decision-making scenarios.</p>
+                                    
+                                    <h3>Combining Multiple Conditions:</h3>
+                                    <ul>
+                                        <li>Use parentheses to group conditions</li>
+                                        <li>Mix different operators carefully</li>
+                                        <li>Consider readability and maintainability</li>
+                                        <li>Test all possible combinations</li>
+                                    </ul>
+
+                                    <h3>Common Patterns:</h3>
+                                    <ul>
+                                        <li><strong>Range checks:</strong> <code>18 &lt;= age &lt;= 65</code></li>
+                                        <li><strong>Multiple options:</strong> Using <code>or</code> for alternatives</li>
+                                        <li><strong>Exclusive conditions:</strong> Using <code>and</code> for requirements</li>
+                                        <li><strong>Negation:</strong> Using <code>not</code> for inverse logic</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Break complex conditions into variables</li>
+                                        <li>Use meaningful variable names</li>
+                                        <li>Add comments for clarity</li>
+                                        <li>Test edge cases thoroughly</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Complex Condition Examples</div>
+                                    <pre><code># Grade calculation with complex logic
+score = 85
+attendance = 0.9
+assignments_complete = True
+
+# Complex condition broken down
+is_passing_score = score >= 70
+has_good_attendance = attendance >= 0.8
+all_work_done = assignments_complete
+
+if is_passing_score and has_good_attendance and all_work_done:
+    print("Student passes the course")
+elif score >= 60 and attendance >= 0.7:
+    print("Student can retake the course")
+else:
+    print("Student fails the course")
+
+# User authentication system
+username = "admin"
+password = "secret123"
+is_active = True
+login_attempts = 2
+max_attempts = 3
+
+# Check multiple conditions
+valid_credentials = username == "admin" and password == "secret123"
+account_active = is_active
+under_attempt_limit = login_attempts < max_attempts
+
+if valid_credentials and account_active:
+    print("Login successful!")
+elif valid_credentials and not account_active:
+    print("Account is deactivated")
+elif not valid_credentials and under_attempt_limit:
+    print("Invalid credentials, try again")
+else:
+    print("Too many failed attempts")
+
+# Weather recommendation system
+temperature = 25
+humidity = 70
+is_raining = False
+wind_speed = 15
+
+# Complex weather logic
+comfortable_temp = 20 <= temperature <= 30
+low_humidity = humidity < 80
+good_conditions = not is_raining and wind_speed < 20
+
+if comfortable_temp and low_humidity and good_conditions:
+    print("Perfect day for outdoor activities!")
+elif temperature > 30 or humidity > 90:
+    print("Stay indoors with air conditioning")
+elif is_raining:
+    print("Bring an umbrella")
+else:
+    print("Moderate conditions")
+
+# Shopping cart validation
+item_count = 5
+total_price = 150.00
+has_coupon = True
+coupon_valid = True
+is_member = False
+
+# Complex purchase logic
+affordable = total_price <= 200
+good_deal = has_coupon and coupon_valid
+member_discount = is_member
+
+if affordable and (good_deal or member_discount):
+    print("Proceed to checkout")
+elif total_price > 200:
+    print("Remove some items")
+else:
+    print("Consider joining membership for discounts")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Nested Conditions -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 7: Nested Conditions</h1>
+                        <p class="slide-subtitle">Conditions Within Conditions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Nested Conditional Statements</h2>
+                                    <p>Nested conditions allow you to check for additional conditions within existing conditional blocks, creating more sophisticated decision-making logic.</p>
+                                    
+                                    <h3>When to Use Nested Conditions:</h3>
+                                    <ul>
+                                        <li>When you need to check secondary conditions</li>
+                                        <li>For hierarchical decision-making</li>
+                                        <li>When conditions depend on previous conditions</li>
+                                        <li>For complex validation scenarios</li>
+                                    </ul>
+
+                                    <h3>Structure and Indentation:</h3>
+                                    <ul>
+                                        <li>Each nested level adds 4 spaces</li>
+                                        <li>Maintain consistent indentation</li>
+                                        <li>Use clear, descriptive condition names</li>
+                                        <li>Limit nesting depth (max 3-4 levels)</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Keep nesting shallow when possible</li>
+                                        <li>Use early returns to reduce nesting</li>
+                                        <li>Extract complex conditions to functions</li>
+                                        <li>Add comments for clarity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Nested Condition Examples</div>
+                                    <pre><code># User access control
+username = "admin"
+password = "secret123"
+is_active = True
+has_permission = True
+
+if username == "admin":
+    if password == "secret123":
+        if is_active:
+            if has_permission:
+                print("Full access granted")
+            else:
+                print("Access denied - no permission")
+        else:
+            print("Account is deactivated")
+    else:
+        print("Invalid password")
+else:
+    print("User not found")
+
+# Grade classification system
+score = 85
+attendance = 0.9
+
+if score >= 90:
+    if attendance >= 0.95:
+        print("A+ - Outstanding with perfect attendance")
+    else:
+        print("A - Outstanding")
+elif score >= 80:
+    if attendance >= 0.9:
+        print("B+ - Good with excellent attendance")
+    else:
+        print("B - Good")
+elif score >= 70:
+    if attendance >= 0.8:
+        print("C+ - Satisfactory with good attendance")
+    else:
+        print("C - Satisfactory")
+else:
+    print("F - Failed")
+
+# Weather activity recommendation
+temperature = 25
+is_raining = False
+wind_speed = 10
+
+if temperature > 20:
+    if not is_raining:
+        if wind_speed < 15:
+            print("Perfect for outdoor activities!")
+        else:
+            print("Good for outdoor activities, but windy")
+    else:
+        print("Indoor activities recommended")
+else:
+    if temperature > 10:
+        print("Bundle up for outdoor activities")
+    else:
+        print("Stay indoors or dress very warmly")
+
+# Shopping cart with discounts
+total_price = 150
+item_count = 5
+is_member = True
+
+if total_price > 100:
+    if item_count > 3:
+        if is_member:
+            discount = 0.20
+            print(f"Member discount: 20% off!")
+        else:
+            discount = 0.10
+            print(f"Bulk discount: 10% off!")
+    else:
+        if is_member:
+            discount = 0.15
+            print(f"Member discount: 15% off!")
+        else:
+            discount = 0.05
+            print(f"Standard discount: 5% off!")
+else:
+    discount = 0
+    print("No discount available")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Introduction to Loops -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 8: Introduction to Loops</h1>
+                        <p class="slide-subtitle">Repeating Code Efficiently</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Loops?</h2>
+                                    <p>Loops allow you to execute a block of code multiple times without having to write it repeatedly. They're essential for processing data, automating tasks, and creating dynamic programs.</p>
+                                    
+                                    <h3>Types of Loops in Python:</h3>
+                                    <ul>
+                                        <li><strong>for loops:</strong> Iterate over sequences (lists, strings, ranges)</li>
+                                        <li><strong>while loops:</strong> Repeat while a condition is True</li>
+                                        <li><strong>nested loops:</strong> Loops within loops</li>
+                                        <li><strong>list comprehensions:</strong> Compact loop expressions</li>
+                                    </ul>
+
+                                    <h3>When to Use Each Type:</h3>
+                                    <ul>
+                                        <li><strong>for:</strong> When you know how many iterations</li>
+                                        <li><strong>while:</strong> When you don't know iterations in advance</li>
+                                        <li><strong>nested:</strong> For multi-dimensional data processing</li>
+                                        <li><strong>comprehensions:</strong> For simple transformations</li>
+                                    </ul>
+
+                                    <h3>Loop Control:</h3>
+                                    <ul>
+                                        <li><code>break:</code> Exit the loop immediately</li>
+                                        <li><code>continue:</code> Skip to next iteration</li>
+                                        <li><code>pass:</code> Do nothing (placeholder)</li>
+                                        <li><code>else:</code> Execute when loop completes normally</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Loop Examples</div>
+                                    <pre><code># For loop with range
+for i in range(5):
+    print(f"Count: {i}")
+
+# For loop with list
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(f"I like {fruit}")
+
+# While loop
+count = 0
+while count < 3:
+    print(f"While count: {count}")
+    count += 1
+
+# Loop with break
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+# Loop with continue
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+
+# Loop with else
+for i in range(3):
+    print(i)
+else:
+    print("Loop completed normally")
+
+# Nested loops
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+
+# List comprehension
+squares = [x**2 for x in range(5)]
+print(squares)
+
+# Practical example
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age} years old")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: For Loops -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 9: For Loops</h1>
+                        <p class="slide-subtitle">Iterating Over Sequences</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>For Loop Basics</h2>
+                                    <p>For loops are used to iterate over sequences like lists, strings, tuples, and ranges. They execute a block of code for each item in the sequence.</p>
+                                    
+                                    <h3>For Loop Syntax:</h3>
+                                    <ul>
+                                        <li><code>for variable in sequence:</code></li>
+                                        <li>Variable takes each value from sequence</li>
+                                        <li>Code block executes for each iteration</li>
+                                        <li>Loop ends when sequence is exhausted</li>
+                                    </ul>
+
+                                    <h3>Common Iterable Types:</h3>
+                                    <ul>
+                                        <li><strong>Lists:</strong> <code>for item in [1, 2, 3]</code></li>
+                                        <li><strong>Strings:</strong> <code>for char in "hello"</code></li>
+                                        <li><strong>Ranges:</strong> <code>for i in range(5)</code></li>
+                                        <li><strong>Tuples:</strong> <code>for item in (1, 2, 3)</code></li>
+                                    </ul>
+
+                                    <h3>Loop Variables:</h3>
+                                    <ul>
+                                        <li>Variable name is arbitrary</li>
+                                        <li>Use descriptive names when possible</li>
+                                        <li>Variable scope is limited to loop</li>
+                                        <li>Can use <code>enumerate()</code> for index</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">For Loop Examples</div>
+                                    <pre><code># Basic for loop with range
+for i in range(5):
+    print(f"Number: {i}")
+
+# For loop with list
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(f"I like {fruit}")
+
+# For loop with string
+message = "Hello"
+for char in message:
+    print(f"Character: {char}")
+
+# Using enumerate for index
+names = ["Alice", "Bob", "Charlie"]
+for index, name in enumerate(names):
+    print(f"{index}: {name}")
+
+# For loop with dictionary
+person = {"name": "Alice", "age": 25, "city": "NYC"}
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+# Nested for loops
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+
+# For loop with conditional
+numbers = [1, 2, 3, 4, 5, 6]
+for num in numbers:
+    if num % 2 == 0:
+        print(f"{num} is even")
+    else:
+        print(f"{num} is odd")
+
+# Practical example - grade calculator
+scores = [85, 92, 78, 96, 88]
+total = 0
+for score in scores:
+    total += score
+average = total / len(scores)
+print(f"Average score: {average}")
+
+# For loop with break
+for i in range(10):
+    if i == 5:
+        break
+    print(i)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Range Function -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📊 Slide 10: Range Function</h1>
+                        <p class="slide-subtitle">Generating Number Sequences</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>The Range Function</h2>
+                                    <p>The <code>range()</code> function generates a sequence of numbers, commonly used with for loops to iterate a specific number of times.</p>
+                                    
+                                    <h3>Range Syntax:</h3>
+                                    <ul>
+                                        <li><code>range(stop):</code> 0 to stop-1</li>
+                                        <li><code>range(start, stop):</code> start to stop-1</li>
+                                        <li><code>range(start, stop, step):</code> with step size</li>
+                                        <li>Returns an iterable object (not a list)</li>
+                                    </ul>
+
+                                    <h3>Common Use Cases:</h3>
+                                    <ul>
+                                        <li><strong>Counting:</strong> <code>for i in range(5)</code></li>
+                                        <li><strong>Indexing:</strong> <code>for i in range(len(list))</code></li>
+                                        <li><strong>Custom ranges:</strong> <code>for i in range(1, 11)</code></li>
+                                        <li><strong>Step counting:</strong> <code>for i in range(0, 10, 2)</code></li>
+                                    </ul>
+
+                                    <h3>Important Notes:</h3>
+                                    <ul>
+                                        <li>Range is zero-based by default</li>
+                                        <li>Stop value is exclusive (not included)</li>
+                                        <li>Step can be negative for reverse counting</li>
+                                        <li>Memory efficient for large ranges</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Range Examples</div>
+                                    <pre><code># Basic range
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+# Range with start and stop
+for i in range(1, 6):
+    print(i)  # 1, 2, 3, 4, 5
+
+# Range with step
+for i in range(0, 10, 2):
+    print(i)  # 0, 2, 4, 6, 8
+
+# Reverse counting
+for i in range(5, 0, -1):
+    print(i)  # 5, 4, 3, 2, 1
+
+# Converting range to list
+numbers = list(range(1, 6))
+print(numbers)  # [1, 2, 3, 4, 5]
+
+# Practical examples
+# Countdown
+for i in range(5, 0, -1):
+    print(f"Countdown: {i}")
+print("Blast off!")
+
+# Multiplication table
+for i in range(1, 6):
+    result = 5 * i
+    print(f"5 x {i} = {result}")
+
+# Indexing a list
+fruits = ["apple", "banana", "orange"]
+for i in range(len(fruits)):
+    print(f"Index {i}: {fruits[i]}")
+
+# Creating patterns
+for i in range(5):
+    print("*" * (i + 1))
+
+# Sum of even numbers
+total = 0
+for i in range(2, 11, 2):
+    total += i
+print(f"Sum of even numbers 2-10: {total}")
+
+# Temperature conversion
+for celsius in range(0, 101, 10):
+    fahrenheit = (celsius * 9/5) + 32
+    print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: While Loops -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 11: While Loops</h1>
+                        <p class="slide-subtitle">Repeating Until Condition Changes</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>While Loop Basics</h2>
+                                    <p>While loops continue executing a block of code as long as a condition remains True. They're useful when you don't know in advance how many iterations you'll need.</p>
+                                    
+                                    <h3>While Loop Syntax:</h3>
+                                    <ul>
+                                        <li><code>while condition:</code></li>
+                                        <li>Condition is checked before each iteration</li>
+                                        <li>Loop continues while condition is True</li>
+                                        <li>Must ensure condition eventually becomes False</li>
+                                    </ul>
+
+                                    <h3>When to Use While Loops:</h3>
+                                    <ul>
+                                        <li>When iterations depend on a condition</li>
+                                        <li>For user input validation</li>
+                                        <li>When processing data until a condition is met</li>
+                                        <li>For game loops and simulations</li>
+                                    </ul>
+
+                                    <h3>Important Considerations:</h3>
+                                    <ul>
+                                        <li>Always update variables in the condition</li>
+                                        <li>Beware of infinite loops</li>
+                                        <li>Use break statement for safety</li>
+                                        <li>Test with different input values</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">While Loop Examples</div>
+                                    <pre><code># Basic while loop
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# User input validation
+password = "secret123"
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+    user_input = input("Enter password: ")
+    if user_input == password:
+        print("Access granted!")
+        break
+    else:
+        attempts += 1
+        print(f"Wrong password. {max_attempts - attempts} attempts left")
+
+# Number guessing game
+import random
+secret_number = random.randint(1, 100)
+guesses = 0
+
+while True:
+    guess = int(input("Guess the number (1-100): "))
+    guesses += 1
+    
+    if guess < secret_number:
+        print("Too low!")
+    elif guess > secret_number:
+        print("Too high!")
+    else:
+        print(f"Correct! You guessed it in {guesses} tries")
+        break
+
+# Processing data until condition
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+index = 0
+sum_so_far = 0
+
+while index < len(numbers) and sum_so_far < 20:
+    sum_so_far += numbers[index]
+    print(f"Added {numbers[index]}, sum: {sum_so_far}")
+    index += 1
+
+# Menu system
+while True:
+    print("\nMenu:")
+    print("1. View profile")
+    print("2. Edit settings")
+    print("3. Exit")
+    
+    choice = input("Enter your choice (1-3): ")
+    
+    if choice == "1":
+        print("Showing profile...")
+    elif choice == "2":
+        print("Opening settings...")
+    elif choice == "3":
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
+# Countdown with while
+countdown = 10
+while countdown > 0:
+    print(f"Countdown: {countdown}")
+    countdown -= 1
+print("Blast off!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: Loop Control Statements -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎛️ Slide 12: Loop Control Statements</h1>
+                        <p class="slide-subtitle">Controlling Loop Execution</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Loop Control Statements</h2>
+                                    <p>Loop control statements allow you to modify the normal flow of loops, providing more flexibility in how your loops execute.</p>
+                                    
+                                    <h3>Break Statement:</h3>
+                                    <ul>
+                                        <li>Exits the loop immediately</li>
+                                        <li>Skips remaining iterations</li>
+                                        <li>Useful for early termination</li>
+                                        <li>Can be used in both for and while loops</li>
+                                    </ul>
+
+                                    <h3>Continue Statement:</h3>
+                                    <ul>
+                                        <li>Skips current iteration</li>
+                                        <li>Continues with next iteration</li>
+                                        <li>Useful for skipping specific cases</li>
+                                        <li>Helps avoid deeply nested conditions</li>
+                                    </ul>
+
+                                    <h3>Pass Statement:</h3>
+                                    <ul>
+                                        <li>Does nothing (placeholder)</li>
+                                        <li>Used when syntax requires code</li>
+                                        <li>Common in incomplete functions</li>
+                                        <li>Helps with code structure</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Loop Control Examples</div>
+                                    <pre><code># Break statement
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+
+# Continue statement
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(f"Odd number: {i}")
+
+# Pass statement
+for i in range(5):
+    if i < 3:
+        pass  # Do nothing for now
+    else:
+        print(f"Processing: {i}")
+
+# Break in while loop
+count = 0
+while True:
+    if count >= 5:
+        break
+    print(f"Count: {count}")
+    count += 1
+
+# Continue with condition
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for num in numbers:
+    if num == 5:
+        continue
+    if num > 8:
+        break
+    print(f"Processing: {num}")
+
+# Search with break
+names = ["Alice", "Bob", "Charlie", "David"]
+search_name = "Charlie"
+
+for name in names:
+    if name == search_name:
+        print(f"Found {name}!")
+        break
+else:
+    print(f"{search_name} not found")
+
+# Skip invalid data
+data = [1, "invalid", 3, "error", 5, 6]
+valid_numbers = []
+
+for item in data:
+    if not isinstance(item, int):
+        continue
+    valid_numbers.append(item)
+
+print(f"Valid numbers: {valid_numbers}")
+
+# Menu with break
+while True:
+    print("1. Continue")
+    print("2. Break")
+    choice = input("Enter choice: ")
+    
+    if choice == "1":
+        print("Continuing...")
+        continue
+    elif choice == "2":
+        print("Breaking...")
+        break
+    else:
+        print("Invalid choice")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Nested Loops -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 13: Nested Loops</h1>
+                        <p class="slide-subtitle">Loops Within Loops</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Nested Loops</h2>
+                                    <p>Nested loops are loops that contain other loops within them. They're useful for processing multi-dimensional data and creating complex patterns.</p>
+                                    
+                                    <h3>When to Use Nested Loops:</h3>
+                                    <ul>
+                                        <li>Processing 2D arrays or matrices</li>
+                                        <li>Creating patterns and shapes</li>
+                                        <li>Comparing elements in lists</li>
+                                        <li>Working with coordinate systems</li>
+                                    </ul>
+
+                                    <h3>Performance Considerations:</h3>
+                                    <ul>
+                                        <li>Nested loops can be computationally expensive</li>
+                                        <li>Complexity increases exponentially</li>
+                                        <li>Consider alternatives for large datasets</li>
+                                        <li>Use break/continue to optimize</li>
+                                    </ul>
+
+                                    <h3>Common Patterns:</h3>
+                                    <ul>
+                                        <li><strong>Grid traversal:</strong> Row by row, column by column</li>
+                                        <li><strong>Pattern printing:</strong> Stars, numbers, shapes</li>
+                                        <li><strong>Data comparison:</strong> Comparing all pairs</li>
+                                        <li><strong>Coordinate systems:</strong> X and Y coordinates</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Nested Loop Examples</div>
+                                    <pre><code># Basic nested loops
+for i in range(3):
+    for j in range(2):
+        print(f"i={i}, j={j}")
+
+# Creating a pattern
+for i in range(5):
+    for j in range(i + 1):
+        print("*", end="")
+    print()
+
+# Multiplication table
+for i in range(1, 6):
+    for j in range(1, 6):
+        result = i * j
+        print(f"{result:2}", end=" ")
+    print()
+
+# Processing 2D list
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for row in matrix:
+    for element in row:
+        print(element, end=" ")
+    print()
+
+# Finding pairs
+numbers = [1, 2, 3, 4]
+for i in range(len(numbers)):
+    for j in range(i + 1, len(numbers)):
+        print(f"Pair: {numbers[i]} and {numbers[j]}")
+
+# Coordinate system
+for x in range(3):
+    for y in range(3):
+        print(f"({x}, {y})", end=" ")
+    print()
+
+# Pattern with conditions
+for i in range(5):
+    for j in range(5):
+        if i == j:
+            print("X", end=" ")
+        else:
+            print(".", end=" ")
+    print()
+
+# Sum of matrix elements
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+total = 0
+
+for row in matrix:
+    for element in row:
+        total += element
+
+print(f"Sum: {total}")
+
+# Break in nested loops
+for i in range(3):
+    for j in range(3):
+        if i == 1 and j == 1:
+            print("Found target!")
+            break
+        print(f"Checking ({i}, {j})")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Practical Applications -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎯 Slide 14: Practical Applications</h1>
+                        <p class="slide-subtitle">Real-World Control Flow Examples</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Real-World Applications</h2>
+                                    <p>Control flow and loops are used in countless real-world applications. Let's explore some practical examples that demonstrate their power.</p>
+                                    
+                                    <h3>Data Processing:</h3>
+                                    <ul>
+                                        <li>Filtering and sorting data</li>
+                                        <li>Calculating statistics</li>
+                                        <li>Data validation and cleaning</li>
+                                        <li>Batch processing operations</li>
+                                    </ul>
+
+                                    <h3>User Interface:</h3>
+                                    <ul>
+                                        <li>Menu systems and navigation</li>
+                                        <li>Input validation</li>
+                                        <li>Game loops and simulations</li>
+                                        <li>Interactive applications</li>
+                                    </ul>
+
+                                    <h3>Business Logic:</h3>
+                                    <ul>
+                                        <li>Pricing calculations</li>
+                                        <li>Inventory management</li>
+                                        <li>Customer segmentation</li>
+                                        <li>Report generation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Practical Examples</div>
+                                    <pre><code># Grade calculator
+scores = [85, 92, 78, 96, 88, 91, 87]
+total = 0
+count = 0
+
+for score in scores:
+    if score >= 0 and score <= 100:
+        total += score
+        count += 1
+
+if count > 0:
+    average = total / count
+    print(f"Average score: {average:.2f}")
+    
+    if average >= 90:
+        grade = "A"
+    elif average >= 80:
+        grade = "B"
+    elif average >= 70:
+        grade = "C"
+    else:
+        grade = "F"
+    print(f"Class grade: {grade}")
+
+# Inventory management
+products = [
+    {"name": "Laptop", "price": 999, "stock": 5},
+    {"name": "Mouse", "price": 25, "stock": 20},
+    {"name": "Keyboard", "price": 50, "stock": 10}
+]
+
+low_stock = []
+total_value = 0
+
+for product in products:
+    total_value += product["price"] * product["stock"]
+    
+    if product["stock"] < 10:
+        low_stock.append(product["name"])
+
+print(f"Total inventory value: ${total_value}")
+if low_stock:
+    print(f"Low stock items: {', '.join(low_stock)}")
+
+# Password strength checker
+password = "MySecret123"
+strength = 0
+has_upper = False
+has_lower = False
+has_digit = False
+has_special = False
+
+for char in password:
+    if char.isupper():
+        has_upper = True
+    elif char.islower():
+        has_lower = True
+    elif char.isdigit():
+        has_digit = True
+    elif char in "!@#$%^&*":
+        has_special = True
+
+if has_upper:
+    strength += 1
+if has_lower:
+    strength += 1
+if has_digit:
+    strength += 1
+if has_special:
+    strength += 1
+if len(password) >= 8:
+    strength += 1
+
+if strength >= 4:
+    print("Strong password")
+elif strength >= 3:
+    print("Medium password")
+else:
+    print("Weak password")
+
+# Temperature monitoring
+temperatures = [22, 25, 18, 30, 28, 24, 26]
+high_temp_count = 0
+total_temp = 0
+
+for temp in temperatures:
+    total_temp += temp
+    if temp > 25:
+        high_temp_count += 1
+
+avg_temp = total_temp / len(temperatures)
+print(f"Average temperature: {avg_temp:.1f}°C")
+print(f"Days above 25°C: {high_temp_count}")
+
+if avg_temp > 25:
+    print("Warning: High average temperature")
+elif avg_temp < 15:
+    print("Warning: Low average temperature")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Best Practices -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>✅ Slide 15: Best Practices</h1>
+                        <p class="slide-subtitle">Writing Clean Control Flow</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Control Flow Best Practices</h2>
+                                    <p>Following best practices makes your code more readable, maintainable, and less prone to errors.</p>
+                                    
+                                    <h3>Conditional Statements:</h3>
+                                    <ul>
+                                        <li>Use clear, descriptive condition names</li>
+                                        <li>Keep conditions simple and readable</li>
+                                        <li>Use parentheses for complex conditions</li>
+                                        <li>Test all possible conditions</li>
+                                    </ul>
+
+                                    <h3>Loop Best Practices:</h3>
+                                    <ul>
+                                        <li>Use meaningful variable names</li>
+                                        <li>Keep loops focused on one task</li>
+                                        <li>Use break/continue appropriately</li>
+                                        <li>Consider performance for large datasets</li>
+                                    </ul>
+
+                                    <h3>Code Organization:</h3>
+                                    <ul>
+                                        <li>Extract complex logic to functions</li>
+                                        <li>Use consistent indentation (4 spaces)</li>
+                                        <li>Add comments for complex logic</li>
+                                        <li>Test edge cases thoroughly</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Best Practice Examples</div>
+                                    <pre><code># Good: Clear condition names
+is_adult = age >= 18
+has_valid_license = license_status == "active"
+can_drive = is_adult and has_valid_license
+
+if can_drive:
+    print("You can drive")
+
+# Good: Simple conditions
+if temperature > 30:
+    print("It's hot")
+elif temperature < 10:
+    print("It's cold")
+else:
+    print("It's comfortable")
+
+# Good: Meaningful loop variables
+for student in students:
+    if student.grade >= 90:
+        print(f"{student.name} gets an A")
+
+# Good: Focused loops
+def calculate_average(scores):
+    total = 0
+    count = 0
+    for score in scores:
+        if 0 <= score <= 100:
+            total += score
+            count += 1
+    return total / count if count > 0 else 0
+
+# Good: Early returns
+def validate_user(username, password):
+    if not username:
+        return False
+    if not password:
+        return False
+    if len(password) < 8:
+        return False
+    return True
+
+# Good: Using enumerate
+for index, item in enumerate(items):
+    print(f"Item {index}: {item}")
+
+# Good: Break for efficiency
+for number in numbers:
+    if number == target:
+        print("Found target!")
+        break
+
+# Good: Clear variable names
+user_age = 25
+minimum_age = 18
+is_eligible = user_age >= minimum_age
+
+if is_eligible:
+    print("User is eligible")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16: Common Mistakes -->
+            <div class="slide" data-slide="16">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚠️ Slide 16: Common Mistakes</h1>
+                        <p class="slide-subtitle">Avoiding Control Flow Pitfalls</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common Control Flow Mistakes</h2>
+                                    <p>Even experienced programmers make mistakes with control flow. Learning to recognize and avoid these common pitfalls will make you a better programmer.</p>
+                                    
+                                    <h3>Conditional Statement Mistakes:</h3>
+                                    <ul>
+                                        <li>Using <code>=</code> instead of <code>==</code></li>
+                                        <li>Forgetting to handle all cases</li>
+                                        <li>Incorrect indentation</li>
+                                        <li>Complex nested conditions</li>
+                                    </ul>
+
+                                    <h3>Loop Mistakes:</h3>
+                                    <ul>
+                                        <li>Infinite loops</li>
+                                        <li>Modifying loop variable inside loop</li>
+                                        <li>Off-by-one errors</li>
+                                        <li>Forgetting to update loop condition</li>
+                                    </ul>
+
+                                    <h3>Logic Errors:</h3>
+                                    <ul>
+                                        <li>Incorrect operator precedence</li>
+                                        <li>Missing parentheses</li>
+                                        <li>Confusing <code>and</code>/<code>or</code></li>
+                                        <li>Not considering edge cases</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Common Mistakes Examples</div>
+                                    <pre><code># Mistake: Using = instead of ==
+age = 18
+if age = 18:  # Error!
+    print("Adult")
+
+# Correct:
+if age == 18:
+    print("Adult")
+
+# Mistake: Infinite loop
+count = 0
+while count < 5:
+    print(count)
+    # Forgot to increment count!
+
+# Correct:
+while count < 5:
+    print(count)
+    count += 1
+
+# Mistake: Modifying loop variable
+for i in range(5):
+    i = i * 2  # This doesn't affect the loop!
+    print(i)
+
+# Mistake: Off-by-one error
+for i in range(5):
+    print(i)  # Prints 0,1,2,3,4
+    if i == 5:  # Never true!
+        print("Found 5")
+
+# Mistake: Complex nested conditions
+if age >= 18:
+    if has_license:
+        if is_sober:
+            if car_available:
+                print("Can drive")
+            else:
+                print("No car")
+        else:
+            print("Not sober")
+    else:
+        print("No license")
+else:
+    print("Too young")
+
+# Better approach:
+can_drive = (age >= 18 and has_license and 
+             is_sober and car_available)
+if can_drive:
+    print("Can drive")
+else:
+    print("Cannot drive")
+
+# Mistake: Not handling edge cases
+numbers = []
+total = 0
+for num in numbers:
+    total += num
+average = total / len(numbers)  # Division by zero!
+
+# Correct:
+if len(numbers) > 0:
+    average = total / len(numbers)
+else:
+    average = 0
+
+# Mistake: Incorrect operator precedence
+if age >= 18 and income > 30000 or has_co_signer:
+    print("Loan approved")
+
+# Correct (with parentheses):
+if (age >= 18 and income > 30000) or has_co_signer:
+    print("Loan approved")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with slides 17-25... -->
         </div>
     </div>
 

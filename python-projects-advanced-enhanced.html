@@ -114,7 +114,1764 @@ class TodoList:
                 </div>
             </div>
 
-            <!-- Continue with slides 2-25... -->
+            <!-- Slide 2: Error Handling Basics -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 2: Error Handling Basics</h1>
+                        <p class="slide-subtitle">Managing Exceptions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Error Handling?</h2>
+                                    <p>Error handling allows your program to deal with unexpected situations gracefully instead of crashing. In Python, we use try/except blocks to handle exceptions.</p>
+                                    
+                                    <h3>Why Handle Errors?</h3>
+                                    <ul>
+                                        <li>Prevent program crashes</li>
+                                        <li>Provide user-friendly error messages</li>
+                                        <li>Allow programs to recover from errors</li>
+                                        <li>Make programs more robust</li>
+                                    </ul>
+
+                                    <h3>Basic Structure:</h3>
+                                    <ul>
+                                        <li><code>try:</code> - Code that might cause an error</li>
+                                        <li><code>except:</code> - Code to handle the error</li>
+                                        <li><code>else:</code> - Code that runs if no error occurs</li>
+                                        <li><code>finally:</code> - Code that always runs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Error Handling Example</div>
+                                    <pre><code>try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(f"Result: {result}")
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except Exception as e:
+    print(f"An error occurred: {e}")
+else:
+    print("No errors occurred!")
+finally:
+    print("This always runs!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Common Exceptions -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 3: Common Exceptions</h1>
+                        <p class="slide-subtitle">Types of Errors in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common Python Exceptions</h2>
+                                    <p>Python has many built-in exception types. Understanding them helps you write better error handling code.</p>
+                                    
+                                    <h3>Built-in Exceptions:</h3>
+                                    <ul>
+                                        <li><code>ValueError:</code> Invalid value for operation</li>
+                                        <li><code>TypeError:</code> Wrong type for operation</li>
+                                        <li><code>IndexError:</code> Invalid list index</li>
+                                        <li><code>KeyError:</code> Invalid dictionary key</li>
+                                        <li><code>FileNotFoundError:</code> File doesn't exist</li>
+                                        <li><code>ZeroDivisionError:</code> Division by zero</li>
+                                        <li><code>NameError:</code> Variable not defined</li>
+                                    </ul>
+
+                                    <h3>When They Occur:</h3>
+                                    <ul>
+                                        <li><code>ValueError:</code> <code>int("abc")</code></li>
+                                        <li><code>TypeError:</code> <code>"hello" + 5</code></li>
+                                        <li><code>IndexError:</code> <code>list[10]</code> (list too short)</li>
+                                        <li><code>KeyError:</code> <code>dict["missing_key"]</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Exception Examples</div>
+                                    <pre><code># ValueError
+try:
+    age = int("twenty")
+except ValueError:
+    print("Please enter a valid number")
+
+# TypeError
+try:
+    result = "hello" + 5
+except TypeError:
+    print("Cannot add string and number")
+
+# IndexError
+try:
+    numbers = [1, 2, 3]
+    print(numbers[5])
+except IndexError:
+    print("Index out of range")
+
+# KeyError
+try:
+    person = {"name": "Alice"}
+    print(person["age"])
+except KeyError:
+    print("Key not found in dictionary")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Custom Exceptions -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 4: Custom Exceptions</h1>
+                        <p class="slide-subtitle">Creating Your Own Error Types</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Creating Custom Exceptions</h2>
+                                    <p>You can create your own exception types to handle specific errors in your programs. This makes your code more organized and easier to understand.</p>
+                                    
+                                    <h3>How to Create Custom Exceptions:</h3>
+                                    <ul>
+                                        <li>Create a class that inherits from <code>Exception</code></li>
+                                        <li>Usually just need an <code>__init__</code> method</li>
+                                        <li>Can add custom attributes and methods</li>
+                                        <li>Use descriptive names ending in "Error"</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>More specific error handling</li>
+                                        <li>Better error messages</li>
+                                        <li>Easier to debug</li>
+                                        <li>More professional code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Custom Exception Example</div>
+                                    <pre><code>class AgeError(Exception):
+    def __init__(self, age, message="Invalid age"):
+        self.age = age
+        self.message = message
+        super().__init__(self.message)
+
+def check_age(age):
+    if age < 0:
+        raise AgeError(age, "Age cannot be negative")
+    elif age > 150:
+        raise AgeError(age, "Age seems unrealistic")
+    return True
+
+try:
+    check_age(-5)
+except AgeError as e:
+    print(f"Error: {e.message} ({e.age})")
+
+try:
+    check_age(200)
+except AgeError as e:
+    print(f"Error: {e.message} ({e.age})")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: File Operations -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 5: File Operations</h1>
+                        <p class="slide-subtitle">Reading and Writing Files</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Working with Files</h2>
+                                    <p>File operations allow your programs to read data from files and save data to files. This is essential for many real-world applications.</p>
+                                    
+                                    <h3>File Modes:</h3>
+                                    <ul>
+                                        <li><code>'r'</code>: Read (default)</li>
+                                        <li><code>'w'</code>: Write (overwrites existing file)</li>
+                                        <li><code>'a'</code>: Append (adds to existing file)</li>
+                                        <li><code>'x'</code>: Exclusive creation (fails if file exists)</li>
+                                        <li><code>'b'</code>: Binary mode</li>
+                                        <li><code>'t'</code>: Text mode (default)</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Always close files when done</li>
+                                        <li>Use <code>with</code> statement for automatic closing</li>
+                                        <li>Handle file not found errors</li>
+                                        <li>Use appropriate file modes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">File Operations Example</div>
+                                    <pre><code># Writing to a file
+with open("data.txt", "w") as file:
+    file.write("Hello, World!\n")
+    file.write("This is a test file.\n")
+
+# Reading from a file
+with open("data.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Reading line by line
+with open("data.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+
+# Appending to a file
+with open("data.txt", "a") as file:
+    file.write("This line was added later.\n")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: CSV Files -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 6: CSV Files</h1>
+                        <p class="slide-subtitle">Working with Spreadsheet Data</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are CSV Files?</h2>
+                                    <p>CSV (Comma-Separated Values) files are a simple way to store tabular data. They're commonly used for spreadsheets and data exchange.</p>
+                                    
+                                    <h3>CSV Module:</h3>
+                                    <ul>
+                                        <li>Use <code>import csv</code></li>
+                                        <li><code>csv.reader()</code> for reading</li>
+                                        <li><code>csv.writer()</code> for writing</li>
+                                        <li><code>csv.DictReader()</code> for dictionary-like access</li>
+                                        <li><code>csv.DictWriter()</code> for writing dictionaries</li>
+                                    </ul>
+
+                                    <h3>Common Uses:</h3>
+                                    <ul>
+                                        <li>Import/export spreadsheet data</li>
+                                        <li>Store simple databases</li>
+                                        <li>Data analysis and processing</li>
+                                        <li>Configuration files</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">CSV Example</div>
+                                    <pre><code>import csv
+
+# Writing CSV
+with open("students.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age", "Grade"])
+    writer.writerow(["Alice", 20, 85])
+    writer.writerow(["Bob", 19, 92])
+
+# Reading CSV
+with open("students.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+# Using DictReader
+with open("students.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(f"{row['Name']} is {row['Age']} years old")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: JSON Files -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 7: JSON Files</h1>
+                        <p class="slide-subtitle">Working with Structured Data</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is JSON?</h2>
+                                    <p>JSON (JavaScript Object Notation) is a lightweight data format that's easy to read and write. It's commonly used for APIs and configuration files.</p>
+                                    
+                                    <h3>JSON Data Types:</h3>
+                                    <ul>
+                                        <li><strong>Objects:</strong> <code>{"key": "value"}</code></li>
+                                        <li><strong>Arrays:</strong> <code>[1, 2, 3]</code></li>
+                                        <li><strong>Strings:</strong> <code>"text"</code></li>
+                                        <li><strong>Numbers:</strong> <code>42</code> or <code>3.14</code></li>
+                                        <li><strong>Booleans:</strong> <code>true</code> or <code>false</code></li>
+                                        <li><strong>Null:</strong> <code>null</code></li>
+                                    </ul>
+
+                                    <h3>JSON Module:</h3>
+                                    <ul>
+                                        <li><code>json.dumps()</code>: Convert Python to JSON string</li>
+                                        <li><code>json.loads()</code>: Convert JSON string to Python</li>
+                                        <li><code>json.dump()</code>: Write Python to JSON file</li>
+                                        <li><code>json.load()</code>: Read JSON file to Python</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">JSON Example</div>
+                                    <pre><code>import json
+
+# Python data
+data = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York",
+    "hobbies": ["reading", "swimming"]
+}
+
+# Convert to JSON string
+json_string = json.dumps(data, indent=2)
+print(json_string)
+
+# Save to file
+with open("data.json", "w") as file:
+    json.dump(data, file, indent=2)
+
+# Load from file
+with open("data.json", "r") as file:
+    loaded_data = json.load(file)
+    print(loaded_data["name"])  # Alice</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Modules and Packages -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 8: Modules and Packages</h1>
+                        <p class="slide-subtitle">Organizing Your Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Modules?</h2>
+                                    <p>A module is a Python file that contains functions, classes, and variables. Modules help you organize code and reuse it across different programs.</p>
+                                    
+                                    <h3>Creating Modules:</h3>
+                                    <ul>
+                                        <li>Create a <code>.py</code> file</li>
+                                        <li>Define functions, classes, or variables</li>
+                                        <li>Use <code>import</code> to use in other files</li>
+                                        <li>Use <code>from module import item</code> for specific imports</li>
+                                    </ul>
+
+                                    <h3>Built-in Modules:</h3>
+                                    <ul>
+                                        <li><code>math:</code> Mathematical functions</li>
+                                        <li><code>random:</code> Random number generation</li>
+                                        <li><code>datetime:</code> Date and time handling</li>
+                                        <li><code>os:</code> Operating system interface</li>
+                                        <li><code>sys:</code> System-specific parameters</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Modules Example</div>
+                                    <pre><code># math_utils.py (module file)
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+
+PI = 3.14159
+
+# main.py (using the module)
+import math_utils
+from math_utils import add, PI
+
+print(math_utils.multiply(5, 3))  # 15
+print(add(10, 20))                # 30
+print(PI)                         # 3.14159
+
+# Using built-in modules
+import math
+import random
+
+print(math.sqrt(16))              # 4.0
+print(random.randint(1, 10))      # Random number 1-10</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Creating Packages -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 9: Creating Packages</h1>
+                        <p class="slide-subtitle">Organizing Multiple Modules</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Packages?</h2>
+                                    <p>A package is a directory containing multiple modules and an <code>__init__.py</code> file. Packages help organize related modules together.</p>
+                                    
+                                    <h3>Package Structure:</h3>
+                                    <ul>
+                                        <li>Create a directory for your package</li>
+                                        <li>Add an <code>__init__.py</code> file (can be empty)</li>
+                                        <li>Add your module files (`.py` files)</li>
+                                        <li>Use dot notation to import: <code>package.module</code></li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Organize related code together</li>
+                                        <li>Avoid naming conflicts</li>
+                                        <li>Make code more maintainable</li>
+                                        <li>Share code with others</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Package Example</div>
+                                    <pre><code># Directory structure:
+# mypackage/
+#   __init__.py
+#   math_utils.py
+#   string_utils.py
+
+# mypackage/__init__.py
+from .math_utils import add, multiply
+from .string_utils import reverse
+
+# mypackage/math_utils.py
+def add(a, b):
+    return a + b
+
+def multiply(a, b):
+    return a * b
+
+# mypackage/string_utils.py
+def reverse(text):
+    return text[::-1]
+
+# Using the package
+import mypackage
+from mypackage import add, reverse
+
+print(add(5, 3))      # 8
+print(reverse("hello")) # olleh</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Virtual Environments -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 10: Virtual Environments</h1>
+                        <p class="slide-subtitle">Managing Dependencies</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Virtual Environments?</h2>
+                                    <p>Virtual environments are isolated Python environments that allow you to install packages without affecting your system Python installation.</p>
+                                    
+                                    <h3>Why Use Virtual Environments?</h3>
+                                    <ul>
+                                        <li>Avoid conflicts between different projects</li>
+                                        <li>Keep your system Python clean</li>
+                                        <li>Easily share project requirements</li>
+                                        <li>Test with different package versions</li>
+                                    </ul>
+
+                                    <h3>Basic Commands:</h3>
+                                    <ul>
+                                        <li><code>python -m venv env_name</code>: Create virtual environment</li>
+                                        <li><code>source env_name/bin/activate</code>: Activate (Linux/Mac)</li>
+                                        <li><code>env_name\Scripts\activate</code>: Activate (Windows)</li>
+                                        <li><code>deactivate</code>: Deactivate virtual environment</li>
+                                        <li><code>pip freeze > requirements.txt</code>: Save dependencies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Virtual Environment Example</div>
+                                    <pre><code># Create virtual environment
+python -m venv myproject_env
+
+# Activate (Linux/Mac)
+source myproject_env/bin/activate
+
+# Activate (Windows)
+myproject_env\Scripts\activate
+
+# Install packages
+pip install requests
+pip install pandas
+
+# Save requirements
+pip freeze > requirements.txt
+
+# Deactivate
+deactivate
+
+# Install from requirements
+pip install -r requirements.txt</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Advanced Data Structures -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 11: Advanced Data Structures</h1>
+                        <p class="slide-subtitle">Dictionaries, Sets, and Tuples</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Beyond Lists</h2>
+                                    <p>Python has several other data structures that are useful for different types of data and operations.</p>
+                                    
+                                    <h3>Dictionaries:</h3>
+                                    <ul>
+                                        <li>Store key-value pairs</li>
+                                        <li>Fast lookups by key</li>
+                                        <li>Useful for mapping data</li>
+                                        <li>Syntax: <code>{key: value}</code></li>
+                                    </ul>
+
+                                    <h3>Sets:</h3>
+                                    <ul>
+                                        <li>Store unique values</li>
+                                        <li>Fast membership testing</li>
+                                        <li>Mathematical set operations</li>
+                                        <li>Syntax: <code>{value1, value2}</code></li>
+                                    </ul>
+
+                                    <h3>Tuples:</h3>
+                                    <ul>
+                                        <li>Immutable sequences</li>
+                                        <li>Faster than lists</li>
+                                        <li>Good for fixed data</li>
+                                        <li>Syntax: <code>(value1, value2)</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Data Structures Example</div>
+                                    <pre><code># Dictionary
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+print(person["name"])  # Alice
+
+# Set
+fruits = {"apple", "banana", "orange"}
+fruits.add("grape")
+print(fruits)  # {'apple', 'banana', 'orange', 'grape'}
+
+# Tuple
+coordinates = (10, 20)
+x, y = coordinates
+print(f"X: {x}, Y: {y}")  # X: 10, Y: 20
+
+# Dictionary operations
+person["email"] = "alice@email.com"
+print(person.keys())    # dict_keys(['name', 'age', 'city', 'email'])
+print(person.values())  # dict_values(['Alice', 25, 'New York', 'alice@email.com'])</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: Dictionary Comprehensions -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 12: Dictionary Comprehensions</h1>
+                        <p class="slide-subtitle">Creating Dictionaries Efficiently</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Dictionary Comprehensions</h2>
+                                    <p>Dictionary comprehensions are a concise way to create dictionaries from iterables, similar to list comprehensions.</p>
+                                    
+                                    <h3>Basic Syntax:</h3>
+                                    <ul>
+                                        <li><code>{key: value for item in iterable}</code></li>
+                                        <li>Can include conditions</li>
+                                        <li>More readable than loops</li>
+                                        <li>Efficient for data transformation</li>
+                                    </ul>
+
+                                    <h3>Common Patterns:</h3>
+                                    <ul>
+                                        <li>Transform list to dictionary</li>
+                                        <li>Filter data while creating</li>
+                                        <li>Create lookup tables</li>
+                                        <li>Count occurrences</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Dictionary Comprehension Example</div>
+                                    <pre><code># Basic dictionary comprehension
+numbers = [1, 2, 3, 4, 5]
+squares = {num: num**2 for num in numbers}
+print(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# With condition
+even_squares = {num: num**2 for num in numbers if num % 2 == 0}
+print(even_squares)  # {2: 4, 4: 16}
+
+# From two lists
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+people = {name: age for name, age in zip(names, ages)}
+print(people)  # {'Alice': 25, 'Bob': 30, 'Charlie': 35}
+
+# Counting characters
+text = "hello"
+char_count = {char: text.count(char) for char in set(text)}
+print(char_count)  # {'h': 1, 'e': 1, 'l': 2, 'o': 1}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Set Operations -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 13: Set Operations</h1>
+                        <p class="slide-subtitle">Mathematical Set Operations</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Set Operations</h2>
+                                    <p>Sets support mathematical set operations that are useful for data analysis and problem solving.</p>
+                                    
+                                    <h3>Basic Operations:</h3>
+                                    <ul>
+                                        <li><code>union()</code> or <code>|</code>: Combine sets</li>
+                                        <li><code>intersection()</code> or <code>&</code>: Common elements</li>
+                                        <li><code>difference()</code> or <code>-</code>: Elements in first but not second</li>
+                                        <li><code>symmetric_difference()</code> or <code>^</code>: Elements in either but not both</li>
+                                    </ul>
+
+                                    <h3>Set Methods:</h3>
+                                    <ul>
+                                        <li><code>add()</code>: Add element</li>
+                                        <li><code>remove()</code>: Remove element (raises error if not found)</li>
+                                        <li><code>discard()</code>: Remove element (no error if not found)</li>
+                                        <li><code>clear()</code>: Remove all elements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Set Operations Example</div>
+                                    <pre><code>set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+# Union
+union_set = set1 | set2
+print(union_set)  # {1, 2, 3, 4, 5, 6, 7, 8}
+
+# Intersection
+intersection_set = set1 & set2
+print(intersection_set)  # {4, 5}
+
+# Difference
+difference_set = set1 - set2
+print(difference_set)  # {1, 2, 3}
+
+# Symmetric difference
+symmetric_diff = set1 ^ set2
+print(symmetric_diff)  # {1, 2, 3, 6, 7, 8}
+
+# Practical example
+students_math = {"Alice", "Bob", "Charlie"}
+students_science = {"Bob", "David", "Eve"}
+
+both_classes = students_math & students_science
+print(f"Students in both classes: {both_classes}")  # {'Bob'}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Project Planning -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 14: Project Planning</h1>
+                        <p class="slide-subtitle">Planning Your Projects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>How to Plan a Project</h2>
+                                    <p>Good project planning helps you build better applications and avoid common pitfalls.</p>
+                                    
+                                    <h3>Planning Steps:</h3>
+                                    <ul>
+                                        <li><strong>Define the problem:</strong> What are you trying to solve?</li>
+                                        <li><strong>List requirements:</strong> What features do you need?</li>
+                                        <li><strong>Design the solution:</strong> How will you structure your code?</li>
+                                        <li><strong>Break it down:</strong> What are the smaller tasks?</li>
+                                        <li><strong>Test your plan:</strong> Does it make sense?</li>
+                                    </ul>
+
+                                    <h3>Project Structure:</h3>
+                                    <ul>
+                                        <li>Main program file</li>
+                                        <li>Supporting modules</li>
+                                        <li>Data files</li>
+                                        <li>Documentation</li>
+                                        <li>Tests</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Project Structure Example</div>
+                                    <pre><code># myproject/
+# ├── main.py
+# ├── utils.py
+# ├── data/
+# │   └── users.json
+# ├── tests/
+# │   └── test_main.py
+# └── README.md
+
+# main.py
+from utils import load_data, save_data
+
+def main():
+    data = load_data("data/users.json")
+    # Process data
+    save_data(data, "data/users.json")
+
+if __name__ == "__main__":
+    main()
+
+# utils.py
+import json
+
+def load_data(filename):
+    with open(filename, "r") as file:
+        return json.load(file)
+
+def save_data(data, filename):
+    with open(filename, "w") as file:
+        json.dump(data, file, indent=2)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Todo List Project -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 15: Todo List Project</h1>
+                        <p class="slide-subtitle">Building a Complete Application</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Todo List Application</h2>
+                                    <p>Let's build a simple todo list application that demonstrates many Python concepts.</p>
+                                    
+                                    <h3>Features:</h3>
+                                    <ul>
+                                        <li>Add new tasks</li>
+                                        <li>Mark tasks as complete</li>
+                                        <li>List all tasks</li>
+                                        <li>Save tasks to file</li>
+                                        <li>Load tasks from file</li>
+                                    </ul>
+
+                                    <h3>What We'll Learn:</h3>
+                                    <ul>
+                                        <li>Class design and organization</li>
+                                        <li>File I/O operations</li>
+                                        <li>Error handling</li>
+                                        <li>User input processing</li>
+                                        <li>Data persistence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Todo List Example</div>
+                                    <pre><code>import json
+from datetime import datetime
+
+class TodoList:
+    def __init__(self):
+        self.tasks = []
+    
+    def add_task(self, description):
+        task = {
+            "id": len(self.tasks) + 1,
+            "description": description,
+            "completed": False,
+            "created": datetime.now().isoformat()
+        }
+        self.tasks.append(task)
+        print(f"Task added: {description}")
+    
+    def complete_task(self, task_id):
+        for task in self.tasks:
+            if task["id"] == task_id:
+                task["completed"] = True
+                print(f"Task completed: {task['description']}")
+                return
+        print("Task not found!")
+    
+    def list_tasks(self):
+        if not self.tasks:
+            print("No tasks!")
+            return
+        for task in self.tasks:
+            status = "✓" if task["completed"] else " "
+            print(f"{task['id']}. [{status}] {task['description']}")
+    
+    def save_to_file(self, filename):
+        with open(filename, "w") as file:
+            json.dump(self.tasks, file, indent=2)
+        print(f"Tasks saved to {filename}")
+    
+    def load_from_file(self, filename):
+        try:
+            with open(filename, "r") as file:
+                self.tasks = json.load(file)
+            print(f"Tasks loaded from {filename}")
+        except FileNotFoundError:
+            print("No saved tasks found.")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16: Calculator Project -->
+            <div class="slide" data-slide="16">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 16: Calculator Project</h1>
+                        <p class="slide-subtitle">Building a Simple Calculator</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Calculator Application</h2>
+                                    <p>Let's build a calculator that can perform basic mathematical operations.</p>
+                                    
+                                    <h3>Features:</h3>
+                                    <ul>
+                                        <li>Basic arithmetic operations</li>
+                                        <li>Error handling for invalid input</li>
+                                        <li>Continuous operation mode</li>
+                                        <li>Clear and exit options</li>
+                                    </ul>
+
+                                    <h3>What We'll Learn:</h3>
+                                    <ul>
+                                        <li>Function organization</li>
+                                        <li>Input validation</li>
+                                        <li>Error handling</li>
+                                        <li>Menu-driven interfaces</li>
+                                        <li>Loop control</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Calculator Example</div>
+                                    <pre><code>def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+def calculator():
+    while True:
+        print("\nCalculator Menu:")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Multiply")
+        print("4. Divide")
+        print("5. Exit")
+        
+        choice = input("Enter your choice (1-5): ")
+        
+        if choice == "5":
+            print("Goodbye!")
+            break
+        
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            
+            if choice == "1":
+                result = add(num1, num2)
+            elif choice == "2":
+                result = subtract(num1, num2)
+            elif choice == "3":
+                result = multiply(num1, num2)
+            elif choice == "4":
+                result = divide(num1, num2)
+            else:
+                print("Invalid choice!")
+                continue
+            
+            print(f"Result: {result}")
+            
+        except ValueError as e:
+            print(f"Error: {e}")
+        except Exception as e:
+            print(f"An error occurred: {e}")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17: Password Generator Project -->
+            <div class="slide" data-slide="17">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 17: Password Generator Project</h1>
+                        <p class="slide-subtitle">Creating Secure Passwords</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Password Generator</h2>
+                                    <p>Let's build a password generator that creates secure, random passwords.</p>
+                                    
+                                    <h3>Features:</h3>
+                                    <ul>
+                                        <li>Generate random passwords</li>
+                                        <li>Customizable length</li>
+                                        <li>Include/exclude character types</li>
+                                        <li>Password strength checking</li>
+                                    </ul>
+
+                                    <h3>What We'll Learn:</h3>
+                                    <ul>
+                                        <li>Random number generation</li>
+                                        <li>String manipulation</li>
+                                        <li>Conditional logic</li>
+                                        <li>Function parameters</li>
+                                        <li>Security concepts</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Password Generator Example</div>
+                                    <pre><code>import random
+import string
+
+def generate_password(length=12, include_uppercase=True, 
+                     include_numbers=True, include_symbols=True):
+    characters = string.ascii_lowercase
+    
+    if include_uppercase:
+        characters += string.ascii_uppercase
+    if include_numbers:
+        characters += string.digits
+    if include_symbols:
+        characters += "!@#$%^&*()_+-="
+    
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+def check_password_strength(password):
+    score = 0
+    if len(password) >= 8:
+        score += 1
+    if any(c.isupper() for c in password):
+        score += 1
+    if any(c.islower() for c in password):
+        score += 1
+    if any(c.isdigit() for c in password):
+        score += 1
+    if any(c in "!@#$%^&*()_+-=" for c in password):
+        score += 1
+    
+    if score <= 2:
+        return "Weak"
+    elif score <= 3:
+        return "Medium"
+    else:
+        return "Strong"
+
+# Generate and check password
+password = generate_password(16, True, True, True)
+strength = check_password_strength(password)
+print(f"Generated password: {password}")
+print(f"Password strength: {strength}")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: File Manager Project -->
+            <div class="slide" data-slide="18">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 18: File Manager Project</h1>
+                        <p class="slide-subtitle">Managing Files and Directories</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>File Manager Application</h2>
+                                    <p>Let's build a simple file manager that can list, copy, and organize files.</p>
+                                    
+                                    <h3>Features:</h3>
+                                    <ul>
+                                        <li>List files in directory</li>
+                                        <li>Copy files</li>
+                                        <li>Create directories</li>
+                                        <li>File information display</li>
+                                        <li>File search</li>
+                                    </ul>
+
+                                    <h3>What We'll Learn:</h3>
+                                    <ul>
+                                        <li>OS module usage</li>
+                                        <li>File system operations</li>
+                                        <li>Path handling</li>
+                                        <li>Error handling</li>
+                                        <li>System integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">File Manager Example</div>
+                                    <pre><code>import os
+import shutil
+from datetime import datetime
+
+class FileManager:
+    def __init__(self, directory="."):
+        self.directory = directory
+    
+    def list_files(self):
+        try:
+            files = os.listdir(self.directory)
+            for file in files:
+                path = os.path.join(self.directory, file)
+                size = os.path.getsize(path)
+                modified = datetime.fromtimestamp(os.path.getmtime(path))
+                print(f"{file:<20} {size:>8} bytes {modified.strftime('%Y-%m-%d %H:%M')}")
+        except Exception as e:
+            print(f"Error listing files: {e}")
+    
+    def copy_file(self, source, destination):
+        try:
+            shutil.copy2(source, destination)
+            print(f"File copied: {source} -> {destination}")
+        except Exception as e:
+            print(f"Error copying file: {e}")
+    
+    def create_directory(self, name):
+        try:
+            os.makedirs(name, exist_ok=True)
+            print(f"Directory created: {name}")
+        except Exception as e:
+            print(f"Error creating directory: {e}")
+    
+    def get_file_info(self, filename):
+        try:
+            path = os.path.join(self.directory, filename)
+            if os.path.exists(path):
+                size = os.path.getsize(path)
+                modified = datetime.fromtimestamp(os.path.getmtime(path))
+                return {
+                    "name": filename,
+                    "size": size,
+                    "modified": modified
+                }
+        except Exception as e:
+            print(f"Error getting file info: {e}")
+        return None
+
+# Usage
+fm = FileManager()
+fm.list_files()
+fm.create_directory("backup")
+fm.copy_file("data.txt", "backup/data.txt")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: Data Analysis Project -->
+            <div class="slide" data-slide="19">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 19: Data Analysis Project</h1>
+                        <p class="slide-subtitle">Analyzing Data with Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Data Analysis Application</h2>
+                                    <p>Let's build a simple data analysis tool that can process and analyze datasets.</p>
+                                    
+                                    <h3>Features:</h3>
+                                    <ul>
+                                        <li>Load data from CSV files</li>
+                                        <li>Calculate basic statistics</li>
+                                        <li>Find patterns in data</li>
+                                        <li>Generate simple reports</li>
+                                        <li>Data filtering</li>
+                                    </ul>
+
+                                    <h3>What We'll Learn:</h3>
+                                    <ul>
+                                        <li>CSV file processing</li>
+                                        <li>Data structures for analysis</li>
+                                        <li>Statistical calculations</li>
+                                        <li>Data filtering and sorting</li>
+                                        <li>Report generation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Data Analysis Example</div>
+                                    <pre><code>import csv
+from collections import defaultdict
+
+class DataAnalyzer:
+    def __init__(self):
+        self.data = []
+    
+    def load_csv(self, filename):
+        try:
+            with open(filename, 'r') as file:
+                reader = csv.DictReader(file)
+                self.data = list(reader)
+            print(f"Loaded {len(self.data)} records from {filename}")
+        except Exception as e:
+            print(f"Error loading file: {e}")
+    
+    def calculate_stats(self, column):
+        try:
+            values = [float(row[column]) for row in self.data if row[column]]
+            if values:
+                return {
+                    "count": len(values),
+                    "sum": sum(values),
+                    "average": sum(values) / len(values),
+                    "min": min(values),
+                    "max": max(values)
+                }
+        except Exception as e:
+            print(f"Error calculating stats: {e}")
+        return None
+    
+    def group_by(self, group_column, value_column):
+        groups = defaultdict(list)
+        for row in self.data:
+            if row[group_column] and row[value_column]:
+                groups[row[group_column]].append(float(row[value_column]))
+        
+        result = {}
+        for group, values in groups.items():
+            result[group] = {
+                "count": len(values),
+                "average": sum(values) / len(values)
+            }
+        return result
+    
+    def filter_data(self, column, value):
+        return [row for row in self.data if row.get(column) == value]
+
+# Usage
+analyzer = DataAnalyzer()
+analyzer.load_csv("sales.csv")
+stats = analyzer.calculate_stats("amount")
+print(f"Sales statistics: {stats}")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 20: Web Scraper Project -->
+            <div class="slide" data-slide="20">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 20: Web Scraper Project</h1>
+                        <p class="slide-subtitle">Extracting Data from Websites</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Web Scraper Application</h2>
+                                    <p>Let's build a simple web scraper that can extract information from websites.</p>
+                                    
+                                    <h3>Features:</h3>
+                                    <ul>
+                                        <li>Fetch web pages</li>
+                                        <li>Extract specific data</li>
+                                        <li>Save data to files</li>
+                                        <li>Handle different content types</li>
+                                        <li>Error handling for network issues</li>
+                                    </ul>
+
+                                    <h3>What We'll Learn:</h3>
+                                    <ul>
+                                        <li>HTTP requests</li>
+                                        <li>HTML parsing</li>
+                                        <li>Regular expressions</li>
+                                        <li>Network error handling</li>
+                                        <li>Data extraction techniques</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Web Scraper Example</div>
+                                    <pre><code>import requests
+import re
+from urllib.parse import urljoin, urlparse
+
+class WebScraper:
+    def __init__(self):
+        self.session = requests.Session()
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        })
+    
+    def fetch_page(self, url):
+        try:
+            response = self.session.get(url)
+            response.raise_for_status()
+            return response.text
+        except Exception as e:
+            print(f"Error fetching {url}: {e}")
+            return None
+    
+    def extract_links(self, html, base_url):
+        links = re.findall(r'href=["\']([^"\']+)["\']', html)
+        absolute_links = []
+        for link in links:
+            absolute_link = urljoin(base_url, link)
+            if urlparse(absolute_link).netloc == urlparse(base_url).netloc:
+                absolute_links.append(absolute_link)
+        return absolute_links
+    
+    def extract_text(self, html):
+        # Remove HTML tags
+        text = re.sub(r'<[^>]+>', '', html)
+        # Remove extra whitespace
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+    
+    def save_data(self, data, filename):
+        try:
+            with open(filename, 'w', encoding='utf-8') as file:
+                file.write(data)
+            print(f"Data saved to {filename}")
+        except Exception as e:
+            print(f"Error saving data: {e}")
+
+# Usage
+scraper = WebScraper()
+html = scraper.fetch_page("https://example.com")
+if html:
+    text = scraper.extract_text(html)
+    scraper.save_data(text, "extracted_text.txt")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 21: Testing Your Code -->
+            <div class="slide" data-slide="21">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 21: Testing Your Code</h1>
+                        <p class="slide-subtitle">Writing Tests for Your Projects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Why Test Your Code?</h2>
+                                    <p>Testing helps ensure your code works correctly and makes it easier to find and fix bugs.</p>
+                                    
+                                    <h3>Types of Tests:</h3>
+                                    <ul>
+                                        <li><strong>Unit tests:</strong> Test individual functions</li>
+                                        <li><strong>Integration tests:</strong> Test how components work together</li>
+                                        <li><strong>Manual tests:</strong> Test by running the program</li>
+                                        <li><strong>Automated tests:</strong> Tests that run automatically</li>
+                                    </ul>
+
+                                    <h3>Testing Best Practices:</h3>
+                                    <ul>
+                                        <li>Write tests as you write code</li>
+                                        <li>Test edge cases and error conditions</li>
+                                        <li>Keep tests simple and focused</li>
+                                        <li>Use descriptive test names</li>
+                                        <li>Test both valid and invalid inputs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Testing Example</div>
+                                    <pre><code>import unittest
+
+def add_numbers(a, b):
+    return a + b
+
+def divide_numbers(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+class TestMathFunctions(unittest.TestCase):
+    def test_add_numbers(self):
+        self.assertEqual(add_numbers(2, 3), 5)
+        self.assertEqual(add_numbers(-1, 1), 0)
+        self.assertEqual(add_numbers(0, 0), 0)
+    
+    def test_divide_numbers(self):
+        self.assertEqual(divide_numbers(6, 2), 3)
+        self.assertEqual(divide_numbers(5, 2), 2.5)
+    
+    def test_divide_by_zero(self):
+        with self.assertRaises(ValueError):
+            divide_numbers(5, 0)
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22: Debugging Techniques -->
+            <div class="slide" data-slide="22">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 22: Debugging Techniques</h1>
+                        <p class="slide-subtitle">Finding and Fixing Bugs</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Debugging Your Code</h2>
+                                    <p>Debugging is the process of finding and fixing errors in your code. Good debugging skills are essential for any programmer.</p>
+                                    
+                                    <h3>Debugging Techniques:</h3>
+                                    <ul>
+                                        <li><strong>Print statements:</strong> Add print() to see variable values</li>
+                                        <li><strong>Logging:</strong> Use the logging module for better output</li>
+                                        <li><strong>Breakpoints:</strong> Use debugger to pause execution</li>
+                                        <li><strong>Step through code:</strong> Execute code line by line</li>
+                                        <li><strong>Check error messages:</strong> Read and understand error output</li>
+                                    </ul>
+
+                                    <h3>Common Debugging Tools:</h3>
+                                    <ul>
+                                        <li>Python debugger (pdb)</li>
+                                        <li>IDE debuggers (PyCharm, VS Code)</li>
+                                        <li>Print debugging</li>
+                                        <li>Logging module</li>
+                                        <li>Assert statements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Debugging Example</div>
+                                    <pre><code>import logging
+
+# Set up logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
+def calculate_average(numbers):
+    logger.debug(f"Input numbers: {numbers}")
+    
+    if not numbers:
+        logger.warning("Empty list provided")
+        return 0
+    
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    
+    logger.debug(f"Total: {total}, Count: {count}, Average: {average}")
+    return average
+
+# Test the function
+try:
+    result = calculate_average([1, 2, 3, 4, 5])
+    print(f"Average: {result}")
+    
+    result = calculate_average([])
+    print(f"Average: {result}")
+    
+except Exception as e:
+    logger.error(f"Error occurred: {e}")
+
+# Using assert for debugging
+def divide(a, b):
+    assert b != 0, "Cannot divide by zero"
+    return a / b</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 23: Code Optimization -->
+            <div class="slide" data-slide="23">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 23: Code Optimization</h1>
+                        <p class="slide-subtitle">Making Your Code Faster</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Optimizing Your Code</h2>
+                                    <p>Code optimization is about making your programs run faster and use less memory while maintaining readability.</p>
+                                    
+                                    <h3>Optimization Techniques:</h3>
+                                    <ul>
+                                        <li><strong>Use appropriate data structures:</strong> Lists vs sets vs dictionaries</li>
+                                        <li><strong>Avoid unnecessary loops:</strong> Use list comprehensions</li>
+                                        <li><strong>Cache results:</strong> Store computed values</li>
+                                        <li><strong>Use built-in functions:</strong> They're usually faster</li>
+                                        <li><strong>Profile your code:</strong> Find bottlenecks</li>
+                                    </ul>
+
+                                    <h3>Performance Tips:</h3>
+                                    <ul>
+                                        <li>Choose the right algorithm</li>
+                                        <li>Minimize function calls in loops</li>
+                                        <li>Use local variables instead of global</li>
+                                        <li>Avoid creating objects in loops</li>
+                                        <li>Use generators for large datasets</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Optimization Example</div>
+                                    <pre><code>import time
+
+# Slow version
+def slow_find_duplicates(numbers):
+    duplicates = []
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] == numbers[j] and numbers[i] not in duplicates:
+                duplicates.append(numbers[i])
+    return duplicates
+
+# Fast version
+def fast_find_duplicates(numbers):
+    seen = set()
+    duplicates = set()
+    for num in numbers:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+    return list(duplicates)
+
+# Test performance
+numbers = [1, 2, 3, 4, 5, 1, 2, 6, 7, 8, 9, 1] * 1000
+
+start = time.time()
+result1 = slow_find_duplicates(numbers)
+end = time.time()
+print(f"Slow version: {end - start:.4f} seconds")
+
+start = time.time()
+result2 = fast_find_duplicates(numbers)
+end = time.time()
+print(f"Fast version: {end - start:.4f} seconds")
+
+# List comprehension vs loop
+# Slow
+squares = []
+for i in range(1000):
+    squares.append(i ** 2)
+
+# Fast
+squares = [i ** 2 for i in range(1000)]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Best Practices -->
+            <div class="slide" data-slide="24">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Slide 24: Best Practices</h1>
+                        <p class="slide-subtitle">Writing Professional Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Python Best Practices</h2>
+                                    <p>Following best practices makes your code more readable, maintainable, and professional.</p>
+                                    
+                                    <h3>Code Style:</h3>
+                                    <ul>
+                                        <li>Follow PEP 8 style guide</li>
+                                        <li>Use meaningful variable names</li>
+                                        <li>Keep functions small and focused</li>
+                                        <li>Add comments for complex logic</li>
+                                        <li>Use consistent indentation</li>
+                                    </ul>
+
+                                    <h3>Code Organization:</h3>
+                                    <ul>
+                                        <li>Separate concerns into different modules</li>
+                                        <li>Use classes to organize related data and functions</li>
+                                        <li>Keep main logic separate from utility functions</li>
+                                        <li>Use configuration files for settings</li>
+                                        <li>Structure projects logically</li>
+                                    </ul>
+
+                                    <h3>Error Handling:</h3>
+                                    <ul>
+                                        <li>Always handle potential errors</li>
+                                        <li>Provide meaningful error messages</li>
+                                        <li>Use specific exception types</li>
+                                        <li>Log errors for debugging</li>
+                                        <li>Don't ignore exceptions silently</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Best Practices Example</div>
+                                    <pre><code># Good: Clear function names and documentation
+def calculate_monthly_payment(principal, annual_rate, years):
+    """
+    Calculate monthly mortgage payment.
+    
+    Args:
+        principal (float): Loan amount
+        annual_rate (float): Annual interest rate (as decimal)
+        years (int): Loan term in years
+    
+    Returns:
+        float: Monthly payment amount
+    """
+    monthly_rate = annual_rate / 12
+    num_payments = years * 12
+    
+    if monthly_rate == 0:
+        return principal / num_payments
+    
+    payment = principal * (monthly_rate * (1 + monthly_rate)**num_payments) / \
+              ((1 + monthly_rate)**num_payments - 1)
+    return round(payment, 2)
+
+# Good: Proper error handling
+def safe_divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        raise ValueError("Cannot divide by zero")
+    except TypeError:
+        raise TypeError("Both arguments must be numbers")
+
+# Good: Configuration
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+database_url = config.get('Database', 'url')
+api_key = config.get('API', 'key')</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 25: Course Summary -->
+            <div class="slide" data-slide="25">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎉 Slide 25: Course Summary</h1>
+                        <p class="slide-subtitle">Congratulations!</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>You've Completed Projects & Advanced Topics!</h2>
+                                    <ul>
+                                        <li>Learned error handling and exception management</li>
+                                        <li>Explored file operations and data persistence</li>
+                                        <li>Built complete applications from scratch</li>
+                                        <li>Mastered advanced data structures</li>
+                                        <li>Discovered testing and debugging techniques</li>
+                                        <li>Applied best practices for professional code</li>
+                                    </ul>
+                                    <p>You now have the skills to build real-world Python applications!</p>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Next Steps</div>
+                                    <pre><code># Continue building projects!
+# Try these ideas:
+# - Weather app using APIs
+# - Database application
+# - GUI application with tkinter
+# - Web application with Flask
+# - Data visualization project
+
+print("Keep coding and building amazing projects!")
+print("The best way to learn is by doing!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

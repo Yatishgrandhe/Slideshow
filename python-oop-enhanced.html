@@ -112,7 +112,1512 @@ print(introduce(student))</code></pre>
                 </div>
             </div>
 
-            <!-- Continue with slides 2-25... -->
+            <!-- Slide 2: What is Object-Oriented Programming? -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 2: What is Object-Oriented Programming?</h1>
+                        <p class="slide-subtitle">Understanding OOP Concepts</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>OOP Explained Simply</h2>
+                                    <p>Object-Oriented Programming is a way of organizing code by creating "objects" that contain both data and the functions that work with that data.</p>
+                                    
+                                    <h3>Key Concepts:</h3>
+                                    <ul>
+                                        <li><strong>Class:</strong> A blueprint or template for creating objects</li>
+                                        <li><strong>Object:</strong> An instance of a class (like a car made from a blueprint)</li>
+                                        <li><strong>Attributes:</strong> Data stored in objects (like a car's color, model)</li>
+                                        <li><strong>Methods:</strong> Functions that belong to objects (like a car's ability to start)</li>
+                                    </ul>
+
+                                    <h3>Why Use OOP?</h3>
+                                    <ul>
+                                        <li>Organizes code better</li>
+                                        <li>Makes code reusable</li>
+                                        <li>Models real-world concepts</li>
+                                        <li>Easier to maintain and extend</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">OOP Example</div>
+                                    <pre><code># Class (blueprint)
+class Car:
+    def __init__(self, color, model):
+        self.color = color    # Attribute
+        self.model = model    # Attribute
+    
+    def start(self):          # Method
+        print(f"{self.color} {self.model} is starting!")
+
+# Object (instance)
+my_car = Car("red", "Toyota")
+my_car.start()  # Output: red Toyota is starting!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Classes and Objects -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 3: Classes and Objects</h1>
+                        <p class="slide-subtitle">Creating Your First Class</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Understanding Classes and Objects</h2>
+                                    <p>Think of a class as a blueprint and objects as things made from that blueprint.</p>
+                                    
+                                    <h3>Class Definition:</h3>
+                                    <ul>
+                                        <li>Use the <code>class</code> keyword</li>
+                                        <li>Class names start with capital letters</li>
+                                        <li>Use <code>__init__</code> method to set up objects</li>
+                                        <li><code>self</code> refers to the object being created</li>
+                                    </ul>
+
+                                    <h3>Creating Objects:</h3>
+                                    <ul>
+                                        <li>Use the class name like a function</li>
+                                        <li>Pass arguments to <code>__init__</code></li>
+                                        <li>Each object is independent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Class and Object Example</div>
+                                    <pre><code>class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        print(f"{self.name} says woof!")
+
+# Creating objects
+dog1 = Dog("Buddy", 3)
+dog2 = Dog("Max", 5)
+
+dog1.bark()  # Output: Buddy says woof!
+dog2.bark()  # Output: Max says woof!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: The __init__ Method -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 4: The __init__ Method</h1>
+                        <p class="slide-subtitle">Setting Up Objects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is __init__?</h2>
+                                    <p>The <code>__init__</code> method is a special method that runs when you create a new object. It's like a setup function.</p>
+                                    
+                                    <h3>Key Points:</h3>
+                                    <ul>
+                                        <li>Always called when creating a new object</li>
+                                        <li>Used to set initial values for attributes</li>
+                                        <li><code>self</code> is always the first parameter</li>
+                                        <li>Can take additional parameters</li>
+                                    </ul>
+
+                                    <h3>Why Use __init__?</h3>
+                                    <ul>
+                                        <li>Ensures objects start with proper values</li>
+                                        <li>Makes object creation consistent</li>
+                                        <li>Reduces code repetition</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">__init__ Example</div>
+                                    <pre><code>class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+        self.is_passing = grade >= 60
+
+student1 = Student("Alice", 85)
+student2 = Student("Bob", 55)
+
+print(f"{student1.name}: {student1.grade}")  # Alice: 85
+print(f"{student2.name}: {student2.grade}")  # Bob: 55
+print(f"Alice passing: {student1.is_passing}")  # True
+print(f"Bob passing: {student2.is_passing}")    # False</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Attributes -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 5: Attributes</h1>
+                        <p class="slide-subtitle">Storing Data in Objects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Attributes?</h2>
+                                    <p>Attributes are variables that store data in objects. They're like properties or characteristics of the object.</p>
+                                    
+                                    <h3>Types of Attributes:</h3>
+                                    <ul>
+                                        <li><strong>Instance attributes:</strong> Belong to individual objects</li>
+                                        <li><strong>Class attributes:</strong> Shared by all objects of the class</li>
+                                        <li>Access with dot notation: <code>object.attribute</code></li>
+                                        <li>Can be any data type</li>
+                                    </ul>
+
+                                    <h3>Setting and Getting Attributes:</h3>
+                                    <ul>
+                                        <li>Set in <code>__init__</code> or methods</li>
+                                        <li>Access from outside the class</li>
+                                        <li>Can be modified after creation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Attributes Example</div>
+                                    <pre><code>class Book:
+    # Class attribute (shared by all books)
+    library_name = "My Library"
+    
+    def __init__(self, title, author):
+        # Instance attributes (unique to each book)
+        self.title = title
+        self.author = author
+        self.is_checked_out = False
+
+book1 = Book("Python Guide", "John Doe")
+book2 = Book("Java Basics", "Jane Smith")
+
+print(book1.title)  # Python Guide
+print(book2.title)  # Java Basics
+print(book1.library_name)  # My Library
+print(book2.library_name)  # My Library
+
+# Modifying attributes
+book1.is_checked_out = True
+print(book1.is_checked_out)  # True</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Methods -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 6: Methods</h1>
+                        <p class="slide-subtitle">Functions That Belong to Objects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Methods?</h2>
+                                    <p>Methods are functions that belong to objects. They define what objects can do.</p>
+                                    
+                                    <h3>Method Basics:</h3>
+                                    <ul>
+                                        <li>Defined inside the class</li>
+                                        <li>Always have <code>self</code> as first parameter</li>
+                                        <li>Can access object's attributes</li>
+                                        <li>Called with dot notation</li>
+                                    </ul>
+
+                                    <h3>Types of Methods:</h3>
+                                    <ul>
+                                        <li><strong>Instance methods:</strong> Work with object data</li>
+                                        <li><strong>Class methods:</strong> Work with class data</li>
+                                        <li><strong>Static methods:</strong> Don't need object data</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Methods Example</div>
+                                    <pre><code>class BankAccount:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ${amount}")
+    
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            print(f"Withdrew ${amount}")
+        else:
+            print("Insufficient funds")
+    
+    def check_balance(self):
+        print(f"Balance: ${self.balance}")
+
+account = BankAccount("Alice", 1000)
+account.deposit(500)
+account.withdraw(200)
+account.check_balance()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: The self Parameter -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 7: The self Parameter</h1>
+                        <p class="slide-subtitle">Understanding self</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is self?</h2>
+                                    <p><code>self</code> is a special parameter that refers to the object itself. It's how methods know which object they're working with.</p>
+                                    
+                                    <h3>Key Points:</h3>
+                                    <ul>
+                                        <li><code>self</code> is always the first parameter in methods</li>
+                                        <li>Python automatically passes the object as <code>self</code></li>
+                                        <li>Use <code>self</code> to access object attributes</li>
+                                        <li>The name "self" is a convention (you could use another name)</li>
+                                    </ul>
+
+                                    <h3>Why Use self?</h3>
+                                    <ul>
+                                        <li>Methods need to know which object they're working with</li>
+                                        <li>Allows access to object's attributes</li>
+                                        <li>Enables object-specific behavior</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">self Example</div>
+                                    <pre><code>class Person:
+    def __init__(self, name, age):
+        self.name = name  # self refers to this object
+        self.age = age
+    
+    def introduce(self):
+        print(f"Hi, I'm {self.name}")  # self.name accesses this object's name
+    
+    def have_birthday(self):
+        self.age += 1  # self.age modifies this object's age
+        print(f"Happy birthday! I'm now {self.age}")
+
+person1 = Person("Alice", 25)
+person2 = Person("Bob", 30)
+
+person1.introduce()  # Hi, I'm Alice
+person2.introduce()  # Hi, I'm Bob
+
+person1.have_birthday()  # Happy birthday! I'm now 26</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Creating Multiple Objects -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 8: Creating Multiple Objects</h1>
+                        <p class="slide-subtitle">Working with Many Objects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Multiple Objects from One Class</h2>
+                                    <p>You can create many objects from the same class. Each object is independent and has its own data.</p>
+                                    
+                                    <h3>Key Concepts:</h3>
+                                    <ul>
+                                        <li>Each object has its own attributes</li>
+                                        <li>Objects can have different values</li>
+                                        <li>Methods work with each object's data</li>
+                                        <li>Objects don't interfere with each other</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Organize related data together</li>
+                                        <li>Reuse code for similar objects</li>
+                                        <li>Keep data separate and organized</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Multiple Objects Example</div>
+                                    <pre><code>class Product:
+    def __init__(self, name, price, stock):
+        self.name = name
+        self.price = price
+        self.stock = stock
+    
+    def display_info(self):
+        print(f"{self.name}: ${self.price} ({self.stock} in stock)")
+    
+    def sell(self, quantity):
+        if self.stock >= quantity:
+            self.stock -= quantity
+            return self.price * quantity
+        else:
+            print("Not enough stock")
+            return 0
+
+# Creating multiple products
+laptop = Product("Laptop", 999, 5)
+phone = Product("Phone", 599, 10)
+tablet = Product("Tablet", 399, 8)
+
+laptop.display_info()  # Laptop: $999 (5 in stock)
+phone.display_info()    # Phone: $599 (10 in stock)
+tablet.display_info()   # Tablet: $399 (8 in stock)
+
+# Each object maintains its own data
+laptop.sell(2)
+laptop.display_info()  # Laptop: $999 (3 in stock)
+phone.display_info()    # Phone: $599 (10 in stock) - unchanged</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Class vs Instance -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 9: Class vs Instance</h1>
+                        <p class="slide-subtitle">Understanding the Difference</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Class Attributes vs Instance Attributes</h2>
+                                    <p>Class attributes belong to the class itself and are shared by all objects. Instance attributes belong to individual objects.</p>
+                                    
+                                    <h3>Class Attributes:</h3>
+                                    <ul>
+                                        <li>Defined outside <code>__init__</code></li>
+                                        <li>Shared by all objects of the class</li>
+                                        <li>Accessed with <code>Class.attribute</code></li>
+                                        <li>Good for data that's the same for all objects</li>
+                                    </ul>
+
+                                    <h3>Instance Attributes:</h3>
+                                    <ul>
+                                        <li>Defined in <code>__init__</code> or methods</li>
+                                        <li>Unique to each object</li>
+                                        <li>Accessed with <code>object.attribute</code></li>
+                                        <li>Good for data that varies between objects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Class vs Instance Example</div>
+                                    <pre><code>class Employee:
+    # Class attribute (shared by all employees)
+    company = "Tech Corp"
+    
+    def __init__(self, name, salary):
+        # Instance attributes (unique to each employee)
+        self.name = name
+        self.salary = salary
+
+emp1 = Employee("Alice", 50000)
+emp2 = Employee("Bob", 60000)
+
+print(emp1.name)      # Alice
+print(emp2.name)      # Bob
+print(emp1.company)   # Tech Corp
+print(emp2.company)   # Tech Corp
+
+# Changing class attribute affects all objects
+Employee.company = "New Tech Corp"
+print(emp1.company)   # New Tech Corp
+print(emp2.company)   # New Tech Corp
+
+# Changing instance attribute only affects that object
+emp1.salary = 55000
+print(emp1.salary)    # 55000
+print(emp2.salary)    # 60000 (unchanged)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Method Types -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 10: Method Types</h1>
+                        <p class="slide-subtitle">Different Kinds of Methods</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Types of Methods in Python</h2>
+                                    <p>Python has different types of methods that serve different purposes.</p>
+                                    
+                                    <h3>Instance Methods:</h3>
+                                    <ul>
+                                        <li>Most common type of method</li>
+                                        <li>Take <code>self</code> as first parameter</li>
+                                        <li>Can access and modify object data</li>
+                                        <li>Called on specific objects</li>
+                                    </ul>
+
+                                    <h3>Class Methods:</h3>
+                                    <ul>
+                                        <li>Use <code>@classmethod</code> decorator</li>
+                                        <li>Take <code>cls</code> as first parameter</li>
+                                        <li>Work with class data, not instance data</li>
+                                        <li>Can be called on class or instance</li>
+                                    </ul>
+
+                                    <h3>Static Methods:</h3>
+                                    <ul>
+                                        <li>Use <code>@staticmethod</code> decorator</li>
+                                        <li>Don't take <code>self</code> or <code>cls</code></li>
+                                        <li>Don't access object or class data</li>
+                                        <li>Like regular functions inside a class</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Method Types Example</div>
+                                    <pre><code>class MathHelper:
+    pi = 3.14159
+    
+    def __init__(self, value):
+        self.value = value
+    
+    # Instance method
+    def square(self):
+        return self.value ** 2
+    
+    # Class method
+    @classmethod
+    def get_pi(cls):
+        return cls.pi
+    
+    # Static method
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+helper = MathHelper(5)
+print(helper.square())        # 25 (instance method)
+print(MathHelper.get_pi())    # 3.14159 (class method)
+print(MathHelper.add(3, 4))   # 7 (static method)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Inheritance -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 11: Inheritance</h1>
+                        <p class="slide-subtitle">Creating New Classes from Existing Ones</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Inheritance?</h2>
+                                    <p>Inheritance allows you to create a new class that inherits all the attributes and methods from an existing class. The new class can add its own features or modify existing ones.</p>
+                                    
+                                    <h3>Key Terms:</h3>
+                                    <ul>
+                                        <li><strong>Parent class (superclass):</strong> The class being inherited from</li>
+                                        <li><strong>Child class (subclass):</strong> The class that inherits</li>
+                                        <li><strong>Inheritance:</strong> The process of creating a child class</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Reuse code from parent class</li>
+                                        <li>Add new features to child class</li>
+                                        <li>Override parent methods if needed</li>
+                                        <li>Create a hierarchy of classes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Inheritance Example</div>
+                                    <pre><code># Parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def speak(self):
+        return "Some sound"
+
+# Child class inherits from Animal
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says meow!"
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+print(dog.speak())  # Buddy says woof!
+print(cat.speak())  # Whiskers says meow!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: The super() Function -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 12: The super() Function</h1>
+                        <p class="slide-subtitle">Calling Parent Class Methods</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Using super()</h2>
+                                    <p>The <code>super()</code> function allows you to call methods from the parent class. This is especially useful in the <code>__init__</code> method.</p>
+                                    
+                                    <h3>When to Use super():</h3>
+                                    <ul>
+                                        <li>In <code>__init__</code> to call parent's constructor</li>
+                                        <li>When you want to extend parent's behavior</li>
+                                        <li>To avoid duplicating code</li>
+                                        <li>To maintain the parent's functionality</li>
+                                    </ul>
+
+                                    <h3>Syntax:</h3>
+                                    <ul>
+                                        <li><code>super().__init__(args)</code> - Call parent's __init__</li>
+                                        <li><code>super().method_name(args)</code> - Call parent's method</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">super() Example</div>
+                                    <pre><code>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def introduce(self):
+        return f"Hi, I'm {self.name}"
+
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        # Call parent's __init__ first
+        super().__init__(name, age)
+        # Add student-specific attribute
+        self.student_id = student_id
+    
+    def introduce(self):
+        # Call parent's introduce method
+        parent_intro = super().introduce()
+        return f"{parent_intro} and my student ID is {self.student_id}"
+
+student = Student("Alice", 20, "12345")
+print(student.introduce())  # Hi, I'm Alice and my student ID is 12345</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Method Overriding -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 13: Method Overriding</h1>
+                        <p class="slide-subtitle">Customizing Parent Methods</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Method Overriding?</h2>
+                                    <p>Method overriding happens when a child class defines a method with the same name as a method in the parent class. The child's method replaces the parent's method.</p>
+                                    
+                                    <h3>When to Override:</h3>
+                                    <ul>
+                                        <li>When you want different behavior</li>
+                                        <li>To customize parent's functionality</li>
+                                        <li>To add child-specific features</li>
+                                        <li>To provide more specific implementation</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Keep the same method signature</li>
+                                        <li>Use <code>super()</code> when appropriate</li>
+                                        <li>Document why you're overriding</li>
+                                        <li>Test that the override works correctly</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Method Overriding Example</div>
+                                    <pre><code>class Shape:
+    def __init__(self, color):
+        self.color = color
+    
+    def area(self):
+        return "Unknown area"
+    
+    def describe(self):
+        return f"A {self.color} shape"
+
+class Circle(Shape):
+    def __init__(self, color, radius):
+        super().__init__(color)
+        self.radius = radius
+    
+    def area(self):
+        import math
+        return math.pi * self.radius ** 2
+    
+    def describe(self):
+        return f"A {self.color} circle with radius {self.radius}"
+
+circle = Circle("red", 5)
+print(circle.area())      # 78.54...
+print(circle.describe())  # A red circle with radius 5</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Polymorphism -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 14: Polymorphism</h1>
+                        <p class="slide-subtitle">Using Objects of Different Types</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Polymorphism?</h2>
+                                    <p>Polymorphism means "many forms." In programming, it allows you to use objects of different classes in the same way, as long as they have the same interface (methods).</p>
+                                    
+                                    <h3>Types of Polymorphism:</h3>
+                                    <ul>
+                                        <li><strong>Method overriding:</strong> Child classes override parent methods</li>
+                                        <li><strong>Method overloading:</strong> Same method with different parameters</li>
+                                        <li><strong>Duck typing:</strong> "If it walks like a duck, it's a duck"</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Write more flexible code</li>
+                                        <li>Handle different object types uniformly</li>
+                                        <li>Make code more maintainable</li>
+                                        <li>Support future extensions</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Polymorphism Example</div>
+                                    <pre><code>class Animal:
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+class Bird(Animal):
+    def speak(self):
+        return "Tweet!"
+
+# Polymorphic function
+def make_sound(animal):
+    return animal.speak()
+
+# Different objects, same interface
+animals = [Dog(), Cat(), Bird()]
+for animal in animals:
+    print(make_sound(animal))  # Woof! Meow! Tweet!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Encapsulation -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 15: Encapsulation</h1>
+                        <p class="slide-subtitle">Protecting Data and Methods</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Encapsulation?</h2>
+                                    <p>Encapsulation is the practice of bundling data and methods that work on that data within a single unit (class) and controlling access to that data.</p>
+                                    
+                                    <h3>Access Modifiers:</h3>
+                                    <ul>
+                                        <li><strong>Public:</strong> Accessible from anywhere (default in Python)</li>
+                                        <li><strong>Protected:</strong> Accessible within class and subclasses (single underscore)</li>
+                                        <li><strong>Private:</strong> Accessible only within class (double underscore)</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Protect data from external interference</li>
+                                        <li>Control how data is accessed and modified</li>
+                                        <li>Make code more maintainable</li>
+                                        <li>Provide a clean interface</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Encapsulation Example</div>
+                                    <pre><code>class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # Private attribute
+    
+    def get_balance(self):
+        return self.__balance
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return True
+        return False
+    
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            return True
+        return False
+
+account = BankAccount(1000)
+print(account.get_balance())  # 1000
+account.deposit(500)
+print(account.get_balance())  # 1500
+# account.__balance = 0  # Error! Can't access private attribute</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16: Properties -->
+            <div class="slide" data-slide="16">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 16: Properties</h1>
+                        <p class="slide-subtitle">Controlled Attribute Access</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Properties?</h2>
+                                    <p>Properties allow you to control how attributes are accessed and modified. They let you add validation, computation, or other logic when getting or setting values.</p>
+                                    
+                                    <h3>Property Decorators:</h3>
+                                    <ul>
+                                        <li><code>@property</code>: Makes a method look like an attribute</li>
+                                        <li><code>@attribute.setter</code>: Controls how attribute is set</li>
+                                        <li><code>@attribute.deleter</code>: Controls attribute deletion</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Add validation when setting values</li>
+                                        <li>Compute values on-the-fly</li>
+                                        <li>Maintain backward compatibility</li>
+                                        <li>Control access to attributes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Properties Example</div>
+                                    <pre><code>class Temperature:
+    def __init__(self):
+        self._celsius = 0
+    
+    @property
+    def celsius(self):
+        return self._celsius
+    
+    @celsius.setter
+    def celsius(self, value):
+        if value < -273.15:
+            raise ValueError("Temperature too low!")
+        self._celsius = value
+    
+    @property
+    def fahrenheit(self):
+        return self._celsius * 9/5 + 32
+    
+    @fahrenheit.setter
+    def fahrenheit(self, value):
+        self.celsius = (value - 32) * 5/9
+
+temp = Temperature()
+temp.celsius = 25
+print(temp.fahrenheit)  # 77.0
+temp.fahrenheit = 100
+print(temp.celsius)     # 37.777...</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17: Class Methods and Static Methods -->
+            <div class="slide" data-slide="17">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 17: Class Methods and Static Methods</h1>
+                        <p class="slide-subtitle">Alternative Method Types</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Class Methods vs Static Methods</h2>
+                                    <p>Class methods and static methods provide alternative ways to define methods that don't need instance data.</p>
+                                    
+                                    <h3>Class Methods:</h3>
+                                    <ul>
+                                        <li>Use <code>@classmethod</code> decorator</li>
+                                        <li>First parameter is <code>cls</code> (the class)</li>
+                                        <li>Can access class attributes</li>
+                                        <li>Often used for alternative constructors</li>
+                                    </ul>
+
+                                    <h3>Static Methods:</h3>
+                                    <ul>
+                                        <li>Use <code>@staticmethod</code> decorator</li>
+                                        <li>No automatic first parameter</li>
+                                        <li>Can't access class or instance data</li>
+                                        <li>Like regular functions inside a class</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Class and Static Methods Example</div>
+                                    <pre><code>class Date:
+    def __init__(self, year, month, day):
+        self.year = year
+        self.month = month
+        self.day = day
+    
+    @classmethod
+    def from_string(cls, date_string):
+        year, month, day = map(int, date_string.split('-'))
+        return cls(year, month, day)
+    
+    @staticmethod
+    def is_valid_date(year, month, day):
+        return 1 <= month <= 12 and 1 <= day <= 31
+
+# Using class method
+date1 = Date.from_string("2023-12-25")
+
+# Using static method
+print(Date.is_valid_date(2023, 13, 1))  # False
+print(Date.is_valid_date(2023, 12, 25)) # True</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: Multiple Inheritance -->
+            <div class="slide" data-slide="18">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 18: Multiple Inheritance</h1>
+                        <p class="slide-subtitle">Inheriting from Multiple Classes</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Multiple Inheritance?</h2>
+                                    <p>Multiple inheritance allows a class to inherit from more than one parent class. The child class gets all the attributes and methods from all parent classes.</p>
+                                    
+                                    <h3>Syntax:</h3>
+                                    <ul>
+                                        <li><code>class Child(Parent1, Parent2):</code></li>
+                                        <li>Order matters for method resolution</li>
+                                        <li>Use <code>super()</code> carefully</li>
+                                    </ul>
+
+                                    <h3>Method Resolution Order (MRO):</h3>
+                                    <ul>
+                                        <li>Python determines which method to call</li>
+                                        <li>Checks child class first</li>
+                                        <li>Then checks parent classes in order</li>
+                                        <li>Can be complex with multiple inheritance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Multiple Inheritance Example</div>
+                                    <pre><code>class Flyable:
+    def fly(self):
+        return "Flying high!"
+
+class Swimmable:
+    def swim(self):
+        return "Swimming deep!"
+
+class Duck(Flyable, Swimmable):
+    def __init__(self, name):
+        self.name = name
+    
+    def quack(self):
+        return f"{self.name} says quack!"
+
+duck = Duck("Donald")
+print(duck.fly())   # Flying high!
+print(duck.swim())  # Swimming deep!
+print(duck.quack()) # Donald says quack!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: Abstract Classes -->
+            <div class="slide" data-slide="19">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 19: Abstract Classes</h1>
+                        <p class="slide-subtitle">Defining Interfaces</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Abstract Classes?</h2>
+                                    <p>Abstract classes define a common interface for a group of related classes. They can't be instantiated directly but provide a template for subclasses.</p>
+                                    
+                                    <h3>Key Features:</h3>
+                                    <ul>
+                                        <li>Use <code>from abc import ABC, abstractmethod</code></li>
+                                        <li>Inherit from <code>ABC</code> (Abstract Base Class)</li>
+                                        <li>Use <code>@abstractmethod</code> decorator</li>
+                                        <li>Subclasses must implement abstract methods</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Define common interface</li>
+                                        <li>Ensure subclasses implement required methods</li>
+                                        <li>Provide shared functionality</li>
+                                        <li>Enforce design patterns</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Abstract Class Example</div>
+                                    <pre><code>from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        import math
+        return math.pi * self.radius ** 2
+    
+    def perimeter(self):
+        import math
+        return 2 * math.pi * self.radius
+
+# shape = Shape()  # Error! Can't instantiate abstract class
+circle = Circle(5)
+print(circle.area())      # 78.54...
+print(circle.perimeter()) # 31.41...</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 20: Design Patterns -->
+            <div class="slide" data-slide="20">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 20: Design Patterns</h1>
+                        <p class="slide-subtitle">Common OOP Solutions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common Design Patterns</h2>
+                                    <p>Design patterns are proven solutions to common programming problems. They help you write better, more maintainable code.</p>
+                                    
+                                    <h3>Singleton Pattern:</h3>
+                                    <ul>
+                                        <li>Ensures only one instance of a class exists</li>
+                                        <li>Useful for database connections, logging</li>
+                                        <li>Control access to shared resources</li>
+                                    </ul>
+
+                                    <h3>Factory Pattern:</h3>
+                                    <ul>
+                                        <li>Creates objects without specifying exact class</li>
+                                        <li>Centralizes object creation logic</li>
+                                        <li>Makes code more flexible</li>
+                                    </ul>
+
+                                    <h3>Observer Pattern:</h3>
+                                    <ul>
+                                        <li>Notifies objects when state changes</li>
+                                        <li>Loose coupling between objects</li>
+                                        <li>Common in GUI frameworks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Singleton Pattern Example</div>
+                                    <pre><code>class Logger:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+            cls._instance.logs = []
+        return cls._instance
+    
+    def log(self, message):
+        self.logs.append(message)
+        print(f"Log: {message}")
+    
+    def get_logs(self):
+        return self.logs
+
+# Always the same instance
+logger1 = Logger()
+logger2 = Logger()
+print(logger1 is logger2)  # True</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 21: Magic Methods -->
+            <div class="slide" data-slide="21">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 21: Magic Methods</h1>
+                        <p class="slide-subtitle">Special Methods in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Magic Methods?</h2>
+                                    <p>Magic methods (also called dunder methods) are special methods with double underscores that Python calls automatically in certain situations.</p>
+                                    
+                                    <h3>Common Magic Methods:</h3>
+                                    <ul>
+                                        <li><code>__init__(self)</code>: Constructor</li>
+                                        <li><code>__str__(self)</code>: String representation</li>
+                                        <li><code>__repr__(self)</code>: Detailed string representation</li>
+                                        <li><code>__len__(self)</code>: Length of object</li>
+                                        <li><code>__add__(self, other)</code>: Addition operator</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Make objects behave like built-in types</li>
+                                        <li>Enable custom operators</li>
+                                        <li>Provide meaningful string representations</li>
+                                        <li>Control object behavior</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Magic Methods Example</div>
+                                    <pre><code>class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __str__(self):
+        return f"Point({self.x}, {self.y})"
+    
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    
+    def __len__(self):
+        return 2  # Points have 2 coordinates
+
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+print(p1)           # Point(1, 2)
+print(p1 + p2)      # Point(4, 6)
+print(len(p1))      # 2</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22: Error Handling in Classes -->
+            <div class="slide" data-slide="22">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 22: Error Handling in Classes</h1>
+                        <p class="slide-subtitle">Managing Exceptions in OOP</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Handling Errors in Classes</h2>
+                                    <p>Classes can raise and handle exceptions just like regular functions. This helps make your classes more robust and user-friendly.</p>
+                                    
+                                    <h3>Raising Exceptions:</h3>
+                                    <ul>
+                                        <li>Use <code>raise</code> to signal errors</li>
+                                        <li>Create custom exception classes</li>
+                                        <li>Provide meaningful error messages</li>
+                                        <li>Validate input in constructors</li>
+                                    </ul>
+
+                                    <h3>Handling Exceptions:</h3>
+                                    <ul>
+                                        <li>Use <code>try/except</code> blocks</li>
+                                        <li>Handle specific exception types</li>
+                                        <li>Provide fallback behavior</li>
+                                        <li>Log errors for debugging</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Error Handling Example</div>
+                                    <pre><code>class BankAccount:
+    def __init__(self, balance):
+        if balance < 0:
+            raise ValueError("Balance cannot be negative")
+        self.balance = balance
+    
+    def withdraw(self, amount):
+        if amount < 0:
+            raise ValueError("Withdrawal amount must be positive")
+        if amount > self.balance:
+            raise ValueError("Insufficient funds")
+        self.balance -= amount
+        return amount
+
+try:
+    account = BankAccount(-100)  # Raises ValueError
+except ValueError as e:
+    print(f"Error: {e}")
+
+account = BankAccount(1000)
+try:
+    account.withdraw(1500)  # Raises ValueError
+except ValueError as e:
+    print(f"Error: {e}")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 23: OOP Best Practices -->
+            <div class="slide" data-slide="23">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 23: OOP Best Practices</h1>
+                        <p class="slide-subtitle">Writing Good Object-Oriented Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>OOP Best Practices</h2>
+                                    <p>Following best practices makes your object-oriented code more readable, maintainable, and robust.</p>
+                                    
+                                    <h3>Class Design:</h3>
+                                    <ul>
+                                        <li>Keep classes focused on one responsibility</li>
+                                        <li>Use descriptive class and method names</li>
+                                        <li>Document your classes and methods</li>
+                                        <li>Keep methods small and focused</li>
+                                    </ul>
+
+                                    <h3>Inheritance:</h3>
+                                    <ul>
+                                        <li>Use inheritance for "is-a" relationships</li>
+                                        <li>Avoid deep inheritance hierarchies</li>
+                                        <li>Prefer composition over inheritance</li>
+                                        <li>Use abstract classes for interfaces</li>
+                                    </ul>
+
+                                    <h3>Encapsulation:</h3>
+                                    <ul>
+                                        <li>Protect data with private attributes</li>
+                                        <li>Provide public methods for access</li>
+                                        <li>Validate input in constructors</li>
+                                        <li>Use properties for controlled access</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Best Practices Example</div>
+                                    <pre><code>class Student:
+    """Represents a student in the school system."""
+    
+    def __init__(self, name, student_id):
+        if not name or not student_id:
+            raise ValueError("Name and student ID are required")
+        self._name = name
+        self._student_id = student_id
+        self._grades = []
+    
+    @property
+    def name(self):
+        return self._name
+    
+    @property
+    def student_id(self):
+        return self._student_id
+    
+    def add_grade(self, grade):
+        if not 0 <= grade <= 100:
+            raise ValueError("Grade must be between 0 and 100")
+        self._grades.append(grade)
+    
+    def get_average(self):
+        if not self._grades:
+            return 0
+        return sum(self._grades) / len(self._grades)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Common OOP Mistakes -->
+            <div class="slide" data-slide="24">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 24: Common OOP Mistakes</h1>
+                        <p class="slide-subtitle">Avoiding Pitfalls</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common OOP Mistakes</h2>
+                                    <p>Even experienced programmers make mistakes with object-oriented programming. Here are some common pitfalls to avoid.</p>
+                                    
+                                    <h3>Design Mistakes:</h3>
+                                    <ul>
+                                        <li>Creating classes that do too much</li>
+                                        <li>Using inheritance when composition is better</li>
+                                        <li>Not using <code>super()</code> in child classes</li>
+                                        <li>Forgetting to call parent constructors</li>
+                                    </ul>
+
+                                    <h3>Implementation Mistakes:</h3>
+                                    <ul>
+                                        <li>Not validating input in constructors</li>
+                                        <li>Exposing internal data unnecessarily</li>
+                                        <li>Forgetting to handle exceptions</li>
+                                        <li>Using mutable default arguments</li>
+                                    </ul>
+
+                                    <h3>Naming Mistakes:</h3>
+                                    <ul>
+                                        <li>Using unclear class and method names</li>
+                                        <li>Not following Python naming conventions</li>
+                                        <li>Using reserved words as names</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Common Mistakes</div>
+                                    <pre><code># Mistake: Mutable default argument
+class BadExample:
+    def __init__(self, items=[]):  # Don't do this!
+        self.items = items
+
+# Better approach
+class GoodExample:
+    def __init__(self, items=None):
+        self.items = items if items is not None else []
+
+# Mistake: Not using super()
+class Child(Parent):
+    def __init__(self, name):
+        # Missing: super().__init__()
+        self.name = name
+
+# Better approach
+class Child(Parent):
+    def __init__(self, name):
+        super().__init__()
+        self.name = name</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 25: Course Summary -->
+            <div class="slide" data-slide="25">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎉 Slide 25: Course Summary</h1>
+                        <p class="slide-subtitle">Congratulations!</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>You've Completed Object-Oriented Programming!</h2>
+                                    <ul>
+                                        <li>Learned how to create classes and objects</li>
+                                        <li>Explored inheritance and polymorphism</li>
+                                        <li>Understood encapsulation and properties</li>
+                                        <li>Practiced advanced OOP concepts</li>
+                                        <li>Discovered best practices and common mistakes</li>
+                                    </ul>
+                                    <p>You now have a solid foundation in object-oriented programming with Python!</p>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Next Steps</div>
+                                    <pre><code># Try creating your own classes!
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+    
+    def display_info(self):
+        return f"{self.title} by {self.author}"
+
+my_book = Book("Python Guide", "John Doe")
+print(my_book.display_info())</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
