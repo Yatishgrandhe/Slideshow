@@ -2,9 +2,15 @@
 class SlideshowManager {
     constructor() {
         this.currentSlide = 1;
-        this.totalSlides = 5; // Updated for JavaScript slideshow
+        this.totalSlides = this.countTotalSlides(); // Dynamically count slides
         this.isFullscreen = false;
         this.init();
+    }
+
+    countTotalSlides() {
+        // Count all slides with data-slide attribute
+        const slides = document.querySelectorAll('[data-slide]');
+        return slides.length;
     }
 
     init() {

@@ -1170,104 +1170,97 @@ print("Blast off!")</code></pre>
                                     
                                     <h3>Break Statement:</h3>
                                     <ul>
-                                        <li>Exits the loop immediately</li>
-                                        <li>Skips remaining iterations</li>
-                                        <li>Useful for early termination</li>
-                                        <li>Can be used in both for and while loops</li>
+                                        <li><strong>Exits the loop:</strong> Immediately stops execution</li>
+                                        <li><strong>Use when:</strong> You find what you're looking for</li>
+                                        <li><strong>Common uses:</strong> Search operations, error conditions</li>
+                                        <li><strong>Only exits:</strong> The innermost loop containing it</li>
                                     </ul>
 
                                     <h3>Continue Statement:</h3>
                                     <ul>
-                                        <li>Skips current iteration</li>
-                                        <li>Continues with next iteration</li>
-                                        <li>Useful for skipping specific cases</li>
-                                        <li>Helps avoid deeply nested conditions</li>
+                                        <li><strong>Skips iteration:</strong> Goes to next iteration</li>
+                                        <li><strong>Use when:</strong> You want to skip current item</li>
+                                        <li><strong>Common uses:</strong> Filtering, error handling</li>
+                                        <li><strong>Loop continues:</strong> With next iteration</li>
                                     </ul>
 
                                     <h3>Pass Statement:</h3>
                                     <ul>
-                                        <li>Does nothing (placeholder)</li>
-                                        <li>Used when syntax requires code</li>
-                                        <li>Common in incomplete functions</li>
-                                        <li>Helps with code structure</li>
+                                        <li><strong>Does nothing:</strong> Placeholder for empty code</li>
+                                        <li><strong>Use when:</strong> Syntax requires code but you don't need any</li>
+                                        <li><strong>Common uses:</strong> Empty functions, classes, or conditions</li>
+                                        <li><strong>Loop continues:</strong> Normally to next iteration</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
-                                    <div class="code-header">Loop Control Examples</div>
-                                    <pre><code># Break statement
-for i in range(10):
-    if i == 5:
+                                    <div class="code-header">Control Statement Examples</div>
+                                    <pre><code># Break example - find first even number
+numbers = [1, 3, 5, 8, 9, 10]
+for num in numbers:
+    if num % 2 == 0:
+        print(f"First even number: {num}")
         break
-    print(i)
 
-# Continue statement
-for i in range(10):
-    if i % 2 == 0:
+# Continue example - skip negative numbers
+numbers = [1, -2, 3, -4, 5]
+for num in numbers:
+    if num < 0:
         continue
-    print(f"Odd number: {i}")
+    print(f"Positive number: {num}")
 
-# Pass statement
+# Pass example - placeholder
 for i in range(5):
-    if i < 3:
-        pass  # Do nothing for now
+    if i == 2:
+        pass  # Do nothing for i == 2
     else:
-        print(f"Processing: {i}")
+        print(f"Number: {i}")
 
 # Break in while loop
 count = 0
 while True:
-    if count >= 5:
-        break
-    print(f"Count: {count}")
     count += 1
-
-# Continue with condition
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-for num in numbers:
-    if num == 5:
-        continue
-    if num > 8:
+    if count > 10:
         break
-    print(f"Processing: {num}")
+    print(count)
 
-# Search with break
-names = ["Alice", "Bob", "Charlie", "David"]
-search_name = "Charlie"
+# Continue in while loop
+number = 0
+while number < 10:
+    number += 1
+    if number % 2 == 0:
+        continue
+    print(f"Odd: {number}")
 
-for name in names:
-    if name == search_name:
-        print(f"Found {name}!")
+# Nested loops with break
+for i in range(3):
+    for j in range(3):
+        if i == 1 and j == 1:
+            print("Found target!")
+            break  # Only exits inner loop
+    print(f"Outer loop: {i}")
+
+# Using break for efficiency
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+search_for = 5
+
+for num in numbers:
+    if num == search_for:
+        print(f"Found {search_for}!")
         break
 else:
-    print(f"{search_name} not found")
+    print(f"{search_for} not found")
 
-# Skip invalid data
-data = [1, "invalid", 3, "error", 5, 6]
-valid_numbers = []
-
-for item in data:
-    if not isinstance(item, int):
+# Continue with validation
+for i in range(10):
+    if i < 5:
         continue
-    valid_numbers.append(item)
+    print(f"Processing: {i}")
 
-print(f"Valid numbers: {valid_numbers}")
-
-# Menu with break
-while True:
-    print("1. Continue")
-    print("2. Break")
-    choice = input("Enter choice: ")
-    
-    if choice == "1":
-        print("Continuing...")
-        continue
-    elif choice == "2":
-        print("Breaking...")
-        break
-    else:
-        print("Invalid choice")</code></pre>
+# Pass in empty function
+def not_implemented_yet():
+    pass  # Placeholder</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1454,6 +1447,8 @@ if count > 0:
         grade = "B"
     elif average >= 70:
         grade = "C"
+    elif average >= 60:
+        grade = "D"
     else:
         grade = "F"
     print(f"Class grade: {grade}")
@@ -1551,7 +1546,7 @@ elif avg_temp < 15:
                             <div class="main-content">
                                 <div class="text-content">
                                     <h2>Control Flow Best Practices</h2>
-                                    <p>Following best practices makes your code more readable, maintainable, and less prone to errors.</p>
+                                    <p>Following best practices makes your control flow code more readable, maintainable, and less prone to errors.</p>
                                     
                                     <h3>Conditional Statements:</h3>
                                     <ul>
@@ -1559,6 +1554,7 @@ elif avg_temp < 15:
                                         <li>Keep conditions simple and readable</li>
                                         <li>Use parentheses for complex conditions</li>
                                         <li>Test all possible conditions</li>
+                                        <li>Use early returns when appropriate</li>
                                     </ul>
 
                                     <h3>Loop Best Practices:</h3>
@@ -1567,6 +1563,7 @@ elif avg_temp < 15:
                                         <li>Keep loops focused on one task</li>
                                         <li>Use break/continue appropriately</li>
                                         <li>Consider performance for large datasets</li>
+                                        <li>Use enumerate() when you need indices</li>
                                     </ul>
 
                                     <h3>Code Organization:</h3>
@@ -1575,6 +1572,7 @@ elif avg_temp < 15:
                                         <li>Use consistent indentation (4 spaces)</li>
                                         <li>Add comments for complex logic</li>
                                         <li>Test edge cases thoroughly</li>
+                                        <li>Use list comprehensions when appropriate</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1638,7 +1636,20 @@ minimum_age = 18
 is_eligible = user_age >= minimum_age
 
 if is_eligible:
-    print("User is eligible")</code></pre>
+    print("User is eligible")
+
+# Good: List comprehension
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# Good: Complex logic in functions
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1666,6 +1677,7 @@ if is_eligible:
                                         <li>Forgetting to handle all cases</li>
                                         <li>Incorrect indentation</li>
                                         <li>Complex nested conditions</li>
+                                        <li>Missing else clauses</li>
                                     </ul>
 
                                     <h3>Loop Mistakes:</h3>
@@ -1674,6 +1686,7 @@ if is_eligible:
                                         <li>Modifying loop variable inside loop</li>
                                         <li>Off-by-one errors</li>
                                         <li>Forgetting to update loop condition</li>
+                                        <li>Using wrong loop type</li>
                                     </ul>
 
                                     <h3>Logic Errors:</h3>
@@ -1682,13 +1695,14 @@ if is_eligible:
                                         <li>Missing parentheses</li>
                                         <li>Confusing <code>and</code>/<code>or</code></li>
                                         <li>Not considering edge cases</li>
+                                        <li>Over-complicating simple logic</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
                                     <div class="code-header">Common Mistakes Examples</div>
-                                    <pre><code># Mistake: Using = instead of ==
+                                    <pre><code># Mistake: = instead of ==
 age = 18
 if age = 18:  # Error!
     print("Adult")
@@ -1761,7 +1775,17 @@ if age >= 18 and income > 30000 or has_co_signer:
 
 # Correct (with parentheses):
 if (age >= 18 and income > 30000) or has_co_signer:
-    print("Loan approved")</code></pre>
+    print("Loan approved")
+
+# Mistake: Using wrong loop type
+# Don't use for loop when you need while
+for i in range(100):
+    if some_condition:
+        break  # Use while instead
+
+# Better:
+while not some_condition:
+    # do something</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -1769,7 +1793,1022 @@ if (age >= 18 and income > 30000) or has_co_signer:
                 </div>
             </div>
 
-            <!-- Continue with slides 17-25... -->
+            <!-- Slide 17: While Loops -->
+            <div class="slide" data-slide="17">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 17: While Loops</h1>
+                        <p class="slide-subtitle">Repeating While Condition is True</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are While Loops?</h2>
+                                    <p>While loops repeat a block of code as long as a condition remains True. They're useful when you don't know how many times you need to repeat something.</p>
+                                    
+                                    <h3>While Loop Structure:</h3>
+                                    <ul>
+                                        <li><strong>Condition:</strong> Checked before each iteration</li>
+                                        <li><strong>Loop body:</strong> Code that runs if condition is True</li>
+                                        <li><strong>Update:</strong> Change condition inside loop</li>
+                                        <li><strong>Exit:</strong> When condition becomes False</li>
+                                    </ul>
+
+                                    <h3>When to Use While Loops:</h3>
+                                    <ul>
+                                        <li>Reading data until end of file</li>
+                                        <li>User input validation</li>
+                                        <li>Game loops</li>
+                                        <li>Unknown number of iterations</li>
+                                        <li>Complex conditions</li>
+                                    </ul>
+
+                                    <h3>Important Rules:</h3>
+                                    <ul>
+                                        <li>Always update the condition inside the loop</li>
+                                        <li>Be careful of infinite loops</li>
+                                        <li>Use break to exit early if needed</li>
+                                        <li>Test your loop conditions carefully</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">While Loop Examples</div>
+                                    <pre><code># Basic while loop
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# User input validation
+password = ""
+while len(password) < 8:
+    password = input("Enter password (min 8 chars): ")
+    if len(password) < 8:
+        print("Password too short!")
+
+# Reading until condition
+number = 1
+while number != 0:
+    number = int(input("Enter a number (0 to quit): "))
+    if number > 0:
+        print(f"Positive: {number}")
+    elif number < 0:
+        print(f"Negative: {number}")
+
+# Game loop example
+import random
+target = random.randint(1, 100)
+guesses = 0
+
+while True:
+    guess = int(input("Guess the number (1-100): "))
+    guesses += 1
+    
+    if guess == target:
+        print(f"Correct! You took {guesses} guesses")
+        break
+    elif guess < target:
+        print("Too low!")
+    else:
+        print("Too high!")
+
+# Countdown
+countdown = 10
+while countdown > 0:
+    print(countdown)
+    countdown -= 1
+print("Blast off!")
+
+# Processing list with while
+numbers = [1, 2, 3, 4, 5]
+index = 0
+while index < len(numbers):
+    print(numbers[index])
+    index += 1</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: Loop Control Statements -->
+            <div class="slide" data-slide="18">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 18: Loop Control Statements</h1>
+                        <p class="slide-subtitle">break, continue, and pass</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Controlling Loop Execution</h2>
+                                    <p>Python provides three statements to control how loops behave: break, continue, and pass. These give you fine control over loop execution.</p>
+                                    
+                                    <h3>Break Statement:</h3>
+                                    <ul>
+                                        <li><strong>Exits the loop:</strong> Immediately stops execution</li>
+                                        <li><strong>Use when:</strong> You find what you're looking for</li>
+                                        <li><strong>Common uses:</strong> Search operations, error conditions</li>
+                                        <li><strong>Only exits:</strong> The innermost loop containing it</li>
+                                    </ul>
+
+                                    <h3>Continue Statement:</h3>
+                                    <ul>
+                                        <li><strong>Skips iteration:</strong> Goes to next iteration</li>
+                                        <li><strong>Use when:</strong> You want to skip current item</li>
+                                        <li><strong>Common uses:</strong> Filtering, error handling</li>
+                                        <li><strong>Loop continues:</strong> With next iteration</li>
+                                    </ul>
+
+                                    <h3>Pass Statement:</h3>
+                                    <ul>
+                                        <li><strong>Does nothing:</strong> Placeholder for empty code</li>
+                                        <li><strong>Use when:</strong> Syntax requires code but you don't need any</li>
+                                        <li><strong>Common uses:</strong> Empty functions, classes, or conditions</li>
+                                        <li><strong>Loop continues:</strong> Normally to next iteration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Control Statement Examples</div>
+                                    <pre><code># Break example - find first even number
+numbers = [1, 3, 5, 8, 9, 10]
+for num in numbers:
+    if num % 2 == 0:
+        print(f"First even number: {num}")
+        break
+
+# Continue example - skip negative numbers
+numbers = [1, -2, 3, -4, 5]
+for num in numbers:
+    if num < 0:
+        continue
+    print(f"Positive number: {num}")
+
+# Pass example - placeholder
+for i in range(5):
+    if i == 2:
+        pass  # Do nothing for i == 2
+    else:
+        print(f"Number: {i}")
+
+# Break in while loop
+count = 0
+while True:
+    count += 1
+    if count > 10:
+        break
+    print(count)
+
+# Continue in while loop
+number = 0
+while number < 10:
+    number += 1
+    if number % 2 == 0:
+        continue
+    print(f"Odd: {number}")
+
+# Nested loops with break
+for i in range(3):
+    for j in range(3):
+        if i == 1 and j == 1:
+            print("Found target!")
+            break  # Only exits inner loop
+    print(f"Outer loop: {i}")
+
+# Using break for efficiency
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+search_for = 5
+
+for num in numbers:
+    if num == search_for:
+        print(f"Found {search_for}!")
+        break
+else:
+    print(f"{search_for} not found")
+
+# Continue with validation
+for i in range(10):
+    if i < 5:
+        continue
+    print(f"Processing: {i}")
+
+# Pass in empty function
+def not_implemented_yet():
+    pass  # Placeholder</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: Range Function -->
+            <div class="slide" data-slide="19">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 19: Range Function</h1>
+                        <p class="slide-subtitle">Creating Number Sequences</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is the Range Function?</h2>
+                                    <p>The range() function creates a sequence of numbers. It's commonly used with for loops to iterate over a specific number of times.</p>
+                                    
+                                    <h3>Range Syntax:</h3>
+                                    <ul>
+                                        <li><strong>range(stop):</strong> 0 to stop-1</li>
+                                        <li><strong>range(start, stop):</strong> start to stop-1</li>
+                                        <li><strong>range(start, stop, step):</strong> start to stop-1 with step</li>
+                                        <li><strong>Memory efficient:</strong> Doesn't store all numbers</li>
+                                    </ul>
+
+                                    <h3>Common Uses:</h3>
+                                    <ul>
+                                        <li>Counting from 0 to n-1</li>
+                                        <li>Counting from 1 to n</li>
+                                        <li>Counting backwards</li>
+                                        <li>Counting by steps</li>
+                                        <li>Generating indices</li>
+                                    </ul>
+
+                                    <h3>Important Notes:</h3>
+                                    <ul>
+                                        <li>Range is not a list (it's an iterator)</li>
+                                        <li>Use list(range()) to convert to list</li>
+                                        <li>Step can be negative for counting down</li>
+                                        <li>Stop value is not included</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Range Examples</div>
+                                    <pre><code># Basic range
+for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+# Range with start and stop
+for i in range(1, 6):
+    print(i)  # 1, 2, 3, 4, 5
+
+# Range with step
+for i in range(0, 10, 2):
+    print(i)  # 0, 2, 4, 6, 8
+
+# Counting backwards
+for i in range(5, 0, -1):
+    print(i)  # 5, 4, 3, 2, 1
+
+# Converting range to list
+numbers = list(range(1, 6))
+print(numbers)  # [1, 2, 3, 4, 5]
+
+# Practical examples
+# Countdown
+for i in range(5, 0, -1):
+    print(f"Countdown: {i}")
+print("Blast off!")
+
+# Multiplication table
+for i in range(1, 6):
+    result = 5 * i
+    print(f"5 x {i} = {result}")
+
+# Indexing a list
+fruits = ["apple", "banana", "orange"]
+for i in range(len(fruits)):
+    print(f"Index {i}: {fruits[i]}")
+
+# Creating patterns
+for i in range(5):
+    print("*" * (i + 1))
+
+# Sum of even numbers
+total = 0
+for i in range(2, 11, 2):
+    total += i
+print(f"Sum of even numbers 2-10: {total}")
+
+# Temperature conversion
+for celsius in range(0, 101, 10):
+    fahrenheit = (celsius * 9/5) + 32
+    print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 20: Enumerate Function -->
+            <div class="slide" data-slide="20">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 20: Enumerate Function</h1>
+                        <p class="slide-subtitle">Getting Index and Value Together</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Enumerate?</h2>
+                                    <p>The enumerate() function adds a counter to an iterable and returns it as an enumerate object. It's very useful when you need both the index and value in a loop.</p>
+                                    
+                                    <h3>Enumerate Syntax:</h3>
+                                    <ul>
+                                        <li><strong>enumerate(iterable):</strong> Starts counting from 0</li>
+                                        <li><strong>enumerate(iterable, start):</strong> Starts counting from start</li>
+                                        <li><strong>Returns tuples:</strong> (index, value) pairs</li>
+                                        <li><strong>Memory efficient:</strong> Doesn't create a list</li>
+                                    </ul>
+
+                                    <h3>When to Use Enumerate:</h3>
+                                    <ul>
+                                        <li>Need both index and value</li>
+                                        <li>Processing list items with position</li>
+                                        <li>Creating numbered lists</li>
+                                        <li>Finding item positions</li>
+                                        <li>Displaying rankings</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>Cleaner than range(len())</li>
+                                        <li>More readable code</li>
+                                        <li>Less error-prone</li>
+                                        <li>Pythonic way to get indices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Enumerate Examples</div>
+                                    <pre><code># Basic enumerate
+fruits = ["apple", "banana", "orange"]
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+
+# Enumerate with custom start
+for index, fruit in enumerate(fruits, 1):
+    print(f"{index}. {fruit}")
+
+# Finding item position
+colors = ["red", "blue", "green", "yellow"]
+search_color = "green"
+for index, color in enumerate(colors):
+    if color == search_color:
+        print(f"Found {search_color} at position {index}")
+        break
+
+# Creating numbered list
+tasks = ["Learn Python", "Build project", "Deploy"]
+for i, task in enumerate(tasks, 1):
+    print(f"Task {i}: {task}")
+
+# Processing with conditions
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for index, num in enumerate(numbers):
+    if num % 2 == 0:
+        print(f"Even number {num} at position {index}")
+
+# Enumerate with strings
+text = "Python"
+for index, char in enumerate(text):
+    print(f"Character {index}: {char}")
+
+# Creating a dictionary with enumerate
+fruits = ["apple", "banana", "orange"]
+fruit_dict = {index: fruit for index, fruit in enumerate(fruits)}
+print(fruit_dict)
+
+# Multiple lists with enumerate
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+for index, (name, age) in enumerate(zip(names, ages)):
+    print(f"{index + 1}. {name} is {age} years old")
+
+# Enumerate with filtering
+scores = [85, 92, 78, 96, 88]
+for index, score in enumerate(scores):
+    if score >= 90:
+        print(f"High score {score} at position {index}")
+
+# Creating a ranking system
+students = ["Alice", "Bob", "Charlie", "David"]
+grades = [85, 92, 78, 96]
+for rank, (student, grade) in enumerate(sorted(zip(students, grades), 
+                                            key=lambda x: x[1], reverse=True), 1):
+    print(f"Rank {rank}: {student} - {grade}")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 21: List Comprehensions -->
+            <div class="slide" data-slide="21">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 21: List Comprehensions</h1>
+                        <p class="slide-subtitle">Creating Lists Efficiently</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are List Comprehensions?</h2>
+                                    <p>List comprehensions are a concise way to create lists based on existing sequences. They're more readable and often faster than traditional for loops.</p>
+                                    
+                                    <h3>Basic Syntax:</h3>
+                                    <ul>
+                                        <li><strong>[expression for item in iterable]:</strong> Basic comprehension</li>
+                                        <li><strong>[expression for item in iterable if condition]:</strong> With filter</li>
+                                        <li><strong>More readable:</strong> Than equivalent for loops</li>
+                                        <li><strong>More efficient:</strong> Often faster than loops</li>
+                                    </ul>
+
+                                    <h3>When to Use:</h3>
+                                    <ul>
+                                        <li>Creating lists from existing data</li>
+                                        <li>Filtering data</li>
+                                        <li>Transforming data</li>
+                                        <li>Simple operations</li>
+                                        <li>One-liner solutions</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li>More concise code</li>
+                                        <li>Better readability</li>
+                                        <li>Functional programming style</li>
+                                        <li>Often more efficient</li>
+                                        <li>Pythonic approach</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Comprehension Examples</div>
+                                    <pre><code># Basic list comprehension
+numbers = [1, 2, 3, 4, 5]
+squares = [x**2 for x in numbers]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# With condition (filtering)
+even_squares = [x**2 for x in numbers if x % 2 == 0]
+print(even_squares)  # [4, 16]
+
+# Creating list from range
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# String operations
+words = ["hello", "world", "python"]
+upper_words = [word.upper() for word in words]
+print(upper_words)  # ['HELLO', 'WORLD', 'PYTHON']
+
+# Multiple conditions
+numbers = range(1, 21)
+filtered = [x for x in numbers if x % 2 == 0 and x % 3 == 0]
+print(filtered)  # [6, 12, 18]
+
+# Nested comprehension
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# With enumerate
+fruits = ["apple", "banana", "orange"]
+indexed = [f"{i}: {fruit}" for i, fruit in enumerate(fruits)]
+print(indexed)  # ['0: apple', '1: banana', '2: orange']
+
+# Conditional expression
+numbers = [1, 2, 3, 4, 5]
+result = ["even" if x % 2 == 0 else "odd" for x in numbers]
+print(result)  # ['odd', 'even', 'odd', 'even', 'odd']
+
+# Processing strings
+text = "Hello World Python"
+words = [word.lower() for word in text.split()]
+print(words)  # ['hello', 'world', 'python']
+
+# Creating pairs
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+pairs = [(name, age) for name, age in zip(names, ages)]
+print(pairs)  # [('Alice', 25), ('Bob', 30), ('Charlie', 35)]
+
+# Mathematical operations
+numbers = [1, 2, 3, 4, 5]
+processed = [x * 2 if x % 2 == 0 else x * 3 for x in numbers]
+print(processed)  # [3, 4, 9, 8, 15]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22: Practical Applications -->
+            <div class="slide" data-slide="22">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎯 Slide 22: Practical Applications</h1>
+                        <p class="slide-subtitle">Real-World Control Flow Examples</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Using Control Flow in Real Projects</h2>
+                                    <p>Let's see how control flow and loops are used in practical applications. These examples show real-world usage of what you've learned.</p>
+                                    
+                                    <h3>Grade Calculator:</h3>
+                                    <ul>
+                                        <li>Calculate average scores</li>
+                                        <li>Determine letter grades</li>
+                                        <li>Handle different grade scales</li>
+                                        <li>Generate reports</li>
+                                    </ul>
+
+                                    <h3>Password Validator:</h3>
+                                    <ul>
+                                        <li>Check password strength</li>
+                                        <li>Validate requirements</li>
+                                        <li>Provide feedback</li>
+                                        <li>Retry logic</li>
+                                    </ul>
+
+                                    <h3>Number Guessing Game:</h3>
+                                    <ul>
+                                        <li>Random number generation</li>
+                                        <li>User input handling</li>
+                                        <li>Feedback system</li>
+                                        <li>Score tracking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Practical Examples</div>
+                                    <pre><code># Grade Calculator
+def calculate_grade(scores):
+    if not scores:
+        return "No scores provided"
+    
+    total = sum(scores)
+    average = total / len(scores)
+    
+    if average >= 90:
+        grade = "A"
+    elif average >= 80:
+        grade = "B"
+    elif average >= 70:
+        grade = "C"
+    elif average >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+    
+    return {
+        "average": round(average, 2),
+        "grade": grade,
+        "total": total
+    }
+
+# Password Validator
+def validate_password(password):
+    if len(password) < 8:
+        return False, "Password too short"
+    
+    has_upper = any(c.isupper() for c in password)
+    has_lower = any(c.islower() for c in password)
+    has_digit = any(c.isdigit() for c in password)
+    
+    if not has_upper:
+        return False, "Need uppercase letter"
+    if not has_lower:
+        return False, "Need lowercase letter"
+    if not has_digit:
+        return False, "Need digit"
+    
+    return True, "Password is strong"
+
+# Number Guessing Game
+import random
+
+def guessing_game():
+    target = random.randint(1, 100)
+    attempts = 0
+    max_attempts = 10
+    
+    print("Guess the number (1-100)")
+    
+    while attempts < max_attempts:
+        try:
+            guess = int(input(f"Attempt {attempts + 1}: "))
+            attempts += 1
+            
+            if guess == target:
+                print(f"Correct! You took {attempts} attempts")
+                return attempts
+            elif guess < target:
+                print("Too low!")
+            else:
+                print("Too high!")
+                
+        except ValueError:
+            print("Please enter a valid number")
+    
+    print(f"Game over! The number was {target}")
+    return max_attempts
+
+# Menu System
+def show_menu():
+    while True:
+        print("\n=== Menu ===")
+        print("1. Calculate grades")
+        print("2. Validate password")
+        print("3. Play guessing game")
+        print("4. Exit")
+        
+        choice = input("Enter your choice (1-4): ")
+        
+        if choice == "1":
+            scores = [85, 92, 78, 96, 88]
+            result = calculate_grade(scores)
+            print(f"Average: {result['average']}, Grade: {result['grade']}")
+        elif choice == "2":
+            password = input("Enter password: ")
+            valid, message = validate_password(password)
+            print(message)
+        elif choice == "3":
+            guessing_game()
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice!")
+
+# Usage
+show_menu()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 23: Best Practices -->
+            <div class="slide" data-slide="23">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>✅ Slide 23: Best Practices</h1>
+                        <p class="slide-subtitle">Writing Good Control Flow Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Control Flow Best Practices</h2>
+                                    <p>Following best practices makes your control flow code more readable, maintainable, and less prone to errors.</p>
+                                    
+                                    <h3>Conditional Statements:</h3>
+                                    <ul>
+                                        <li>Use clear, descriptive condition names</li>
+                                        <li>Keep conditions simple and readable</li>
+                                        <li>Use parentheses for complex conditions</li>
+                                        <li>Test all possible conditions</li>
+                                        <li>Use early returns when appropriate</li>
+                                    </ul>
+
+                                    <h3>Loop Best Practices:</h3>
+                                    <ul>
+                                        <li>Use meaningful variable names</li>
+                                        <li>Keep loops focused on one task</li>
+                                        <li>Use break/continue appropriately</li>
+                                        <li>Consider performance for large datasets</li>
+                                        <li>Use enumerate() when you need indices</li>
+                                    </ul>
+
+                                    <h3>Code Organization:</h3>
+                                    <ul>
+                                        <li>Extract complex logic to functions</li>
+                                        <li>Use consistent indentation (4 spaces)</li>
+                                        <li>Add comments for complex logic</li>
+                                        <li>Test edge cases thoroughly</li>
+                                        <li>Use list comprehensions when appropriate</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Best Practices Examples</div>
+                                    <pre><code># Good: Clear condition names
+is_adult = age >= 18
+has_valid_license = license_status == "active"
+can_drive = is_adult and has_valid_license
+
+if can_drive:
+    print("You can drive")
+
+# Good: Simple conditions
+if temperature > 30:
+    print("It's hot")
+elif temperature < 10:
+    print("It's cold")
+else:
+    print("It's comfortable")
+
+# Good: Meaningful loop variables
+for student in students:
+    if student.grade >= 90:
+        print(f"{student.name} gets an A")
+
+# Good: Focused loops
+def calculate_average(scores):
+    total = 0
+    count = 0
+    for score in scores:
+        if 0 <= score <= 100:
+            total += score
+            count += 1
+    return total / count if count > 0 else 0
+
+# Good: Early returns
+def validate_user(username, password):
+    if not username:
+        return False
+    if not password:
+        return False
+    if len(password) < 8:
+        return False
+    return True
+
+# Good: Using enumerate
+for index, item in enumerate(items):
+    print(f"Item {index}: {item}")
+
+# Good: Break for efficiency
+for number in numbers:
+    if number == target:
+        print("Found target!")
+        break
+
+# Good: Clear variable names
+user_age = 25
+minimum_age = 18
+is_eligible = user_age >= minimum_age
+
+if is_eligible:
+    print("User is eligible")
+
+# Good: List comprehension
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+# Good: Complex logic in functions
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Common Mistakes -->
+            <div class="slide" data-slide="24">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚠️ Slide 24: Common Mistakes</h1>
+                        <p class="slide-subtitle">Avoiding Control Flow Pitfalls</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common Control Flow Mistakes</h2>
+                                    <p>Even experienced programmers make mistakes with control flow. Learning to recognize and avoid these common pitfalls will make you a better programmer.</p>
+                                    
+                                    <h3>Conditional Statement Mistakes:</h3>
+                                    <ul>
+                                        <li>Using <code>=</code> instead of <code>==</code></li>
+                                        <li>Forgetting to handle all cases</li>
+                                        <li>Incorrect indentation</li>
+                                        <li>Complex nested conditions</li>
+                                        <li>Missing else clauses</li>
+                                    </ul>
+
+                                    <h3>Loop Mistakes:</h3>
+                                    <ul>
+                                        <li>Infinite loops</li>
+                                        <li>Modifying loop variable inside loop</li>
+                                        <li>Off-by-one errors</li>
+                                        <li>Forgetting to update loop condition</li>
+                                        <li>Using wrong loop type</li>
+                                    </ul>
+
+                                    <h3>Logic Errors:</h3>
+                                    <ul>
+                                        <li>Incorrect operator precedence</li>
+                                        <li>Missing parentheses</li>
+                                        <li>Confusing <code>and</code>/<code>or</code></li>
+                                        <li>Not considering edge cases</li>
+                                        <li>Over-complicating simple logic</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Common Mistakes Examples</div>
+                                    <pre><code># Mistake: = instead of ==
+age = 18
+if age = 18:  # Error!
+    print("Adult")
+
+# Correct:
+if age == 18:
+    print("Adult")
+
+# Mistake: Infinite loop
+count = 0
+while count < 5:
+    print(count)
+    # Forgot to increment count!
+
+# Correct:
+while count < 5:
+    print(count)
+    count += 1
+
+# Mistake: Modifying loop variable
+for i in range(5):
+    i = i * 2  # This doesn't affect the loop!
+    print(i)
+
+# Mistake: Off-by-one error
+for i in range(5):
+    print(i)  # Prints 0,1,2,3,4
+    if i == 5:  # Never true!
+        print("Found 5")
+
+# Mistake: Complex nested conditions
+if age >= 18:
+    if has_license:
+        if is_sober:
+            if car_available:
+                print("Can drive")
+            else:
+                print("No car")
+        else:
+            print("Not sober")
+    else:
+        print("No license")
+else:
+    print("Too young")
+
+# Better approach:
+can_drive = (age >= 18 and has_license and 
+             is_sober and car_available)
+if can_drive:
+    print("Can drive")
+else:
+    print("Cannot drive")
+
+# Mistake: Not handling edge cases
+numbers = []
+total = 0
+for num in numbers:
+    total += num
+average = total / len(numbers)  # Division by zero!
+
+# Correct:
+if len(numbers) > 0:
+    average = total / len(numbers)
+else:
+    average = 0
+
+# Mistake: Incorrect operator precedence
+if age >= 18 and income > 30000 or has_co_signer:
+    print("Loan approved")
+
+# Correct (with parentheses):
+if (age >= 18 and income > 30000) or has_co_signer:
+    print("Loan approved")
+
+# Mistake: Using wrong loop type
+# Don't use for loop when you need while
+for i in range(100):
+    if some_condition:
+        break  # Use while instead
+
+# Better:
+while not some_condition:
+    # do something</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 25: Course Summary -->
+            <div class="slide" data-slide="25">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎉 Slide 25: Course Summary</h1>
+                        <p class="slide-subtitle">Congratulations!</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>You've Completed Control Flow & Loops!</h2>
+                                    <ul>
+                                        <li>Learned about conditional statements (if, elif, else)</li>
+                                        <li>Mastered comparison and logical operators</li>
+                                        <li>Explored for loops and while loops</li>
+                                        <li>Practiced loop control statements (break, continue, pass)</li>
+                                        <li>Used range() and enumerate() functions</li>
+                                        <li>Created list comprehensions</li>
+                                        <li>Built practical applications</li>
+                                        <li>Applied best practices and avoided common mistakes</li>
+                                    </ul>
+                                    <p>You now have powerful tools to control program flow and repeat actions!</p>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Next Steps</div>
+                                    <pre><code># Try these exercises to practice:
+# 1. Build a simple calculator
+# 2. Create a number guessing game
+# 3. Make a grade calculator
+# 4. Write a password strength checker
+# 5. Build a simple menu system
+
+print("Keep practicing control flow and loops!")
+print("These are fundamental skills for any programmer!")
+
+# Example: Simple calculator
+def calculator():
+    while True:
+        print("\nSimple Calculator")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Multiply")
+        print("4. Divide")
+        print("5. Exit")
+        
+        choice = input("Enter choice (1-5): ")
+        
+        if choice == "5":
+            print("Goodbye!")
+            break
+        
+        if choice in ["1", "2", "3", "4"]:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            
+            if choice == "1":
+                result = num1 + num2
+            elif choice == "2":
+                result = num1 - num2
+            elif choice == "3":
+                result = num1 * num2
+            elif choice == "4":
+                if num2 != 0:
+                    result = num1 / num2
+                else:
+                    print("Cannot divide by zero!")
+                    continue
+            
+            print(f"Result: {result}")
+        else:
+            print("Invalid choice!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
