@@ -22,7 +22,7 @@
                 <button id="prevBtn" class="nav-btn">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-                <span class="slide-counter">1 / 5</span>
+                <span class="slide-counter">1 / 10</span>
                 <button id="nextBtn" class="nav-btn">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -36,11 +36,11 @@
 
         <!-- Slides Wrapper -->
         <div class="slides-wrapper">
-            <!-- Day 1: What is Python? -->
+            <!-- Day 1, Slide 1: What is Python? -->
             <div class="slide active" data-slide="1">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>🐍 Day 1: What is Python?</h1>
+                        <h1>🐍 Day 1, Slide 1: What is Python?</h1>
                         <p class="slide-subtitle">Introduction to Python Programming</p>
                     </div>
                     <div class="slide-body">
@@ -93,11 +93,80 @@ for i in range(3):
                 </div>
             </div>
 
-            <!-- Day 2: Setting Up Python -->
+            <!-- Day 1, Slide 2: Python History -->
             <div class="slide" data-slide="2">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>🚀 Day 2: Setting Up Python</h1>
+                        <h1>📚 Day 1, Slide 2: Python History</h1>
+                        <p class="slide-subtitle">The Story Behind Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Python's Origins</h2>
+                                    <p>Python was created by Guido van Rossum and was first released in 1991. The name "Python" comes from Monty Python's Flying Circus, not the snake!</p>
+                                    
+                                    <h3>Key Milestones:</h3>
+                                    <ul>
+                                        <li><strong>1991:</strong> Python 1.0 released</li>
+                                        <li><strong>2000:</strong> Python 2.0 with new features</li>
+                                        <li><strong>2008:</strong> Python 3.0 (major update)</li>
+                                        <li><strong>2020:</strong> Python 2.7 end of life</li>
+                                        <li><strong>Today:</strong> Python 3.x is the standard</li>
+                                    </ul>
+
+                                    <h3>Python Philosophy:</h3>
+                                    <ul>
+                                        <li><strong>Readability:</strong> Code should be easy to read</li>
+                                        <li><strong>Simplicity:</strong> Simple is better than complex</li>
+                                        <li><strong>Explicit:</strong> Explicit is better than implicit</li>
+                                        <li><strong>Beautiful:</strong> Beautiful is better than ugly</li>
+                                    </ul>
+
+                                    <h3>Why Python 3?</h3>
+                                    <ul>
+                                        <li>Better Unicode support</li>
+                                        <li>Improved print function</li>
+                                        <li>Enhanced exception handling</li>
+                                        <li>More consistent syntax</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Python 2 vs Python 3</div>
+                                    <pre><code># Python 2 (old way)
+print "Hello, World!"
+print "Hello", "World"
+
+# Python 3 (current way)
+print("Hello, World!")
+print("Hello", "World")
+
+# Python 2 division
+result = 5 / 2  # Returns 2 (integer division)
+
+# Python 3 division  
+result = 5 / 2  # Returns 2.5 (float division)
+result = 5 // 2 # Returns 2 (integer division)
+
+# Python 3 f-strings (new feature)
+name = "Alice"
+age = 25
+print(f"{name} is {age} years old")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 3: Setting Up Python -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Day 1, Slide 3: Setting Up Python</h1>
                         <p class="slide-subtitle">Getting Your Environment Ready</p>
                     </div>
                     <div class="slide-body">
@@ -165,170 +234,73 @@ Hello, Python!
                 </div>
             </div>
 
-            <!-- Day 3: Variables and Data Types -->
-            <div class="slide" data-slide="3">
-                <div class="slide-content">
-                    <div class="slide-header">
-                        <h1>📦 Day 3: Variables and Data Types</h1>
-                        <p class="slide-subtitle">Storing Information in Python</p>
-                    </div>
-                    <div class="slide-body">
-                        <div class="content-grid">
-                            <div class="main-content">
-                                <div class="text-content">
-                                    <h2>What are Variables?</h2>
-                                    <p>Variables are like labeled boxes where you store information. They can hold different types of data that your program can use.</p>
-                                    
-                                    <h3>How Variables Work:</h3>
-                                    <ul>
-                                        <li><strong>Assignment:</strong> Use = to put data in a variable</li>
-                                        <li><strong>Naming:</strong> Choose descriptive names (use letters, numbers, underscore)</li>
-                                        <li><strong>Dynamic Typing:</strong> Python figures out the data type automatically</li>
-                                        <li><strong>Reusable:</strong> Use the variable name to access the stored data</li>
-                                    </ul>
-
-                                    <h3>Python Data Types:</h3>
-                                    <ul>
-                                        <li><strong>String (str):</strong> Text data - "Hello", "Python"</li>
-                                        <li><strong>Integer (int):</strong> Whole numbers - 5, 100, -3</li>
-                                        <li><strong>Float:</strong> Decimal numbers - 3.14, 2.5, -1.0</li>
-                                        <li><strong>Boolean (bool):</strong> True or False values</li>
-                                        <li><strong>List:</strong> Collection of items - [1, 2, 3]</li>
-                                    </ul>
-
-                                    <h3>Variable Naming Rules:</h3>
-                                    <ul>
-                                        <li>Start with a letter or underscore</li>
-                                        <li>Can contain letters, numbers, and underscores</li>
-                                        <li>Case sensitive (name ≠ Name)</li>
-                                        <li>Use descriptive names (user_age, not x)</li>
-                                        <li>Avoid Python keywords (print, if, for, etc.)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="side-content">
-                                <div class="code-example">
-                                    <div class="code-header">Variable Examples</div>
-                                    <pre><code># String variables (text)
-name = "Alice"
-city = "New York"
-message = "Hello, World!"
-
-# Integer variables (whole numbers)
-age = 25
-score = 100
-temperature = -5
-
-# Float variables (decimal numbers)
-height = 5.6
-pi = 3.14159
-price = 19.99
-
-# Boolean variables (True/False)
-is_student = True
-is_raining = False
-has_license = True
-
-# Check the type of each variable
-print(type(name))        # <class 'str'>
-print(type(age))         # <class 'int'>
-print(type(height))      # <class 'float'>
-print(type(is_student))  # <class 'bool'>
-
-# Use variables in calculations
-total = price * 2
-print(f"Total: ${total}")  # Total: $39.98</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 4: Type Checking & Casting -->
+            <!-- Day 1, Slide 4: Your First Python Program -->
             <div class="slide" data-slide="4">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>🔍 Day 4: Type Checking & Casting</h1>
-                        <p class="slide-subtitle">Understanding and Converting Data Types</p>
+                        <h1>🎯 Day 1, Slide 4: Your First Python Program</h1>
+                        <p class="slide-subtitle">Writing Your First Code</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
-                                    <h2>What is Type Checking?</h2>
-                                    <p>Type checking helps you understand what kind of data a variable contains. This is useful for debugging and ensuring your code works correctly.</p>
+                                    <h2>Hello, World!</h2>
+                                    <p>Every programmer's journey begins with a "Hello, World!" program. It's a tradition that dates back to the 1970s.</p>
                                     
-                                    <h3>Using type() Function:</h3>
+                                    <h3>Creating Your First Program:</h3>
                                     <ul>
-                                        <li><strong>Check Type:</strong> Use type(variable_name) to see the data type</li>
-                                        <li><strong>Debugging:</strong> Helps identify why calculations might not work</li>
-                                        <li><strong>Learning:</strong> Great way to understand what Python is doing</li>
-                                        <li><strong>Validation:</strong> Ensure you're working with the right data type</li>
+                                        <li><strong>Step 1:</strong> Open your text editor or IDE</li>
+                                        <li><strong>Step 2:</strong> Create a new file called "hello.py"</li>
+                                        <li><strong>Step 3:</strong> Type the code: print("Hello, World!")</li>
+                                        <li><strong>Step 4:</strong> Save the file</li>
+                                        <li><strong>Step 5:</strong> Run it from the terminal</li>
                                     </ul>
 
-                                    <h3>What is Type Casting?</h3>
-                                    <p>Type casting (or conversion) is the process of changing one data type to another. This is often necessary when working with user input or combining different types of data.</p>
-
-                                    <h3>Common Conversion Functions:</h3>
+                                    <h3>Understanding the Code:</h3>
                                     <ul>
-                                        <li><strong>int():</strong> Convert to integer (whole number)</li>
-                                        <li><strong>float():</strong> Convert to decimal number</li>
-                                        <li><strong>str():</strong> Convert to text string</li>
-                                        <li><strong>bool():</strong> Convert to True/False</li>
+                                        <li><strong>print():</strong> A function that displays text on the screen</li>
+                                        <li><strong>"Hello, World!":</strong> A string (text) enclosed in quotes</li>
+                                        <li><strong>Parentheses:</strong> Required for function calls</li>
+                                        <li><strong>Quotes:</strong> Can be single or double quotes</li>
                                     </ul>
 
-                                    <h3>When to Use Type Casting:</h3>
+                                    <h3>Running Your Program:</h3>
                                     <ul>
-                                        <li>User input always comes as text (string)</li>
-                                        <li>Mathematical calculations need numbers</li>
-                                        <li>Displaying numbers as text</li>
-                                        <li>Combining different data types</li>
+                                        <li>Open terminal/command prompt</li>
+                                        <li>Navigate to your file's directory</li>
+                                        <li>Type: python hello.py</li>
+                                        <li>Press Enter to run</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
-                                    <div class="code-header">Type Checking & Casting Examples</div>
-                                    <pre><code># Type checking examples
-age = 25
+                                    <div class="code-header">Your First Python Program</div>
+                                    <pre><code># hello.py
+print("Hello, World!")
+
+# Run this file from terminal:
+# python hello.py
+
+# Output:
+# Hello, World!
+
+# More examples:
+print("Welcome to Python!")
+print('Single quotes work too')
+print("You can use", "multiple", "items")
+
+# Using variables
+message = "Hello, Python!"
+print(message)
+
+# Combining text
 name = "Alice"
-height = 5.6
-is_student = True
+print("Hello, " + name + "!")
 
-print(type(age))        # <class 'int'>
-print(type(name))       # <class 'str'>
-print(type(height))     # <class 'float'>
-print(type(is_student)) # <class 'bool'>
-
-# Type casting examples
-# String to Integer
-text_number = "42"
-number = int(text_number)
-print(number)  # 42
-print(type(number))  # <class 'int'>
-
-# Integer to String
-age = 25
-age_text = str(age)
-print(age_text)  # "25"
-print(type(age_text))  # <class 'str'>
-
-# String to Float
-decimal_text = "3.14"
-pi = float(decimal_text)
-print(pi)  # 3.14
-
-# Float to Integer
-price = 19.99
-whole_price = int(price)
-print(whole_price)  # 19 (truncates decimal)
-
-# Boolean conversion
-print(bool(1))    # True
-print(bool(0))    # False
-print(bool(""))   # False
-print(bool("Hi")) # True</code></pre>
+# Using f-strings (modern way)
+print(f"Hello, {name}!")</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -336,81 +308,509 @@ print(bool("Hi")) # True</code></pre>
                 </div>
             </div>
 
-            <!-- Day 5: Getting User Input -->
+            <!-- Day 1, Slide 5: Comments and Documentation -->
             <div class="slide" data-slide="5">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>📥 Day 5: Getting User Input</h1>
-                        <p class="slide-subtitle">Making Your Programs Interactive</p>
+                        <h1>📝 Day 1, Slide 5: Comments and Documentation</h1>
+                        <p class="slide-subtitle">Writing Clear and Readable Code</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
-                                    <h2>What is User Input?</h2>
-                                    <p>User input allows your program to get information from the person using it. This makes your programs interactive and dynamic.</p>
+                                    <h2>Why Comments Matter</h2>
+                                    <p>Comments help you and others understand your code. They're essential for writing maintainable and professional code.</p>
                                     
-                                    <h3>Using the input() Function:</h3>
+                                    <h3>Types of Comments:</h3>
                                     <ul>
-                                        <li><strong>Basic Syntax:</strong> input("Your message here")</li>
-                                        <li><strong>Prompt Message:</strong> The text in quotes tells the user what to enter</li>
-                                        <li><strong>Always Returns String:</strong> Input is always treated as text initially</li>
-                                        <li><strong>Program Pauses:</strong> Your program waits for the user to type something</li>
+                                        <li><strong>Single-line comments:</strong> Start with #</li>
+                                        <li><strong>Multi-line comments:</strong> Use triple quotes """</li>
+                                        <li><strong>Inline comments:</strong> Comments on the same line as code</li>
+                                        <li><strong>Docstrings:</strong> Documentation for functions and classes</li>
                                     </ul>
 
-                                    <h3>Important Things to Remember:</h3>
+                                    <h3>Best Practices:</h3>
                                     <ul>
-                                        <li><strong>String Output:</strong> input() always returns a string, even if the user types a number</li>
-                                        <li><strong>Type Conversion:</strong> You often need to convert input to the right type</li>
-                                        <li><strong>Error Handling:</strong> Users might enter unexpected data</li>
-                                        <li><strong>Clear Prompts:</strong> Tell users exactly what you want them to enter</li>
+                                        <li>Explain WHY, not WHAT (code shows what)</li>
+                                        <li>Keep comments up to date with code changes</li>
+                                        <li>Use clear, concise language</li>
+                                        <li>Comment complex logic and algorithms</li>
+                                        <li>Don't over-comment obvious code</li>
                                     </ul>
 
-                                    <h3>Common Input Patterns:</h3>
+                                    <h3>When to Use Comments:</h3>
                                     <ul>
-                                        <li>Getting names and text information</li>
-                                        <li>Collecting numbers for calculations</li>
-                                        <li>Asking for yes/no answers</li>
-                                        <li>Building interactive games and tools</li>
+                                        <li>Explaining complex algorithms</li>
+                                        <li>Documenting function purposes</li>
+                                        <li>Explaining business logic</li>
+                                        <li>Temporary debugging notes</li>
+                                        <li>File headers and module descriptions</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
-                                    <div class="code-header">Input Examples</div>
-                                    <pre><code># Basic input
-name = input("What's your name? ")
+                                    <div class="code-header">Comment Examples</div>
+                                    <pre><code># This is a single-line comment
+print("Hello, World!")  # This is an inline comment
+
+"""
+This is a multi-line comment.
+It can span multiple lines.
+Useful for longer explanations.
+"""
+
+# Calculate the area of a circle
+# Formula: area = π * radius²
+radius = 5
+pi = 3.14159
+area = pi * radius ** 2
+print(f"Area: {area}")
+
+def calculate_area(radius):
+    """
+    Calculate the area of a circle.
+    
+    Args:
+        radius (float): The radius of the circle
+        
+    Returns:
+        float: The area of the circle
+    """
+    pi = 3.14159
+    return pi * radius ** 2
+
+# Bad comment (obvious):
+x = 5  # Set x to 5
+
+# Good comment (explains why):
+x = 5  # Initialize counter for loop iterations</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 6: Python Interactive Shell -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>💻 Day 1, Slide 6: Python Interactive Shell</h1>
+                        <p class="slide-subtitle">Learning Through Experimentation</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is the Interactive Shell?</h2>
+                                    <p>The Python interactive shell (REPL - Read, Evaluate, Print, Loop) is a powerful tool for learning and experimenting with Python code.</p>
+                                    
+                                    <h3>Starting the Shell:</h3>
+                                    <ul>
+                                        <li><strong>Terminal/Command Prompt:</strong> Type "python" or "python3"</li>
+                                        <li><strong>You'll see:</strong> >>> prompt indicating Python is ready</li>
+                                        <li><strong>Type code:</strong> Enter Python commands directly</li>
+                                        <li><strong>See results:</strong> Output appears immediately</li>
+                                        <li><strong>Exit:</strong> Type "exit()" or press Ctrl+D</li>
+                                    </ul>
+
+                                    <h3>Benefits of Interactive Shell:</h3>
+                                    <ul>
+                                        <li>Test code snippets quickly</li>
+                                        <li>Learn new features by experimenting</li>
+                                        <li>Debug code step by step</li>
+                                        <li>Explore Python's built-in functions</li>
+                                        <li>Perfect for learning and prototyping</li>
+                                    </ul>
+
+                                    <h3>Useful Shell Commands:</h3>
+                                    <ul>
+                                        <li><strong>help():</strong> Get help on any topic</li>
+                                        <li><strong>dir():</strong> List available attributes</li>
+                                        <li><strong>type():</strong> Check data type</li>
+                                        <li><strong>len():</strong> Get length of objects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Interactive Shell Examples</div>
+                                    <pre><code># Start Python shell
+$ python3
+Python 3.9.7 (default, Sep 16 2021, 13:09:58)
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+
+# Try some commands
+>>> print("Hello, World!")
+Hello, World!
+
+>>> 2 + 2
+4
+
+>>> name = "Alice"
+>>> print(f"Hello, {name}!")
+Hello, Alice!
+
+>>> help(print)
+Help on built-in function print in module builtins:
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    ...
+
+>>> dir()
+['__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'name']
+
+>>> type(name)
+<class 'str'>
+
+>>> exit()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 7: Basic Syntax Rules -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Day 1, Slide 7: Basic Syntax Rules</h1>
+                        <p class="slide-subtitle">Understanding Python's Grammar</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Python Syntax Fundamentals</h2>
+                                    <p>Python has specific rules that make it readable and consistent. Understanding these rules is crucial for writing proper Python code.</p>
+                                    
+                                    <h3>Indentation Rules:</h3>
+                                    <ul>
+                                        <li><strong>Use spaces or tabs:</strong> But be consistent (spaces recommended)</li>
+                                        <li><strong>4 spaces:</strong> Standard indentation (1 tab = 4 spaces)</li>
+                                        <li><strong>Indentation matters:</strong> It defines code blocks</li>
+                                        <li><strong>Be consistent:</strong> Don't mix tabs and spaces</li>
+                                    </ul>
+
+                                    <h3>Line Structure:</h3>
+                                    <ul>
+                                        <li><strong>One statement per line:</strong> Usually best practice</li>
+                                        <li><strong>Semicolons:</strong> Optional, rarely used in Python</li>
+                                        <li><strong>Line continuation:</strong> Use \ for long lines</li>
+                                        <li><strong>Parentheses:</strong> Can span multiple lines naturally</li>
+                                    </ul>
+
+                                    <h3>Naming Conventions:</h3>
+                                    <ul>
+                                        <li><strong>snake_case:</strong> For variables and functions</li>
+                                        <li><strong>PascalCase:</strong> For classes</li>
+                                        <li><strong>UPPER_CASE:</strong> For constants</li>
+                                        <li><strong>Descriptive names:</strong> Make code self-documenting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Syntax Examples</div>
+                                    <pre><code># Correct indentation
+if x > 0:
+    print("Positive")
+    x = x + 1
+else:
+    print("Negative or zero")
+
+# Line continuation
+long_string = "This is a very long string " \
+              "that spans multiple lines"
+
+# Or using parentheses
+long_string = ("This is a very long string "
+               "that spans multiple lines")
+
+# Naming conventions
+user_name = "Alice"          # snake_case
+MAX_ATTEMPTS = 3             # UPPER_CASE
+class UserAccount:           # PascalCase
+    def get_user_info(self): # snake_case
+        pass
+
+# Multiple statements (avoid this)
+x = 1; y = 2; print(x + y)
+
+# Better approach
+x = 1
+y = 2
+print(x + y)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 8: Common Errors and Debugging -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🐛 Day 1, Slide 8: Common Errors and Debugging</h1>
+                        <p class="slide-subtitle">Understanding and Fixing Errors</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Types of Python Errors</h2>
+                                    <p>Errors are a normal part of programming. Understanding them helps you write better code and fix problems quickly.</p>
+                                    
+                                    <h3>SyntaxError:</h3>
+                                    <ul>
+                                        <li><strong>Missing colons:</strong> After if, for, def statements</li>
+                                        <li><strong>Missing parentheses:</strong> Around function calls</li>
+                                        <li><strong>Unmatched quotes:</strong> String not properly closed</li>
+                                        <li><strong>Indentation errors:</strong> Inconsistent spacing</li>
+                                    </ul>
+
+                                    <h3>NameError:</h3>
+                                    <ul>
+                                        <li><strong>Undefined variables:</strong> Using variables before defining</li>
+                                        <li><strong>Typos:</strong> Misspelled variable names</li>
+                                        <li><strong>Scope issues:</strong> Variables not in current scope</li>
+                                    </ul>
+
+                                    <h3>TypeError:</h3>
+                                    <ul>
+                                        <li><strong>Wrong data types:</strong> Adding string to number</li>
+                                        <li><strong>Missing arguments:</strong> Function calls with wrong parameters</li>
+                                        <li><strong>Invalid operations:</strong> Operations on incompatible types</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Error Examples and Fixes</div>
+                                    <pre><code># SyntaxError examples
+if x > 0    # Missing colon
+    print("Positive")
+
+# Fixed:
+if x > 0:
+    print("Positive")
+
+# NameError examples
+print(undefined_variable)  # Variable not defined
+
+# Fixed:
+defined_variable = "Hello"
+print(defined_variable)
+
+# TypeError examples
+result = "5" + 3  # Can't add string and int
+
+# Fixed:
+result = int("5") + 3  # Convert string to int
+# or
+result = "5" + str(3)  # Convert int to string
+
+# IndentationError
+if x > 0:
+print("Positive")  # Wrong indentation
+
+# Fixed:
+if x > 0:
+    print("Positive")
+
+# Debugging tips:
+# 1. Read the error message carefully
+# 2. Check the line number mentioned
+# 3. Look for common patterns
+# 4. Use print() to debug
+# 5. Use the interactive shell to test</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 9: Getting Help -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>❓ Day 1, Slide 9: Getting Help</h1>
+                        <p class="slide-subtitle">Resources for Learning Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Built-in Help System</h2>
+                                    <p>Python has excellent built-in help that you can access anytime. This is your first resource when you're stuck.</p>
+                                    
+                                    <h3>Using help():</h3>
+                                    <ul>
+                                        <li><strong>help():</strong> Opens interactive help system</li>
+                                        <li><strong>help(function):</strong> Get help on specific functions</li>
+                                        <li><strong>help(module):</strong> Get help on modules</li>
+                                        <li><strong>help(class):</strong> Get help on classes</li>
+                                    </ul>
+
+                                    <h3>Other Help Commands:</h3>
+                                    <ul>
+                                        <li><strong>dir():</strong> List all available attributes</li>
+                                        <li><strong>type():</strong> Check the type of an object</li>
+                                        <li><strong>__doc__:</strong> Access documentation strings</li>
+                                        <li><strong>pydoc:</strong> Command-line documentation tool</li>
+                                    </ul>
+
+                                    <h3>Online Resources:</h3>
+                                    <ul>
+                                        <li><strong>Python.org:</strong> Official documentation</li>
+                                        <li><strong>Stack Overflow:</strong> Community Q&A</li>
+                                        <li><strong>Real Python:</strong> Tutorials and articles</li>
+                                        <li><strong>Python Discord:</strong> Community chat</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Help System Examples</div>
+                                    <pre><code># Interactive help
+>>> help()
+Welcome to Python 3.9.7's help utility!
+...
+
+# Help on specific function
+>>> help(print)
+Help on built-in function print in module builtins:
+print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    Prints the values to a stream, or to sys.stdout by default.
+...
+
+# List available attributes
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+# Check object type
+>>> type("Hello")
+<class 'str'>
+
+# Access documentation
+>>> print.__doc__
+"print(value, ..., sep=' ', end='\\n', file=sys.stdout, flush=False)\n\nPrints the values to a stream, or to sys.stdout by default.\nOptional keyword arguments:\nfile:  a file-like object (stream); defaults to the current sys.stdout.\nsep:   string inserted between values, default a space.\nend:   string appended after the last value, default a newline.\nflush: whether to forcibly flush the stream."</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 1, Slide 10: Practice Exercises -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>💪 Day 1, Slide 10: Practice Exercises</h1>
+                        <p class="slide-subtitle">Reinforcing Your Learning</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Day 1 Practice</h2>
+                                    <p>Practice is essential for learning programming. Complete these exercises to reinforce what you've learned today.</p>
+                                    
+                                    <h3>Exercise 1: Hello World Variations</h3>
+                                    <ul>
+                                        <li>Print "Hello, World!" using single quotes</li>
+                                        <li>Print "Hello, World!" using double quotes</li>
+                                        <li>Print your name with a greeting</li>
+                                        <li>Print multiple items on one line</li>
+                                    </ul>
+
+                                    <h3>Exercise 2: Comments Practice</h3>
+                                    <ul>
+                                        <li>Write a program with helpful comments</li>
+                                        <li>Explain what each line does</li>
+                                        <li>Use both single-line and multi-line comments</li>
+                                        <li>Write a docstring for a function</li>
+                                    </ul>
+
+                                    <h3>Exercise 3: Interactive Shell</h3>
+                                    <ul>
+                                        <li>Start the Python interactive shell</li>
+                                        <li>Try different mathematical operations</li>
+                                        <li>Use the help() function</li>
+                                        <li>Explore dir() and type() functions</li>
+                                    </ul>
+
+                                    <h3>Exercise 4: Error Handling</h3>
+                                    <ul>
+                                        <li>Intentionally create a SyntaxError</li>
+                                        <li>Create a NameError</li>
+                                        <li>Create a TypeError</li>
+                                        <li>Fix each error</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Exercise Solutions</div>
+                                    <pre><code># Exercise 1: Hello World Variations
+print('Hello, World!')
+print("Hello, World!")
+name = "Alice"
 print(f"Hello, {name}!")
+print("Hello", "World", "from", "Python")
 
-# Input with type conversion
-age = input("How old are you? ")
-age = int(age)  # Convert string to integer
-print(f"You are {age} years old")
+# Exercise 2: Comments Practice
+# This program calculates the area of a rectangle
+length = 10  # Length in meters
+width = 5    # Width in meters
 
-# Multiple inputs
-first_name = input("Enter your first name: ")
-last_name = input("Enter your last name: ")
-full_name = first_name + " " + last_name
-print(f"Welcome, {full_name}!")
+def calculate_area(length, width):
+    """
+    Calculate the area of a rectangle.
+    
+    Args:
+        length (float): Length of rectangle
+        width (float): Width of rectangle
+        
+    Returns:
+        float: Area of rectangle
+    """
+    area = length * width  # Calculate area
+    return area
 
-# Input for calculations
-price = input("Enter the price: ")
-quantity = input("Enter the quantity: ")
-total = float(price) * int(quantity)
-print(f"Total cost: ${total}")
+# Exercise 3: Interactive Shell
+# Try these in the Python shell:
+# >>> 2 + 3
+# >>> help(print)
+# >>> dir(str)
+# >>> type("Hello")
 
-# Interactive program
-print("=== Simple Calculator ===")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-result = num1 + num2
-print(f"{num1} + {num2} = {result}")
+# Exercise 4: Error Handling
+# SyntaxError (missing colon):
+# if x > 0
+#     print("Positive")
 
-# What you'll see:
-# What's your name? Alice
-# Hello, Alice!
-# How old are you? 25
-# You are 25 years old</code></pre>
+# NameError (undefined variable):
+# print(undefined_variable)
+
+# TypeError (wrong types):
+# "5" + 3
+
+# Fixed versions:
+if x > 0:
+    print("Positive")
+
+defined_variable = "Hello"
+print(defined_variable)
+
+result = int("5") + 3</code></pre>
                                 </div>
                             </div>
                         </div>
