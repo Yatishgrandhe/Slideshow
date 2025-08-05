@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Object-Oriented Programming - Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Object-Oriented Programming</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Day 1: Classes and Objects -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Day 1: Classes and Objects</h1>
+                        <p class="slide-subtitle">Introduction to Object-Oriented Programming</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Object-Oriented Programming?</h2>
+                                    <p>Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects that contain data and code. It's a powerful way to structure complex programs.</p>
+                                    
+                                    <h3>Key Concepts:</h3>
+                                    <ul>
+                                        <li><strong>Class:</strong> Blueprint for creating objects</li>
+                                        <li><strong>Object:</strong> Instance of a class</li>
+                                        <li><strong>Attributes:</strong> Data stored in objects</li>
+                                        <li><strong>Methods:</strong> Functions that belong to objects</li>
+                                    </ul>
+
+                                    <h3>Why Use OOP?</h3>
+                                    <ul>
+                                        <li><strong>Organization:</strong> Group related data and functions</li>
+                                        <li><strong>Reusability:</strong> Create objects that can be reused</li>
+                                        <li><strong>Maintainability:</strong> Easier to modify and extend</li>
+                                        <li><strong>Abstraction:</strong> Hide complex details</li>
+                                    </ul>
+
+                                    <h3>Real-World Analogy:</h3>
+                                    <ul>
+                                        <li><strong>Class:</strong> Like a car blueprint</li>
+                                        <li><strong>Object:</strong> Like an actual car</li>
+                                        <li><strong>Attributes:</strong> Like car properties (color, model)</li>
+                                        <li><strong>Methods:</strong> Like car actions (start, stop, drive)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Class and Object Examples</div>
+                                    <pre><code># Defining a class
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+        self.is_running = False
+    
+    def start(self):
+        self.is_running = True
+        return f"{self.brand} {self.model} is starting"
+    
+    def stop(self):
+        self.is_running = False
+        return f"{self.brand} {self.model} is stopping"
+    
+    def get_info(self):
+        return f"{self.year} {self.brand} {self.model}"
+
+# Creating objects (instances)
+my_car = Car("Toyota", "Camry", 2020)
+your_car = Car("Honda", "Civic", 2019)
+
+# Using object methods
+print(my_car.get_info())  # 2020 Toyota Camry
+print(my_car.start())     # Toyota Camry is starting
+print(my_car.stop())      # Toyota Camry is stopping
+
+# Accessing attributes
+print(my_car.brand)       # Toyota
+print(my_car.year)        # 2020
+
+# Multiple objects
+print(your_car.get_info())  # 2019 Honda Civic</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2: Methods and Attributes -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Day 2: Methods and Attributes</h1>
+                        <p class="slide-subtitle">Working with Class Components</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Class Components</h2>
+                                    <p>Classes have two main components: attributes (data) and methods (functions). Understanding how to work with these is key to OOP.</p>
+                                    
+                                    <h3>Attributes:</h3>
+                                    <ul>
+                                        <li><strong>Instance attributes:</strong> Belong to specific objects</li>
+                                        <li><strong>Class attributes:</strong> Shared by all objects</li>
+                                        <li><strong>Private attributes:</strong> Start with underscore (_)</li>
+                                        <li><strong>Protected attributes:</strong> Start with double underscore (__)</li>
+                                    </ul>
+
+                                    <h3>Methods:</h3>
+                                    <ul>
+                                        <li><strong>Instance methods:</strong> Work with object data</li>
+                                        <li><strong>Class methods:</strong> Work with class data</li>
+                                        <li><strong>Static methods:</strong> Don't need object or class data</li>
+                                        <li><strong>Special methods:</strong> Start and end with double underscores</li>
+                                    </ul>
+
+                                    <h3>Method Types:</h3>
+                                    <ul>
+                                        <li><strong>__init__():</strong> Constructor method</li>
+                                        <li><strong>Getter methods:</strong> Access attributes</li>
+                                        <li><strong>Setter methods:</strong> Modify attributes</li>
+                                        <li><strong>Utility methods:</strong> Perform calculations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Methods and Attributes Examples</div>
+                                    <pre><code>class BankAccount:
+    # Class attribute
+    bank_name = "Python Bank"
+    
+    def __init__(self, account_holder, balance=0):
+        # Instance attributes
+        self.account_holder = account_holder
+        self.balance = balance
+        self._account_number = self._generate_account_number()
+    
+    def _generate_account_number(self):
+        # Private method
+        import random
+        return f"ACC{random.randint(1000, 9999)}"
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            return f"Deposited ${amount}. New balance: ${self.balance}"
+        return "Invalid amount"
+    
+    def withdraw(self, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            return f"Withdrew ${amount}. New balance: ${self.balance}"
+        return "Insufficient funds"
+    
+    def get_balance(self):
+        return f"Balance: ${self.balance}"
+    
+    def get_account_info(self):
+        return f"Account: {self._account_number}, Holder: {self.account_holder}"
+
+# Creating accounts
+account1 = BankAccount("Alice", 1000)
+account2 = BankAccount("Bob", 500)
+
+# Using methods
+print(account1.deposit(500))    # Deposited $500. New balance: $1500
+print(account1.withdraw(200))   # Withdrew $200. New balance: $1300
+print(account1.get_balance())   # Balance: $1300
+print(account1.get_account_info())
+
+# Class attribute
+print(BankAccount.bank_name)    # Python Bank</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: Inheritance -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🧬 Day 3: Inheritance</h1>
+                        <p class="slide-subtitle">Creating Class Hierarchies</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Inheritance?</h2>
+                                    <p>Inheritance allows a class to inherit attributes and methods from another class. It promotes code reuse and establishes relationships between classes.</p>
+                                    
+                                    <h3>Inheritance Concepts:</h3>
+                                    <ul>
+                                        <li><strong>Parent class:</strong> Base class that others inherit from</li>
+                                        <li><strong>Child class:</strong> Class that inherits from parent</li>
+                                        <li><strong>Method overriding:</strong> Child can redefine parent methods</li>
+                                        <li><strong>Method extension:</strong> Child can add new methods</li>
+                                    </ul>
+
+                                    <h3>Types of Inheritance:</h3>
+                                    <ul>
+                                        <li><strong>Single inheritance:</strong> One parent class</li>
+                                        <li><strong>Multiple inheritance:</strong> Multiple parent classes</li>
+                                        <li><strong>Multilevel inheritance:</strong> Chain of inheritance</li>
+                                        <li><strong>Hierarchical inheritance:</strong> Multiple children from one parent</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li><strong>Code reuse:</strong> Don't repeat code</li>
+                                        <li><strong>Hierarchy:</strong> Organize related classes</li>
+                                        <li><strong>Polymorphism:</strong> Use different classes interchangeably</li>
+                                        <li><strong>Maintainability:</strong> Easier to update common code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Inheritance Examples</div>
+                                    <pre><code># Parent class
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+    
+    def make_sound(self):
+        return "Some sound"
+    
+    def get_info(self):
+        return f"{self.name} is a {self.species}"
+
+# Child class inheriting from Animal
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name, "Dog")
+        self.breed = breed
+    
+    def make_sound(self):
+        return "Woof!"
+    
+    def fetch(self):
+        return f"{self.name} is fetching the ball"
+
+# Another child class
+class Cat(Animal):
+    def __init__(self, name, color):
+        super().__init__(name, "Cat")
+        self.color = color
+    
+    def make_sound(self):
+        return "Meow!"
+    
+    def climb(self):
+        return f"{self.name} is climbing the tree"
+
+# Using the classes
+dog = Dog("Buddy", "Golden Retriever")
+cat = Cat("Whiskers", "Orange")
+
+print(dog.get_info())      # Buddy is a Dog
+print(dog.make_sound())    # Woof!
+print(dog.fetch())         # Buddy is fetching the ball
+
+print(cat.get_info())      # Whiskers is a Cat
+print(cat.make_sound())    # Meow!
+print(cat.climb())         # Whiskers is climbing the tree
+
+# Multiple inheritance example
+class FlyingAnimal(Animal):
+    def fly(self):
+        return f"{self.name} is flying"
+
+class Bird(FlyingAnimal):
+    def __init__(self, name, wing_span):
+        super().__init__(name, "Bird")
+        self.wing_span = wing_span
+    
+    def make_sound(self):
+        return "Tweet!"</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: Encapsulation -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔒 Day 4: Encapsulation</h1>
+                        <p class="slide-subtitle">Protecting Data and Methods</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Encapsulation?</h2>
+                                    <p>Encapsulation is the bundling of data and methods that operate on that data within a single unit (class). It helps protect data from outside interference.</p>
+                                    
+                                    <h3>Access Modifiers:</h3>
+                                    <ul>
+                                        <li><strong>Public:</strong> Accessible from anywhere (default)</li>
+                                        <li><strong>Protected:</strong> Accessible within class and subclasses (_)</li>
+                                        <li><strong>Private:</strong> Accessible only within class (__)</li>
+                                    </ul>
+
+                                    <h3>Benefits of Encapsulation:</h3>
+                                    <ul>
+                                        <li><strong>Data hiding:</strong> Protect sensitive data</li>
+                                        <li><strong>Controlled access:</strong> Control how data is modified</li>
+                                        <li><strong>Validation:</strong> Ensure data integrity</li>
+                                        <li><strong>Maintenance:</strong> Easier to change internal implementation</li>
+                                    </ul>
+
+                                    <h3>Getter and Setter Methods:</h3>
+                                    <ul>
+                                        <li><strong>Getters:</strong> Access private attributes safely</li>
+                                        <li><strong>Setters:</strong> Modify private attributes with validation</li>
+                                        <li><strong>Property decorator:</strong> Python's way to create getters/setters</li>
+                                        <li><strong>Benefits:</strong> Add validation and logging</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Encapsulation Examples</div>
+                                    <pre><code>class BankAccount:
+    def __init__(self, account_holder, initial_balance=0):
+        self.account_holder = account_holder
+        self.__balance = initial_balance  # Private attribute
+        self._account_number = self._generate_number()  # Protected
+    
+    def _generate_number(self):
+        import random
+        return f"ACC{random.randint(1000, 9999)}"
+    
+    # Getter method
+    def get_balance(self):
+        return self.__balance
+    
+    # Setter method with validation
+    def set_balance(self, new_balance):
+        if new_balance >= 0:
+            self.__balance = new_balance
+        else:
+            raise ValueError("Balance cannot be negative")
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return f"Deposited ${amount}"
+        return "Invalid amount"
+    
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+            return f"Withdrew ${amount}"
+        return "Insufficient funds"
+
+# Using property decorator
+class Temperature:
+    def __init__(self):
+        self._celsius = 0
+    
+    @property
+    def celsius(self):
+        return self._celsius
+    
+    @celsius.setter
+    def celsius(self, value):
+        if value < -273.15:
+            raise ValueError("Temperature below absolute zero")
+        self._celsius = value
+    
+    @property
+    def fahrenheit(self):
+        return (self._celsius * 9/5) + 32
+    
+    @fahrenheit.setter
+    def fahrenheit(self, value):
+        self.celsius = (value - 32) * 5/9
+
+# Using the classes
+account = BankAccount("Alice", 1000)
+print(account.get_balance())  # 1000
+account.deposit(500)
+print(account.get_balance())  # 1500
+
+temp = Temperature()
+temp.celsius = 25
+print(f"{temp.celsius}°C = {temp.fahrenheit}°F")  # 25°C = 77.0°F
+
+temp.fahrenheit = 98.6
+print(f"{temp.celsius}°C = {temp.fahrenheit}°F")  # 37.0°C = 98.6°F</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: Polymorphism -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Day 5: Polymorphism</h1>
+                        <p class="slide-subtitle">Using Different Classes Interchangeably</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Polymorphism?</h2>
+                                    <p>Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables flexibility and extensibility in code.</p>
+                                    
+                                    <h3>Types of Polymorphism:</h3>
+                                    <ul>
+                                        <li><strong>Method overriding:</strong> Child classes redefine parent methods</li>
+                                        <li><strong>Method overloading:</strong> Same method with different parameters</li>
+                                        <li><strong>Duck typing:</strong> "If it walks like a duck, it's a duck"</li>
+                                        <li><strong>Operator overloading:</strong> Redefine operators for custom classes</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li><strong>Flexibility:</strong> Use different objects interchangeably</li>
+                                        <li><strong>Extensibility:</strong> Add new classes easily</li>
+                                        <li><strong>Code reuse:</strong> Write generic code that works with many types</li>
+                                        <li><strong>Maintainability:</strong> Easier to modify and extend</li>
+                                    </ul>
+
+                                    <h3>Common Patterns:</h3>
+                                    <ul>
+                                        <li>Interface-based programming</li>
+                                        <li>Plugin architectures</li>
+                                        <li>Strategy patterns</li>
+                                        <li>Factory patterns</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Polymorphism Examples</div>
+                                    <pre><code># Base class
+class Shape:
+    def area(self):
+        pass
+    
+    def perimeter(self):
+        pass
+
+# Different shape classes
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def area(self):
+        return self.width * self.height
+    
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        import math
+        return math.pi * self.radius ** 2
+    
+    def perimeter(self):
+        import math
+        return 2 * math.pi * self.radius
+
+# Polymorphic function
+def print_shape_info(shape):
+    print(f"Area: {shape.area():.2f}")
+    print(f"Perimeter: {shape.perimeter():.2f}")
+
+# Using different shapes
+shapes = [Rectangle(5, 3), Circle(4)]
+
+for shape in shapes:
+    print_shape_info(shape)
+    print()
+
+# Duck typing example
+class Duck:
+    def swim(self):
+        return "Duck swimming"
+    
+    def fly(self):
+        return "Duck flying"
+
+class Airplane:
+    def fly(self):
+        return "Airplane flying"
+
+def make_it_fly(flying_object):
+    return flying_object.fly()
+
+# Both work because they have fly method
+print(make_it_fly(Duck()))      # Duck flying
+print(make_it_fly(Airplane()))  # Airplane flying
+
+# Operator overloading
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    
+    def __str__(self):
+        return f"Point({self.x}, {self.y})"
+
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+p3 = p1 + p2  # Uses __add__ method
+print(p3)  # Point(4, 6)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

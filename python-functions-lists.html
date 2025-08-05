@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Functions & Lists - Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Functions & Lists</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Day 1: Functions Basics -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Day 1: Functions Basics</h1>
+                        <p class="slide-subtitle">Creating Reusable Code Blocks</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Functions?</h2>
+                                    <p>Functions are reusable blocks of code that perform specific tasks. They help organize code and avoid repetition.</p>
+                                    
+                                    <h3>Function Declaration:</h3>
+                                    <ul>
+                                        <li><strong>def keyword:</strong> Used to define a function</li>
+                                        <li><strong>Function name:</strong> Choose descriptive names</li>
+                                        <li><strong>Parameters:</strong> Input values the function receives</li>
+                                        <li><strong>Function body:</strong> Code that runs when function is called</li>
+                                        <li><strong>Return statement:</strong> Output value the function sends back</li>
+                                    </ul>
+
+                                    <h3>Why Use Functions?</h3>
+                                    <ul>
+                                        <li><strong>Reusability:</strong> Write once, use many times</li>
+                                        <li><strong>Organization:</strong> Break code into logical pieces</li>
+                                        <li><strong>Maintainability:</strong> Easier to fix and update</li>
+                                        <li><strong>Testing:</strong> Test individual pieces of code</li>
+                                    </ul>
+
+                                    <h3>Function Components:</h3>
+                                    <ul>
+                                        <li><strong>Parameters:</strong> Input values the function receives</li>
+                                        <li><strong>Function body:</strong> Code that runs when function is called</li>
+                                        <li><strong>Return statement:</strong> Output value the function sends back</li>
+                                        <li><strong>Function call:</strong> How you use the function</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Function Examples</div>
+                                    <pre><code># Function declaration
+def greet(name):
+    return f"Hello, {name}!"
+
+# Function call
+message = greet("Alice")
+print(message)  # Hello, Alice!
+
+# Function with multiple parameters
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # 8
+
+# Function without parameters
+def say_hello():
+    print("Hello, World!")
+
+say_hello()  # Hello, World!
+
+# Function with default parameters
+def greet_user(name="Guest"):
+    return f"Welcome, {name}!"
+
+print(greet_user("Bob"))  # Welcome, Bob!
+print(greet_user())       # Welcome, Guest!
+
+# Function with multiple return values
+def get_name_and_age():
+    return "Alice", 25
+
+name, age = get_name_and_age()
+print(f"{name} is {age} years old")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2: Function Parameters -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📝 Day 2: Function Parameters</h1>
+                        <p class="slide-subtitle">Understanding Function Inputs</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Function Parameters</h2>
+                                    <p>Parameters are the input values that functions receive. They allow functions to work with different data.</p>
+                                    
+                                    <h3>Types of Parameters:</h3>
+                                    <ul>
+                                        <li><strong>Required parameters:</strong> Must be provided when calling function</li>
+                                        <li><strong>Default parameters:</strong> Have default values if not provided</li>
+                                        <li><strong>Keyword arguments:</strong> Specify parameters by name</li>
+                                        <li><strong>Variable arguments:</strong> Accept any number of arguments</li>
+                                    </ul>
+
+                                    <h3>Parameter Best Practices:</h3>
+                                    <ul>
+                                        <li>Use descriptive parameter names</li>
+                                        <li>Provide default values when appropriate</li>
+                                        <li>Document what each parameter does</li>
+                                        <li>Keep functions focused on one task</li>
+                                    </ul>
+
+                                    <h3>Common Patterns:</h3>
+                                    <ul>
+                                        <li>Functions that calculate values</li>
+                                        <li>Functions that process data</li>
+                                        <li>Functions that format output</li>
+                                        <li>Functions that validate input</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Parameter Examples</div>
+                                    <pre><code># Required parameters
+def calculate_area(width, height):
+    return width * height
+
+area = calculate_area(10, 5)
+print(f"Area: {area}")  # Area: 50
+
+# Default parameters
+def greet(name="Guest", greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+print(greet("Alice"))           # Hello, Alice!
+print(greet("Bob", "Hi"))       # Hi, Bob!
+print(greet())                  # Hello, Guest!
+
+# Keyword arguments
+def create_profile(name, age, city, occupation):
+    return f"{name}, {age}, from {city}, works as {occupation}"
+
+profile = create_profile(
+    name="Alice",
+    age=25,
+    city="New York",
+    occupation="Developer"
+)
+print(profile)
+
+# Variable arguments (*args)
+def sum_all(*numbers):
+    return sum(numbers)
+
+total = sum_all(1, 2, 3, 4, 5)
+print(f"Sum: {total}")  # Sum: 15
+
+# Variable keyword arguments (**kwargs)
+def create_person(**details):
+    return details
+
+person = create_person(
+    name="Alice",
+    age=25,
+    city="New York"
+)
+print(person)  # {'name': 'Alice', 'age': 25, 'city': 'New York'}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: Lists Introduction -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Day 3: Lists Introduction</h1>
+                        <p class="slide-subtitle">Working with Collections of Data</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Lists?</h2>
+                                    <p>Lists are ordered collections of items. They can hold multiple values of different types and are one of Python's most versatile data structures.</p>
+                                    
+                                    <h3>Creating Lists:</h3>
+                                    <ul>
+                                        <li><strong>Square brackets:</strong> [item1, item2, item3]</li>
+                                        <li><strong>Empty list:</strong> []</li>
+                                        <li><strong>Mixed types:</strong> Can contain different data types</li>
+                                        <li><strong>Nested lists:</strong> Lists inside lists</li>
+                                    </ul>
+
+                                    <h3>Accessing List Elements:</h3>
+                                    <ul>
+                                        <li><strong>Indexing:</strong> Use [index] to access elements</li>
+                                        <li><strong>Zero-based:</strong> First element is at index 0</li>
+                                        <li><strong>Negative indexing:</strong> -1 is last element</li>
+                                        <li><strong>Slicing:</strong> Get multiple elements with [start:end]</li>
+                                    </ul>
+
+                                    <h3>List Characteristics:</h3>
+                                    <ul>
+                                        <li><strong>Ordered:</strong> Elements maintain their order</li>
+                                        <li><strong>Mutable:</strong> Can change elements after creation</li>
+                                        <li><strong>Dynamic:</strong> Can add or remove elements</li>
+                                        <li><strong>Heterogeneous:</strong> Can contain different types</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Examples</div>
+                                    <pre><code># Creating lists
+fruits = ["apple", "banana", "orange"]
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "hello", 3.14, True]
+
+# Empty list
+empty_list = []
+
+# Accessing elements
+print(fruits[0])      # apple
+print(fruits[-1])     # orange
+print(fruits[1:3])    # ['banana', 'orange']
+
+# Modifying lists
+fruits[1] = "grape"
+print(fruits)         # ['apple', 'grape', 'orange']
+
+# Adding elements
+fruits.append("mango")
+print(fruits)         # ['apple', 'grape', 'orange', 'mango']
+
+# Removing elements
+fruits.remove("grape")
+print(fruits)         # ['apple', 'orange', 'mango']
+
+# List length
+print(len(fruits))    # 3
+
+# Checking if item exists
+if "apple" in fruits:
+    print("Apple is in the list!")
+
+# Looping through lists
+for fruit in fruits:
+    print(f"I like {fruit}")
+
+# List comprehension
+squares = [x**2 for x in range(5)]
+print(squares)        # [0, 1, 4, 9, 16]
+
+# Nested lists
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(matrix[1][1])   # 5</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: List Methods -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Day 4: List Methods</h1>
+                        <p class="slide-subtitle">Built-in Functions for Lists</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>List Methods</h2>
+                                    <p>Python provides many built-in methods to work with lists. These methods make it easy to manipulate and analyze list data.</p>
+                                    
+                                    <h3>Adding Elements:</h3>
+                                    <ul>
+                                        <li><strong>.append(item):</strong> Add item to end of list</li>
+                                        <li><strong>.insert(index, item):</strong> Insert item at specific position</li>
+                                        <li><strong>.extend(iterable):</strong> Add all items from another list</li>
+                                    </ul>
+
+                                    <h3>Removing Elements:</h3>
+                                    <ul>
+                                        <li><strong>.remove(item):</strong> Remove first occurrence of item</li>
+                                        <li><strong>.pop(index):</strong> Remove and return item at index</li>
+                                        <li><strong>.clear():</strong> Remove all elements</li>
+                                        <li><strong>del statement:</strong> Remove by index</li>
+                                    </ul>
+
+                                    <h3>Finding Elements:</h3>
+                                    <ul>
+                                        <li><strong>.index(item):</strong> Find position of item</li>
+                                        <li><strong>.count(item):</strong> Count occurrences of item</li>
+                                        <li><strong>in operator:</strong> Check if item exists</li>
+                                    </ul>
+
+                                    <h3>Sorting and Reversing:</h3>
+                                    <ul>
+                                        <li><strong>.sort():</strong> Sort list in place</li>
+                                        <li><strong>.reverse():</strong> Reverse list in place</li>
+                                        <li><strong>sorted():</strong> Return new sorted list</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Method Examples</div>
+                                    <pre><code># Adding elements
+fruits = ["apple", "banana"]
+fruits.append("orange")
+print(fruits)  # ['apple', 'banana', 'orange']
+
+fruits.insert(1, "grape")
+print(fruits)  # ['apple', 'grape', 'banana', 'orange']
+
+more_fruits = ["mango", "kiwi"]
+fruits.extend(more_fruits)
+print(fruits)  # ['apple', 'grape', 'banana', 'orange', 'mango', 'kiwi']
+
+# Removing elements
+fruits.remove("grape")
+print(fruits)  # ['apple', 'banana', 'orange', 'mango', 'kiwi']
+
+last_fruit = fruits.pop()
+print(last_fruit)  # kiwi
+print(fruits)      # ['apple', 'banana', 'orange', 'mango']
+
+# Finding elements
+print(fruits.index("banana"))  # 1
+print(fruits.count("apple"))   # 1
+print("orange" in fruits)      # True
+
+# Sorting
+numbers = [3, 1, 4, 1, 5, 9, 2, 6]
+numbers.sort()
+print(numbers)  # [1, 1, 2, 3, 4, 5, 6, 9]
+
+numbers.reverse()
+print(numbers)  # [9, 6, 5, 4, 3, 2, 1, 1]
+
+# Creating sorted copy
+original = [3, 1, 4, 1, 5]
+sorted_list = sorted(original)
+print(original)    # [3, 1, 4, 1, 5]
+print(sorted_list) # [1, 1, 3, 4, 5]
+
+# List operations
+numbers = [1, 2, 3, 4, 5]
+print(len(numbers))     # 5
+print(max(numbers))     # 5
+print(min(numbers))     # 1
+print(sum(numbers))     # 15
+
+# Copying lists
+original = [1, 2, 3]
+copy1 = original.copy()
+copy2 = original[:]
+copy3 = list(original)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: List Comprehensions -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚡ Day 5: List Comprehensions</h1>
+                        <p class="slide-subtitle">Creating Lists Efficiently</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are List Comprehensions?</h2>
+                                    <p>List comprehensions are a concise way to create lists based on existing sequences or other iterable objects. They're more readable and often faster than traditional loops.</p>
+                                    
+                                    <h3>Basic Syntax:</h3>
+                                    <ul>
+                                        <li><strong>Basic:</strong> [expression for item in iterable]</li>
+                                        <li><strong>With condition:</strong> [expression for item in iterable if condition]</li>
+                                        <li><strong>Nested:</strong> [expression for item in iterable for subitem in item]</li>
+                                    </ul>
+
+                                    <h3>Advantages:</h3>
+                                    <ul>
+                                        <li><strong>Readability:</strong> More concise than loops</li>
+                                        <li><strong>Performance:</strong> Often faster than loops</li>
+                                        <li><strong>Functional style:</strong> More Pythonic</li>
+                                        <li><strong>Less code:</strong> Fewer lines to write</li>
+                                    </ul>
+
+                                    <h3>When to Use:</h3>
+                                    <ul>
+                                        <li>Creating lists from existing sequences</li>
+                                        <li>Filtering data</li>
+                                        <li>Transforming data</li>
+                                        <li>Simple mathematical operations</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Keep comprehensions simple and readable</li>
+                                        <li>Use loops for complex logic</li>
+                                        <li>Don't nest too deeply</li>
+                                        <li>Consider readability over brevity</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Comprehension Examples</div>
+                                    <pre><code># Basic list comprehension
+squares = [x**2 for x in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]
+
+# With condition (filtering)
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
+print(even_squares)  # [0, 4, 16, 36, 64]
+
+# Transforming strings
+words = ["hello", "world", "python"]
+upper_words = [word.upper() for word in words]
+print(upper_words)  # ['HELLO', 'WORLD', 'PYTHON']
+
+# Working with numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = [x for x in numbers if x % 2 == 0]
+print(even_numbers)  # [2, 4, 6, 8, 10]
+
+# Creating pairs
+pairs = [(x, y) for x in range(3) for y in range(3)]
+print(pairs)  # [(0,0), (0,1), (0,2), (1,0), (1,1), (1,2), (2,0), (2,1), (2,2)]
+
+# Dictionary comprehension
+squares_dict = {x: x**2 for x in range(5)}
+print(squares_dict)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Set comprehension
+unique_squares = {x**2 for x in range(10)}
+print(unique_squares)  # {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}
+
+# Nested comprehension
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [item for row in matrix for item in row]
+print(flattened)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Practical example
+names = ["alice", "bob", "charlie"]
+formatted_names = [name.title() for name in names if len(name) > 3]
+print(formatted_names)  # ['Alice', 'Charlie']</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

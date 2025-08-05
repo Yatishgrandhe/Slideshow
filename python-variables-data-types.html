@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Variables & Data Types - Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Variables & Data Types</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Day 1: What is Python? -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🐍 Day 1: What is Python?</h1>
+                        <p class="slide-subtitle">Introduction to Python Programming</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Python?</h2>
+                                    <p>Python is a high-level, interpreted programming language designed to be readable and simple, making it perfect for beginners.</p>
+                                    
+                                    <h3>Why Python?</h3>
+                                    <ul>
+                                        <li><strong>Easy to Learn:</strong> Python reads almost like English</li>
+                                        <li><strong>Versatile:</strong> Used in web development, data science, automation, and AI</li>
+                                        <li><strong>Popular:</strong> One of the most in-demand programming languages</li>
+                                        <li><strong>Beginner-Friendly:</strong> Perfect starting point for your coding journey</li>
+                                    </ul>
+
+                                    <h3>Where is Python Used?</h3>
+                                    <ul>
+                                        <li><strong>Web Development:</strong> Building websites and web applications</li>
+                                        <li><strong>Data Science:</strong> Analyzing data and creating visualizations</li>
+                                        <li><strong>Automation:</strong> Automating repetitive tasks</li>
+                                        <li><strong>Artificial Intelligence:</strong> Machine learning and AI applications</li>
+                                        <li><strong>Game Development:</strong> Creating games and interactive applications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Python Code Example</div>
+                                    <pre><code># This is how simple Python is!
+print("Hello, World!")
+
+# Variables are easy to understand
+name = "Alice"
+age = 25
+print(f"{name} is {age} years old")
+
+# Simple math operations
+result = 10 + 5
+print(f"10 + 5 = {result}")
+
+# Easy to read loops
+for i in range(3):
+    print(f"Learning Python is fun! (step {i+1})")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2: Setting Up Python -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Day 2: Setting Up Python</h1>
+                        <p class="slide-subtitle">Getting Your Environment Ready</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>How to Install Python</h2>
+                                    <p>Setting up Python is the first step in your programming journey. Here are the best ways to get started.</p>
+                                    
+                                    <h3>Option 1: Python.org (Recommended)</h3>
+                                    <ul>
+                                        <li><strong>Visit:</strong> python.org/downloads</li>
+                                        <li><strong>Download:</strong> Latest version for your operating system</li>
+                                        <li><strong>Install:</strong> Run the installer and follow the setup wizard</li>
+                                        <li><strong>Verify:</strong> Open terminal/command prompt and type "python --version"</li>
+                                    </ul>
+
+                                    <h3>Option 2: Replit (Online - No Installation)</h3>
+                                    <ul>
+                                        <li><strong>Go to:</strong> replit.com</li>
+                                        <li><strong>Sign up:</strong> Create a free account</li>
+                                        <li><strong>Create Repl:</strong> Click "Create Repl" and choose Python</li>
+                                        <li><strong>Start coding:</strong> You're ready to write Python code!</li>
+                                    </ul>
+
+                                    <h3>Option 3: Anaconda (For Data Science)</h3>
+                                    <ul>
+                                        <li><strong>Download:</strong> anaconda.com/download</li>
+                                        <li><strong>Install:</strong> Includes Python and many useful libraries</li>
+                                        <li><strong>Great for:</strong> Data science, machine learning, scientific computing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Testing Your Installation</div>
+                                    <pre><code># Open terminal/command prompt and type:
+
+# Check Python version
+python --version
+# or
+python3 --version
+
+# Start Python interactive shell
+python
+# or
+python3
+
+# You should see something like:
+# Python 3.9.7 (default, Sep 16 2021, 13:09:58)
+# [GCC 7.5.0] on linux
+# Type "help", "copyright", "credits" or "license" for more information.
+# >>>
+
+# Try your first command
+>>> print("Hello, Python!")
+Hello, Python!
+
+# Exit Python shell
+>>> exit()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: Variables and Data Types -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Day 3: Variables and Data Types</h1>
+                        <p class="slide-subtitle">Storing Information in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Variables?</h2>
+                                    <p>Variables are like labeled boxes where you store information. They can hold different types of data that your program can use.</p>
+                                    
+                                    <h3>How Variables Work:</h3>
+                                    <ul>
+                                        <li><strong>Assignment:</strong> Use = to put data in a variable</li>
+                                        <li><strong>Naming:</strong> Choose descriptive names (use letters, numbers, underscore)</li>
+                                        <li><strong>Dynamic Typing:</strong> Python figures out the data type automatically</li>
+                                        <li><strong>Reusable:</strong> Use the variable name to access the stored data</li>
+                                    </ul>
+
+                                    <h3>Python Data Types:</h3>
+                                    <ul>
+                                        <li><strong>String (str):</strong> Text data - "Hello", "Python"</li>
+                                        <li><strong>Integer (int):</strong> Whole numbers - 5, 100, -3</li>
+                                        <li><strong>Float:</strong> Decimal numbers - 3.14, 2.5, -1.0</li>
+                                        <li><strong>Boolean (bool):</strong> True or False values</li>
+                                        <li><strong>List:</strong> Collection of items - [1, 2, 3]</li>
+                                    </ul>
+
+                                    <h3>Variable Naming Rules:</h3>
+                                    <ul>
+                                        <li>Start with a letter or underscore</li>
+                                        <li>Can contain letters, numbers, and underscores</li>
+                                        <li>Case sensitive (name ≠ Name)</li>
+                                        <li>Use descriptive names (user_age, not x)</li>
+                                        <li>Avoid Python keywords (print, if, for, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Variable Examples</div>
+                                    <pre><code># String variables (text)
+name = "Alice"
+city = "New York"
+message = "Hello, World!"
+
+# Integer variables (whole numbers)
+age = 25
+score = 100
+temperature = -5
+
+# Float variables (decimal numbers)
+height = 5.6
+pi = 3.14159
+price = 19.99
+
+# Boolean variables (True/False)
+is_student = True
+is_raining = False
+has_license = True
+
+# Check the type of each variable
+print(type(name))        # <class 'str'>
+print(type(age))         # <class 'int'>
+print(type(height))      # <class 'float'>
+print(type(is_student))  # <class 'bool'>
+
+# Use variables in calculations
+total = price * 2
+print(f"Total: ${total}")  # Total: $39.98</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: Type Checking & Casting -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔍 Day 4: Type Checking & Casting</h1>
+                        <p class="slide-subtitle">Understanding and Converting Data Types</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Type Checking?</h2>
+                                    <p>Type checking helps you understand what kind of data a variable contains. This is useful for debugging and ensuring your code works correctly.</p>
+                                    
+                                    <h3>Using type() Function:</h3>
+                                    <ul>
+                                        <li><strong>Check Type:</strong> Use type(variable_name) to see the data type</li>
+                                        <li><strong>Debugging:</strong> Helps identify why calculations might not work</li>
+                                        <li><strong>Learning:</strong> Great way to understand what Python is doing</li>
+                                        <li><strong>Validation:</strong> Ensure you're working with the right data type</li>
+                                    </ul>
+
+                                    <h3>What is Type Casting?</h3>
+                                    <p>Type casting (or conversion) is the process of changing one data type to another. This is often necessary when working with user input or combining different types of data.</p>
+
+                                    <h3>Common Conversion Functions:</h3>
+                                    <ul>
+                                        <li><strong>int():</strong> Convert to integer (whole number)</li>
+                                        <li><strong>float():</strong> Convert to decimal number</li>
+                                        <li><strong>str():</strong> Convert to text string</li>
+                                        <li><strong>bool():</strong> Convert to True/False</li>
+                                    </ul>
+
+                                    <h3>When to Use Type Casting:</h3>
+                                    <ul>
+                                        <li>User input always comes as text (string)</li>
+                                        <li>Mathematical calculations need numbers</li>
+                                        <li>Displaying numbers as text</li>
+                                        <li>Combining different data types</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Type Checking & Casting Examples</div>
+                                    <pre><code># Type checking examples
+age = 25
+name = "Alice"
+height = 5.6
+is_student = True
+
+print(type(age))        # <class 'int'>
+print(type(name))       # <class 'str'>
+print(type(height))     # <class 'float'>
+print(type(is_student)) # <class 'bool'>
+
+# Type casting examples
+# String to Integer
+text_number = "42"
+number = int(text_number)
+print(number)  # 42
+print(type(number))  # <class 'int'>
+
+# Integer to String
+age = 25
+age_text = str(age)
+print(age_text)  # "25"
+print(type(age_text))  # <class 'str'>
+
+# String to Float
+decimal_text = "3.14"
+pi = float(decimal_text)
+print(pi)  # 3.14
+
+# Float to Integer
+price = 19.99
+whole_price = int(price)
+print(whole_price)  # 19 (truncates decimal)
+
+# Boolean conversion
+print(bool(1))    # True
+print(bool(0))    # False
+print(bool(""))   # False
+print(bool("Hi")) # True</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: Getting User Input -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📥 Day 5: Getting User Input</h1>
+                        <p class="slide-subtitle">Making Your Programs Interactive</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is User Input?</h2>
+                                    <p>User input allows your program to get information from the person using it. This makes your programs interactive and dynamic.</p>
+                                    
+                                    <h3>Using the input() Function:</h3>
+                                    <ul>
+                                        <li><strong>Basic Syntax:</strong> input("Your message here")</li>
+                                        <li><strong>Prompt Message:</strong> The text in quotes tells the user what to enter</li>
+                                        <li><strong>Always Returns String:</strong> Input is always treated as text initially</li>
+                                        <li><strong>Program Pauses:</strong> Your program waits for the user to type something</li>
+                                    </ul>
+
+                                    <h3>Important Things to Remember:</h3>
+                                    <ul>
+                                        <li><strong>String Output:</strong> input() always returns a string, even if the user types a number</li>
+                                        <li><strong>Type Conversion:</strong> You often need to convert input to the right type</li>
+                                        <li><strong>Error Handling:</strong> Users might enter unexpected data</li>
+                                        <li><strong>Clear Prompts:</strong> Tell users exactly what you want them to enter</li>
+                                    </ul>
+
+                                    <h3>Common Input Patterns:</h3>
+                                    <ul>
+                                        <li>Getting names and text information</li>
+                                        <li>Collecting numbers for calculations</li>
+                                        <li>Asking for yes/no answers</li>
+                                        <li>Building interactive games and tools</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Input Examples</div>
+                                    <pre><code># Basic input
+name = input("What's your name? ")
+print(f"Hello, {name}!")
+
+# Input with type conversion
+age = input("How old are you? ")
+age = int(age)  # Convert string to integer
+print(f"You are {age} years old")
+
+# Multiple inputs
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+full_name = first_name + " " + last_name
+print(f"Welcome, {full_name}!")
+
+# Input for calculations
+price = input("Enter the price: ")
+quantity = input("Enter the quantity: ")
+total = float(price) * int(quantity)
+print(f"Total cost: ${total}")
+
+# Interactive program
+print("=== Simple Calculator ===")
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+result = num1 + num2
+print(f"{num1} + {num2} = {result}")
+
+# What you'll see:
+# What's your name? Alice
+# Hello, Alice!
+# How old are you? 25
+# You are 25 years old</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

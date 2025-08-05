@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Projects & Advanced Topics - Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Projects & Advanced Topics</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Day 1: File Handling -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📁 Day 1: File Handling</h1>
+                        <p class="slide-subtitle">Reading and Writing Files</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Working with Files</h2>
+                                    <p>File handling allows your Python programs to read data from files and write data to files. This is essential for data processing and persistence.</p>
+                                    
+                                    <h3>File Operations:</h3>
+                                    <ul>
+                                        <li><strong>Reading files:</strong> Open and read file contents</li>
+                                        <li><strong>Writing files:</strong> Create new files or overwrite existing ones</li>
+                                        <li><strong>Appending:</strong> Add data to existing files</li>
+                                        <li><strong>File modes:</strong> 'r' (read), 'w' (write), 'a' (append)</li>
+                                    </ul>
+
+                                    <h3>File Handling Best Practices:</h3>
+                                    <ul>
+                                        <li><strong>Use with statement:</strong> Automatically closes files</li>
+                                        <li><strong>Handle exceptions:</strong> Deal with file errors gracefully</li>
+                                        <li><strong>Close files:</strong> Always close files when done</li>
+                                        <li><strong>Check file existence:</strong> Verify files exist before opening</li>
+                                    </ul>
+
+                                    <h3>Common File Types:</h3>
+                                    <ul>
+                                        <li><strong>Text files:</strong> .txt, .csv, .json</li>
+                                        <li><strong>Binary files:</strong> Images, videos, executables</li>
+                                        <li><strong>Structured data:</strong> JSON, XML, YAML</li>
+                                        <li><strong>Databases:</strong> SQLite, CSV as database</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">File Handling Examples</div>
+                                    <pre><code># Writing to a file
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!\n")
+    file.write("This is a test file.\n")
+    file.write("Python is awesome!")
+
+# Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+
+# Reading line by line
+with open('example.txt', 'r') as file:
+    for line in file:
+        print(line.strip())
+
+# Appending to a file
+with open('example.txt', 'a') as file:
+    file.write("\nThis line was added later.")
+
+# Reading all lines into a list
+with open('example.txt', 'r') as file:
+    lines = file.readlines()
+    for line in lines:
+        print(f"Line: {line.strip()}")
+
+# Working with CSV files
+import csv
+
+# Writing CSV
+data = [
+    ['Name', 'Age', 'City'],
+    ['Alice', 25, 'New York'],
+    ['Bob', 30, 'Los Angeles'],
+    ['Charlie', 35, 'Chicago']
+]
+
+with open('people.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+# Reading CSV
+with open('people.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+# JSON file handling
+import json
+
+# Writing JSON
+data = {
+    'name': 'Alice',
+    'age': 25,
+    'city': 'New York',
+    'hobbies': ['reading', 'swimming']
+}
+
+with open('data.json', 'w') as file:
+    json.dump(data, file, indent=2)
+
+# Reading JSON
+with open('data.json', 'r') as file:
+    loaded_data = json.load(file)
+    print(loaded_data['name'])  # Alice</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2: Error Handling -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚠️ Day 2: Error Handling</h1>
+                        <p class="slide-subtitle">Managing Exceptions and Errors</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Error Handling?</h2>
+                                    <p>Error handling allows your program to gracefully deal with unexpected situations and continue running instead of crashing.</p>
+                                    
+                                    <h3>Try-Except Blocks:</h3>
+                                    <ul>
+                                        <li><strong>try:</strong> Code that might cause an error</li>
+                                        <li><strong>except:</strong> Code that runs if an error occurs</li>
+                                        <li><strong>else:</strong> Code that runs if no error occurs</li>
+                                        <li><strong>finally:</strong> Code that always runs</li>
+                                    </ul>
+
+                                    <h3>Common Exception Types:</h3>
+                                    <ul>
+                                        <li><strong>ValueError:</strong> Invalid value for operation</li>
+                                        <li><strong>TypeError:</strong> Wrong type for operation</li>
+                                        <li><strong>IndexError:</strong> Invalid list index</li>
+                                        <li><strong>KeyError:</strong> Invalid dictionary key</li>
+                                        <li><strong>FileNotFoundError:</strong> File doesn't exist</li>
+                                        <li><strong>ZeroDivisionError:</strong> Division by zero</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Only catch specific exceptions you can handle</li>
+                                        <li>Don't catch all exceptions blindly</li>
+                                        <li>Provide meaningful error messages</li>
+                                        <li>Log errors for debugging</li>
+                                        <li>Clean up resources in finally blocks</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Error Handling Examples</div>
+                                    <pre><code># Basic try-except
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(f"Result: {result}")
+except ValueError:
+    print("Please enter a valid number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+# Multiple exceptions
+try:
+    file = open('nonexistent.txt', 'r')
+    content = file.read()
+    file.close()
+except FileNotFoundError:
+    print("File not found")
+except PermissionError:
+    print("Permission denied")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+# Try-except-else-finally
+try:
+    number = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input")
+else:
+    print(f"You entered: {number}")
+finally:
+    print("This always runs")
+
+# Custom exceptions
+class AgeError(Exception):
+    pass
+
+def validate_age(age):
+    if age < 0:
+        raise AgeError("Age cannot be negative")
+    if age > 150:
+        raise AgeError("Age seems unrealistic")
+    return age
+
+try:
+    age = validate_age(200)
+except AgeError as e:
+    print(f"Age error: {e}")
+
+# Context managers with error handling
+def safe_divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "Cannot divide by zero"
+    except TypeError:
+        return "Invalid types for division"
+
+print(safe_divide(10, 2))   # 5.0
+print(safe_divide(10, 0))   # Cannot divide by zero
+print(safe_divide(10, "2")) # Invalid types for division</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: Modules and Packages -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Day 3: Modules and Packages</h1>
+                        <p class="slide-subtitle">Organizing and Reusing Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Modules?</h2>
+                                    <p>Modules are Python files that contain functions, classes, and variables. They help organize code and make it reusable across different programs.</p>
+                                    
+                                    <h3>Creating Modules:</h3>
+                                    <ul>
+                                        <li><strong>Python files:</strong> Any .py file can be a module</li>
+                                        <li><strong>Importing:</strong> Use import to access module contents</li>
+                                        <li><strong>Namespaces:</strong> Modules create separate namespaces</li>
+                                        <li><strong>__name__:</strong> Special variable for module name</li>
+                                    </ul>
+
+                                    <h3>Import Methods:</h3>
+                                    <ul>
+                                        <li><strong>import module:</strong> Import entire module</li>
+                                        <li><strong>from module import item:</strong> Import specific items</li>
+                                        <li><strong>from module import *:</strong> Import all items (not recommended)</li>
+                                        <li><strong>import module as alias:</strong> Import with alias</li>
+                                    </ul>
+
+                                    <h3>Built-in Modules:</h3>
+                                    <ul>
+                                        <li><strong>math:</strong> Mathematical functions</li>
+                                        <li><strong>random:</strong> Random number generation</li>
+                                        <li><strong>datetime:</strong> Date and time handling</li>
+                                        <li><strong>os:</strong> Operating system interface</li>
+                                        <li><strong>sys:</strong> System-specific parameters</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Module Examples</div>
+                                    <pre><code># Using built-in modules
+import math
+import random
+import datetime
+
+# Math module
+print(math.pi)           # 3.141592653589793
+print(math.sqrt(16))     # 4.0
+print(math.ceil(3.2))    # 4
+
+# Random module
+print(random.randint(1, 10))  # Random number 1-10
+print(random.choice(['a', 'b', 'c']))  # Random choice
+
+# Datetime module
+now = datetime.datetime.now()
+print(now.strftime("%Y-%m-%d %H:%M:%S"))
+
+# Creating a custom module (calculator.py)
+# calculator.py content:
+"""
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b != 0:
+        return a / b
+    return "Cannot divide by zero"
+"""
+
+# Using the custom module
+import calculator
+
+result = calculator.add(5, 3)
+print(result)  # 8
+
+# Import specific functions
+from calculator import multiply, divide
+print(multiply(4, 6))  # 24
+
+# Import with alias
+import calculator as calc
+print(calc.subtract(10, 4))  # 6
+
+# Creating packages
+# mypackage/
+#     __init__.py
+#     module1.py
+#     module2.py
+
+# __init__.py content:
+"""
+from .module1 import function1
+from .module2 import function2
+"""
+
+# Using packages
+from mypackage import function1, function2</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: Project: Simple Calculator -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🧮 Day 4: Project - Simple Calculator</h1>
+                        <p class="slide-subtitle">Building a Complete Application</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Project Overview</h2>
+                                    <p>Let's build a simple calculator that demonstrates all the concepts we've learned: functions, classes, error handling, and user input.</p>
+                                    
+                                    <h3>Project Features:</h3>
+                                    <ul>
+                                        <li><strong>Basic operations:</strong> Add, subtract, multiply, divide</li>
+                                        <li><strong>Error handling:</strong> Division by zero, invalid input</li>
+                                        <li><strong>User interface:</strong> Menu-driven program</li>
+                                        <li><strong>History:</strong> Keep track of calculations</li>
+                                        <li><strong>Extensibility:</strong> Easy to add new operations</li>
+                                    </ul>
+
+                                    <h3>Learning Objectives:</h3>
+                                    <ul>
+                                        <li>Apply OOP concepts in a real project</li>
+                                        <li>Handle user input and validation</li>
+                                        <li>Implement error handling</li>
+                                        <li>Create a user-friendly interface</li>
+                                        <li>Organize code into logical components</li>
+                                    </ul>
+
+                                    <h3>Project Structure:</h3>
+                                    <ul>
+                                        <li>Calculator class with methods</li>
+                                        <li>Input validation functions</li>
+                                        <li>Menu system</li>
+                                        <li>Error handling</li>
+                                        <li>Main program loop</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Calculator Project</div>
+                                    <pre><code>class Calculator:
+    def __init__(self):
+        self.history = []
+    
+    def add(self, a, b):
+        result = a + b
+        self.history.append(f"{a} + {b} = {result}")
+        return result
+    
+    def subtract(self, a, b):
+        result = a - b
+        self.history.append(f"{a} - {b} = {result}")
+        return result
+    
+    def multiply(self, a, b):
+        result = a * b
+        self.history.append(f"{a} * {b} = {result}")
+        return result
+    
+    def divide(self, a, b):
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+        result = a / b
+        self.history.append(f"{a} / {b} = {result}")
+        return result
+    
+    def get_history(self):
+        return self.history
+
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Please enter a valid number")
+
+def main():
+    calc = Calculator()
+    
+    while True:
+        print("\n=== Simple Calculator ===")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Multiply")
+        print("4. Divide")
+        print("5. Show History")
+        print("6. Exit")
+        
+        choice = input("Enter your choice (1-6): ")
+        
+        if choice == '6':
+            print("Goodbye!")
+            break
+        elif choice == '5':
+            print("\nCalculation History:")
+            for calc in calc.get_history():
+                print(calc)
+        elif choice in ['1', '2', '3', '4']:
+            try:
+                num1 = get_number("Enter first number: ")
+                num2 = get_number("Enter second number: ")
+                
+                if choice == '1':
+                    result = calc.add(num1, num2)
+                elif choice == '2':
+                    result = calc.subtract(num1, num2)
+                elif choice == '3':
+                    result = calc.multiply(num1, num2)
+                elif choice == '4':
+                    result = calc.divide(num1, num2)
+                
+                print(f"Result: {result}")
+            except ValueError as e:
+                print(f"Error: {e}")
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: Next Steps -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎯 Day 5: Next Steps</h1>
+                        <p class="slide-subtitle">Continuing Your Python Journey</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Congratulations!</h2>
+                                    <p>You've completed the Python advanced topics course! You now have a solid foundation in Python programming.</p>
+                                    
+                                    <h3>What You've Learned:</h3>
+                                    <ul>
+                                        <li><strong>File Handling:</strong> Reading and writing files</li>
+                                        <li><strong>Error Handling:</strong> Managing exceptions gracefully</li>
+                                        <li><strong>Modules & Packages:</strong> Organizing and reusing code</li>
+                                        <li><strong>Project Development:</strong> Building complete applications</li>
+                                        <li><strong>Advanced Concepts:</strong> Real-world programming skills</li>
+                                    </ul>
+
+                                    <h3>Next Learning Paths:</h3>
+                                    <ul>
+                                        <li><strong>Web Development:</strong> Django, Flask, FastAPI</li>
+                                        <li><strong>Data Science:</strong> Pandas, NumPy, Matplotlib</li>
+                                        <li><strong>Machine Learning:</strong> Scikit-learn, TensorFlow, PyTorch</li>
+                                        <li><strong>Automation:</strong> Selenium, Beautiful Soup, Requests</li>
+                                        <li><strong>Game Development:</strong> Pygame, Arcade</li>
+                                    </ul>
+
+                                    <h3>Practice Resources:</h3>
+                                    <ul>
+                                        <li><strong>HackerRank:</strong> Coding challenges and competitions</li>
+                                        <li><strong>LeetCode:</strong> Algorithm and data structure problems</li>
+                                        <li><strong>GitHub:</strong> Contribute to open source projects</li>
+                                        <li><strong>Personal Projects:</strong> Build your own applications</li>
+                                        <li><strong>Code Review:</strong> Review and improve existing code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Advanced Topics to Explore</div>
+                                    <pre><code># Decorators
+def timer(func):
+    import time
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print(f"{func.__name__} took {end-start:.2f} seconds")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    import time
+    time.sleep(1)
+    return "Done"
+
+# Generators
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+# List comprehension with conditions
+squares = [x**2 for x in range(10) if x % 2 == 0]
+
+# Lambda functions
+add = lambda x, y: x + y
+print(add(5, 3))  # 8
+
+# Context managers
+class DatabaseConnection:
+    def __enter__(self):
+        print("Connecting to database...")
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Closing database connection...")
+
+# Using the context manager
+with DatabaseConnection() as db:
+    print("Performing database operations...")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

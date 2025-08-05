@@ -68,14 +68,14 @@
             </div>
 
             <!-- Python for Data Science -->
-            <div class="slideshow-card" onclick="openSlideshow('python-data-science')">
+            <div class="slideshow-card" onclick="openSlideshow('python-control-flow')">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <div class="slideshow-info">
-                        <h3>Python for Data Science</h3>
-                        <p>Learn data analysis, visualization, and machine learning</p>
+                        <h3>Python Control Flow & Loops</h3>
+                        <p>Master math operations, strings, conditionals, and loops</p>
                     </div>
                 </div>
                 <div class="card-content">
@@ -96,31 +96,31 @@
                     <div class="slideshow-topics">
                         <h4>What You'll Learn:</h4>
                         <ul>
-                            <li>Pandas & NumPy</li>
-                            <li>Data Visualization</li>
-                            <li>Machine Learning Basics</li>
-                            <li>Statistical Analysis</li>
-                            <li>Real-world Projects</li>
+                            <li>Basic Math Operations</li>
+                            <li>Strings & Concatenation</li>
+                            <li>String Methods</li>
+                            <li>Conditional Statements</li>
+                            <li>Loops Introduction</li>
                         </ul>
                     </div>
                 </div>
                 <div class="card-footer">
                     <button class="open-btn">
                         <i class="fas fa-play"></i>
-                        Start Data Science Course
+                        Start Control Flow Course
                     </button>
                 </div>
             </div>
 
             <!-- Python Web Development -->
-            <div class="slideshow-card" onclick="openSlideshow('python-web-dev')">
+            <div class="slideshow-card" onclick="openSlideshow('python-functions')">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="slideshow-info">
-                        <h3>Python Web Development</h3>
-                        <p>Build web applications with Django and Flask</p>
+                        <h3>Python Functions & Lists</h3>
+                        <p>Learn functions, parameters, lists, and list comprehensions</p>
                     </div>
                 </div>
                 <div class="card-content">
@@ -141,31 +141,31 @@
                     <div class="slideshow-topics">
                         <h4>What You'll Learn:</h4>
                         <ul>
-                            <li>Django Framework</li>
-                            <li>Flask Applications</li>
-                            <li>Database Integration</li>
-                            <li>API Development</li>
-                            <li>Deployment & Hosting</li>
+                            <li>Functions Basics</li>
+                            <li>Function Parameters</li>
+                            <li>Lists Introduction</li>
+                            <li>List Methods</li>
+                            <li>List Comprehensions</li>
                         </ul>
                     </div>
                 </div>
                 <div class="card-footer">
                     <button class="open-btn">
                         <i class="fas fa-play"></i>
-                        Start Web Development Course
+                        Start Functions Course
                     </button>
                 </div>
             </div>
 
             <!-- Python Automation -->
-            <div class="slideshow-card" onclick="openSlideshow('python-automation')">
+            <div class="slideshow-card" onclick="openSlideshow('python-oop')">
                 <div class="card-header">
                     <div class="slideshow-icon">
                         <i class="fas fa-robot"></i>
                     </div>
                     <div class="slideshow-info">
-                        <h3>Python Automation</h3>
-                        <p>Automate tasks and workflows with Python</p>
+                        <h3>Python Object-Oriented Programming</h3>
+                        <p>Master classes, objects, inheritance, and polymorphism</p>
                     </div>
                 </div>
                 <div class="card-content">
@@ -186,18 +186,18 @@
                     <div class="slideshow-topics">
                         <h4>What You'll Learn:</h4>
                         <ul>
-                            <li>File & Folder Automation</li>
-                            <li>Web Scraping</li>
-                            <li>Email Automation</li>
-                            <li>Task Scheduling</li>
-                            <li>Desktop Automation</li>
+                            <li>Classes and Objects</li>
+                            <li>Methods and Attributes</li>
+                            <li>Inheritance</li>
+                            <li>Encapsulation</li>
+                            <li>Polymorphism</li>
                         </ul>
                     </div>
                 </div>
                 <div class="card-footer">
                     <button class="open-btn">
                         <i class="fas fa-play"></i>
-                        Start Automation Course
+                        Start OOP Course
                     </button>
                 </div>
             </div>
@@ -232,27 +232,19 @@
                     // Navigate to the appropriate slideshow
                     switch(course) {
                         case 'python-basics':
-                            window.location.href = 'python-slideshow.html';
+                            window.location.href = 'python-variables-data-types.html';
                             break;
-                        case 'python-data-science':
-                            alert('Python Data Science course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
+                        case 'python-control-flow':
+                            window.location.href = 'python-control-flow-loops.html';
                             break;
-                        case 'python-web-dev':
-                            alert('Python Web Development course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
+                        case 'python-functions':
+                            window.location.href = 'python-functions-lists.html';
                             break;
-                        case 'python-automation':
-                            alert('Python Automation course coming soon!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
+                        case 'python-oop':
+                            window.location.href = 'python-oop.html';
                             break;
                         default:
-                            alert('Course not available yet!');
-                            button.innerHTML = originalText;
-                            button.disabled = false;
+                            window.location.href = 'python-projects-advanced.html';
                     }
                 }, 800);
             }

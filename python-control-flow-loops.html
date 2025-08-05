@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Control Flow & Loops - Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Control Flow & Loops</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Day 1: Basic Math Operations -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🧮 Day 1: Basic Math Operations</h1>
+                        <p class="slide-subtitle">Performing Calculations in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Python Math Operators:</h2>
+                                    <p>Python can perform all the mathematical operations you learned in school, plus some additional ones that are useful in programming.</p>
+                                    
+                                    <h3>Basic Arithmetic Operators:</h3>
+                                    <ul>
+                                        <li><strong>Addition (+):</strong> Adds two numbers together</li>
+                                        <li><strong>Subtraction (-):</strong> Subtracts the second number from the first</li>
+                                        <li><strong>Multiplication (*):</strong> Multiplies two numbers</li>
+                                        <li><strong>Division (/):</strong> Divides the first number by the second (gives decimal result)</li>
+                                        <li><strong>Floor Division (//):</strong> Divides and rounds down to the nearest whole number</li>
+                                        <li><strong>Modulo (%):</strong> Gives the remainder after division</li>
+                                        <li><strong>Exponentiation (**):</strong> Raises a number to a power</li>
+                                    </ul>
+
+                                    <h3>Order of Operations:</h3>
+                                    <p>Python follows the same math rules you learned in school:</p>
+                                    <ol>
+                                        <li><strong>Parentheses:</strong> Do calculations inside () first</li>
+                                        <li><strong>Exponents:</strong> Calculate powers (**)</li>
+                                        <li><strong>Multiplication/Division:</strong> From left to right</li>
+                                        <li><strong>Addition/Subtraction:</strong> From left to right</li>
+                                    </ol>
+
+                                    <h3>Working with Variables:</h3>
+                                    <ul>
+                                        <li>Store calculation results in variables</li>
+                                        <li>Use variables in calculations</li>
+                                        <li>Update variables with new calculations</li>
+                                        <li>Combine different data types carefully</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Math Operation Examples</div>
+                                    <pre><code># Basic arithmetic
+a = 10
+b = 3
+
+print(a + b)   # 13 (addition)
+print(a - b)   # 7 (subtraction)
+print(a * b)   # 30 (multiplication)
+print(a / b)   # 3.333... (division)
+print(a // b)  # 3 (floor division)
+print(a % b)   # 1 (remainder)
+print(a ** b)  # 1000 (10 to the power of 3)
+
+# Order of operations
+result = 2 + 3 * 4
+print(result)  # 14 (multiply first, then add)
+
+# Using parentheses
+result = (2 + 3) * 4
+print(result)  # 20 (add first, then multiply)
+
+# Working with variables
+price = 19.99
+quantity = 3
+total = price * quantity
+tax = total * 0.08
+final_total = total + tax
+
+print(f"Price: ${price}")
+print(f"Quantity: {quantity}")
+print(f"Subtotal: ${total}")
+print(f"Tax: ${tax:.2f}")
+print(f"Final Total: ${final_total:.2f}")
+
+# Integer vs Float division
+print(10 / 3)   # 3.333... (float result)
+print(10 // 3)  # 3 (integer result)
+print(10 % 3)   # 1 (remainder)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2: Strings & Concatenation -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔗 Day 2: Strings & Concatenation</h1>
+                        <p class="slide-subtitle">Working with Text in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Strings?</h2>
+                                    <p>Strings are sequences of characters (letters, numbers, symbols) that represent text. They're one of the most commonly used data types in programming.</p>
+                                    
+                                    <h3>Creating Strings:</h3>
+                                    <ul>
+                                        <li><strong>Single Quotes:</strong> 'Hello World'</li>
+                                        <li><strong>Double Quotes:</strong> "Hello World"</li>
+                                        <li><strong>Triple Quotes:</strong> """Multi-line strings"""</li>
+                                        <li><strong>Escape Characters:</strong> Use \ for special characters</li>
+                                    </ul>
+
+                                    <h3>String Concatenation:</h3>
+                                    <p>Concatenation means joining strings together. There are several ways to do this in Python:</p>
+                                    <ul>
+                                        <li><strong>+ Operator:</strong> Joins strings with the + symbol</li>
+                                        <li><strong>f-strings:</strong> Modern way to embed variables in strings</li>
+                                        <li><strong>.format():</strong> Older method for string formatting</li>
+                                        <li><strong>% Operator:</strong> C-style string formatting</li>
+                                    </ul>
+
+                                    <h3>Why Use Different Methods?</h3>
+                                    <ul>
+                                        <li><strong>f-strings:</strong> Most readable and recommended</li>
+                                        <li><strong>+ Operator:</strong> Simple for joining a few strings</li>
+                                        <li><strong>.format():</strong> Good for complex formatting</li>
+                                        <li><strong>% Operator:</strong> Legacy code compatibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">String Examples</div>
+                                    <pre><code># Creating strings
+first_name = "Jane"
+last_name = "Doe"
+age = 25
+
+# String concatenation with +
+full_name = first_name + " " + last_name
+print(full_name)  # Jane Doe
+
+# f-strings (recommended)
+greeting = f"Hello, {first_name} {last_name}!"
+print(greeting)  # Hello, Jane Doe!
+
+# Using f-strings with expressions
+message = f"{first_name} is {age} years old"
+print(message)  # Jane is 25 years old
+
+# .format() method
+template = "Welcome, {} {}!"
+formatted = template.format(first_name, last_name)
+print(formatted)  # Welcome, Jane Doe!
+
+# Multiple concatenations
+part1 = "Python"
+part2 = " is"
+part3 = " awesome!"
+result = part1 + part2 + part3
+print(result)  # Python is awesome!
+
+# Working with numbers in strings
+price = 19.99
+quantity = 3
+total = price * quantity
+
+# f-string with formatting
+print(f"Price: ${price:.2f}")
+print(f"Quantity: {quantity}")
+print(f"Total: ${total:.2f}")
+
+# Escape characters
+print("She said \"Hello!\"")  # She said "Hello!"
+print('It\'s a beautiful day')  # It's a beautiful day
+print("Line 1\nLine 2")  # Multi-line output</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3: String Methods -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Day 3: String Methods</h1>
+                        <p class="slide-subtitle">Built-in Functions for Text Manipulation</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are String Methods?</h2>
+                                    <p>String methods are built-in functions that help you manipulate and work with text. They make it easy to transform, search, and analyze strings.</p>
+                                    
+                                    <h3>Common String Methods:</h3>
+                                    <ul>
+                                        <li><strong>.upper():</strong> Converts all letters to uppercase</li>
+                                        <li><strong>.lower():</strong> Converts all letters to lowercase</li>
+                                        <li><strong>.title():</strong> Capitalizes the first letter of each word</li>
+                                        <li><strong>.strip():</strong> Removes whitespace from beginning and end</li>
+                                        <li><strong>.replace():</strong> Replaces one substring with another</li>
+                                        <li><strong>.split():</strong> Splits a string into a list of substrings</li>
+                                        <li><strong>.join():</strong> Joins a list of strings into one string</li>
+                                        <li><strong>.find():</strong> Finds the position of a substring</li>
+                                        <li><strong>.count():</strong> Counts how many times a substring appears</li>
+                                    </ul>
+
+                                    <h3>How to Use String Methods:</h3>
+                                    <ul>
+                                        <li><strong>Syntax:</strong> string.method_name()</li>
+                                        <li><strong>Chaining:</strong> You can use multiple methods together</li>
+                                        <li><strong>Immutability:</strong> Original string doesn't change</li>
+                                        <li><strong>Return Value:</strong> Methods return a new string</li>
+                                    </ul>
+
+                                    <h3>Practical Applications:</h3>
+                                    <ul>
+                                        <li>Cleaning user input (removing extra spaces)</li>
+                                        <li>Formatting text for display</li>
+                                        <li>Searching and replacing text</li>
+                                        <li>Parsing data from files or user input</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">String Method Examples</div>
+                                    <pre><code># Basic string methods
+text = "  Hello World  "
+
+# Case conversion
+print(text.upper())      # "  HELLO WORLD  "
+print(text.lower())      # "  hello world  "
+print(text.title())      # "  Hello World  "
+
+# Cleaning whitespace
+print(text.strip())      # "Hello World"
+print(text.lstrip())     # "Hello World  "
+print(text.rstrip())     # "  Hello World"
+
+# Replacing text
+message = "Hello Python"
+new_message = message.replace("Python", "World")
+print(new_message)       # "Hello World"
+
+# Splitting and joining
+sentence = "Python is awesome"
+words = sentence.split()  # ["Python", "is", "awesome"]
+print(words)
+
+# Joining words back together
+new_sentence = " ".join(words)
+print(new_sentence)      # "Python is awesome"
+
+# Finding and counting
+text = "Python programming is fun"
+print(text.find("programming"))  # 7 (position)
+print(text.count("m"))          # 2 (count of 'm')
+
+# Chaining methods
+user_input = "  HELLO WORLD  "
+clean_input = user_input.strip().lower()
+print(clean_input)       # "hello world"
+
+# Practical example
+name = input("Enter your name: ")
+clean_name = name.strip().title()
+print(f"Welcome, {clean_name}!")
+
+# What you'll see:
+# Enter your name:   john doe  
+# Welcome, John Doe!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4: Conditional Statements -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎯 Day 4: Conditional Statements</h1>
+                        <p class="slide-subtitle">Making Decisions in Your Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Conditional Statements?</h2>
+                                    <p>Conditional statements allow your program to make decisions based on certain conditions. They control which code runs and which doesn't.</p>
+                                    
+                                    <h3>Using if, elif, and else:</h3>
+                                    <ul>
+                                        <li><strong>if:</strong> Checks if a condition is True</li>
+                                        <li><strong>elif:</strong> Checks another condition if the first was False</li>
+                                        <li><strong>else:</strong> Runs if all previous conditions were False</li>
+                                        <li><strong>Indentation:</strong> Code inside conditions must be indented</li>
+                                    </ul>
+
+                                    <h3>Comparison Operators:</h3>
+                                    <ul>
+                                        <li><strong>==:</strong> Equal to</li>
+                                        <li><strong>!=:</strong> Not equal to</li>
+                                        <li><strong>&lt;:</strong> Less than</li>
+                                        <li><strong>&gt;:</strong> Greater than</li>
+                                        <li><strong>&lt;=:</strong> Less than or equal to</li>
+                                        <li><strong>&gt;=:</strong> Greater than or equal to</li>
+                                    </ul>
+
+                                    <h3>Logical Operators:</h3>
+                                    <ul>
+                                        <li><strong>and:</strong> Both conditions must be True</li>
+                                        <li><strong>or:</strong> At least one condition must be True</li>
+                                        <li><strong>not:</strong> Reverses the condition</li>
+                                    </ul>
+
+                                    <h3>Common Patterns:</h3>
+                                    <ul>
+                                        <li>Checking user input</li>
+                                        <li>Validating data</li>
+                                        <li>Making decisions in games</li>
+                                        <li>Handling different scenarios</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Conditional Examples</div>
+                                    <pre><code># Basic if statement
+age = 18
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+
+# Using elif for multiple conditions
+score = 85
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+else:
+    grade = "F"
+print(f"Your grade is: {grade}")
+
+# Comparison operators
+x = 10
+y = 5
+
+if x > y:
+    print("x is greater than y")
+elif x < y:
+    print("x is less than y")
+else:
+    print("x equals y")
+
+# Logical operators
+username = "admin"
+password = "12345"
+
+if username == "admin" and password == "12345":
+    print("Login successful")
+else:
+    print("Login failed")
+
+# Checking user input
+user_input = input("Enter a number: ")
+number = int(user_input)
+
+if number > 0:
+    print("Positive number")
+elif number < 0:
+    print("Negative number")
+else:
+    print("Zero")
+
+# Nested conditions
+age = 25
+has_license = True
+
+if age >= 16:
+    if has_license:
+        print("You can drive")
+    else:
+        print("You need a license")
+else:
+    print("Too young to drive")
+
+# Using 'in' operator
+fruits = ["apple", "banana", "orange"]
+user_fruit = input("Enter a fruit: ")
+
+if user_fruit in fruits:
+    print("That fruit is in our list!")
+else:
+    print("Fruit not found")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5: Loops Introduction -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Day 5: Loops Introduction</h1>
+                        <p class="slide-subtitle">Repeating Code with Loops</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Loops?</h2>
+                                    <p>Loops allow you to repeat code multiple times without writing it over and over. They're essential for processing data and automating tasks.</p>
+                                    
+                                    <h3>Types of Loops:</h3>
+                                    <ul>
+                                        <li><strong>for loops:</strong> Repeat a specific number of times</li>
+                                        <li><strong>while loops:</strong> Repeat while a condition is True</li>
+                                        <li><strong>Nested loops:</strong> Loops inside other loops</li>
+                                    </ul>
+
+                                    <h3>For Loops with range():</h3>
+                                    <ul>
+                                        <li><strong>range(n):</strong> Numbers from 0 to n-1</li>
+                                        <li><strong>range(start, end):</strong> Numbers from start to end-1</li>
+                                        <li><strong>range(start, end, step):</strong> Numbers with step size</li>
+                                        <li><strong>Iterating over lists:</strong> Loop through each item</li>
+                                    </ul>
+
+                                    <h3>While Loops:</h3>
+                                    <ul>
+                                        <li><strong>Condition-based:</strong> Repeat while condition is True</li>
+                                        <li><strong>Manual control:</strong> You control when to stop</li>
+                                        <li><strong>Infinite loops:</strong> Be careful to avoid these</li>
+                                        <li><strong>Break statement:</strong> Exit loop early</li>
+                                    </ul>
+
+                                    <h3>Loop Control:</h3>
+                                    <ul>
+                                        <li><strong>break:</strong> Exit the loop immediately</li>
+                                        <li><strong>continue:</strong> Skip to next iteration</li>
+                                        <li><strong>else clause:</strong> Run when loop finishes normally</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Loop Examples</div>
+                                    <pre><code># For loop with range
+for i in range(5):
+    print(f"Count: {i}")
+
+# Output: Count: 0, 1, 2, 3, 4
+
+# For loop with start and end
+for i in range(1, 6):
+    print(f"Number: {i}")
+
+# Output: Number: 1, 2, 3, 4, 5
+
+# For loop with step
+for i in range(0, 10, 2):
+    print(f"Even: {i}")
+
+# Output: Even: 0, 2, 4, 6, 8
+
+# Iterating over a list
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(f"I like {fruit}")
+
+# While loop
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# While loop with break
+number = 0
+while True:
+    if number >= 5:
+        break
+    print(f"Number: {number}")
+    number += 1
+
+# Loop with continue
+for i in range(10):
+    if i % 2 == 0:  # Skip even numbers
+        continue
+    print(f"Odd: {i}")
+
+# Nested loops
+for i in range(3):
+    for j in range(3):
+        print(f"({i}, {j})", end=" ")
+    print()  # New line after each row
+
+# Loop with else
+for i in range(5):
+    print(i)
+else:
+    print("Loop completed successfully!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
