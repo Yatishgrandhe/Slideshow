@@ -794,8 +794,1708 @@ temp = 42</code></pre>
                 </div>
             </div>
 
-            <!-- Add remaining slides 8-25 with comprehensive content -->
-            <!-- For brevity, I'll add a final slide showing the structure -->
+            <!-- Slide 8: Variables and Data Types -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Slide 8: Variables and Data Types</h1>
+                        <p class="slide-subtitle">Storing Information in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Variables?</h2>
+                                    <p>Variables are like labeled boxes where you store information. They can hold different types of data that your program can use and manipulate.</p>
+                                    
+                                    <h3>How Variables Work:</h3>
+                                    <ul>
+                                        <li><strong>Assignment:</strong> Use = to put data in a variable</li>
+                                        <li><strong>Naming:</strong> Choose descriptive names (use letters, numbers, underscore)</li>
+                                        <li><strong>Dynamic Typing:</strong> Python figures out the data type automatically</li>
+                                        <li><strong>Reusable:</strong> Use the variable name to access the stored data</li>
+                                        <li><strong>Mutable:</strong> You can change the value of variables</li>
+                                    </ul>
+
+                                    <h3>Python Data Types:</h3>
+                                    <ul>
+                                        <li><strong>String (str):</strong> Text data - "Hello", "Python"</li>
+                                        <li><strong>Integer (int):</strong> Whole numbers - 5, 100, -3</li>
+                                        <li><strong>Float:</strong> Decimal numbers - 3.14, 2.5, -1.0</li>
+                                        <li><strong>Boolean (bool):</strong> True or False values</li>
+                                        <li><strong>List:</strong> Collection of items - [1, 2, 3]</li>
+                                        <li><strong>Dictionary:</strong> Key-value pairs - {"name": "Alice"}</li>
+                                    </ul>
+
+                                    <h3>Variable Naming Rules:</h3>
+                                    <ul>
+                                        <li>Start with a letter or underscore</li>
+                                        <li>Can contain letters, numbers, and underscores</li>
+                                        <li>Case sensitive (name ≠ Name)</li>
+                                        <li>Use descriptive names (user_age, not x)</li>
+                                        <li>Avoid Python keywords (print, if, for, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Variable Examples</div>
+                                    <pre><code># String variables (text)
+name = "Alice"
+city = "New York"
+message = "Hello, World!"
+
+# Integer variables (whole numbers)
+age = 25
+score = 100
+temperature = -5
+
+# Float variables (decimal numbers)
+height = 5.6
+pi = 3.14159
+price = 19.99
+
+# Boolean variables (True/False)
+is_student = True
+is_raining = False
+has_license = True
+
+# Check the type of each variable
+print(type(name))        # <class 'str'>
+print(type(age))         # <class 'int'>
+print(type(height))      # <class 'float'>
+print(type(is_student))  # <class 'bool'>
+
+# Use variables in calculations
+total = price * 2
+print(f"Total: ${total}")  # Total: $39.98
+
+# Variable naming examples
+user_name = "Alice"          # Good: descriptive
+age = 25                     # Good: clear
+x = 10                       # Bad: not descriptive
+userName = "Bob"             # Bad: inconsistent style
+
+# Dynamic typing
+variable = "Hello"           # String
+print(type(variable))        # <class 'str'>
+
+variable = 42                # Now it's an integer
+print(type(variable))        # <class 'int'>
+
+variable = 3.14              # Now it's a float
+print(type(variable))        # <class 'float'>
+
+# Working with variables
+first_name = "Alice"
+last_name = "Johnson"
+full_name = first_name + " " + last_name
+print(full_name)  # Alice Johnson
+
+# Using variables in expressions
+price = 19.99
+quantity = 3
+total = price * quantity
+print(f"Total cost: ${total:.2f}")  # Total cost: $59.97</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Type Checking and Conversion -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔍 Slide 9: Type Checking and Conversion</h1>
+                        <p class="slide-subtitle">Understanding and Converting Data Types</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Type Checking?</h2>
+                                    <p>Type checking helps you understand what kind of data a variable contains. This is useful for debugging and ensuring your code works correctly.</p>
+                                    
+                                    <h3>Using type() Function:</h3>
+                                    <ul>
+                                        <li><strong>Check Type:</strong> Use type(variable_name) to see the data type</li>
+                                        <li><strong>Debugging:</strong> Helps identify why calculations might not work</li>
+                                        <li><strong>Learning:</strong> Great way to understand what Python is doing</li>
+                                        <li><strong>Validation:</strong> Ensure you're working with the right data type</li>
+                                    </ul>
+
+                                    <h3>What is Type Casting?</h3>
+                                    <p>Type casting (or conversion) is the process of changing one data type to another. This is often necessary when working with user input or combining different types of data.</p>
+
+                                    <h3>Common Conversion Functions:</h3>
+                                    <ul>
+                                        <li><strong>int():</strong> Convert to integer (whole number)</li>
+                                        <li><strong>float():</strong> Convert to decimal number</li>
+                                        <li><strong>str():</strong> Convert to text string</li>
+                                        <li><strong>bool():</strong> Convert to True/False</li>
+                                        <li><strong>list():</strong> Convert to list</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Type Checking & Casting Examples</div>
+                                    <pre><code># Type checking examples
+age = 25
+name = "Alice"
+height = 5.6
+is_student = True
+
+print(type(age))        # <class 'int'>
+print(type(name))       # <class 'str'>
+print(type(height))     # <class 'float'>
+print(type(is_student)) # <class 'bool'>
+
+# Type casting examples
+# String to Integer
+text_number = "42"
+number = int(text_number)
+print(number)  # 42
+print(type(number))  # <class 'int'>
+
+# Integer to String
+age = 25
+age_text = str(age)
+print(age_text)  # "25"
+print(type(age_text))  # <class 'str'>
+
+# String to Float
+decimal_text = "3.14"
+pi = float(decimal_text)
+print(pi)  # 3.14
+
+# Float to Integer
+price = 19.99
+whole_price = int(price)
+print(whole_price)  # 19 (truncates decimal)
+
+# Boolean conversion
+print(bool(1))    # True
+print(bool(0))    # False
+print(bool(""))   # False
+print(bool("Hi")) # True
+
+# Working with user input
+user_input = input("Enter a number: ")  # Always returns string
+number = int(user_input)  # Convert to integer
+print(f"You entered: {number}")
+
+# Safe conversion with error handling
+def safe_convert_to_int(value):
+    try:
+        return int(value)
+    except ValueError:
+        return f"Cannot convert '{value}' to integer"
+
+print(safe_convert_to_int("42"))    # 42
+print(safe_convert_to_int("abc"))   # Cannot convert 'abc' to integer
+
+# Type checking in functions
+def process_data(data):
+    if isinstance(data, str):
+        return data.upper()
+    elif isinstance(data, int):
+        return data * 2
+    elif isinstance(data, list):
+        return len(data)
+    else:
+        return "Unknown type"
+
+print(process_data("hello"))    # HELLO
+print(process_data(5))         # 10
+print(process_data([1, 2, 3])) # 3</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Getting User Input -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📥 Slide 10: Getting User Input</h1>
+                        <p class="slide-subtitle">Making Your Programs Interactive</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is User Input?</h2>
+                                    <p>User input allows your program to get information from the person using it. This makes your programs interactive and dynamic.</p>
+                                    
+                                    <h3>Using the input() Function:</h3>
+                                    <ul>
+                                        <li><strong>Basic Syntax:</strong> input("Your message here")</li>
+                                        <li><strong>Prompt Message:</strong> The text in quotes tells the user what to enter</li>
+                                        <li><strong>Always Returns String:</strong> Input is always treated as text initially</li>
+                                        <li><strong>Program Pauses:</strong> Your program waits for the user to type something</li>
+                                        <li><strong>Enter Key:</strong> User presses Enter to submit their input</li>
+                                    </ul>
+
+                                    <h3>Important Things to Remember:</h3>
+                                    <ul>
+                                        <li><strong>String Output:</strong> input() always returns a string, even if the user types a number</li>
+                                        <li><strong>Type Conversion:</strong> You often need to convert input to the right type</li>
+                                        <li><strong>Error Handling:</strong> Users might enter unexpected data</li>
+                                        <li><strong>Clear Prompts:</strong> Tell users exactly what you want them to enter</li>
+                                        <li><strong>Validation:</strong> Check if the input is what you expect</li>
+                                    </ul>
+
+                                    <h3>Common Input Patterns:</h3>
+                                    <ul>
+                                        <li>Getting names and text information</li>
+                                        <li>Collecting numbers for calculations</li>
+                                        <li>Asking for yes/no answers</li>
+                                        <li>Building interactive games and tools</li>
+                                        <li>Creating user-friendly applications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Input Examples</div>
+                                    <pre><code># Basic input
+name = input("What's your name? ")
+print(f"Hello, {name}!")
+
+# Input with type conversion
+age = input("How old are you? ")
+age = int(age)  # Convert string to integer
+print(f"You are {age} years old")
+
+# Multiple inputs
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+full_name = first_name + " " + last_name
+print(f"Welcome, {full_name}!")
+
+# Input for calculations
+price = input("Enter the price: ")
+quantity = input("Enter the quantity: ")
+total = float(price) * int(quantity)
+print(f"Total cost: ${total}")
+
+# Interactive program
+print("=== Simple Calculator ===")
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+result = num1 + num2
+print(f"{num1} + {num2} = {result}")
+
+# Input validation
+def get_valid_age():
+    while True:
+        try:
+            age = int(input("Enter your age: "))
+            if age < 0 or age > 120:
+                print("Please enter a realistic age (0-120)")
+                continue
+            return age
+        except ValueError:
+            print("Please enter a valid number")
+
+# Using the validation function
+age = get_valid_age()
+print(f"Valid age entered: {age}")
+
+# Yes/No input
+response = input("Do you want to continue? (y/n): ").lower()
+if response in ['y', 'yes']:
+    print("Continuing...")
+elif response in ['n', 'no']:
+    print("Stopping...")
+else:
+    print("Invalid response")
+
+# Input with default value
+def get_name_with_default():
+    name = input("Enter your name (or press Enter for 'Guest'): ")
+    return name if name else "Guest"
+
+user_name = get_name_with_default()
+print(f"Hello, {user_name}!")
+
+# What you'll see when running:
+# What's your name? Alice
+# Hello, Alice!
+# How old are you? 25
+# You are 25 years old</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Conditional Statements -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔀 Slide 11: Conditional Statements</h1>
+                        <p class="slide-subtitle">Making Decisions in Your Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Conditional Statements?</h2>
+                                    <p>Conditional statements allow your program to make decisions based on whether certain conditions are true or false. They make your programs intelligent and responsive.</p>
+                                    
+                                    <h3>if Statement:</h3>
+                                    <ul>
+                                        <li><strong>Basic Structure:</strong> if condition: followed by indented code</li>
+                                        <li><strong>Condition:</strong> An expression that evaluates to True or False</li>
+                                        <li><strong>Indentation:</strong> Code that runs when condition is True</li>
+                                        <li><strong>Comparison Operators:</strong> ==, !=, <, >, <=, >=</li>
+                                        <li><strong>Logical Operators:</strong> and, or, not</li>
+                                    </ul>
+
+                                    <h3>if-elif-else Structure:</h3>
+                                    <ul>
+                                        <li><strong>if:</strong> First condition to check</li>
+                                        <li><strong>elif:</strong> Additional conditions to check if first is False</li>
+                                        <li><strong>else:</strong> What to do if no conditions are True</li>
+                                        <li><strong>Only One Block Runs:</strong> First True condition wins</li>
+                                    </ul>
+
+                                    <h3>Common Conditions:</h3>
+                                    <ul>
+                                        <li>Checking if numbers are equal, greater, or less than</li>
+                                        <li>Checking if strings match or contain text</li>
+                                        <li>Checking if variables have certain values</li>
+                                        <li>Combining multiple conditions with and/or</li>
+                                        <li>Checking if lists contain items</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Conditional Examples</div>
+                                    <pre><code># Basic if statement
+age = 18
+if age >= 18:
+    print("You are an adult")
+
+# if-else statement
+temperature = 25
+if temperature > 20:
+    print("It's warm")
+else:
+    print("It's cool")
+
+# if-elif-else statement
+score = 85
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+elif score >= 70:
+    grade = "C"
+elif score >= 60:
+    grade = "D"
+else:
+    grade = "F"
+print(f"Grade: {grade}")
+
+# Multiple conditions with and
+age = 25
+has_license = True
+if age >= 18 and has_license:
+    print("You can drive")
+
+# Multiple conditions with or
+weather = "rainy"
+temperature = 15
+if weather == "rainy" or temperature < 20:
+    print("Bring a jacket")
+
+# Checking string conditions
+name = input("Enter your name: ")
+if name.lower() == "alice":
+    print("Hello, Alice!")
+elif name.lower() == "bob":
+    print("Hello, Bob!")
+else:
+    print(f"Hello, {name}!")
+
+# Checking if value is in a list
+fruits = ["apple", "banana", "orange"]
+user_fruit = input("Enter a fruit: ")
+if user_fruit.lower() in fruits:
+    print(f"{user_fruit} is in our list!")
+else:
+    print(f"{user_fruit} is not in our list")
+
+# Nested conditions
+age = 25
+income = 50000
+if age >= 18:
+    if income >= 30000:
+        print("You qualify for the loan")
+    else:
+        print("Income too low")
+else:
+    print("Too young for loan")
+
+# Using not operator
+is_raining = False
+if not is_raining:
+    print("Let's go for a walk")
+
+# Complex condition
+username = "alice"
+password = "secret123"
+is_admin = True
+
+if username == "alice" and password == "secret123":
+    if is_admin:
+        print("Welcome, Administrator!")
+    else:
+        print("Welcome, User!")
+else:
+    print("Access denied")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: Loops and Iteration -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔄 Slide 12: Loops and Iteration</h1>
+                        <p class="slide-subtitle">Repeating Code Efficiently</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Loops?</h2>
+                                    <p>Loops allow you to repeat code multiple times without writing it over and over. They make your programs more efficient and powerful.</p>
+                                    
+                                    <h3>for Loop:</h3>
+                                    <ul>
+                                        <li><strong>Range-based:</strong> for i in range(5): repeats 5 times</li>
+                                        <li><strong>List-based:</strong> for item in [1, 2, 3]: processes each item</li>
+                                        <li><strong>String-based:</strong> for char in "hello": processes each character</li>
+                                        <li><strong>Variable:</strong> The loop variable changes each iteration</li>
+                                        <li><strong>Indentation:</strong> Code inside the loop must be indented</li>
+                                    </ul>
+
+                                    <h3>while Loop:</h3>
+                                    <ul>
+                                        <li><strong>Condition-based:</strong> Repeats while condition is True</li>
+                                        <li><strong>Manual Control:</strong> You control when it stops</li>
+                                        <li><strong>Infinite Risk:</strong> Can run forever if not careful</li>
+                                        <li><strong>Use Cases:</strong> User input, game loops, processing until done</li>
+                                    </ul>
+
+                                    <h3>Loop Control:</h3>
+                                    <ul>
+                                        <li><strong>break:</strong> Exit the loop immediately</li>
+                                        <li><strong>continue:</strong> Skip to next iteration</li>
+                                        <li><strong>else:</strong> Code that runs when loop finishes normally</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Loop Examples</div>
+                                    <pre><code># Basic for loop with range
+for i in range(5):
+    print(f"Count: {i}")
+# Output: Count: 0, Count: 1, Count: 2, Count: 3, Count: 4
+
+# For loop with list
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(f"I like {fruit}")
+
+# For loop with string
+for char in "Python":
+    print(char)
+# Output: P, y, t, h, o, n
+
+# While loop
+count = 0
+while count < 5:
+    print(f"Count: {count}")
+    count += 1
+
+# While loop with user input
+password = "secret123"
+attempts = 0
+while attempts < 3:
+    user_input = input("Enter password: ")
+    if user_input == password:
+        print("Access granted!")
+        break
+    else:
+        attempts += 1
+        print(f"Wrong password. {3-attempts} attempts left")
+
+# Loop with break
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+# Output: 0, 1, 2, 3, 4
+
+# Loop with continue
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(i)
+# Output: 1, 3, 5, 7, 9
+
+# Nested loops
+for i in range(3):
+    for j in range(3):
+        print(f"({i}, {j})", end=" ")
+    print()  # New line after each row
+
+# Loop with else
+for i in range(5):
+    print(i)
+else:
+    print("Loop completed normally")
+
+# Practical example: number guessing game
+import random
+secret = random.randint(1, 10)
+attempts = 0
+
+while attempts < 3:
+    guess = int(input("Guess the number (1-10): "))
+    attempts += 1
+    
+    if guess == secret:
+        print(f"Correct! You got it in {attempts} attempts")
+        break
+    elif guess < secret:
+        print("Too low!")
+    else:
+        print("Too high!")
+else:
+    print(f"Game over! The number was {secret}")
+
+# Processing user input with loops
+names = []
+while True:
+    name = input("Enter a name (or 'quit' to stop): ")
+    if name.lower() == 'quit':
+        break
+    names.append(name)
+
+print("Names entered:", names)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: String Operations -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📝 Slide 13: String Operations</h1>
+                        <p class="slide-subtitle">Working with Text in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>String Basics</h2>
+                                    <p>Strings are sequences of characters (letters, numbers, symbols) used to represent text in Python. They're one of the most commonly used data types.</p>
+                                    
+                                    <h3>String Creation:</h3>
+                                    <ul>
+                                        <li><strong>Single Quotes:</strong> 'Hello' or 'Python'</li>
+                                        <li><strong>Double Quotes:</strong> "Hello" or "Python"</li>
+                                        <li><strong>Triple Quotes:</strong> """Multi-line strings"""</li>
+                                        <li><strong>Escape Characters:</strong> \n for new line, \t for tab</li>
+                                    </ul>
+
+                                    <h3>String Methods:</h3>
+                                    <ul>
+                                        <li><strong>upper() / lower():</strong> Change case</li>
+                                        <li><strong>strip():</strong> Remove whitespace</li>
+                                        <li><strong>split():</strong> Break into list</li>
+                                        <li><strong>join():</strong> Combine list into string</li>
+                                        <li><strong>replace():</strong> Substitute text</li>
+                                        <li><strong>find() / index():</strong> Locate text</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">String Examples</div>
+                                    <pre><code># String creation
+name = "Alice"
+message = 'Hello, World!'
+multi_line = """This is a
+multi-line string"""
+
+# String methods
+text = "  Hello, Python!  "
+print(text.upper())      # "  HELLO, PYTHON!  "
+print(text.lower())      # "  hello, python!  "
+print(text.strip())      # "Hello, Python!"
+
+# String concatenation
+first = "Hello"
+second = "World"
+result = first + " " + second
+print(result)  # "Hello World"
+
+# String formatting
+name = "Alice"
+age = 25
+print(f"Hello, {name}! You are {age} years old")
+
+# String methods
+sentence = "Python is awesome"
+words = sentence.split()  # ['Python', 'is', 'awesome']
+joined = " ".join(words)  # "Python is awesome"
+
+# String replacement
+text = "I love Java"
+new_text = text.replace("Java", "Python")
+print(new_text)  # "I love Python"
+
+# String searching
+text = "Hello, World!"
+print(text.find("World"))  # 7
+print(text.find("Python")) # -1 (not found)
+
+# String slicing
+text = "Python Programming"
+print(text[0:6])    # "Python"
+print(text[7:])     # "Programming"
+print(text[-3:])    # "ing"</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Lists and Collections -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 14: Lists and Collections</h1>
+                        <p class="slide-subtitle">Working with Multiple Items</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Lists?</h2>
+                                    <p>Lists are ordered collections of items that can store different types of data. They're one of Python's most versatile data structures.</p>
+                                    
+                                    <h3>List Features:</h3>
+                                    <ul>
+                                        <li><strong>Ordered:</strong> Items maintain their position</li>
+                                        <li><strong>Mutable:</strong> Can add, remove, or change items</li>
+                                        <li><strong>Indexed:</strong> Access items by position (0-based)</li>
+                                        <li><strong>Heterogeneous:</strong> Can mix different data types</li>
+                                        <li><strong>Dynamic:</strong> Can grow or shrink as needed</li>
+                                    </ul>
+
+                                    <h3>Common List Operations:</h3>
+                                    <ul>
+                                        <li><strong>append():</strong> Add item to end</li>
+                                        <li><strong>insert():</strong> Add item at specific position</li>
+                                        <li><strong>remove():</strong> Remove specific item</li>
+                                        <li><strong>pop():</strong> Remove and return item</li>
+                                        <li><strong>len():</strong> Get number of items</li>
+                                        <li><strong>sort():</strong> Arrange items in order</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Examples</div>
+                                    <pre><code># Creating lists
+numbers = [1, 2, 3, 4, 5]
+fruits = ["apple", "banana", "orange"]
+mixed = [1, "hello", 3.14, True]
+
+# Accessing items
+print(numbers[0])    # 1
+print(fruits[1])     # "banana"
+print(numbers[-1])   # 5 (last item)
+
+# Adding items
+fruits.append("grape")
+fruits.insert(1, "pear")
+print(fruits)  # ['apple', 'pear', 'banana', 'orange', 'grape']
+
+# Removing items
+fruits.remove("banana")
+popped = fruits.pop(1)
+print(fruits)  # ['apple', 'orange', 'grape']
+
+# List operations
+numbers = [3, 1, 4, 1, 5, 9, 2, 6]
+print(len(numbers))  # 8
+print(max(numbers))  # 9
+print(min(numbers))  # 1
+print(sum(numbers))  # 31
+
+# List slicing
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(numbers[2:5])   # [2, 3, 4]
+print(numbers[:3])    # [0, 1, 2]
+print(numbers[7:])    # [7, 8, 9]
+print(numbers[::2])   # [0, 2, 4, 6, 8]
+
+# List comprehension
+squares = [x**2 for x in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]
+
+# Nested lists
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(matrix[1][2])  # 6</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Functions Basics -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 15: Functions Basics</h1>
+                        <p class="slide-subtitle">Creating Reusable Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Functions?</h2>
+                                    <p>Functions are reusable blocks of code that perform specific tasks. They help organize code and avoid repetition.</p>
+                                    
+                                    <h3>Function Structure:</h3>
+                                    <ul>
+                                        <li><strong>def keyword:</strong> Used to define a function</li>
+                                        <li><strong>Function name:</strong> Choose descriptive names</li>
+                                        <li><strong>Parameters:</strong> Input values (optional)</li>
+                                        <li><strong>Function body:</strong> Code that runs</li>
+                                        <li><strong>return statement:</strong> Output value (optional)</li>
+                                    </ul>
+
+                                    <h3>Benefits of Functions:</h3>
+                                    <ul>
+                                        <li><strong>Reusability:</strong> Write once, use many times</li>
+                                        <li><strong>Organization:</strong> Break code into logical pieces</li>
+                                        <li><strong>Testing:</strong> Test individual pieces</li>
+                                        <li><strong>Readability:</strong> Code becomes self-documenting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Function Examples</div>
+                                    <pre><code># Basic function
+def greet():
+    print("Hello, World!")
+
+greet()  # Hello, World!
+
+# Function with parameters
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+greet_person("Alice")  # Hello, Alice!
+
+# Function with return value
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # 8
+
+# Function with default parameters
+def greet_with_title(name, title="Mr."):
+    return f"Hello, {title} {name}!"
+
+print(greet_with_title("Smith"))                    # Hello, Mr. Smith!
+print(greet_with_title("Johnson", "Dr."))          # Hello, Dr. Johnson!
+
+# Function with multiple return values
+def get_name_and_age():
+    return "Alice", 25
+
+name, age = get_name_and_age()
+print(f"Name: {name}, Age: {age}")
+
+# Function with conditional logic
+def check_number(num):
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        return "Zero"
+
+print(check_number(5))   # Positive
+print(check_number(-3))  # Negative
+print(check_number(0))   # Zero</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16: Error Handling -->
+            <div class="slide" data-slide="16">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚠️ Slide 16: Error Handling</h1>
+                        <p class="slide-subtitle">Dealing with Problems in Your Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Errors?</h2>
+                                    <p>Errors (exceptions) are problems that occur when your program runs. Good error handling makes your programs robust and user-friendly.</p>
+                                    
+                                    <h3>Common Error Types:</h3>
+                                    <ul>
+                                        <li><strong>SyntaxError:</strong> Code doesn't follow Python rules</li>
+                                        <li><strong>NameError:</strong> Using undefined variable</li>
+                                        <li><strong>TypeError:</strong> Wrong data type for operation</li>
+                                        <li><strong>ValueError:</strong> Invalid value for function</li>
+                                        <li><strong>IndexError:</strong> Accessing list item that doesn't exist</li>
+                                        <li><strong>ZeroDivisionError:</strong> Dividing by zero</li>
+                                    </ul>
+
+                                    <h3>Using try-except:</h3>
+                                    <ul>
+                                        <li><strong>try:</strong> Code that might cause an error</li>
+                                        <li><strong>except:</strong> What to do if error occurs</li>
+                                        <li><strong>else:</strong> Code that runs if no error</li>
+                                        <li><strong>finally:</strong> Code that always runs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Error Handling Examples</div>
+                                    <pre><code># Basic error handling
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(f"Result: {result}")
+except ValueError:
+    print("Please enter a valid number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+# Multiple exceptions
+try:
+    user_input = input("Enter a number: ")
+    number = int(user_input)
+    result = 10 / number
+    print(f"Result: {result}")
+except (ValueError, ZeroDivisionError) as e:
+    print(f"Error: {e}")
+
+# Using else and finally
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+except ValueError:
+    print("Invalid input")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print(f"Result: {result}")
+finally:
+    print("Calculation completed")
+
+# Custom error messages
+def safe_divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return "Error: Division by zero"
+    except TypeError:
+        return "Error: Invalid data types"
+
+print(safe_divide(10, 2))   # 5.0
+print(safe_divide(10, 0))   # Error: Division by zero
+print(safe_divide("10", 2)) # Error: Invalid data types</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17: File Operations -->
+            <div class="slide" data-slide="17">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📁 Slide 17: File Operations</h1>
+                        <p class="slide-subtitle">Reading and Writing Files</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Working with Files</h2>
+                                    <p>File operations allow your programs to read data from files and save data to files. This is essential for real-world applications.</p>
+                                    
+                                    <h3>File Modes:</h3>
+                                    <ul>
+                                        <li><strong>'r':</strong> Read mode (default)</li>
+                                        <li><strong>'w':</strong> Write mode (overwrites)</li>
+                                        <li><strong>'a':</strong> Append mode (adds to end)</li>
+                                        <li><strong>'x':</strong> Exclusive creation</li>
+                                        <li><strong>'b':</strong> Binary mode</li>
+                                        <li><strong>'+':</strong> Read and write</li>
+                                    </ul>
+
+                                    <h3>File Operations:</h3>
+                                    <ul>
+                                        <li><strong>open():</strong> Open a file</li>
+                                        <li><strong>read():</strong> Read file content</li>
+                                        <li><strong>write():</strong> Write to file</li>
+                                        <li><strong>close():</strong> Close file</li>
+                                        <li><strong>with statement:</strong> Automatic file closing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">File Examples</div>
+                                    <pre><code># Writing to a file
+with open("example.txt", "w") as file:
+    file.write("Hello, World!\n")
+    file.write("This is a test file.\n")
+
+# Reading from a file
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Reading line by line
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+
+# Appending to a file
+with open("example.txt", "a") as file:
+    file.write("This line was added.\n")
+
+# Reading all lines into a list
+with open("example.txt", "r") as file:
+    lines = file.readlines()
+    print(lines)
+
+# Error handling with files
+try:
+    with open("nonexistent.txt", "r") as file:
+        content = file.read()
+except FileNotFoundError:
+    print("File not found")
+
+# Working with CSV-like data
+data = [
+    ["Name", "Age", "City"],
+    ["Alice", "25", "New York"],
+    ["Bob", "30", "London"]
+]
+
+# Write CSV data
+with open("people.csv", "w") as file:
+    for row in data:
+        file.write(",".join(row) + "\n")
+
+# Read CSV data
+with open("people.csv", "r") as file:
+    for line in file:
+        row = line.strip().split(",")
+        print(row)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: Dictionaries -->
+            <div class="slide" data-slide="18">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📚 Slide 18: Dictionaries</h1>
+                        <p class="slide-subtitle">Key-Value Data Storage</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Dictionaries?</h2>
+                                    <p>Dictionaries store data as key-value pairs. They're perfect for storing related information and looking up values quickly.</p>
+                                    
+                                    <h3>Dictionary Features:</h3>
+                                    <ul>
+                                        <li><strong>Key-Value Pairs:</strong> Each item has a key and a value</li>
+                                        <li><strong>Unordered:</strong> Items don't have a fixed position</li>
+                                        <li><strong>Mutable:</strong> Can add, remove, or change items</li>
+                                        <li><strong>Keys Must Be Unique:</strong> No duplicate keys allowed</li>
+                                        <li><strong>Fast Lookup:</strong> Very efficient for finding values</li>
+                                    </ul>
+
+                                    <h3>Common Operations:</h3>
+                                    <ul>
+                                        <li><strong>Access:</strong> dict[key] or dict.get(key)</li>
+                                        <li><strong>Add/Update:</strong> dict[key] = value</li>
+                                        <li><strong>Remove:</strong> del dict[key] or dict.pop(key)</li>
+                                        <li><strong>Check:</strong> key in dict</li>
+                                        <li><strong>Iterate:</strong> for key in dict:</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Dictionary Examples</div>
+                                    <pre><code># Creating dictionaries
+person = {"name": "Alice", "age": 25, "city": "New York"}
+scores = {"Alice": 95, "Bob": 87, "Charlie": 92}
+
+# Accessing values
+print(person["name"])      # Alice
+print(person.get("age"))   # 25
+print(person.get("email", "Not found"))  # Not found
+
+# Adding/updating items
+person["email"] = "alice@example.com"
+person["age"] = 26
+print(person)
+
+# Removing items
+del person["city"]
+email = person.pop("email")
+print(person)
+
+# Checking if key exists
+if "name" in person:
+    print("Name found")
+
+# Iterating through dictionary
+for key in person:
+    print(f"{key}: {person[key]}")
+
+# Iterating through items
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+# Dictionary comprehension
+squares = {x: x**2 for x in range(5)}
+print(squares)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Nested dictionaries
+students = {
+    "Alice": {"age": 20, "grade": "A"},
+    "Bob": {"age": 22, "grade": "B"}
+}
+
+print(students["Alice"]["grade"])  # A</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: Sets -->
+            <div class="slide" data-slide="19">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔗 Slide 19: Sets</h1>
+                        <p class="slide-subtitle">Unique Collections</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Sets?</h2>
+                                    <p>Sets are unordered collections of unique elements. They're perfect for removing duplicates and performing mathematical set operations.</p>
+                                    
+                                    <h3>Set Features:</h3>
+                                    <ul>
+                                        <li><strong>Unique Elements:</strong> No duplicates allowed</li>
+                                        <li><strong>Unordered:</strong> No fixed position for items</li>
+                                        <li><strong>Mutable:</strong> Can add and remove items</li>
+                                        <li><strong>Mathematical Operations:</strong> Union, intersection, difference</li>
+                                        <li><strong>Fast Membership Testing:</strong> Very efficient for checking if item exists</li>
+                                    </ul>
+
+                                    <h3>Set Operations:</h3>
+                                    <ul>
+                                        <li><strong>add():</strong> Add single item</li>
+                                        <li><strong>update():</strong> Add multiple items</li>
+                                        <li><strong>remove()/discard():</strong> Remove items</li>
+                                        <li><strong>union():</strong> Combine sets</li>
+                                        <li><strong>intersection():</strong> Find common items</li>
+                                        <li><strong>difference():</strong> Find items in one but not other</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Set Examples</div>
+                                    <pre><code># Creating sets
+numbers = {1, 2, 3, 4, 5}
+fruits = {"apple", "banana", "orange"}
+empty_set = set()
+
+# Adding items
+fruits.add("grape")
+fruits.update(["pear", "kiwi"])
+print(fruits)
+
+# Removing items
+fruits.remove("banana")  # Raises error if not found
+fruits.discard("mango")  # No error if not found
+
+# Set operations
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+union = set1 | set2  # or set1.union(set2)
+print(union)  # {1, 2, 3, 4, 5, 6}
+
+intersection = set1 & set2  # or set1.intersection(set2)
+print(intersection)  # {3, 4}
+
+difference = set1 - set2  # or set1.difference(set2)
+print(difference)  # {1, 2}
+
+# Removing duplicates
+numbers = [1, 2, 2, 3, 3, 4, 5, 5]
+unique_numbers = list(set(numbers))
+print(unique_numbers)  # [1, 2, 3, 4, 5]
+
+# Membership testing
+if "apple" in fruits:
+    print("Apple is in the set")
+
+# Set comprehension
+squares = {x**2 for x in range(5)}
+print(squares)  # {0, 1, 4, 9, 16}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 20: Tuples -->
+            <div class="slide" data-slide="20">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Slide 20: Tuples</h1>
+                        <p class="slide-subtitle">Immutable Collections</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Tuples?</h2>
+                                    <p>Tuples are ordered, immutable collections. They're similar to lists but cannot be changed after creation. They're perfect for data that shouldn't be modified.</p>
+                                    
+                                    <h3>Tuple Features:</h3>
+                                    <ul>
+                                        <li><strong>Immutable:</strong> Cannot be changed after creation</li>
+                                        <li><strong>Ordered:</strong> Items maintain their position</li>
+                                        <li><strong>Indexed:</strong> Access items by position</li>
+                                        <li><strong>Heterogeneous:</strong> Can mix different data types</li>
+                                        <li><strong>Memory Efficient:</strong> Use less memory than lists</li>
+                                    </ul>
+
+                                    <h3>Common Uses:</h3>
+                                    <ul>
+                                        <li>Returning multiple values from functions</li>
+                                        <li>Storing related data that shouldn't change</li>
+                                        <li>Using as dictionary keys (unlike lists)</li>
+                                        <li>Representing coordinates or points</li>
+                                        <li>Storing configuration data</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Tuple Examples</div>
+                                    <pre><code># Creating tuples
+coordinates = (10, 20)
+person = ("Alice", 25, "New York")
+empty_tuple = ()
+
+# Accessing items
+print(coordinates[0])  # 10
+print(person[1])       # 25
+
+# Tuple unpacking
+name, age, city = person
+print(f"{name} is {age} years old from {city}")
+
+# Returning multiple values
+def get_name_and_age():
+    return "Alice", 25
+
+name, age = get_name_and_age()
+print(f"Name: {name}, Age: {age}")
+
+# Tuples as dictionary keys
+points = {(0, 0): "origin", (1, 1): "diagonal"}
+
+# Nested tuples
+matrix = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print(matrix[1][2])  # 6
+
+# Tuple methods
+numbers = (1, 2, 2, 3, 2, 4)
+print(numbers.count(2))  # 3
+print(numbers.index(3))  # 3
+
+# Converting between types
+numbers_list = [1, 2, 3]
+numbers_tuple = tuple(numbers_list)
+print(numbers_tuple)  # (1, 2, 3)
+
+# Tuple with single item
+single_item = (42,)  # Note the comma
+print(type(single_item))  # <class 'tuple'>
+
+# Tuple comprehension (generator expression)
+squares = tuple(x**2 for x in range(5))
+print(squares)  # (0, 1, 4, 9, 16)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 21: Modules and Imports -->
+            <div class="slide" data-slide="21">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Slide 21: Modules and Imports</h1>
+                        <p class="slide-subtitle">Using Python's Built-in Libraries</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Modules?</h2>
+                                    <p>Modules are Python files containing functions, classes, and variables that you can import and use in your programs. They help organize code and provide reusable functionality.</p>
+                                    
+                                    <h3>Import Methods:</h3>
+                                    <ul>
+                                        <li><strong>import module:</strong> Import entire module</li>
+                                        <li><strong>from module import item:</strong> Import specific items</li>
+                                        <li><strong>from module import *:</strong> Import all items (not recommended)</li>
+                                        <li><strong>import module as alias:</strong> Import with custom name</li>
+                                        <li><strong>from module import item as alias:</strong> Import item with custom name</li>
+                                    </ul>
+
+                                    <h3>Common Built-in Modules:</h3>
+                                    <ul>
+                                        <li><strong>math:</strong> Mathematical functions</li>
+                                        <li><strong>random:</strong> Random number generation</li>
+                                        <li><strong>datetime:</strong> Date and time handling</li>
+                                        <li><strong>os:</strong> Operating system interface</li>
+                                        <li><strong>sys:</strong> System-specific parameters</li>
+                                        <li><strong>json:</strong> JSON data handling</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Module Examples</div>
+                                    <pre><code># Import entire module
+import math
+print(math.pi)  # 3.141592653589793
+print(math.sqrt(16))  # 4.0
+
+# Import specific items
+from random import randint, choice
+print(randint(1, 10))  # Random number between 1 and 10
+fruits = ["apple", "banana", "orange"]
+print(choice(fruits))  # Random fruit
+
+# Import with alias
+import datetime as dt
+now = dt.datetime.now()
+print(now)
+
+# Import specific item with alias
+from math import sqrt as square_root
+print(square_root(25))  # 5.0
+
+# Using multiple imports
+import os
+import sys
+import json
+
+# Check current directory
+print(os.getcwd())
+
+# Get Python version
+print(sys.version)
+
+# Working with JSON
+data = {"name": "Alice", "age": 25}
+json_string = json.dumps(data)
+print(json_string)  # {"name": "Alice", "age": 25}
+
+# Parsing JSON
+parsed_data = json.loads(json_string)
+print(parsed_data["name"])  # Alice
+
+# Math module examples
+import math
+print(math.ceil(3.2))    # 4
+print(math.floor(3.8))   # 3
+print(math.pow(2, 3))    # 8.0
+print(math.factorial(5)) # 120
+
+# Random module examples
+import random
+print(random.random())        # Random float between 0 and 1
+print(random.uniform(1, 10)) # Random float between 1 and 10
+print(random.choice([1, 2, 3, 4, 5]))  # Random choice from list</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22: Working with Dates and Times -->
+            <div class="slide" data-slide="22">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📅 Slide 22: Working with Dates and Times</h1>
+                        <p class="slide-subtitle">Handling Temporal Data</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Date and Time in Python</h2>
+                                    <p>Python's datetime module provides powerful tools for working with dates, times, and time intervals. This is essential for many real-world applications.</p>
+                                    
+                                    <h3>Key Classes:</h3>
+                                    <ul>
+                                        <li><strong>datetime:</strong> Date and time together</li>
+                                        <li><strong>date:</strong> Date only (year, month, day)</li>
+                                        <li><strong>time:</strong> Time only (hour, minute, second)</li>
+                                        <li><strong>timedelta:</strong> Duration or time difference</li>
+                                    </ul>
+
+                                    <h3>Common Operations:</h3>
+                                    <ul>
+                                        <li><strong>Current Time:</strong> datetime.now()</li>
+                                        <li><strong>Date Creation:</strong> datetime(year, month, day)</li>
+                                        <li><strong>Formatting:</strong> strftime() for custom formats</li>
+                                        <li><strong>Parsing:</strong> strptime() to parse strings</li>
+                                        <li><strong>Arithmetic:</strong> Add/subtract timedelta</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Date/Time Examples</div>
+                                    <pre><code>from datetime import datetime, date, time, timedelta
+
+# Current date and time
+now = datetime.now()
+print(now)  # 2024-01-15 14:30:25.123456
+
+# Creating specific dates
+birthday = datetime(1990, 5, 15, 10, 30, 0)
+print(birthday)  # 1990-05-15 10:30:00
+
+# Date components
+print(now.year)    # 2024
+print(now.month)   # 1
+print(now.day)     # 15
+print(now.hour)    # 14
+print(now.minute)  # 30
+
+# Formatting dates
+formatted = now.strftime("%Y-%m-%d %H:%M:%S")
+print(formatted)  # 2024-01-15 14:30:25
+
+# Parsing date strings
+date_string = "2024-01-15"
+parsed_date = datetime.strptime(date_string, "%Y-%m-%d")
+print(parsed_date)  # 2024-01-15 00:00:00
+
+# Date arithmetic
+today = date.today()
+tomorrow = today + timedelta(days=1)
+yesterday = today - timedelta(days=1)
+print(f"Today: {today}")
+print(f"Tomorrow: {tomorrow}")
+print(f"Yesterday: {yesterday}")
+
+# Time differences
+future = datetime(2025, 1, 1)
+difference = future - now
+print(f"Days until 2025: {difference.days}")
+
+# Working with time
+current_time = time(14, 30, 25)
+print(current_time)  # 14:30:25
+
+# Date formatting examples
+formats = [
+    "%Y-%m-%d",           # 2024-01-15
+    "%B %d, %Y",          # January 15, 2024
+    "%d/%m/%Y",           # 15/01/2024
+    "%Y-%m-%d %H:%M:%S", # 2024-01-15 14:30:25
+    "%A, %B %d, %Y"       # Monday, January 15, 2024
+]
+
+for fmt in formats:
+    print(now.strftime(fmt))</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 23: List Comprehensions -->
+            <div class="slide" data-slide="23">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚡ Slide 23: List Comprehensions</h1>
+                        <p class="slide-subtitle">Creating Lists Efficiently</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are List Comprehensions?</h2>
+                                    <p>List comprehensions are a concise way to create lists based on existing sequences. They're more readable and often faster than traditional loops.</p>
+                                    
+                                    <h3>Basic Syntax:</h3>
+                                    <ul>
+                                        <li><strong>Format:</strong> [expression for item in iterable]</li>
+                                        <li><strong>Expression:</strong> What to do with each item</li>
+                                        <li><strong>Item:</strong> Variable name for each element</li>
+                                        <li><strong>Iterable:</strong> Sequence to iterate over</li>
+                                        <li><strong>Condition:</strong> Optional filter (if condition)</li>
+                                    </ul>
+
+                                    <h3>Benefits:</h3>
+                                    <ul>
+                                        <li><strong>Concise:</strong> Less code than traditional loops</li>
+                                        <li><strong>Readable:</strong> Clear intent at a glance</li>
+                                        <li><strong>Efficient:</strong> Often faster than loops</li>
+                                        <li><strong>Pythonic:</strong> Follows Python conventions</li>
+                                        <li><strong>Functional:</strong> More functional programming style</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Comprehension Examples</div>
+                                    <pre><code># Basic list comprehension
+squares = [x**2 for x in range(5)]
+print(squares)  # [0, 1, 4, 9, 16]
+
+# Traditional loop equivalent
+squares = []
+for x in range(5):
+    squares.append(x**2)
+
+# With condition (filter)
+even_squares = [x**2 for x in range(10) if x % 2 == 0]
+print(even_squares)  # [0, 4, 16, 36, 64]
+
+# Working with strings
+words = ["hello", "world", "python"]
+upper_words = [word.upper() for word in words]
+print(upper_words)  # ['HELLO', 'WORLD', 'PYTHON']
+
+# Nested list comprehension
+matrix = [[i+j for j in range(3)] for i in range(3)]
+print(matrix)  # [[0, 1, 2], [1, 2, 3], [2, 3, 4]]
+
+# Dictionary comprehension
+squares_dict = {x: x**2 for x in range(5)}
+print(squares_dict)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Set comprehension
+unique_squares = {x**2 for x in range(10)}
+print(unique_squares)  # {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}
+
+# Complex example
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = [x**2 for x in numbers if x % 2 == 0 and x > 5]
+print(result)  # [36, 64, 100]
+
+# Multiple conditions
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+long_fruits = [fruit.upper() for fruit in fruits if len(fruit) > 5]
+print(long_fruits)  # ['BANANA', 'CHERRY', 'ELDERBERRY']
+
+# Tuple unpacking in comprehension
+pairs = [(1, 2), (3, 4), (5, 6)]
+sums = [a + b for a, b in pairs]
+print(sums)  # [3, 7, 11]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Best Practices and Style -->
+            <div class="slide" data-slide="24">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>✨ Slide 24: Best Practices and Style</h1>
+                        <p class="slide-subtitle">Writing Professional Python Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>PEP 8 Style Guide</h2>
+                                    <p>PEP 8 is Python's official style guide. Following it makes your code more readable and professional.</p>
+                                    
+                                    <h3>Naming Conventions:</h3>
+                                    <ul>
+                                        <li><strong>Variables/Functions:</strong> snake_case (user_name, calculate_total)</li>
+                                        <li><strong>Classes:</strong> PascalCase (UserAccount, DatabaseConnection)</li>
+                                        <li><strong>Constants:</strong> UPPER_CASE (MAX_CONNECTIONS, PI)</li>
+                                        <li><strong>Private:</strong> Leading underscore (_private_var)</li>
+                                        <li><strong>Descriptive:</strong> Use clear, meaningful names</li>
+                                    </ul>
+
+                                    <h3>Code Organization:</h3>
+                                    <ul>
+                                        <li><strong>Imports:</strong> Standard library, third-party, local</li>
+                                        <li><strong>Spacing:</strong> Two blank lines between classes, one between functions</li>
+                                        <li><strong>Line Length:</strong> Maximum 79 characters</li>
+                                        <li><strong>Indentation:</strong> 4 spaces (not tabs)</li>
+                                        <li><strong>Comments:</strong> Explain why, not what</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Style Examples</div>
+                                    <pre><code># Good naming
+user_name = "Alice"
+def calculate_total_price(items):
+    return sum(item.price for item in items)
+
+# Bad naming
+n = "Alice"
+def calc(items):
+    return sum(i.price for i in items)
+
+# Good organization
+import os
+import sys
+from datetime import datetime
+import requests
+
+# Constants at top
+MAX_RETRIES = 3
+DEFAULT_TIMEOUT = 30
+
+# Function with proper spacing
+def process_user_data(user_id):
+    """Process user data and return formatted result."""
+    user = get_user(user_id)
+    if user is None:
+        return None
+    
+    return format_user_data(user)
+
+
+def format_user_data(user):
+    """Format user data for display."""
+    return {
+        'name': user.name,
+        'email': user.email,
+        'created': user.created_date.strftime('%Y-%m-%d')
+    }
+
+
+# Class definition
+class UserManager:
+    """Manages user operations and data."""
+    
+    def __init__(self, database):
+        self.database = database
+        self._cache = {}
+    
+    def get_user(self, user_id):
+        """Retrieve user by ID with caching."""
+        if user_id in self._cache:
+            return self._cache[user_id]
+        
+        user = self.database.fetch_user(user_id)
+        if user:
+            self._cache[user_id] = user
+        
+        return user
+
+# Good error handling
+def safe_divide(a, b):
+    """Divide a by b with error handling."""
+    try:
+        return a / b
+    except ZeroDivisionError:
+        raise ValueError("Cannot divide by zero")
+    except TypeError:
+        raise TypeError("Both arguments must be numbers")
+
+# List comprehension (preferred over loop)
+numbers = [1, 2, 3, 4, 5]
+squares = [x**2 for x in numbers if x % 2 == 0]
+
+# Instead of:
+# squares = []
+# for x in numbers:
+#     if x % 2 == 0:
+#         squares.append(x**2)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Slide 25: Course Completion -->
             <div class="slide" data-slide="25">
