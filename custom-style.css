@@ -1,0 +1,233 @@
+/* Custom PowerPoint Styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Slide Master Styles */
+.slide {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    pointer-events: none;
+}
+
+/* Title Styles */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.8em;
+    position: relative;
+    z-index: 2;
+}
+
+/* Content Styles */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+ul, ol {
+    margin: 1em 0;
+    padding-left: 2em;
+    position: relative;
+    z-index: 2;
+}
+
+li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+}
+
+/* Code Blocks */
+pre {
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 1em 0;
+    overflow-x: auto;
+    border-left: 4px solid #667eea;
+    position: relative;
+    z-index: 2;
+}
+
+code {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    background: rgba(0,0,0,0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+th {
+    background: rgba(255,255,255,0.2);
+    font-weight: 600;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 20px;
+    margin: 1em 0;
+    font-style: italic;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+/* Links */
+a {
+    color: #667eea;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid #667eea;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Slide Transitions */
+.slide-transition {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Elements */
+.highlight-box {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 1em 0;
+    border-left: 4px solid #667eea;
+    position: relative;
+    z-index: 2;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+    
+    p, li {
+        font-size: 1em;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .slide {
+        background: white;
+        color: black;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    h1, h2, h3 {
+        color: black;
+    }
+    
+    p, li {
+        color: black;
+    }
+} 

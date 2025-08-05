@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics - Complete Beginner's Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <button id="prevBtn" class="nav-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="slide-counter">1 / 25</span>
+            <button id="nextBtn" class="nav-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: What is Python? -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🐍 What is Python?</h1>
+                        <p class="slide-subtitle">Your First Programming Language</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Python?</h2>
+                                    <p>Python is a high-level, interpreted programming language designed to be readable and simple, making it perfect for beginners.</p>
+                                    
+                                    <h3>Why Python?</h3>
+                                    <ul>
+                                        <li><strong>Easy to Learn:</strong> Python reads almost like English</li>
+                                        <li><strong>Versatile:</strong> Used in web development, data science, automation, and AI</li>
+                                        <li><strong>Popular:</strong> One of the most in-demand programming languages</li>
+                                        <li><strong>Beginner-Friendly:</strong> Perfect starting point for your coding journey</li>
+                                    </ul>
+
+                                    <h3>Where is Python Used?</h3>
+                                    <ul>
+                                        <li><strong>Web Development:</strong> Building websites and web applications</li>
+                                        <li><strong>Data Science:</strong> Analyzing data and creating visualizations</li>
+                                        <li><strong>Automation:</strong> Automating repetitive tasks</li>
+                                        <li><strong>Artificial Intelligence:</strong> Machine learning and AI applications</li>
+                                        <li><strong>Game Development:</strong> Creating games and interactive applications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Python Code Example</div>
+                                    <pre><code># This is how simple Python is!
+print("Hello, World!")
+
+# Variables are easy to understand
+name = "Alice"
+age = 25
+print(f"{name} is {age} years old")
+
+# Simple math operations
+result = 10 + 5
+print(f"10 + 5 = {result}")
+
+# Easy to read loops
+for i in range(3):
+    print(f"Learning Python is fun! (step {i+1})")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Setting Up on Replit -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Setting Up on Replit</h1>
+                        <p class="slide-subtitle">Start Coding in Minutes!</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Replit?</h2>
+                                    <p>Replit is a browser-based IDE (Integrated Development Environment) where you can write, run, and test Python code without installing anything on your computer.</p>
+                                    
+                                    <h3>Why Use Replit?</h3>
+                                    <ul>
+                                        <li><strong>No Installation:</strong> Works directly in your web browser</li>
+                                        <li><strong>Instant Setup:</strong> Start coding in less than 2 minutes</li>
+                                        <li><strong>Free:</strong> No cost to get started</li>
+                                        <li><strong>Collaborative:</strong> Share your code with others easily</li>
+                                        <li><strong>Always Available:</strong> Access your code from any device</li>
+                                    </ul>
+
+                                    <h3>How to Get Started:</h3>
+                                    <ol>
+                                        <li><strong>Go to:</strong> <a href="https://replit.com" target="_blank">https://replit.com</a></li>
+                                        <li><strong>Sign Up:</strong> Create a free account (takes 30 seconds)</li>
+                                        <li><strong>Create Repl:</strong> Click "Create Repl" button</li>
+                                        <li><strong>Choose Python:</strong> Select "Python" as your language</li>
+                                        <li><strong>Start Coding:</strong> You're ready to write Python code!</li>
+                                    </ol>
+
+                                    <h3>What You'll See:</h3>
+                                    <ul>
+                                        <li><strong>Code Editor:</strong> Where you write your Python code</li>
+                                        <li><strong>Console:</strong> Where your program output appears</li>
+                                        <li><strong>Run Button:</strong> Click to execute your code</li>
+                                        <li><strong>Files Panel:</strong> Manage your project files</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Your First Replit Session</div>
+                                    <pre><code># Step 1: Type this in the editor
+print("Hello from Replit!")
+
+# Step 2: Click the "Run" button
+# Step 3: See the output in the console below
+
+# Try this too:
+name = input("What's your name? ")
+print(f"Welcome to Python, {name}!")
+
+# The console will show:
+# Hello from Replit!
+# What's your name? [you type here]
+# Welcome to Python, [your name]!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Hello World -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>👋 Hello World</h1>
+                        <p class="slide-subtitle">Your First Python Program</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is "Hello World"?</h2>
+                                    <p>"Hello World" is the traditional first program that every beginner writes. It's a simple way to learn how output works in programming.</p>
+                                    
+                                    <h3>Why Start with Hello World?</h3>
+                                    <ul>
+                                        <li><strong>Simple:</strong> Only one line of code</li>
+                                        <li><strong>Immediate Feedback:</strong> You see results instantly</li>
+                                        <li><strong>Confidence Building:</strong> Proves you can write working code</li>
+                                        <li><strong>Foundation:</strong> Teaches basic syntax and output</li>
+                                    </ul>
+
+                                    <h3>Understanding the Code:</h3>
+                                    <ul>
+                                        <li><strong>print():</strong> This is a function that displays text on the screen</li>
+                                        <li><strong>Quotes:</strong> Text must be enclosed in quotes (single or double)</li>
+                                        <li><strong>Parentheses:</strong> Functions always use parentheses</li>
+                                        <li><strong>Output:</strong> Whatever is inside the quotes appears on screen</li>
+                                    </ul>
+
+                                    <h3>Try These Variations:</h3>
+                                    <ul>
+                                        <li>Change the message inside the quotes</li>
+                                        <li>Try different punctuation marks</li>
+                                        <li>Use single quotes instead of double quotes</li>
+                                        <li>Add multiple print statements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Hello World Examples</div>
+                                    <pre><code># Basic Hello World
+print("Hello, World!")
+
+# Try different messages
+print("Welcome to Python!")
+print("I'm learning to code!")
+print("This is so exciting!")
+
+# Multiple lines
+print("Hello")
+print("World")
+print("From Python!")
+
+# Using single quotes
+print('Hello, World!')
+
+# What you'll see in the console:
+# Hello, World!
+# Welcome to Python!
+# I'm learning to code!
+# This is so exciting!
+# Hello
+# World
+# From Python!
+# Hello, World!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Comments in Python -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>💬 Comments in Python</h1>
+                        <p class="slide-subtitle">Explaining Your Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Comments?</h2>
+                                    <p>Comments are notes you write in your code to explain what the code does. They help you and others understand your code better.</p>
+                                    
+                                    <h3>Why Use Comments?</h3>
+                                    <ul>
+                                        <li><strong>Documentation:</strong> Explain what your code does</li>
+                                        <li><strong>Memory Aid:</strong> Remind yourself of your logic later</li>
+                                        <li><strong>Teamwork:</strong> Help others understand your code</li>
+                                        <li><strong>Debugging:</strong> Temporarily disable code to test</li>
+                                        <li><strong>Learning:</strong> Great for taking notes while learning</li>
+                                    </ul>
+
+                                    <h3>How to Write Comments:</h3>
+                                    <ul>
+                                        <li><strong>Single Line:</strong> Use # at the beginning of the line</li>
+                                        <li><strong>Inline:</strong> Add # after code on the same line</li>
+                                        <li><strong>Multi-line:</strong> Use triple quotes for longer explanations</li>
+                                        <li><strong>Clear Language:</strong> Write in plain English</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Explain the "why" not just the "what"</li>
+                                        <li>Keep comments up to date with your code</li>
+                                        <li>Use comments to break up long sections</li>
+                                        <li>Don't over-comment obvious code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Comment Examples</div>
+                                    <pre><code># This is a single-line comment
+print("Hello")  # This is an inline comment
+
+# Calculate the area of a circle
+radius = 5
+area = 3.14 * radius * radius
+print(f"Area: {area}")
+
+# Multi-line comment using triple quotes
+"""
+This is a longer comment
+that can span multiple lines.
+Useful for explaining complex code.
+"""
+
+# Good comment example
+age = 25
+# Check if person is old enough to vote
+if age >= 18:
+    print("Can vote!")
+else:
+    print("Too young")
+
+# Bad comment example (too obvious)
+name = "Alice"  # Set name to Alice
+print(name)     # Print the name</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Variables and Types -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Variables and Types</h1>
+                        <p class="slide-subtitle">Storing Information</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Variables?</h2>
+                                    <p>Variables are like labeled boxes where you store information. They can hold different types of data that your program can use.</p>
+                                    
+                                    <h3>How Variables Work:</h3>
+                                    <ul>
+                                        <li><strong>Assignment:</strong> Use = to put data in a variable</li>
+                                        <li><strong>Naming:</strong> Choose descriptive names (use letters, numbers, underscore)</li>
+                                        <li><strong>Dynamic Typing:</strong> Python figures out the data type automatically</li>
+                                        <li><strong>Reusable:</strong> Use the variable name to access the stored data</li>
+                                    </ul>
+
+                                    <h3>Python Data Types:</h3>
+                                    <ul>
+                                        <li><strong>String (str):</strong> Text data - "Hello", "Python"</li>
+                                        <li><strong>Integer (int):</strong> Whole numbers - 5, 100, -3</li>
+                                        <li><strong>Float:</strong> Decimal numbers - 3.14, 2.5, -1.0</li>
+                                        <li><strong>Boolean (bool):</strong> True or False values</li>
+                                        <li><strong>List:</strong> Collection of items - [1, 2, 3]</li>
+                                    </ul>
+
+                                    <h3>Variable Naming Rules:</h3>
+                                    <ul>
+                                        <li>Start with a letter or underscore</li>
+                                        <li>Can contain letters, numbers, and underscores</li>
+                                        <li>Case sensitive (name ≠ Name)</li>
+                                        <li>Use descriptive names (user_age, not x)</li>
+                                        <li>Avoid Python keywords (print, if, for, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Variable Examples</div>
+                                    <pre><code># String variables (text)
+name = "Alice"
+city = "New York"
+message = "Hello, World!"
+
+# Integer variables (whole numbers)
+age = 25
+score = 100
+temperature = -5
+
+# Float variables (decimal numbers)
+height = 5.6
+pi = 3.14159
+price = 19.99
+
+# Boolean variables (True/False)
+is_student = True
+is_raining = False
+has_license = True
+
+# Check the type of each variable
+print(type(name))        # <class 'str'>
+print(type(age))         # <class 'int'>
+print(type(height))      # <class 'float'>
+print(type(is_student))  # <class 'bool'>
+
+# Use variables in calculations
+total = price * 2
+print(f"Total: ${total}")  # Total: $39.98</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Type Checking & Casting -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔍 Type Checking & Casting</h1>
+                        <p class="slide-subtitle">Understanding and Converting Data Types</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is Type Checking?</h2>
+                                    <p>Type checking helps you understand what kind of data a variable contains. This is useful for debugging and ensuring your code works correctly.</p>
+                                    
+                                    <h3>Using type() Function:</h3>
+                                    <ul>
+                                        <li><strong>Check Type:</strong> Use type(variable_name) to see the data type</li>
+                                        <li><strong>Debugging:</strong> Helps identify why calculations might not work</li>
+                                        <li><strong>Learning:</strong> Great way to understand what Python is doing</li>
+                                        <li><strong>Validation:</strong> Ensure you're working with the right data type</li>
+                                    </ul>
+
+                                    <h3>What is Type Casting?</h3>
+                                    <p>Type casting (or conversion) is the process of changing one data type to another. This is often necessary when working with user input or combining different types of data.</p>
+
+                                    <h3>Common Conversion Functions:</h3>
+                                    <ul>
+                                        <li><strong>int():</strong> Convert to integer (whole number)</li>
+                                        <li><strong>float():</strong> Convert to decimal number</li>
+                                        <li><strong>str():</strong> Convert to text string</li>
+                                        <li><strong>bool():</strong> Convert to True/False</li>
+                                    </ul>
+
+                                    <h3>When to Use Type Casting:</h3>
+                                    <ul>
+                                        <li>User input always comes as text (string)</li>
+                                        <li>Mathematical calculations need numbers</li>
+                                        <li>Displaying numbers as text</li>
+                                        <li>Combining different data types</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Type Checking & Casting Examples</div>
+                                    <pre><code># Type checking examples
+age = 25
+name = "Alice"
+height = 5.6
+is_student = True
+
+print(type(age))        # <class 'int'>
+print(type(name))       # <class 'str'>
+print(type(height))     # <class 'float'>
+print(type(is_student)) # <class 'bool'>
+
+# Type casting examples
+# String to Integer
+text_number = "42"
+number = int(text_number)
+print(number)  # 42
+print(type(number))  # <class 'int'>
+
+# Integer to String
+age = 25
+age_text = str(age)
+print(age_text)  # "25"
+print(type(age_text))  # <class 'str'>
+
+# String to Float
+decimal_text = "3.14"
+pi = float(decimal_text)
+print(pi)  # 3.14
+
+# Float to Integer
+price = 19.99
+whole_price = int(price)
+print(whole_price)  # 19 (truncates decimal)
+
+# Boolean conversion
+print(bool(1))    # True
+print(bool(0))    # False
+print(bool(""))   # False
+print(bool("Hi")) # True</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Getting Input -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📥 Getting Input</h1>
+                        <p class="slide-subtitle">Making Your Programs Interactive</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is User Input?</h2>
+                                    <p>User input allows your program to get information from the person using it. This makes your programs interactive and dynamic.</p>
+                                    
+                                    <h3>Using the input() Function:</h3>
+                                    <ul>
+                                        <li><strong>Basic Syntax:</strong> input("Your message here")</li>
+                                        <li><strong>Prompt Message:</strong> The text in quotes tells the user what to enter</li>
+                                        <li><strong>Always Returns String:</strong> Input is always treated as text initially</li>
+                                        <li><strong>Program Pauses:</strong> Your program waits for the user to type something</li>
+                                    </ul>
+
+                                    <h3>Important Things to Remember:</h3>
+                                    <ul>
+                                        <li><strong>String Output:</strong> input() always returns a string, even if the user types a number</li>
+                                        <li><strong>Type Conversion:</strong> You often need to convert input to the right type</li>
+                                        <li><strong>Error Handling:</strong> Users might enter unexpected data</li>
+                                        <li><strong>Clear Prompts:</strong> Tell users exactly what you want them to enter</li>
+                                    </ul>
+
+                                    <h3>Common Input Patterns:</h3>
+                                    <ul>
+                                        <li>Getting names and text information</li>
+                                        <li>Collecting numbers for calculations</li>
+                                        <li>Asking for yes/no answers</li>
+                                        <li>Building interactive games and tools</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Input Examples</div>
+                                    <pre><code># Basic input
+name = input("What's your name? ")
+print(f"Hello, {name}!")
+
+# Input with type conversion
+age = input("How old are you? ")
+age = int(age)  # Convert string to integer
+print(f"You are {age} years old")
+
+# Multiple inputs
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+full_name = first_name + " " + last_name
+print(f"Welcome, {full_name}!")
+
+# Input for calculations
+price = input("Enter the price: ")
+quantity = input("Enter the quantity: ")
+total = float(price) * int(quantity)
+print(f"Total cost: ${total}")
+
+# Interactive program
+print("=== Simple Calculator ===")
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+result = num1 + num2
+print(f"{num1} + {num2} = {result}")
+
+# What you'll see:
+# What's your name? Alice
+# Hello, Alice!
+# How old are you? 25
+# You are 25 years old</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Basic Math Operations -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🧮 Basic Math Operations</h1>
+                        <p class="slide-subtitle">Performing Calculations in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Python Math Operators:</h2>
+                                    <p>Python can perform all the mathematical operations you learned in school, plus some additional ones that are useful in programming.</p>
+                                    
+                                    <h3>Basic Arithmetic Operators:</h3>
+                                    <ul>
+                                        <li><strong>Addition (+):</strong> Adds two numbers together</li>
+                                        <li><strong>Subtraction (-):</strong> Subtracts the second number from the first</li>
+                                        <li><strong>Multiplication (*):</strong> Multiplies two numbers</li>
+                                        <li><strong>Division (/):</strong> Divides the first number by the second (gives decimal result)</li>
+                                        <li><strong>Floor Division (//):</strong> Divides and rounds down to the nearest whole number</li>
+                                        <li><strong>Modulo (%):</strong> Gives the remainder after division</li>
+                                        <li><strong>Exponentiation (**):</strong> Raises a number to a power</li>
+                                    </ul>
+
+                                    <h3>Order of Operations:</h3>
+                                    <p>Python follows the same math rules you learned in school:</p>
+                                    <ol>
+                                        <li><strong>Parentheses:</strong> Do calculations inside () first</li>
+                                        <li><strong>Exponents:</strong> Calculate powers (**)</li>
+                                        <li><strong>Multiplication/Division:</strong> From left to right</li>
+                                        <li><strong>Addition/Subtraction:</strong> From left to right</li>
+                                    </ol>
+
+                                    <h3>Working with Variables:</h3>
+                                    <ul>
+                                        <li>Store calculation results in variables</li>
+                                        <li>Use variables in calculations</li>
+                                        <li>Update variables with new calculations</li>
+                                        <li>Combine different data types carefully</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Math Operation Examples</div>
+                                    <pre><code># Basic arithmetic
+a = 10
+b = 3
+
+print(a + b)   # 13 (addition)
+print(a - b)   # 7 (subtraction)
+print(a * b)   # 30 (multiplication)
+print(a / b)   # 3.333... (division)
+print(a // b)  # 3 (floor division)
+print(a % b)   # 1 (remainder)
+print(a ** b)  # 1000 (10 to the power of 3)
+
+# Order of operations
+result = 2 + 3 * 4
+print(result)  # 14 (multiply first, then add)
+
+# Using parentheses
+result = (2 + 3) * 4
+print(result)  # 20 (add first, then multiply)
+
+# Working with variables
+price = 19.99
+quantity = 3
+total = price * quantity
+tax = total * 0.08
+final_total = total + tax
+
+print(f"Price: ${price}")
+print(f"Quantity: {quantity}")
+print(f"Subtotal: ${total}")
+print(f"Tax: ${tax:.2f}")
+print(f"Final Total: ${final_total:.2f}")
+
+# Integer vs Float division
+print(10 / 3)   # 3.333... (float result)
+print(10 // 3)  # 3 (integer result)
+print(10 % 3)   # 1 (remainder)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Strings & Concatenation -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔗 Strings & Concatenation</h1>
+                        <p class="slide-subtitle">Working with Text in Python</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Strings?</h2>
+                                    <p>Strings are sequences of characters (letters, numbers, symbols) that represent text. They're one of the most commonly used data types in programming.</p>
+                                    
+                                    <h3>Creating Strings:</h3>
+                                    <ul>
+                                        <li><strong>Single Quotes:</strong> 'Hello World'</li>
+                                        <li><strong>Double Quotes:</strong> "Hello World"</li>
+                                        <li><strong>Triple Quotes:</strong> """Multi-line strings"""</li>
+                                        <li><strong>Escape Characters:</strong> Use \ for special characters</li>
+                                    </ul>
+
+                                    <h3>String Concatenation:</h3>
+                                    <p>Concatenation means joining strings together. There are several ways to do this in Python:</p>
+                                    <ul>
+                                        <li><strong>+ Operator:</strong> Joins strings with the + symbol</li>
+                                        <li><strong>f-strings:</strong> Modern way to embed variables in strings</li>
+                                        <li><strong>.format():</strong> Older method for string formatting</li>
+                                        <li><strong>% Operator:</strong> C-style string formatting</li>
+                                    </ul>
+
+                                    <h3>Why Use Different Methods?</h3>
+                                    <ul>
+                                        <li><strong>f-strings:</strong> Most readable and recommended</li>
+                                        <li><strong>+ Operator:</strong> Simple for joining a few strings</li>
+                                        <li><strong>.format():</strong> Good for complex formatting</li>
+                                        <li><strong>% Operator:</strong> Legacy code compatibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">String Examples</div>
+                                    <pre><code># Creating strings
+first_name = "Jane"
+last_name = "Doe"
+age = 25
+
+# String concatenation with +
+full_name = first_name + " " + last_name
+print(full_name)  # Jane Doe
+
+# f-strings (recommended)
+greeting = f"Hello, {first_name} {last_name}!"
+print(greeting)  # Hello, Jane Doe!
+
+# Using f-strings with expressions
+message = f"{first_name} is {age} years old"
+print(message)  # Jane is 25 years old
+
+# .format() method
+template = "Welcome, {} {}!"
+formatted = template.format(first_name, last_name)
+print(formatted)  # Welcome, Jane Doe!
+
+# Multiple concatenations
+part1 = "Python"
+part2 = " is"
+part3 = " awesome!"
+result = part1 + part2 + part3
+print(result)  # Python is awesome!
+
+# Working with numbers in strings
+price = 19.99
+quantity = 3
+total = price * quantity
+
+# f-string with formatting
+print(f"Price: ${price:.2f}")
+print(f"Quantity: {quantity}")
+print(f"Total: ${total:.2f}")
+
+# Escape characters
+print("She said \"Hello!\"")  # She said "Hello!"
+print('It\'s a beautiful day')  # It's a beautiful day
+print("Line 1\nLine 2")  # Multi-line output</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: String Methods -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 String Methods</h1>
+                        <p class="slide-subtitle">Built-in Functions for Text Manipulation</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are String Methods?</h2>
+                                    <p>String methods are built-in functions that help you manipulate and work with text. They make it easy to transform, search, and analyze strings.</p>
+                                    
+                                    <h3>Common String Methods:</h3>
+                                    <ul>
+                                        <li><strong>.upper():</strong> Converts all letters to uppercase</li>
+                                        <li><strong>.lower():</strong> Converts all letters to lowercase</li>
+                                        <li><strong>.title():</strong> Capitalizes the first letter of each word</li>
+                                        <li><strong>.strip():</strong> Removes whitespace from beginning and end</li>
+                                        <li><strong>.replace():</strong> Replaces one substring with another</li>
+                                        <li><strong>.split():</strong> Splits a string into a list of substrings</li>
+                                        <li><strong>.join():</strong> Joins a list of strings into one string</li>
+                                        <li><strong>.find():</strong> Finds the position of a substring</li>
+                                        <li><strong>.count():</strong> Counts how many times a substring appears</li>
+                                    </ul>
+
+                                    <h3>How to Use String Methods:</h3>
+                                    <ul>
+                                        <li><strong>Syntax:</strong> string.method_name()</li>
+                                        <li><strong>Chaining:</strong> You can use multiple methods together</li>
+                                        <li><strong>Immutability:</strong> Original string doesn't change</li>
+                                        <li><strong>Return Value:</strong> Methods return a new string</li>
+                                    </ul>
+
+                                    <h3>Practical Applications:</h3>
+                                    <ul>
+                                        <li>Cleaning user input (removing extra spaces)</li>
+                                        <li>Formatting text for display</li>
+                                        <li>Searching and replacing text</li>
+                                        <li>Parsing data from files or user input</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">String Method Examples</div>
+                                    <pre><code># Basic string methods
+text = "  Hello World  "
+
+# Case conversion
+print(text.upper())      # "  HELLO WORLD  "
+print(text.lower())      # "  hello world  "
+print(text.title())      # "  Hello World  "
+
+# Cleaning whitespace
+print(text.strip())      # "Hello World"
+print(text.lstrip())     # "Hello World  "
+print(text.rstrip())     # "  Hello World"
+
+# Replacing text
+message = "Hello Python"
+new_message = message.replace("Python", "World")
+print(new_message)       # "Hello World"
+
+# Splitting and joining
+sentence = "Python is awesome"
+words = sentence.split()  # ["Python", "is", "awesome"]
+print(words)
+
+# Joining words back together
+new_sentence = " ".join(words)
+print(new_sentence)      # "Python is awesome"
+
+# Finding and counting
+text = "Python programming is fun"
+print(text.find("programming"))  # 7 (position)
+print(text.count("m"))          # 2 (count of 'm')
+
+# Chaining methods
+user_input = "  HELLO WORLD  "
+clean_input = user_input.strip().lower()
+print(clean_input)       # "hello world"
+
+# Practical example
+name = input("Enter your name: ")
+clean_name = name.strip().title()
+print(f"Welcome, {clean_name}!")
+
+# What you'll see:
+# Enter your name:   john doe  
+# Welcome, John Doe!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
