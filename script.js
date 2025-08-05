@@ -100,6 +100,15 @@ class SlideshowManager {
             fullscreenBtn.addEventListener('click', () => this.toggleFullscreen());
         }
         
+        // Home button
+        const homeBtn = document.getElementById('homeBtn');
+        if (homeBtn) {
+            homeBtn.addEventListener('click', () => {
+                console.log('Home button clicked');
+                window.location.href = 'homepage.html';
+            });
+        }
+        
         // Export functionality removed
 
         // Slide indicators functionality removed as it's not in the current HTML
