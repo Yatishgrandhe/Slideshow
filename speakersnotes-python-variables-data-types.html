@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Variables & Data Types - Speaker Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .speaker-notes {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin-top: 40px;
+            border-top: 3px solid #007bff;
+        }
+        .speaker-notes h2 {
+            color: #007bff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .note-section {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .note-section h3 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .note-section h4 {
+            color: #555;
+            margin: 15px 0 10px 0;
+        }
+        .note-section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .note-section li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .code-note {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .warning-note {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .tip-note {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Original Slideshow Content -->
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Variables & Data Types</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 25</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Include all 25 slides from the original file -->
+            <!-- This will be populated with the actual slide content -->
+        </div>
+    </div>
+
+    <!-- Speaker Notes Section -->
+    <div class="speaker-notes">
+        <h2><i class="fas fa-microphone"></i> Speaker Notes - Python Variables & Data Types</h2>
+        
+        <div class="note-section">
+            <h3>Slide 1: What is Python?</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Beginner-friendly:</strong> Python reads almost like English, making it perfect for first-time programmers</li>
+                <li><strong>Versatility:</strong> Show examples of where Python is used - web development, data science, AI, automation</li>
+                <li><strong>High-level language:</strong> Python handles complex operations behind the scenes</li>
+                <li><strong>Interpreted:</strong> Code runs directly without compilation step</li>
+            </ul>
+            
+            <div class="important-note">
+                <strong>Teaching Tip:</strong> Start by showing the simple "Hello, World!" example to demonstrate how readable Python is compared to other languages.
+            </div>
+            
+            <h4>Common Questions to Address:</h4>
+            <ul>
+                <li>Why choose Python over other languages?</li>
+                <li>What makes Python "beginner-friendly"?</li>
+                <li>How is Python used in the real world?</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 2: Python History</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Creator:</strong> Guido van Rossum created Python in 1991</li>
+                <li><strong>Name origin:</strong> Named after Monty Python's Flying Circus, not the snake</li>
+                <li><strong>Python 2 vs 3:</strong> Emphasize that Python 3 is the current standard</li>
+                <li><strong>Philosophy:</strong> "Readability counts" - code should be easy to read</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Code Example to Show:</strong><br>
+                # Python 2 vs Python 3 differences<br>
+                print "Hello"  # Python 2 (old)<br>
+                print("Hello") # Python 3 (current)
+            </div>
+            
+            <h4>Teaching Strategy:</h4>
+            <ul>
+                <li>Explain why Python 3 is better than Python 2</li>
+                <li>Show the Zen of Python (import this)</li>
+                <li>Discuss the importance of readability in programming</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 3: Setting Up Python</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Multiple options:</strong> Python.org, Replit, Anaconda</li>
+                <li><strong>Replit advantage:</strong> No installation required, perfect for beginners</li>
+                <li><strong>Verification:</strong> Always test installation with python --version</li>
+                <li><strong>IDE choice:</strong> Explain what an IDE is and why it's helpful</li>
+            </ul>
+            
+            <div class="tip-note">
+                <strong>Pro Tip:</strong> Have students verify their installation by running a simple test program. This builds confidence and ensures everything is working.
+            </div>
+            
+            <h4>Common Installation Issues:</h4>
+            <ul>
+                <li>Python not found in PATH (Windows)</li>
+                <li>Permission errors (Mac/Linux)</li>
+                <li>Multiple Python versions installed</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 4: Your First Python Program</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Tradition:</strong> "Hello, World!" is a programming tradition since 1970s</li>
+                <li><strong>print() function:</strong> Explain what a function is and how to use it</li>
+                <li><strong>String literals:</strong> Text enclosed in quotes</li>
+                <li><strong>File extension:</strong> .py files contain Python code</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Demonstration Code:</strong><br>
+                # Show these examples step by step<br>
+                print("Hello, World!")<br>
+                name = "Alice"<br>
+                print(f"Hello, {name}!")
+            </div>
+            
+            <h4>Teaching Strategy:</h4>
+            <ul>
+                <li>Walk through creating the first program step by step</li>
+                <li>Explain each part of the code</li>
+                <li>Show how to run the program</li>
+                <li>Demonstrate different ways to print text</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 5: Comments and Documentation</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Why comments matter:</strong> Code is read more often than written</li>
+                <li><strong>Types of comments:</strong> Single-line (#), multi-line ("""), docstrings</li>
+                <li><strong>Best practices:</strong> Explain WHY, not WHAT</li>
+                <li><strong>Documentation:</strong> Comments help others (and yourself) understand code</li>
+            </ul>
+            
+            <div class="warning-note">
+                <strong>Common Mistake:</strong> Students often write obvious comments like "x = 5  # Set x to 5". Teach them to explain the purpose, not the action.
+            </div>
+            
+            <h4>Teaching Strategy:</h4>
+            <ul>
+                <li>Show examples of good vs bad comments</li>
+                <li>Explain docstrings for functions</li>
+                <li>Demonstrate how comments help with debugging</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 6: Python Interactive Shell</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>REPL concept:</strong> Read, Evaluate, Print, Loop</li>
+                <li><strong>Immediate feedback:</strong> See results instantly</li>
+                <li><strong>Learning tool:</strong> Perfect for experimenting</li>
+                <li><strong>Built-in help:</strong> help() function provides documentation</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Interactive Examples:</strong><br>
+                >>> 2 + 2<br>
+                4<br>
+                >>> help(print)<br>
+                >>> dir(str)
+            </div>
+            
+            <h4>Teaching Strategy:</h4>
+            <ul>
+                <li>Have students start the interactive shell</li>
+                <li>Show them how to experiment with different commands</li>
+                <li>Demonstrate the help system</li>
+                <li>Explain when to use interactive shell vs writing programs</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 7: Basic Syntax Rules</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Indentation:</strong> Python uses indentation to define code blocks</li>
+                <li><strong>Consistency:</strong> Use 4 spaces (not tabs)</li>
+                <li><strong>Naming conventions:</strong> snake_case for variables, PascalCase for classes</li>
+                <li><strong>Case sensitivity:</strong> age ≠ Age ≠ AGE</li>
+            </ul>
+            
+            <div class="important-note">
+                <strong>Critical Point:</strong> Indentation errors are very common for beginners. Emphasize the importance of consistent indentation.
+            </div>
+            
+            <h4>Common Syntax Errors:</h4>
+            <ul>
+                <li>Missing colons after if/for/def statements</li>
+                <li>Inconsistent indentation</li>
+                <li>Using reserved words as variable names</li>
+                <li>Missing parentheses in function calls</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 8: Common Errors and Debugging</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Error types:</strong> SyntaxError, NameError, TypeError, ValueError</li>
+                <li><strong>Error messages:</strong> Read them carefully - they tell you what's wrong</li>
+                <li><strong>Debugging process:</strong> Systematic approach to finding and fixing errors</li>
+                <li><strong>Prevention:</strong> Good practices prevent many errors</li>
+            </ul>
+            
+            <div class="tip-note">
+                <strong>Teaching Tip:</strong> Show students how to read error messages. The line number and error type are crucial for debugging.
+            </div>
+            
+            <h4>Debugging Strategies:</h4>
+            <ul>
+                <li>Read the error message carefully</li>
+                <li>Check the line number mentioned</li>
+                <li>Use print() statements to debug</li>
+                <li>Test code in small pieces</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 9: Getting Help</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Built-in help:</strong> Python has excellent documentation built-in</li>
+                <li><strong>help() function:</strong> Interactive help system</li>
+                <li><strong>dir() function:</strong> List available attributes and methods</li>
+                <li><strong>Online resources:</strong> Python.org, Stack Overflow, documentation</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Help Examples:</strong><br>
+                >>> help(print)<br>
+                >>> dir(str)<br>
+                >>> type("hello")
+            </div>
+            
+            <h4>Teaching Strategy:</h4>
+            <ul>
+                <li>Show students how to use help() effectively</li>
+                <li>Demonstrate dir() and type() functions</li>
+                <li>Point them to reliable online resources</li>
+                <li>Encourage asking questions and seeking help</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 10: Practice Exercises</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Practice importance:</strong> Programming is a skill that improves with practice</li>
+                <li><strong>Hands-on learning:</strong> Students learn best by doing</li>
+                <li><strong>Building confidence:</strong> Start with simple exercises</li>
+                <li><strong>Problem-solving:</strong> Programming is about solving problems</li>
+            </ul>
+            
+            <div class="important-note">
+                <strong>Exercise Guidelines:</strong> Encourage students to try exercises before looking at solutions. Struggle is part of learning.
+            </div>
+            
+            <h4>Exercise Types:</h4>
+            <ul>
+                <li>Code modification exercises</li>
+                <li>Debugging exercises</li>
+                <li>Creative exercises (build something)</li>
+                <li>Research exercises (find information)</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 11: What are Variables?</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Variable concept:</strong> Containers that store data</li>
+                <li><strong>Naming rules:</strong> Start with letter/underscore, no spaces, case sensitive</li>
+                <li><strong>Descriptive names:</strong> Make code self-documenting</li>
+                <li><strong>Dynamic typing:</strong> Variables can change type</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Variable Examples:</strong><br>
+                name = "Alice"<br>
+                age = 25<br>
+                is_student = True<br>
+                # Good names vs bad names<br>
+                user_age = 25  # Good<br>
+                a = 25         # Bad
+            </div>
+            
+            <h4>Common Variable Mistakes:</h4>
+            <ul>
+                <li>Using reserved words (if, for, def, etc.)</li>
+                <li>Starting with numbers</li>
+                <li>Using spaces in names</li>
+                <li>Using unclear abbreviations</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 12: String Data Type</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>String definition:</strong> Sequence of characters</li>
+                <li><strong>Quotation marks:</strong> Single, double, or triple quotes</li>
+                <li><strong>String methods:</strong> upper(), lower(), strip(), replace()</li>
+                <li><strong>String formatting:</strong> f-strings, .format(), % operator</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>String Operations:</strong><br>
+                text = "Hello, World!"<br>
+                print(text.upper())      # HELLO, WORLD!<br>
+                print(text.lower())      # hello, world!<br>
+                print(len(text))         # 13
+            </div>
+            
+            <h4>String Concepts:</h4>
+            <ul>
+                <li>Indexing (starts at 0)</li>
+                <li>Slicing [start:end:step]</li>
+                <li>Concatenation with +</li>
+                <li>Repetition with *</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 13: Numeric Data Types</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Integer (int):</strong> Whole numbers, unlimited size</li>
+                <li><strong>Float (float):</strong> Decimal numbers, approximate</li>
+                <li><strong>Mathematical operations:</strong> +, -, *, /, //, %, **</li>
+                <li><strong>Type conversion:</strong> int(), float()</li>
+            </ul>
+            
+            <div class="warning-note">
+                <strong>Floating Point Precision:</strong> Explain that floating-point arithmetic can have precision issues due to binary representation.
+            </div>
+            
+            <h4>Mathematical Operations:</h4>
+            <ul>
+                <li>Division (/) always returns float</li>
+                <li>Floor division (//) returns integer</li>
+                <li>Modulo (%) returns remainder</li>
+                <li>Exponentiation (**) for powers</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 14: Boolean Data Type</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Boolean values:</strong> True and False (capitalized)</li>
+                <li><strong>Comparison operators:</strong> ==, !=, <, >, <=, >=</li>
+                <li><strong>Logical operators:</strong> and, or, not</li>
+                <li><strong>Truthy/Falsy:</strong> Non-boolean values in conditions</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Boolean Examples:</strong><br>
+                age = 25<br>
+                is_adult = age >= 18  # True<br>
+                has_license = True<br>
+                can_drive = is_adult and has_license  # True
+            </div>
+            
+            <h4>Common Boolean Mistakes:</h4>
+            <ul>
+                <li>Using = instead of == for comparison</li>
+                <li>Confusing and/or logic</li>
+                <li>Not understanding truthy/falsy values</li>
+                <li>Forgetting that True/False are capitalized</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 15: Type Conversion</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Conversion functions:</strong> int(), float(), str(), bool()</li>
+                <li><strong>When to convert:</strong> User input, calculations, display</li>
+                <li><strong>Error handling:</strong> Some conversions can fail</li>
+                <li><strong>Data loss:</strong> Converting float to int loses decimal</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Conversion Examples:</strong><br>
+                age_string = "25"<br>
+                age_int = int(age_string)  # 25<br>
+                pi_float = 3.14159<br>
+                pi_int = int(pi_float)     # 3 (loses decimal)
+            </div>
+            
+            <h4>Safe Conversion Pattern:</h4>
+            <ul>
+                <li>Always validate input before converting</li>
+                <li>Use try/except for risky conversions</li>
+                <li>Provide default values when possible</li>
+                <li>Check if conversion is necessary</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 16: User Input</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>input() function:</strong> Always returns a string</li>
+                <li><strong>Type conversion:</strong> Convert input to appropriate type</li>
+                <li><strong>Input validation:</strong> Check for valid data</li>
+                <li><strong>Error handling:</strong> Handle invalid input gracefully</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Input Examples:</strong><br>
+                name = input("What is your name? ")<br>
+                age = int(input("How old are you? "))<br>
+                height = float(input("What is your height? "))
+            </div>
+            
+            <h4>Input Best Practices:</h4>
+            <ul>
+                <li>Provide clear, specific prompts</li>
+                <li>Always convert input to appropriate type</li>
+                <li>Validate input ranges and formats</li>
+                <li>Handle empty or invalid input</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 17: Advanced String Operations</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>String methods:</strong> startswith(), endswith(), find(), count()</li>
+                <li><strong>String formatting:</strong> f-strings (modern), .format(), %</li>
+                <li><strong>String slicing:</strong> [start:end:step] with negative indices</li>
+                <li><strong>String manipulation:</strong> strip(), split(), join()</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Advanced String Examples:</strong><br>
+                text = "Hello, World!"<br>
+                print(text.startswith("Hello"))  # True<br>
+                print(text[::-1])               # !dlroW ,olleH<br>
+                words = text.split(", ")        # ['Hello', 'World!']
+            </div>
+            
+            <h4>String Processing Concepts:</h4>
+            <ul>
+                <li>Pattern matching with methods</li>
+                <li>String reversal and manipulation</li>
+                <li>Text parsing and splitting</li>
+                <li>String joining and concatenation</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 18: Mathematical Operations</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Built-in functions:</strong> abs(), round(), min(), max(), sum()</li>
+                <li><strong>Math module:</strong> sqrt(), pi, sin(), cos(), ceil(), floor()</li>
+                <li><strong>Operator precedence:</strong> PEMDAS rules apply</li>
+                <li><strong>Precision issues:</strong> Floating-point arithmetic limitations</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Math Examples:</strong><br>
+                import math<br>
+                print(math.sqrt(16))      # 4.0<br>
+                print(math.pi)            # 3.141592653589793<br>
+                print(round(3.7))         # 4
+            </div>
+            
+            <h4>Mathematical Concepts:</h4>
+            <ul>
+                <li>Scientific notation (1.5e6)</li>
+                <li>Random number generation</li>
+                <li>Statistical calculations</li>
+                <li>Precision and rounding</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 19: None and Special Values</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>None:</strong> Represents "nothing" or "no value"</li>
+                <li><strong>Unique value:</strong> There's only one None</li>
+                <li><strong>Falsy value:</strong> Evaluates to False in conditions</li>
+                <li><strong>Common uses:</strong> Default return value, missing data</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>None Examples:</strong><br>
+                empty_value = None<br>
+                if empty_value is None:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Value is None")<br>
+                # Don't use == None, use 'is None'
+            </div>
+            
+            <h4>None Best Practices:</h4>
+            <ul>
+                <li>Use 'is None' instead of '== None'</li>
+                <li>Use None for optional parameters</li>
+                <li>Use None to indicate missing data</li>
+                <li>Check for None before using values</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 20: Type Checking</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>type() function:</strong> Returns the type of an object</li>
+                <li><strong>isinstance() function:</strong> Check if object is instance of type</li>
+                <li><strong>Type validation:</strong> Ensure correct data types</li>
+                <li><strong>Error prevention:</strong> Catch type-related errors early</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Type Checking Examples:</strong><br>
+                x = 42<br>
+                print(type(x))                    # <class 'int'><br>
+                print(isinstance(x, int))         # True<br>
+                print(isinstance(x, (int, float))) # True
+            </div>
+            
+            <h4>Type Checking Uses:</h4>
+            <ul>
+                <li>Validate function parameters</li>
+                <li>Debug type-related issues</li>
+                <li>Ensure data integrity</li>
+                <li>Write robust code</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 21: Practical Applications</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Real-world usage:</strong> How variables and data types are used in practice</li>
+                <li><strong>Problem-solving:</strong> Apply concepts to solve actual problems</li>
+                <li><strong>Code organization:</strong> Structure programs logically</li>
+                <li><strong>User interaction:</strong> Build interactive programs</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Application Examples:</strong><br>
+                # User registration system<br>
+                # Grade calculator<br>
+                # Temperature converter<br>
+                # Data validation
+            </div>
+            
+            <h4>Teaching Strategy:</h4>
+            <ul>
+                <li>Show complete working programs</li>
+                <li>Explain each part of the code</li>
+                <li>Demonstrate input validation</li>
+                <li>Show error handling techniques</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 22: Best Practices</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Naming conventions:</strong> Use descriptive, consistent names</li>
+                <li><strong>Code organization:</strong> Group related variables together</li>
+                <li><strong>Comments:</strong> Explain complex logic, not obvious code</li>
+                <li><strong>Error handling:</strong> Always validate input and handle errors</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Best Practices Examples:</strong><br>
+                # Good<br>
+                user_age = 25<br>
+                MAX_LOGIN_ATTEMPTS = 3<br>
+                <br>
+                # Bad<br>
+                a = 25<br>
+                x = 3
+            </div>
+            
+            <h4>Code Quality Principles:</h4>
+            <ul>
+                <li>Readability over cleverness</li>
+                <li>Consistency in style</li>
+                <li>Error prevention</li>
+                <li>Maintainability</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 23: Common Mistakes</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Variable mistakes:</strong> Undefined variables, wrong names</li>
+                <li><strong>Type mistakes:</strong> String + number, wrong conversions</li>
+                <li><strong>Input mistakes:</strong> Not converting input, not validating</li>
+                <li><strong>Logic mistakes:</strong> Wrong operators, incorrect conditions</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Common Error Examples:</strong><br>
+                # Mistake: Undefined variable<br>
+                print(undefined_variable)  # NameError<br>
+                <br>
+                # Mistake: String + number<br>
+                print("Age: " + 25)        # TypeError
+            </div>
+            
+            <h4>Prevention Strategies:</h4>
+            <ul>
+                <li>Always test code with different inputs</li>
+                <li>Use descriptive variable names</li>
+                <li>Validate user input</li>
+                <li>Handle potential errors</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 24: Debugging Techniques</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Error messages:</strong> Read them carefully - they tell you what's wrong</li>
+                <li><strong>Print debugging:</strong> Add print() statements to see variable values</li>
+                <li><strong>Step-by-step approach:</strong> Test small parts of code</li>
+                <li><strong>Systematic process:</strong> Methodical approach to finding bugs</li>
+            </ul>
+            
+            <div class="code-note">
+                <strong>Debugging Examples:</strong><br>
+                def calculate_average(numbers):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f"Input: {numbers}")  # Debug print<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;total = sum(numbers)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f"Total: {total}")    # Debug print<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return total / len(numbers)
+            </div>
+            
+            <h4>Debugging Process:</h4>
+            <ul>
+                <li>Read the error message</li>
+                <li>Check the line number</li>
+                <li>Add print statements</li>
+                <li>Test with simple inputs</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 25: Course Summary</h3>
+            <h4>Key Points to Emphasize:</h4>
+            <ul>
+                <li><strong>Foundation skills:</strong> Variables and data types are fundamental</li>
+                <li><strong>Progress made:</strong> Students now understand basic Python concepts</li>
+                <li><strong>Next steps:</strong> Control flow, functions, OOP</li>
+                <li><strong>Practice importance:</strong> Continue coding regularly</li>
+            </ul>
+            
+            <div class="important-note">
+                <strong>Encouragement:</strong> Remind students that they've built a solid foundation. The next courses will build upon these concepts.
+            </div>
+            
+            <h4>Course Outcomes:</h4>
+            <ul>
+                <li>Understanding of Python basics</li>
+                <li>Ability to work with different data types</li>
+                <li>Knowledge of best practices</li>
+                <li>Debugging and problem-solving skills</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
