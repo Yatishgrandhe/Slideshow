@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Global function to open slideshows
-function openSlideshow(slideshowType) {
-    console.log(`Opening slideshow: ${slideshowType}`);
+// Global function to open programming languages
+function openLanguage(language) {
+    console.log(`Opening language: ${language}`);
     
     // Add loading state
     const button = event.target.closest('.open-btn');
@@ -153,30 +153,26 @@ function openSlideshow(slideshowType) {
     }
     
     // Track the event
-    const slideshowName = event.target.closest('.slideshow-card').querySelector('h3').textContent;
-    console.log(`User selected: ${slideshowName}`);
+    const languageName = event.target.closest('.slideshow-card').querySelector('h3').textContent;
+    console.log(`User selected: ${languageName}`);
     
-    // Navigate to the appropriate slideshow
-    switch(slideshowType) {
-        case 'python-basics':
+    // Navigate to the appropriate language slideshow
+    switch(language) {
+        case 'python':
             // Add a small delay for better UX
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = 'python-slideshow.html';
             }, 800);
             break;
-        case 'javascript-fundamentals':
-            // For future slideshows
-            console.log('JavaScript Fundamentals coming soon!');
+        case 'javascript':
+            // Add a small delay for better UX
             setTimeout(() => {
-                if (button) {
-                    button.innerHTML = originalText;
-                    button.disabled = false;
-                }
-            }, 1000);
+                window.location.href = 'javascript-slideshow.html';
+            }, 800);
             break;
-        case 'react-basics':
+        case 'react':
             // For future slideshows
-            console.log('React Basics coming soon!');
+            console.log('React Development coming soon!');
             setTimeout(() => {
                 if (button) {
                     button.innerHTML = originalText;
@@ -185,7 +181,7 @@ function openSlideshow(slideshowType) {
             }, 1000);
             break;
         default:
-            console.log('Unknown slideshow type:', slideshowType);
+            console.log('Unknown language:', language);
             setTimeout(() => {
                 if (button) {
                     button.innerHTML = originalText;

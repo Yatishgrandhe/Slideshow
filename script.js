@@ -2,7 +2,7 @@
 class SlideshowManager {
     constructor() {
         this.currentSlide = 1;
-        this.totalSlides = 25;
+        this.totalSlides = 5; // Updated for JavaScript slideshow
         this.isFullscreen = false;
         this.init();
     }
@@ -105,7 +105,7 @@ class SlideshowManager {
         if (homeBtn) {
             homeBtn.addEventListener('click', () => {
                 console.log('Home button clicked');
-                window.location.href = 'homepage.html';
+                window.location.href = 'index.html';
             });
         }
         

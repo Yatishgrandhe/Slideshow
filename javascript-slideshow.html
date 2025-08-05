@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals - Day 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript Fundamentals</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 5</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: What is JavaScript? -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>⚡ What is JavaScript?</h1>
+                        <p class="slide-subtitle">The Language of the Web</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is JavaScript?</h2>
+                                    <p>JavaScript is a high-level, interpreted programming language that powers the modern web. It's the language that makes websites interactive and dynamic.</p>
+                                    
+                                    <h3>Why JavaScript?</h3>
+                                    <ul>
+                                        <li><strong>Web Native:</strong> Runs in every web browser</li>
+                                        <li><strong>Versatile:</strong> Frontend, backend, mobile apps</li>
+                                        <li><strong>Popular:</strong> Most used programming language</li>
+                                        <li><strong>Modern:</strong> Constantly evolving with new features</li>
+                                    </ul>
+
+                                    <h3>Where is JavaScript Used?</h3>
+                                    <ul>
+                                        <li><strong>Web Development:</strong> Interactive websites and web apps</li>
+                                        <li><strong>Mobile Apps:</strong> React Native, Ionic, Cordova</li>
+                                        <li><strong>Server-Side:</strong> Node.js for backend development</li>
+                                        <li><strong>Desktop Apps:</strong> Electron for cross-platform apps</li>
+                                        <li><strong>Game Development:</strong> Browser-based games</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">JavaScript Code Example</div>
+                                    <pre><code>// This is how simple JavaScript is!
+console.log("Hello, World!");
+
+// Variables are easy to understand
+let name = "Alice";
+let age = 25;
+console.log(`${name} is ${age} years old`);
+
+// Simple math operations
+let result = 10 + 5;
+console.log(`10 + 5 = ${result}`);
+
+// Easy to read loops
+for (let i = 0; i < 3; i++) {
+    console.log(`Learning JavaScript is fun! (step ${i+1})`);
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Setting Up JavaScript -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🚀 Setting Up JavaScript</h1>
+                        <p class="slide-subtitle">Start Coding in Minutes!</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>How to Run JavaScript</h2>
+                                    <p>JavaScript runs in web browsers, so you can start coding immediately without installing anything!</p>
+                                    
+                                    <h3>Method 1: Browser Console</h3>
+                                    <ul>
+                                        <li><strong>Open Browser:</strong> Chrome, Firefox, Safari, or Edge</li>
+                                        <li><strong>Press F12:</strong> Opens Developer Tools</li>
+                                        <li><strong>Click Console:</strong> Tab where you can type JavaScript</li>
+                                        <li><strong>Start Coding:</strong> Type and press Enter to run</li>
+                                    </ul>
+
+                                    <h3>Method 2: HTML File</h3>
+                                    <ul>
+                                        <li><strong>Create HTML file:</strong> Save as .html extension</li>
+                                        <li><strong>Add script tag:</strong> &lt;script&gt; your code &lt;/script&gt;</li>
+                                        <li><strong>Open in browser:</strong> Double-click the file</li>
+                                        <li><strong>Check console:</strong> Press F12 to see output</li>
+                                    </ul>
+
+                                    <h3>Method 3: Online Editors</h3>
+                                    <ul>
+                                        <li><strong>CodePen:</strong> codepen.io</li>
+                                        <li><strong>JSFiddle:</strong> jsfiddle.net</li>
+                                        <li><strong>Replit:</strong> replit.com</li>
+                                        <li><strong>CodeSandbox:</strong> codesandbox.io</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Your First JavaScript File</div>
+                                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello JavaScript!&lt;/h1&gt;
+    
+    &lt;script&gt;
+        // Your JavaScript code goes here
+        console.log("Hello from JavaScript!");
+        
+        let message = "Welcome to JavaScript!";
+        alert(message);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Variables and Data Types -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📦 Variables and Data Types</h1>
+                        <p class="slide-subtitle">Storing Information in JavaScript</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>JavaScript Variables</h2>
+                                    <p>Variables are containers for storing data values. JavaScript has three ways to declare variables.</p>
+                                    
+                                    <h3>Variable Declaration:</h3>
+                                    <ul>
+                                        <li><strong>let:</strong> Modern way, block-scoped, can be reassigned</li>
+                                        <li><strong>const:</strong> Cannot be reassigned, block-scoped</li>
+                                        <li><strong>var:</strong> Old way, function-scoped (avoid in modern code)</li>
+                                    </ul>
+
+                                    <h3>JavaScript Data Types:</h3>
+                                    <ul>
+                                        <li><strong>String:</strong> Text data - "Hello", 'JavaScript'</li>
+                                        <li><strong>Number:</strong> Numbers - 42, 3.14, -5</li>
+                                        <li><strong>Boolean:</strong> True or false values</li>
+                                        <li><strong>Array:</strong> Ordered collections - [1, 2, 3]</li>
+                                        <li><strong>Object:</strong> Key-value pairs - {name: "Alice"}</li>
+                                        <li><strong>null:</strong> Intentional absence of value</li>
+                                        <li><strong>undefined:</strong> Variable declared but not assigned</li>
+                                    </ul>
+
+                                    <h3>Best Practices:</h3>
+                                    <ul>
+                                        <li>Use <strong>const</strong> by default</li>
+                                        <li>Use <strong>let</strong> when you need to reassign</li>
+                                        <li>Use descriptive variable names</li>
+                                        <li>Use camelCase naming convention</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Variable Examples</div>
+                                    <pre><code>// String variables
+const name = "Alice";
+let greeting = "Hello, World!";
+
+// Number variables
+const age = 25;
+let temperature = -5.5;
+const pi = 3.14159;
+
+// Boolean variables
+const isStudent = true;
+let isRaining = false;
+
+// Array variables
+const colors = ["red", "green", "blue"];
+let numbers = [1, 2, 3, 4, 5];
+
+// Object variables
+const person = {
+    name: "Bob",
+    age: 30,
+    city: "New York"
+};
+
+// Check data types
+console.log(typeof name);        // "string"
+console.log(typeof age);         // "number"
+console.log(typeof isStudent);   // "boolean"
+console.log(typeof colors);      // "object" (arrays are objects)
+console.log(typeof person);      // "object"
+
+// Using variables
+console.log(`Hello, ${name}!`);
+console.log(`Age: ${age}`);
+console.log(`Colors: ${colors.join(", ")}`);</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Functions -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Functions</h1>
+                        <p class="slide-subtitle">Reusable Blocks of Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Functions?</h2>
+                                    <p>Functions are reusable blocks of code that perform specific tasks. They help organize code and avoid repetition.</p>
+                                    
+                                    <h3>Function Declaration:</h3>
+                                    <ul>
+                                        <li><strong>function keyword:</strong> Traditional way to declare functions</li>
+                                        <li><strong>Arrow functions:</strong> Modern, concise syntax</li>
+                                        <li><strong>Function expressions:</strong> Functions assigned to variables</li>
+                                    </ul>
+
+                                    <h3>Function Components:</h3>
+                                    <ul>
+                                        <li><strong>Parameters:</strong> Input values the function receives</li>
+                                        <li><strong>Function body:</strong> Code that runs when function is called</li>
+                                        <li><strong>Return statement:</strong> Output value the function sends back</li>
+                                        <li><strong>Function call:</strong> How you use the function</li>
+                                    </ul>
+
+                                    <h3>Why Use Functions?</h3>
+                                    <ul>
+                                        <li><strong>Reusability:</strong> Write once, use many times</li>
+                                        <li><strong>Organization:</strong> Break code into logical pieces</li>
+                                        <li><strong>Maintainability:</strong> Easier to fix and update</li>
+                                        <li><strong>Testing:</strong> Test individual pieces of code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Function Examples</div>
+                                    <pre><code>// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Arrow function
+const add = (a, b) => {
+    return a + b;
+};
+
+// Function expression
+const multiply = function(x, y) {
+    return x * y;
+};
+
+// Simple arrow function (one line)
+const square = x => x * x;
+
+// Using functions
+console.log(greet("Alice"));     // "Hello, Alice!"
+console.log(add(5, 3));          // 8
+console.log(multiply(4, 6));     // 24
+console.log(square(7));          // 49
+
+// Function with multiple parameters
+function calculateArea(width, height) {
+    return width * height;
+}
+
+// Function with default parameters
+function greetUser(name = "Guest") {
+    return `Welcome, ${name}!`;
+}
+
+console.log(calculateArea(10, 5));  // 50
+console.log(greetUser("Bob"));      // "Welcome, Bob!"
+console.log(greetUser());           // "Welcome, Guest!"</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Next Steps -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎯 Day 1 Complete!</h1>
+                        <p class="slide-subtitle">What's Next in Your JavaScript Journey</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Congratulations!</h2>
+                                    <p>You've completed Day 1 of JavaScript Fundamentals. You now understand the basics of JavaScript and how to get started.</p>
+                                    
+                                    <h3>What You Learned Today:</h3>
+                                    <ul>
+                                        <li><strong>JavaScript Basics:</strong> What JavaScript is and where it's used</li>
+                                        <li><strong>Setup & Environment:</strong> How to run JavaScript code</li>
+                                        <li><strong>Variables:</strong> Storing and managing data</li>
+                                        <li><strong>Data Types:</strong> Understanding different kinds of data</li>
+                                        <li><strong>Functions:</strong> Creating reusable code blocks</li>
+                                    </ul>
+
+                                    <h3>Coming Up Next:</h3>
+                                    <ul>
+                                        <li><strong>Day 2:</strong> Control Flow (if/else, switch)</li>
+                                        <li><strong>Day 3:</strong> Loops (for, while, forEach)</li>
+                                        <li><strong>Day 4:</strong> Arrays and Array Methods</li>
+                                        <li><strong>Day 5:</strong> Objects and Object Methods</li>
+                                    </ul>
+
+                                    <h3>Practice Exercises:</h3>
+                                    <ul>
+                                        <li>Create variables for your name, age, and favorite color</li>
+                                        <li>Write a function that calculates the area of a circle</li>
+                                        <li>Create an array of your favorite foods</li>
+                                        <li>Use console.log() to display information about yourself</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Practice Challenge</div>
+                                    <pre><code>// Try this challenge:
+// Create a simple calculator function
+
+function calculator(operation, a, b) {
+    switch(operation) {
+        case 'add':
+            return a + b;
+        case 'subtract':
+            return a - b;
+        case 'multiply':
+            return a * b;
+        case 'divide':
+            return a / b;
+        default:
+            return 'Invalid operation';
+    }
+}
+
+// Test your calculator
+console.log(calculator('add', 10, 5));      // 15
+console.log(calculator('multiply', 4, 3));  // 12
+console.log(calculator('divide', 20, 4));   // 5
+
+// Challenge: Add more operations!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
