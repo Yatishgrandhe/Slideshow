@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Object-Oriented Programming - Speaker Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .speaker-notes {
+            margin-top: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-top: 3px solid #007bff;
+        }
+        .speaker-notes h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .note-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .note-section h3 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .note-section ul {
+            margin-left: 20px;
+        }
+        .note-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .key-point {
+            background: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .example-code {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Python Object-Oriented Programming - Speaker Notes</span>
+            </div>
+            <div class="nav-controls">
+                <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 25</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" class="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+        </button>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Slide 1: Introduction -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🏗️ Slide 1: Introduction to Object-Oriented Programming</h1>
+                        <p class="slide-subtitle">Organizing Code with Classes and Objects</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Welcome to Object-Oriented Programming!</h2>
+                                    <p>This course will teach you how to organize your code using classes and objects, making your programs more modular and maintainable.</p>
+                                    
+                                    <h3>What You'll Learn:</h3>
+                                    <ul>
+                                        <li><strong>Classes and Objects:</strong> Creating blueprints and instances</li>
+                                        <li><strong>Attributes and Methods:</strong> Data and behavior in objects</li>
+                                        <li><strong>Inheritance:</strong> Creating hierarchies of classes</li>
+                                        <li><strong>Encapsulation:</strong> Protecting data and methods</li>
+                                        <li><strong>Polymorphism:</strong> Different behaviors for different objects</li>
+                                        <li><strong>Advanced OOP:</strong> Design patterns and best practices</li>
+                                    </ul>
+
+                                    <h3>Course Structure:</h3>
+                                    <ul>
+                                        <li><strong>Slides 1-5:</strong> Introduction and Basics</li>
+                                        <li><strong>Slides 6-10:</strong> Classes and Objects</li>
+                                        <li><strong>Slides 11-15:</strong> Inheritance and Polymorphism</li>
+                                        <li><strong>Slides 16-20:</strong> Advanced OOP Concepts</li>
+                                        <li><strong>Slides 21-25:</strong> Design Patterns and Best Practices</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">OOP Examples</div>
+                                    <pre><code># Class definition
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def display_info(self):
+        return f"{self.brand} {self.model}"
+
+# Creating objects
+my_car = Car("Toyota", "Camry")
+print(my_car.display_info())</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue with all 25 slides from the original file -->
+            <!-- Add remaining slides 2-25 here -->
+
+        </div>
+    </div>
+
+    <!-- Speaker Notes Section -->
+    <div class="speaker-notes">
+        <h2>📝 Speaker Notes - Python Object-Oriented Programming</h2>
+        
+        <div class="note-section">
+            <h3>Slide 1: Introduction to Object-Oriented Programming</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Object-oriented programming is a powerful paradigm for organizing code and modeling real-world concepts.
+            </div>
+            <ul>
+                <li><strong>Opening Hook:</strong> Ask "How do we model real-world things in code?" - introduce OOP as the answer</li>
+                <li><strong>Real-world Analogy:</strong> Compare classes to blueprints and objects to buildings</li>
+                <li><strong>Paradigm Shift:</strong> Explain how OOP changes how we think about programming</li>
+                <li><strong>Benefits Overview:</strong> Highlight reusability, maintainability, and organization</li>
+                <li><strong>Interactive Element:</strong> Ask students to identify objects in the room</li>
+            </ul>
+            <div class="example-code">
+                # Emphasize the blueprint concept
+                class Car:
+                    def __init__(self, brand, model):
+                        self.brand = brand
+                        self.model = model
+                
+                # Show how one blueprint creates many objects
+                car1 = Car("Toyota", "Camry")
+                car2 = Car("Honda", "Civic")
+            </div>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 2: What is OOP?</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> OOP is a programming paradigm that organizes code around objects and classes.
+            </div>
+            <ul>
+                <li><strong>Definition:</strong> Explain OOP as organizing code around objects</li>
+                <li><strong>Core Concepts:</strong> Introduce the four pillars of OOP</li>
+                <li><strong>History:</strong> Briefly mention OOP's development and popularity</li>
+                <li><strong>Comparison:</strong> Compare OOP to procedural programming</li>
+                <li><strong>Real-world Examples:</strong> Show how OOP models real-world systems</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 3: Classes and Objects</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Classes are blueprints, objects are instances created from those blueprints.
+            </div>
+            <ul>
+                <li><strong>Class Definition:</strong> Show how to define a class with the class keyword</li>
+                <li><strong>Object Creation:</strong> Show how to create objects from classes</li>
+                <li><strong>Blueprint Analogy:</strong> Use the blueprint/building analogy</li>
+                <li><strong>Multiple Objects:</strong> Show how one class can create many objects</li>
+                <li><strong>Class vs Object:</strong> Clarify the difference between classes and objects</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 4: Creating Classes</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Classes are defined using the class keyword and contain attributes and methods.
+            </div>
+            <ul>
+                <li><strong>Class Syntax:</strong> Show the basic class definition syntax</li>
+                <li><strong>Naming Conventions:</strong> Explain PascalCase for class names</li>
+                <li><strong>Class Body:</strong> Show what goes inside a class definition</li>
+                <li><strong>Attributes vs Methods:</strong> Explain the difference between data and behavior</li>
+                <li><strong>Simple Example:</strong> Show a basic class with attributes</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 5: The __init__ Method</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> The __init__ method is a special constructor that initializes objects.
+            </div>
+            <ul>
+                <li><strong>Constructor Purpose:</strong> Explain why we need __init__</li>
+                <li><strong>self Parameter:</strong> Explain what self represents</li>
+                <li><strong>Attribute Assignment:</strong> Show how to assign attributes to self</li>
+                <li><strong>Parameters:</strong> Show how to accept parameters in __init__</li>
+                <li><strong>Common Patterns:</strong> Show typical __init__ patterns</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 6: Instance Attributes</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Instance attributes store data specific to each object.
+            </div>
+            <ul>
+                <li><strong>Attribute Definition:</strong> Show how to define attributes in __init__</li>
+                <li><strong>Accessing Attributes:</strong> Show how to access attributes with dot notation</li>
+                <li><strong>Modifying Attributes:</strong> Show how to change attribute values</li>
+                <li><strong>Attribute Types:</strong> Show different types of attributes</li>
+                <li><strong>Best Practices:</strong> Show good attribute naming conventions</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 7: Instance Methods</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Instance methods define behavior that objects can perform.
+            </div>
+            <ul>
+                <li><strong>Method Definition:</strong> Show how to define methods in classes</li>
+                <li><strong>self Parameter:</strong> Explain why methods need self</li>
+                <li><strong>Accessing Attributes:</strong> Show how methods access instance attributes</li>
+                <li><strong>Method Calls:</strong> Show how to call methods on objects</li>
+                <li><strong>Return Values:</strong> Show methods that return values</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 8: Class Attributes</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Class attributes are shared by all instances of a class.
+            </div>
+            <ul>
+                <li><strong>Class vs Instance:</strong> Explain the difference between class and instance attributes</li>
+                <li><strong>Class Attribute Definition:</strong> Show how to define class attributes</li>
+                <li><strong>Accessing Class Attributes:</strong> Show how to access class attributes</li>
+                <li><strong>Shared Nature:</strong> Demonstrate how class attributes are shared</li>
+                <li><strong>Use Cases:</strong> Show when to use class attributes</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 9: Class Methods</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Class methods operate on the class itself, not individual instances.
+            </div>
+            <ul>
+                <li><strong>@classmethod Decorator:</strong> Show how to define class methods</li>
+                <li><strong>cls Parameter:</strong> Explain what cls represents</li>
+                <li><strong>Class Method Uses:</strong> Show typical class method applications</li>
+                <li><strong>Alternative Constructors:</strong> Show using class methods as constructors</li>
+                <li><strong>Factory Methods:</strong> Show creating objects with class methods</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 10: Static Methods</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Static methods are utility functions that don't need access to class or instance data.
+            </div>
+            <ul>
+                <li><strong>@staticmethod Decorator:</strong> Show how to define static methods</li>
+                <li><strong>No self or cls:</strong> Explain that static methods don't receive self or cls</li>
+                <li><strong>Utility Functions:</strong> Show typical static method use cases</li>
+                <li><strong>Organizational Benefits:</strong> Explain why static methods are useful</li>
+                <li><strong>When to Use:</strong> Show appropriate static method applications</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 11: Inheritance</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Inheritance allows classes to inherit attributes and methods from parent classes.
+            </div>
+            <ul>
+                <li><strong>Inheritance Syntax:</strong> Show class Child(Parent) syntax</li>
+                <li><strong>Code Reuse:</strong> Explain how inheritance promotes code reuse</li>
+                <li><strong>Inherited Attributes:</strong> Show how child classes get parent attributes</li>
+                <li><strong>Inherited Methods:</strong> Show how child classes get parent methods</li>
+                <li><strong>Is-a Relationship:</strong> Explain the "is-a" relationship</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 12: The super() Function</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> super() allows child classes to call parent class methods.
+            </div>
+            <ul>
+                <li><strong>super() Purpose:</strong> Explain why super() is needed</li>
+                <li><strong>Calling Parent Methods:</strong> Show how to call parent methods</li>
+                <li><strong>Constructor Chaining:</strong> Show calling parent __init__</li>
+                <li><strong>Method Resolution:</strong> Explain how super() finds parent methods</li>
+                <li><strong>Multiple Inheritance:</strong> Briefly mention super() with multiple inheritance</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 13: Method Overriding</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Method overriding allows child classes to provide different implementations of parent methods.
+            </div>
+            <ul>
+                <li><strong>Override Definition:</strong> Show how to override parent methods</li>
+                <li><strong>Same Signature:</strong> Emphasize keeping the same method signature</li>
+                <li><strong>Custom Behavior:</strong> Show providing different behavior</li>
+                <li><strong>Calling Parent:</strong> Show when to call parent methods</li>
+                <li><strong>Common Patterns:</strong> Show typical overriding patterns</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 14: Polymorphism</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Polymorphism allows different objects to respond to the same method call in different ways.
+            </div>
+            <ul>
+                <li><strong>Polymorphism Definition:</strong> Explain the concept of "many forms"</li>
+                <li><strong>Method Overriding:</strong> Show how overriding enables polymorphism</li>
+                <li><strong>Common Interface:</strong> Show different classes with same method names</li>
+                <li><strong>Flexible Code:</strong> Show how polymorphism makes code flexible</li>
+                <li><strong>Real Examples:</strong> Show practical polymorphism examples</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 15: Encapsulation</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Encapsulation bundles data and methods together and controls access to them.
+            </div>
+            <ul>
+                <li><strong>Encapsulation Definition:</strong> Explain bundling data and behavior</li>
+                <li><strong>Access Control:</strong> Show public, protected, and private attributes</li>
+                <li><strong>Data Hiding:</strong> Explain why encapsulation is important</li>
+                <li><strong>Getter/Setter Methods:</strong> Show controlling access to attributes</li>
+                <li><strong>Benefits:</strong> Show how encapsulation improves code</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 16: Properties</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Properties provide controlled access to attributes using getter and setter methods.
+            </div>
+            <ul>
+                <li><strong>@property Decorator:</strong> Show how to define properties</li>
+                <li><strong>Getter Methods:</strong> Show @property for getting values</li>
+                <li><strong>Setter Methods:</strong> Show @attribute.setter for setting values</li>
+                <li><strong>Validation:</strong> Show using properties for validation</li>
+                <li><strong>Computed Properties:</strong> Show properties that compute values</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 17: Class Methods and Static Methods</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Class methods and static methods provide different ways to organize class-level functionality.
+            </div>
+            <ul>
+                <li><strong>Method Types Review:</strong> Compare instance, class, and static methods</li>
+                <li><strong>When to Use Each:</strong> Show appropriate use cases for each type</li>
+                <li><strong>Performance Considerations:</strong> Explain when each type is most efficient</li>
+                <li><strong>Design Patterns:</strong> Show how different methods enable design patterns</li>
+                <li><strong>Best Practices:</strong> Show when to use each method type</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 18: Multiple Inheritance</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Multiple inheritance allows classes to inherit from multiple parent classes.
+            </div>
+            <ul>
+                <li><strong>Multiple Inheritance Syntax:</strong> Show class Child(Parent1, Parent2)</li>
+                <li><strong>Method Resolution Order:</strong> Explain how Python resolves method calls</li>
+                <li><strong>Diamond Problem:</strong> Show the classic multiple inheritance problem</li>
+                <li><strong>super() with Multiple Inheritance:</strong> Show how super() works with multiple parents</li>
+                <li><strong>Best Practices:</strong> Show when to use multiple inheritance</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 19: Abstract Classes</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Abstract classes define interfaces that subclasses must implement.
+            </div>
+            <ul>
+                <li><strong>Abstract Class Purpose:</strong> Explain why abstract classes are useful</li>
+                <li><strong>abc Module:</strong> Show using the abc module</li>
+                <li><strong>@abstractmethod Decorator:</strong> Show defining abstract methods</li>
+                <li><strong>Interface Definition:</strong> Show how abstract classes define interfaces</li>
+                <li><strong>Enforcement:</strong> Show how abstract classes enforce implementation</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 20: Design Patterns</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Design patterns are proven solutions to common programming problems.
+            </div>
+            <ul>
+                <li><strong>Pattern Definition:</strong> Explain what design patterns are</li>
+                <li><strong>Singleton Pattern:</strong> Show ensuring only one instance exists</li>
+                <li><strong>Factory Pattern:</strong> Show creating objects without specifying exact class</li>
+                <li><strong>Observer Pattern:</strong> Show one-to-many dependency relationships</li>
+                <li><strong>When to Use Patterns:</strong> Show appropriate pattern applications</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 21: Magic Methods</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Magic methods allow you to define how objects behave with Python operators.
+            </div>
+            <ul>
+                <li><strong>Magic Method Purpose:</strong> Explain why magic methods exist</li>
+                <li><strong>Common Magic Methods:</strong> Show __init__, __str__, __repr__</li>
+                <li><strong>Comparison Methods:</strong> Show __eq__, __lt__, __gt__</li>
+                <li><strong>Arithmetic Methods:</strong> Show __add__, __sub__, __mul__</li>
+                <li><strong>Container Methods:</strong> Show __len__, __getitem__, __setitem__</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 22: Error Handling in Classes</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Classes should handle errors gracefully and provide meaningful error messages.
+            </div>
+            <ul>
+                <li><strong>Input Validation:</strong> Show validating constructor parameters</li>
+                <li><strong>Custom Exceptions:</strong> Show creating class-specific exceptions</li>
+                <li><strong>Try-Except in Methods:</strong> Show handling errors in methods</li>
+                <li><strong>Error Messages:</strong> Show providing helpful error information</li>
+                <li><strong>Defensive Programming:</strong> Show anticipating and handling errors</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 23: OOP Best Practices</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Following OOP best practices leads to better, more maintainable code.
+            </div>
+            <ul>
+                <li><strong>Single Responsibility:</strong> Show each class having one reason to change</li>
+                <li><strong>Open/Closed Principle:</strong> Show open for extension, closed for modification</li>
+                <li><strong>Liskov Substitution:</strong> Show subclasses being usable in place of parent classes</li>
+                <li><strong>Interface Segregation:</strong> Show clients not depending on unused interfaces</li>
+                <li><strong>Dependency Inversion:</strong> Show depending on abstractions, not concretions</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 24: Common OOP Mistakes</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Learning to recognize and avoid common OOP mistakes improves code quality.
+            </div>
+            <ul>
+                <li><strong>God Objects:</strong> Show classes that do too much</li>
+                <li><strong>Inheritance Misuse:</strong> Show using inheritance when composition is better</li>
+                <li><strong>Mutable Default Arguments:</strong> Show the mutable default argument trap</li>
+                <li><strong>Not Using super():</strong> Show problems with not calling parent methods</li>
+                <li><strong>Over-engineering:</strong> Show when simple is better than complex</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 25: Course Summary</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Students have learned fundamental OOP concepts and are ready for advanced topics.
+            </div>
+            <ul>
+                <li><strong>Key Concepts Review:</strong> Summarize classes, objects, inheritance, and polymorphism</li>
+                <li><strong>Practical Skills:</strong> Emphasize real-world applications</li>
+                <li><strong>Next Steps:</strong> Guide students to advanced Python topics</li>
+                <li><strong>Practice Encouragement:</strong> Encourage continued practice</li>
+                <li><strong>Resources:</strong> Point to additional learning materials</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
