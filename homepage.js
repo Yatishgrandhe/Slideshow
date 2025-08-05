@@ -161,7 +161,7 @@ function openLanguage(language) {
         case 'python':
             // Add a small delay for better UX
             setTimeout(() => {
-                window.location.href = 'python-language.html';
+                window.location.href = 'python-basics-slideshows.html';
             }, 800);
             break;
         case 'javascript':
