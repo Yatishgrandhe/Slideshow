@@ -231,30 +231,30 @@
                 button.innerHTML = '<span class="loading"></span> Loading...';
                 button.disabled = true;
                 
-                setTimeout(() => {
-                    // Navigate to the appropriate slideshow
-                    switch(course) {
-                        case 'python-basics':
-                            console.log('Navigating to python-variables-data-types.html');
-                            window.location.href = 'python-variables-data-types.html';
-                            break;
-                        case 'python-control-flow':
-                            console.log('Navigating to python-control-flow-loops.html');
-                            window.location.href = 'python-control-flow-loops.html';
-                            break;
-                        case 'python-functions':
-                            console.log('Navigating to python-functions-lists.html');
-                            window.location.href = 'python-functions-lists.html';
-                            break;
-                        case 'python-oop':
-                            console.log('Navigating to python-oop.html');
-                            window.location.href = 'python-oop.html';
-                            break;
-                        default:
-                            console.log('Navigating to python-projects-advanced.html');
-                            window.location.href = 'python-projects-advanced.html';
-                    }
-                }, 800);
+                                    setTimeout(() => {
+                        // Navigate to the appropriate slideshow
+                        switch(course) {
+                            case 'python-basics':
+                                console.log('Navigating to python-basics-course.html');
+                                window.location.href = 'python-basics-course.html';
+                                break;
+                            case 'python-control-flow':
+                                console.log('Navigating to python-control-flow-course.html');
+                                window.location.href = 'python-control-flow-course.html';
+                                break;
+                            case 'python-functions':
+                                console.log('Navigating to python-functions-course.html');
+                                window.location.href = 'python-functions-course.html';
+                                break;
+                            case 'python-oop':
+                                console.log('Navigating to python-oop-course.html');
+                                window.location.href = 'python-oop-course.html';
+                                break;
+                            default:
+                                console.log('Navigating to python-projects-course.html');
+                                window.location.href = 'python-projects-course.html';
+                        }
+                    }, 800);
             } else {
                 console.log('No button found, navigating directly');
                 // Fallback: navigate directly if button not found
