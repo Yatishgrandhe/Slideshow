@@ -930,16 +930,24 @@ body {
 
 .slideshow-container.fullscreen .slides-wrapper {
     height: 100vh;
+    width: 100vw;
+    margin: 0;
     padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .slideshow-container.fullscreen .slide-content {
     max-width: none;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     margin: 0;
     border-radius: 0;
     padding: 40px;
+    box-sizing: border-box;
 }
 
 /* Animations */
@@ -1429,22 +1437,38 @@ body {
 }
 
 .slideshow-container.fullscreen .slides-wrapper {
-    width: calc(100vw - 400px); /* Adjusted for wider speaker notes */
-    margin-right: 400px;
+    width: 100vw;
+    margin: 0;
     height: 100vh;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .slideshow-container.fullscreen .slide {
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .slideshow-container.fullscreen .slide-content {
-    max-height: 90vh;
+    max-width: none;
+    width: calc(100vw - 400px);
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    padding: 40px;
     overflow-y: auto;
+    box-sizing: border-box;
 }
 
 /* Enhanced speaker notes styling in fullscreen */
@@ -1566,8 +1590,12 @@ body {
     }
     
     .slideshow-container.fullscreen .slides-wrapper {
+        width: 100vw;
+        margin: 0;
+    }
+    
+    .slideshow-container.fullscreen .slide-content {
         width: calc(100vw - 350px);
-        margin-right: 350px;
     }
 }
 
@@ -1578,8 +1606,12 @@ body {
     }
     
     .slideshow-container.fullscreen .slides-wrapper {
+        width: 100vw;
+        margin: 0;
+    }
+    
+    .slideshow-container.fullscreen .slide-content {
         width: calc(100vw - 320px);
-        margin-right: 320px;
     }
     
     .slideshow-container.fullscreen .speaker-notes h2 {
@@ -1612,8 +1644,12 @@ body {
     }
     
     .slideshow-container.fullscreen .slides-wrapper {
+        width: 100vw;
+        margin: 0;
+    }
+    
+    .slideshow-container.fullscreen .slide-content {
         width: calc(100vw - 280px);
-        margin-right: 280px;
     }
     
     .slideshow-container.fullscreen .speaker-notes h2 {
