@@ -1131,28 +1131,33 @@ body {
 
 /* Speaker Notes Styles */
 .speaker-notes {
+    position: fixed;
+    top: 70px; /* Below the navigation */
+    right: 0;
+    width: 350px;
+    height: calc(100vh - 70px);
     background: rgba(15, 15, 35, 0.98);
-    border-top: 2px solid rgba(66, 153, 225, 0.3);
-    padding: 30px;
-    margin-top: 20px;
-    max-height: 60vh;
+    border-left: 2px solid rgba(66, 153, 225, 0.3);
+    padding: 20px;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #4299e1 #1a1a2e;
+    z-index: 100;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .speaker-notes::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 .speaker-notes::-webkit-scrollbar-track {
     background: #1a1a2e;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .speaker-notes::-webkit-scrollbar-thumb {
     background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 .speaker-notes::-webkit-scrollbar-thumb:hover {
@@ -1161,53 +1166,56 @@ body {
 
 .speaker-notes h2 {
     color: #64ffda;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     background: linear-gradient(135deg, #64ffda 0%, #00d4ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(66, 153, 225, 0.2);
 }
 
 .note-section {
     background: rgba(26, 26, 46, 0.8);
     border: 1px solid rgba(66, 153, 225, 0.2);
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .note-section:hover {
     border-color: rgba(66, 153, 225, 0.4);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
 }
 
 .note-section h3 {
     color: #4299e1;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .note-section h3::before {
     content: "📝";
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .key-point {
     background: linear-gradient(135deg, rgba(66, 153, 225, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
-    border-left: 4px solid #4299e1;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 0 8px 8px 0;
+    border-left: 3px solid #4299e1;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 0 6px 6px 0;
+    font-size: 13px;
 }
 
 .key-point strong {
@@ -1224,96 +1232,134 @@ body {
 .note-section li {
     background: rgba(15, 15, 35, 0.6);
     border: 1px solid rgba(66, 153, 225, 0.1);
-    border-radius: 8px;
-    padding: 12px 15px;
-    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
     transition: all 0.3s ease;
     position: relative;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 .note-section li:hover {
     background: rgba(15, 15, 35, 0.8);
     border-color: rgba(66, 153, 225, 0.3);
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 .note-section li strong {
     color: #4299e1;
     font-weight: 600;
     display: inline-block;
-    min-width: 120px;
+    min-width: 80px;
+    font-size: 11px;
 }
 
 .example-code {
     background: rgba(15, 15, 35, 0.9);
     border: 1px solid rgba(66, 153, 225, 0.2);
-    border-radius: 8px;
-    padding: 15px;
-    margin-top: 15px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
     font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
-    font-size: 14px;
+    font-size: 11px;
     color: #e2e8f0;
     position: relative;
 }
 
 .example-code::before {
-    content: "💡 Example Code:";
+    content: "💡 Example:";
     display: block;
     color: #64ffda;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-family: 'Inter', sans-serif;
+    font-size: 11px;
+}
+
+/* Adjust slides wrapper to accommodate speaker notes */
+.slides-wrapper {
+    width: calc(100% - 350px);
+    margin-right: 350px;
+    transition: all 0.3s ease;
 }
 
 /* Responsive Design for Speaker Notes */
+@media (max-width: 1200px) {
+    .speaker-notes {
+        width: 300px;
+    }
+    
+    .slides-wrapper {
+        width: calc(100% - 300px);
+        margin-right: 300px;
+    }
+}
+
 @media (max-width: 768px) {
     .speaker-notes {
-        padding: 20px;
-        max-height: 50vh;
+        width: 280px;
+        padding: 15px;
+    }
+    
+    .slides-wrapper {
+        width: calc(100% - 280px);
+        margin-right: 280px;
     }
     
     .speaker-notes h2 {
-        font-size: 20px;
-    }
-    
-    .note-section {
-        padding: 20px;
-    }
-    
-    .note-section h3 {
         font-size: 16px;
     }
     
+    .note-section {
+        padding: 12px;
+    }
+    
+    .note-section h3 {
+        font-size: 13px;
+    }
+    
+    .note-section li {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+    
     .note-section li strong {
-        min-width: 100px;
-        font-size: 14px;
+        min-width: 70px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .speaker-notes {
-        padding: 15px;
-        max-height: 45vh;
+        width: 250px;
+        padding: 10px;
+    }
+    
+    .slides-wrapper {
+        width: calc(100% - 250px);
+        margin-right: 250px;
     }
     
     .speaker-notes h2 {
-        font-size: 18px;
+        font-size: 14px;
     }
     
     .note-section {
-        padding: 15px;
+        padding: 10px;
     }
     
     .note-section h3 {
-        font-size: 15px;
+        font-size: 12px;
     }
     
     .note-section li {
-        padding: 10px 12px;
+        padding: 5px 6px;
+        font-size: 10px;
     }
     
     .note-section li strong {
-        min-width: 80px;
-        font-size: 13px;
+        min-width: 60px;
+        font-size: 9px;
     }
 } 
