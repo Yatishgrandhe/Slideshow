@@ -189,13 +189,14 @@ body {
     opacity: 0;
     transform: translateX(100%) scale(0.98);
     transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 15px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     filter: blur(1px);
     will-change: transform, opacity, filter;
+    box-sizing: border-box;
 }
 
 .slide.active {
@@ -225,7 +226,7 @@ body {
     backdrop-filter: blur(20px);
     border-radius: 16px;
     padding: 15px;
-    width: 100%;
+    width: calc(100% - 350px);
     height: 100%;
     max-width: 1200px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
@@ -233,6 +234,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 /* Slide Header */
@@ -1309,9 +1311,10 @@ body {
 
 /* Adjust slides wrapper to accommodate speaker notes */
 .slides-wrapper {
-    width: calc(100% - 350px);
-    margin-right: 350px;
+    width: 100%;
+    margin: 0;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 /* Responsive Design for Speaker Notes */
@@ -1321,8 +1324,12 @@ body {
     }
     
     .slides-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .slide-content {
         width: calc(100% - 300px);
-        margin-right: 300px;
     }
 }
 
@@ -1333,8 +1340,12 @@ body {
     }
     
     .slides-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .slide-content {
         width: calc(100% - 280px);
-        margin-right: 280px;
     }
     
     .speaker-notes h2 {
@@ -1367,8 +1378,12 @@ body {
     }
     
     .slides-wrapper {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .slide-content {
         width: calc(100% - 250px);
-        margin-right: 250px;
     }
     
     .speaker-notes h2 {
