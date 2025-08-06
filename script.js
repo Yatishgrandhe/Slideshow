@@ -20,6 +20,7 @@ class SlideshowManager {
         this.setupTabs();
         this.animateSlideContent();
         this.updateSpeakerNotes(); // Add this line to show first slide's notes
+        this.setupFullscreenHandler(); // Add this line
         
 
         
@@ -328,6 +329,7 @@ class SlideshowManager {
         container.classList.add('fullscreen');
         this.isFullscreen = true;
         this.updateFullscreenButton();
+        this.ensureSpeakerNotesVisible(); // Add this line
         
         // Hide cursor after 3 seconds in fullscreen
         this.setupCursorHiding();
@@ -627,6 +629,34 @@ class SlideshowManager {
             }
         }
     }
+
+    ensureSpeakerNotesVisible() {
+        const speakerNotesContainer = document.querySelector('.speaker-notes');
+        if (speakerNotesContainer) {
+            speakerNotesContainer.style.position = 'fixed';
+            speakerNotesContainer.style.top = '0';
+            speakerNotesContainer.style.right = '0';
+            speakerNotesContainer.style.width = '400px';
+            speakerNotesContainer.style.height = '100vh';
+            speakerNotesContainer.style.zIndex = '9999';
+            speakerNotesContainer.style.display = 'block';
+            speakerNotesContainer.style.visibility = 'visible';
+            speakerNotesContainer.style.opacity = '1';
+            speakerNotesContainer.style.background = 'rgba(15, 15, 35, 0.98)';
+            speakerNotesContainer.style.backdropFilter = 'blur(10px)';
+            speakerNotesContainer.style.borderLeft = '3px solid #64ffda';
+            speakerNotesContainer.style.boxShadow = '-8px 0 30px rgba(0, 0, 0, 0.6)';
+            speakerNotesContainer.style.padding = '25px';
+            speakerNotesContainer.style.overflowY = 'auto';
+        }
+    }
+
+    setupFullscreenHandler() {
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+        document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+    }
 }
 
 // Enhanced fullscreen API event listeners
@@ -642,6 +672,28 @@ function handleFullscreenChange() {
                                 document.webkitFullscreenElement || 
                                 document.mozFullScreenElement || 
                                 document.msFullscreenElement);
+        
+        if (isFullscreen) {
+            // Ensure speaker notes are visible in fullscreen
+            const speakerNotesContainer = document.querySelector('.speaker-notes');
+            if (speakerNotesContainer) {
+                speakerNotesContainer.style.position = 'fixed';
+                speakerNotesContainer.style.top = '0';
+                speakerNotesContainer.style.right = '0';
+                speakerNotesContainer.style.width = '400px';
+                speakerNotesContainer.style.height = '100vh';
+                speakerNotesContainer.style.zIndex = '9999';
+                speakerNotesContainer.style.display = 'block';
+                speakerNotesContainer.style.visibility = 'visible';
+                speakerNotesContainer.style.opacity = '1';
+                speakerNotesContainer.style.background = 'rgba(15, 15, 35, 0.98)';
+                speakerNotesContainer.style.backdropFilter = 'blur(10px)';
+                speakerNotesContainer.style.borderLeft = '3px solid #64ffda';
+                speakerNotesContainer.style.boxShadow = '-8px 0 30px rgba(0, 0, 0, 0.6)';
+                speakerNotesContainer.style.padding = '25px';
+                speakerNotesContainer.style.overflowY = 'auto';
+            }
+        }
         
         if (!isFullscreen && slideshow.isFullscreen) {
             slideshow.exitFullscreen();

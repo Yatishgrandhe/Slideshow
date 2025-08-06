@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Speaker Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Navigation -->
+        <div class="slide-nav">
+            <div class="slideshow-title">
+                <i class="fab fa-python"></i>
+                <span>Test Speaker Notes</span>
+            </div>
+            <div class="nav-controls">
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="slide-counter">1 / 2</span>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper">
+            <!-- Slide 1 -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content">
+                    <h1>Test Slide 1</h1>
+                    <p>This is a test slide to check if speaker notes are working.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h1>Test Slide 2</h1>
+                    <p>This is another test slide.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Speaker Notes Section -->
+        <div class="speaker-notes">
+            <h2>📝 Test Speaker Notes</h2>
+            
+            <div class="note-section">
+                <h3>Slide 1: Test Slide 1</h3>
+                <div class="key-point">
+                    <strong>Key Message:</strong> This is a test to see if speaker notes are visible.
+                </div>
+                <ul>
+                    <li><strong>Test Point 1:</strong> This should be visible</li>
+                    <li><strong>Test Point 2:</strong> This should also be visible</li>
+                </ul>
+            </div>
+
+            <div class="note-section">
+                <h3>Slide 2: Test Slide 2</h3>
+                <div class="key-point">
+                    <strong>Key Message:</strong> This is another test slide.
+                </div>
+                <ul>
+                    <li><strong>Test Point 1:</strong> This should be visible</li>
+                    <li><strong>Test Point 2:</strong> This should also be visible</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
