@@ -201,7 +201,7 @@ body {
 
 .slide.active {
     opacity: 1;
-    transform: translateX(0) scale(0.9);
+    transform: translateX(0) scale(1);
     filter: blur(0px);
     z-index: 10;
     transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -228,15 +228,13 @@ body {
     padding: 15px;
     width: calc(100% - 350px);
     height: 100%;
-    max-width: none;
+    max-width: 1200px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(66, 153, 225, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    transform: scale(0.9);
-    transform-origin: left center;
 }
 
 /* Slide Header */
@@ -1332,8 +1330,6 @@ body {
     
     .slide-content {
         width: calc(100% - 300px);
-        transform: scale(0.85);
-        transform-origin: left center;
     }
 }
 
@@ -1350,8 +1346,6 @@ body {
     
     .slide-content {
         width: calc(100% - 280px);
-        transform: scale(0.8);
-        transform-origin: left center;
     }
     
     .speaker-notes h2 {
@@ -1390,8 +1384,6 @@ body {
     
     .slide-content {
         width: calc(100% - 250px);
-        transform: scale(0.75);
-        transform-origin: left center;
     }
     
     .speaker-notes h2 {
@@ -1492,8 +1484,6 @@ body {
     padding: 40px;
     overflow-y: auto;
     box-sizing: border-box;
-    transform: scale(0.95);
-    transform-origin: left center;
 }
 
 /* Enhanced speaker notes styling in fullscreen */
@@ -1621,8 +1611,6 @@ body {
     
     .slideshow-container.fullscreen .slide-content {
         width: calc(100vw - 350px);
-        transform: scale(0.9);
-        transform-origin: left center;
     }
 }
 
@@ -1639,8 +1627,6 @@ body {
     
     .slideshow-container.fullscreen .slide-content {
         width: calc(100vw - 320px);
-        transform: scale(0.85);
-        transform-origin: left center;
     }
     
     .slideshow-container.fullscreen .speaker-notes h2 {
@@ -1679,8 +1665,6 @@ body {
     
     .slideshow-container.fullscreen .slide-content {
         width: calc(100vw - 280px);
-        transform: scale(0.8);
-        transform-origin: left center;
     }
     
     .slideshow-container.fullscreen .speaker-notes h2 {
