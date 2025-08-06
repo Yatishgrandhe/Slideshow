@@ -19,6 +19,7 @@ class SlideshowManager {
         this.updateProgressBar();
         this.setupTabs();
         this.animateSlideContent();
+        this.updateSpeakerNotes(); // Add this line to show first slide's notes
         
 
         
@@ -205,51 +206,37 @@ class SlideshowManager {
     }
 
     goToSlide(slideNumber) {
-        console.log(`Attempting to go to slide ${slideNumber}`);
         if (slideNumber < 1 || slideNumber > this.totalSlides) {
             console.log(`Invalid slide number: ${slideNumber}`);
             return;
         }
-        
-        // Get current and new slides
-        const currentActiveSlide = document.querySelector('.slide.active');
-        const newSlide = document.querySelector(`[data-slide="${slideNumber}"]`);
-        
-        if (!newSlide) {
-            console.log(`Slide ${slideNumber} not found in DOM`);
-            return;
+
+        console.log(`Going to slide ${slideNumber}`);
+
+        // Remove active class from all slides
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach(slide => {
+            slide.classList.remove('active', 'prev', 'next');
+        });
+
+        // Add active class to current slide
+        const currentSlideElement = document.querySelector(`[data-slide="${slideNumber}"]`);
+        if (currentSlideElement) {
+            currentSlideElement.classList.add('active');
+            
+            // Add prev/next classes for animation
+            const prevSlide = document.querySelector(`[data-slide="${slideNumber - 1}"]`);
+            const nextSlide = document.querySelector(`[data-slide="${slideNumber + 1}"]`);
+            
+            if (prevSlide) prevSlide.classList.add('prev');
+            if (nextSlide) nextSlide.classList.add('next');
         }
-        
-        // Determine slide direction for animation
-        const isNext = slideNumber > this.currentSlide || (this.currentSlide === this.totalSlides && slideNumber === 1);
-        const isPrev = slideNumber < this.currentSlide || (this.currentSlide === 1 && slideNumber === this.totalSlides);
-        
-        // Add direction classes for smooth transitions
-        if (currentActiveSlide) {
-            currentActiveSlide.classList.remove('active');
-            currentActiveSlide.classList.add(isNext ? 'prev' : 'next');
-            console.log('Removed active class from current slide');
-        }
-        
-        // Add active class to new slide with direction
-        newSlide.classList.add('active');
-        newSlide.classList.remove('prev', 'next');
-        
+
         this.currentSlide = slideNumber;
         this.updateSlideCounter();
         this.updateProgressBar();
-        
-        // Add a small delay before animating content for smoother transition
-        setTimeout(() => {
-            this.animateSlideContent();
-        }, 300);
-        
-        console.log(`Successfully switched to slide ${slideNumber}`);
-        
-        // Update slide indicators (if they exist)
-        document.querySelectorAll('.slide-indicator').forEach((indicator, index) => {
-            indicator.classList.toggle('active', index + 1 === slideNumber);
-        });
+        this.animateSlideContent();
+        this.updateSpeakerNotes(); // Add this line to update speaker notes
     }
 
     updateSlideCounter() {
@@ -604,6 +591,41 @@ class SlideshowManager {
         const snippet = content.substring(start, end);
         
         return (start > 0 ? '...' : '') + snippet + (end < content.length ? '...' : '');
+    }
+
+    updateSpeakerNotes() {
+        // Find all speaker note sections
+        const speakerNotes = document.querySelectorAll('.note-section');
+        
+        // Remove active class from all speaker notes
+        speakerNotes.forEach(note => {
+            note.classList.remove('active-speaker-note');
+        });
+        
+        // Find the speaker note for the current slide
+        const noteSections = document.querySelectorAll('.note-section');
+        let currentSlideNote = null;
+        
+        noteSections.forEach(section => {
+            const h3 = section.querySelector('h3');
+            if (h3 && h3.textContent.includes(`Slide ${this.currentSlide}:`)) {
+                currentSlideNote = section;
+            }
+        });
+        
+        if (currentSlideNote) {
+            // Add active class to current slide's speaker note
+            currentSlideNote.classList.add('active-speaker-note');
+            
+            // Scroll to the speaker note
+            const speakerNotesContainer = document.querySelector('.speaker-notes');
+            if (speakerNotesContainer) {
+                currentSlideNote.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        }
     }
 }
 

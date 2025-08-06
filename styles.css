@@ -1255,6 +1255,28 @@ body {
     font-size: 11px;
 }
 
+/* Active speaker note styling */
+.note-section.active-speaker-note {
+    border-color: #64ffda;
+    box-shadow: 0 4px 20px rgba(100, 255, 218, 0.3);
+    background: rgba(26, 26, 46, 0.95);
+    transform: translateY(-2px);
+}
+
+.note-section.active-speaker-note h3 {
+    color: #64ffda;
+}
+
+.note-section.active-speaker-note h3::before {
+    content: "🎯";
+    font-size: 16px;
+}
+
+.note-section.active-speaker-note .key-point {
+    border-left-color: #64ffda;
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%);
+}
+
 .example-code {
     background: rgba(15, 15, 35, 0.9);
     border: 1px solid rgba(66, 153, 225, 0.2);
