@@ -3,56 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Functions & Lists - Speaker Notes</title>
+    <title>Python Functions & Lists - Learning Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .speaker-notes {
-            margin-top: 50px;
-            padding: 30px;
-            background: #f8f9fa;
-            border-top: 3px solid #007bff;
-        }
-        .speaker-notes h2 {
-            color: #007bff;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-        .note-section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .note-section h3 {
-            color: #333;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .note-section ul {
-            margin-left: 20px;
-        }
-        .note-section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        .key-point {
-            background: #fff3cd;
-            padding: 10px;
-            border-left: 4px solid #ffc107;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        .example-code {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            margin: 10px 0;
-        }
-    </style>
 </head>
 <body>
     <div class="slideshow-container">
@@ -60,7 +13,7 @@
         <div class="slide-nav">
             <div class="slideshow-title">
                 <i class="fab fa-python"></i>
-                <span>Python Functions & Lists - Speaker Notes</span>
+                <span>Python Functions & Lists</span>
             </div>
             <div class="nav-controls">
                 <button id="homeBtn" class="nav-btn home-btn" title="Back to Home">
@@ -88,31 +41,31 @@
                 <div class="slide-content">
                     <div class="slide-header">
                         <h1>🔧 Slide 1: Introduction to Functions & Lists</h1>
-                        <p class="slide-subtitle">Organizing Code and Data</p>
+                        <p class="slide-subtitle">Reusable Code and Data Collections</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
                                     <h2>Welcome to Functions & Lists!</h2>
-                                    <p>This course will teach you how to organize your code with functions and work with collections of data using lists.</p>
+                                    <p>This course will teach you how to create reusable code with functions and work with collections of data using lists. These are fundamental concepts that will make your programs more powerful and organized.</p>
                                     
                                     <h3>What You'll Learn:</h3>
                                     <ul>
-                                        <li><strong>Function Definition:</strong> Creating reusable code blocks</li>
-                                        <li><strong>Parameters and Arguments:</strong> Passing data to functions</li>
+                                        <li><strong>Function Basics:</strong> Defining and calling functions</li>
+                                        <li><strong>Parameters:</strong> Passing data to functions</li>
                                         <li><strong>Return Values:</strong> Getting results from functions</li>
-                                        <li><strong>List Operations:</strong> Working with collections of data</li>
-                                        <li><strong>List Methods:</strong> Built-in list manipulation tools</li>
-                                        <li><strong>List Comprehensions:</strong> Creating lists efficiently</li>
+                                        <li><strong>List Creation:</strong> Making and manipulating lists</li>
+                                        <li><strong>List Methods:</strong> Built-in list operations</li>
+                                        <li><strong>List Comprehensions:</strong> Advanced list creation</li>
                                     </ul>
 
                                     <h3>Course Structure:</h3>
                                     <ul>
-                                        <li><strong>Slides 1-5:</strong> Introduction and Basics</li>
-                                        <li><strong>Slides 6-10:</strong> Function Fundamentals</li>
-                                        <li><strong>Slides 11-15:</strong> Advanced Functions</li>
-                                        <li><strong>Slides 16-20:</strong> List Basics</li>
+                                        <li><strong>Slides 1-5:</strong> Introduction and Function Basics</li>
+                                        <li><strong>Slides 6-10:</strong> Function Parameters and Arguments</li>
+                                        <li><strong>Slides 11-15:</strong> Return Values and Scope</li>
+                                        <li><strong>Slides 16-20:</strong> List Basics and Operations</li>
                                         <li><strong>Slides 21-25:</strong> Advanced Lists and Applications</li>
                                     </ul>
                                 </div>
@@ -124,16 +77,30 @@
 def greet(name):
     return f"Hello, {name}!"
 
-# List creation and manipulation
-numbers = [1, 2, 3, 4, 5]
-squares = [x**2 for x in numbers]
+# Function call
+message = greet("Alice")
+print(message)
 
-# Using functions with lists
+# List creation
+numbers = [1, 2, 3, 4, 5]
+names = ["Alice", "Bob", "Charlie"]
+
+# List operations
+numbers.append(6)
+names.remove("Bob")
+
+# Function with list parameter
 def calculate_average(numbers):
+    if len(numbers) == 0:
+        return 0
     return sum(numbers) / len(numbers)
 
-result = calculate_average([85, 92, 78, 96, 88])
-print(f"Average: {result}")</code></pre>
+# List comprehension
+squares = [x**2 for x in range(5)]
+
+# Function returning list
+def get_even_numbers(max_num):
+    return [x for x in range(max_num) if x % 2 == 0]</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -141,8 +108,900 @@ print(f"Average: {result}")</code></pre>
                 </div>
             </div>
 
-            <!-- Continue with all 25 slides from the original file -->
-            <!-- Add remaining slides 2-25 here -->
+            <!-- Slide 2: What is a Function? -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 2: What is a Function?</h1>
+                        <p class="slide-subtitle">Reusable Blocks of Code</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Understanding Functions</h2>
+                                    <p>A function is a named block of code that performs a specific task. You can call a function whenever you need to perform that task, which helps you avoid repeating code.</p>
+                                    <ul>
+                                        <li>Functions make code organized and reusable</li>
+                                        <li>They can take input (parameters) and return output (values)</li>
+                                        <li>Python has built-in functions and you can create your own</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Function Example</div>
+                                    <pre><code># Defining a function
+def greet():
+    print("Hello!")
+
+# Calling a function
+greet()  # Output: Hello!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Why Use Functions? -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 3: Why Use Functions?</h1>
+                        <p class="slide-subtitle">Benefits of Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Why Functions Matter</h2>
+                                    <ul>
+                                        <li><strong>Reusability:</strong> Write code once, use it many times</li>
+                                        <li><strong>Organization:</strong> Break big problems into smaller pieces</li>
+                                        <li><strong>Readability:</strong> Make code easier to understand</li>
+                                        <li><strong>Testing:</strong> Test small parts of code independently</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Reusable Function</div>
+                                    <pre><code>def say_hello(name):
+    print(f"Hello, {name}!")
+
+say_hello("Alice")
+say_hello("Bob")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Function Syntax -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 4: Function Syntax</h1>
+                        <p class="slide-subtitle">How to Write Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Defining Functions in Python</h2>
+                                    <ul>
+                                        <li>Use the <code>def</code> keyword</li>
+                                        <li>Give your function a name</li>
+                                        <li>Use parentheses for parameters (even if empty)</li>
+                                        <li>End the line with a colon <code>:</code></li>
+                                        <li>Indent the function body</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Syntax Example</div>
+                                    <pre><code>def add(a, b):
+    result = a + b
+    print(result)
+
+add(2, 3)  # Output: 5</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Parameters and Arguments -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 5: Parameters and Arguments</h1>
+                        <p class="slide-subtitle">Passing Data to Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Parameters vs. Arguments</h2>
+                                    <ul>
+                                        <li><strong>Parameter:</strong> Variable in the function definition</li>
+                                        <li><strong>Argument:</strong> Value you pass to the function</li>
+                                        <li>You can have multiple parameters, separated by commas</li>
+                                        <li>Arguments are matched to parameters by position or name</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Parameters Example</div>
+                                    <pre><code>def multiply(x, y):
+    print(x * y)
+
+multiply(4, 5)  # Output: 20</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Default Parameters -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 6: Default Parameters</h1>
+                        <p class="slide-subtitle">Optional Function Arguments</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Default Parameter Values</h2>
+                                    <ul>
+                                        <li>You can give parameters default values</li>
+                                        <li>If no argument is provided, the default is used</li>
+                                        <li>Default parameters must come after required ones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Default Example</div>
+                                    <pre><code>def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("Alice")  # Output: Hello, Alice!
+greet("Bob", "Hi")  # Output: Hi, Bob!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Return Values -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 7: Return Values</h1>
+                        <p class="slide-subtitle">Getting Results from Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Returning Values</h2>
+                                    <ul>
+                                        <li>Use the <code>return</code> keyword to send a value back</li>
+                                        <li>Functions can return any type of value</li>
+                                        <li>Once <code>return</code> is executed, the function ends</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Return Example</div>
+                                    <pre><code>def add(a, b):
+    return a + b
+
+result = add(2, 3)
+print(result)  # Output: 5</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Multiple Return Values -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 8: Multiple Return Values</h1>
+                        <p class="slide-subtitle">Returning More Than One Value</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Returning Multiple Values</h2>
+                                    <ul>
+                                        <li>Use a comma to return multiple values (as a tuple)</li>
+                                        <li>Unpack the result into multiple variables</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Multiple Returns</div>
+                                    <pre><code>def min_max(numbers):
+    return min(numbers), max(numbers)
+
+low, high = min_max([1, 2, 3, 4, 5])
+print(low, high)  # Output: 1 5</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Scope -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 9: Scope</h1>
+                        <p class="slide-subtitle">Where Variables Live</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Understanding Scope</h2>
+                                    <ul>
+                                        <li>Variables defined inside a function are local</li>
+                                        <li>Local variables can't be used outside the function</li>
+                                        <li>Global variables are defined outside all functions</li>
+                                        <li>Use <code>global</code> keyword to modify globals (not recommended)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Scope Example</div>
+                                    <pre><code>def foo():
+    x = 10  # Local variable
+    print(x)
+
+foo()
+# print(x)  # Error: x is not defined
+
+y = 5  # Global variable
+def bar():
+    print(y)
+
+bar()  # Output: 5</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Docstrings -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🔧 Slide 10: Docstrings</h1>
+                        <p class="slide-subtitle">Documenting Your Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is a Docstring?</h2>
+                                    <ul>
+                                        <li>A docstring is a special string at the start of a function</li>
+                                        <li>It describes what the function does</li>
+                                        <li>Use triple quotes <code>""" ... """</code></li>
+                                        <li>Helps others (and you) understand your code</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Docstring Example</div>
+                                    <pre><code>def square(x):
+    """Returns the square of x."""
+    return x * x
+
+print(square(4))  # Output: 16
+print(square.__doc__)  # Output: Returns the square of x.</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: List Basics -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 11: List Basics</h1>
+                        <p class="slide-subtitle">Storing Multiple Values</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What is a List?</h2>
+                                    <ul>
+                                        <li>A list is a collection of items in a specific order</li>
+                                        <li>Lists can store any type of data (numbers, strings, etc.)</li>
+                                        <li>Lists are defined with square brackets <code>[]</code></li>
+                                        <li>Items are separated by commas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">List Example</div>
+                                    <pre><code># Creating a list
+fruits = ["apple", "banana", "orange"]
+print(fruits)
+
+# Empty list
+empty = []
+
+# List with mixed types
+mixed = [1, "hello", 3.14, True]
+print(mixed)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: Accessing List Items -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 12: Accessing List Items</h1>
+                        <p class="slide-subtitle">Getting Data from Lists</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Accessing Elements</h2>
+                                    <ul>
+                                        <li>Use square brackets and an index to access items</li>
+                                        <li>Indexes start at 0 (first item)</li>
+                                        <li>Negative indexes count from the end</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Access Example</div>
+                                    <pre><code>fruits = ["apple", "banana", "orange"]
+print(fruits[0])  # apple
+print(fruits[2])  # orange
+print(fruits[-1]) # orange</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Modifying Lists -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 13: Modifying Lists</h1>
+                        <p class="slide-subtitle">Changing List Contents</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Modifying List Items</h2>
+                                    <ul>
+                                        <li>Assign a new value to a specific index</li>
+                                        <li>Use <code>append()</code> to add items</li>
+                                        <li>Use <code>remove()</code> or <code>pop()</code> to delete items</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Modify Example</div>
+                                    <pre><code>numbers = [1, 2, 3]
+numbers[0] = 10
+print(numbers)  # [10, 2, 3]
+numbers.append(4)
+print(numbers)  # [10, 2, 3, 4]
+numbers.remove(2)
+print(numbers)  # [10, 3, 4]
+numbers.pop()
+print(numbers)  # [10, 3]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: List Methods -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 14: List Methods</h1>
+                        <p class="slide-subtitle">Built-in List Operations</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common List Methods</h2>
+                                    <ul>
+                                        <li><code>append()</code>: Add item to end</li>
+                                        <li><code>insert()</code>: Add item at position</li>
+                                        <li><code>remove()</code>: Remove first occurrence</li>
+                                        <li><code>pop()</code>: Remove and return item</li>
+                                        <li><code>sort()</code>: Sort the list</li>
+                                        <li><code>reverse()</code>: Reverse the list</li>
+                                        <li><code>len()</code>: Get number of items</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Methods Example</div>
+                                    <pre><code>numbers = [3, 1, 4, 2]
+numbers.sort()
+print(numbers)  # [1, 2, 3, 4]
+numbers.reverse()
+print(numbers)  # [4, 3, 2, 1]
+print(len(numbers))  # 4
+numbers.insert(1, 99)
+print(numbers)  # [4, 99, 3, 2, 1]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Looping Through Lists -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 15: Looping Through Lists</h1>
+                        <p class="slide-subtitle">Processing List Items</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Iterating Over Lists</h2>
+                                    <ul>
+                                        <li>Use a <code>for</code> loop to process each item</li>
+                                        <li>Use <code>enumerate()</code> to get index and value</li>
+                                        <li>List comprehensions for concise loops</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Loop Example</div>
+                                    <pre><code>fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print(fruit)
+
+for i, fruit in enumerate(fruits):
+    print(i, fruit)
+
+# List comprehension
+lengths = [len(fruit) for fruit in fruits]
+print(lengths)  # [5, 6, 6]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16: Slicing Lists -->
+            <div class="slide" data-slide="16">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 16: Slicing Lists</h1>
+                        <p class="slide-subtitle">Getting Parts of a List</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>List Slicing</h2>
+                                    <ul>
+                                        <li>Use <code>list[start:end]</code> to get a sublist</li>
+                                        <li>Start is inclusive, end is exclusive</li>
+                                        <li>Omit start or end for defaults</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Slicing Example</div>
+                                    <pre><code>numbers = [0, 1, 2, 3, 4, 5]
+print(numbers[1:4])  # [1, 2, 3]
+print(numbers[:3])   # [0, 1, 2]
+print(numbers[3:])   # [3, 4, 5]
+print(numbers[-2:])  # [4, 5]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17: Copying Lists -->
+            <div class="slide" data-slide="17">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 17: Copying Lists</h1>
+                        <p class="slide-subtitle">Making List Copies</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Copying Lists</h2>
+                                    <ul>
+                                        <li>Use <code>list.copy()</code> or slicing to copy a list</li>
+                                        <li>Direct assignment creates a reference, not a copy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Copy Example</div>
+                                    <pre><code>numbers = [1, 2, 3]
+copy1 = numbers.copy()
+copy2 = numbers[:]
+
+numbers[0] = 99
+print(numbers)  # [99, 2, 3]
+print(copy1)    # [1, 2, 3]
+print(copy2)    # [1, 2, 3]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: Nested Lists -->
+            <div class="slide" data-slide="18">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 18: Nested Lists</h1>
+                        <p class="slide-subtitle">Lists Inside Lists</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>What are Nested Lists?</h2>
+                                    <ul>
+                                        <li>A list can contain other lists as elements</li>
+                                        <li>Useful for representing tables or grids</li>
+                                        <li>Access elements with double indexing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Nested Example</div>
+                                    <pre><code>matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[0][1])  # 2
+for row in matrix:
+    print(row)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: List Comprehensions -->
+            <div class="slide" data-slide="19">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 19: List Comprehensions</h1>
+                        <p class="slide-subtitle">Advanced List Creation</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>List Comprehensions</h2>
+                                    <ul>
+                                        <li>Concise way to create lists from other lists</li>
+                                        <li>Syntax: <code>[expression for item in list]</code></li>
+                                        <li>Can include conditions: <code>[x for x in numbers if x % 2 == 0]</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Comprehension Example</div>
+                                    <pre><code>numbers = [1, 2, 3, 4, 5]
+squares = [x**2 for x in numbers]
+evens = [x for x in numbers if x % 2 == 0]
+print(squares)  # [1, 4, 9, 16, 25]
+print(evens)    # [2, 4]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 20: List Functions -->
+            <div class="slide" data-slide="20">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 20: List Functions</h1>
+                        <p class="slide-subtitle">Useful Built-in Functions</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Built-in List Functions</h2>
+                                    <ul>
+                                        <li><code>len(list)</code>: Number of items</li>
+                                        <li><code>sum(list)</code>: Sum of items</li>
+                                        <li><code>min(list)</code>: Smallest item</li>
+                                        <li><code>max(list)</code>: Largest item</li>
+                                        <li><code>sorted(list)</code>: New sorted list</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Functions Example</div>
+                                    <pre><code>numbers = [3, 1, 4, 2]
+print(len(numbers))    # 4
+print(sum(numbers))    # 10
+print(min(numbers))    # 1
+print(max(numbers))    # 4
+print(sorted(numbers)) # [1, 2, 3, 4]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 21: Filtering Lists -->
+            <div class="slide" data-slide="21">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 21: Filtering Lists</h1>
+                        <p class="slide-subtitle">Selecting Items by Condition</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Filtering with Loops and Comprehensions</h2>
+                                    <ul>
+                                        <li>Use a for loop to select items that meet a condition</li>
+                                        <li>List comprehensions make filtering concise</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Filtering Example</div>
+                                    <pre><code>numbers = [1, 2, 3, 4, 5, 6]
+evens = []
+for num in numbers:
+    if num % 2 == 0:
+        evens.append(num)
+print(evens)  # [2, 4, 6]
+
+# List comprehension
+evens2 = [x for x in numbers if x % 2 == 0]
+print(evens2)  # [2, 4, 6]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22: Lists of Lists (2D Lists) -->
+            <div class="slide" data-slide="22">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 22: Lists of Lists (2D Lists)</h1>
+                        <p class="slide-subtitle">Working with Tables</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>2D Lists</h2>
+                                    <ul>
+                                        <li>Lists can contain other lists (rows and columns)</li>
+                                        <li>Useful for representing tables, grids, or matrices</li>
+                                        <li>Access with double indexing: <code>matrix[row][col]</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">2D List Example</div>
+                                    <pre><code>matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[1][2])  # 6
+for row in matrix:
+    print(row)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 23: Practical List Applications -->
+            <div class="slide" data-slide="23">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 23: Practical List Applications</h1>
+                        <p class="slide-subtitle">Real-World List Use Cases</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>How Lists Are Used</h2>
+                                    <ul>
+                                        <li>Storing user data (names, scores, etc.)</li>
+                                        <li>Processing data from files or the web</li>
+                                        <li>Building dynamic menus and options</li>
+                                        <li>Tracking items in games or apps</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Applications Example</div>
+                                    <pre><code># Storing scores
+scores = [95, 88, 76, 100]
+print(f"Highest score: {max(scores)}")
+
+# Menu options
+menu = ["Start", "Settings", "Exit"]
+for option in menu:
+    print(option)
+
+# Tracking inventory
+inventory = ["sword", "shield", "potion"]
+if "potion" in inventory:
+    print("You have a potion!")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Common List Mistakes -->
+            <div class="slide" data-slide="24">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>📋 Slide 24: Common List Mistakes</h1>
+                        <p class="slide-subtitle">Avoiding Pitfalls</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>Common Mistakes</h2>
+                                    <ul>
+                                        <li>Using <code>=</code> instead of <code>==</code> for comparison</li>
+                                        <li>Forgetting lists are zero-indexed</li>
+                                        <li>Modifying a list while looping over it</li>
+                                        <li>Confusing <code>append()</code> with <code>extend()</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Mistakes Example</div>
+                                    <pre><code># Mistake: = instead of ==
+if item = "apple":  # Error!
+    print("Found apple")
+
+# Correct:
+if item == "apple":
+    print("Found apple")
+
+# Mistake: Modifying list while looping
+numbers = [1, 2, 3, 4]
+for num in numbers:
+    if num % 2 == 0:
+        numbers.remove(num)
+print(numbers)  # Unexpected result!
+
+# Correct way:
+numbers = [1, 2, 3, 4]
+new_numbers = [num for num in numbers if num % 2 != 0]
+print(new_numbers)  # [1, 3]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 25: Course Summary -->
+            <div class="slide" data-slide="25">
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <h1>🎉 Slide 25: Course Summary</h1>
+                        <p class="slide-subtitle">Congratulations!</p>
+                    </div>
+                    <div class="slide-body">
+                        <div class="content-grid">
+                            <div class="main-content">
+                                <div class="text-content">
+                                    <h2>You've Completed Functions & Lists!</h2>
+                                    <ul>
+                                        <li>Learned how to define and use functions</li>
+                                        <li>Explored parameters, arguments, and return values</li>
+                                        <li>Worked with lists and their methods</li>
+                                        <li>Practiced list comprehensions and advanced uses</li>
+                                        <li>Discovered common mistakes and best practices</li>
+                                    </ul>
+                                    <p>Keep practicing and building your Python skills!</p>
+                                </div>
+                            </div>
+                            <div class="side-content">
+                                <div class="code-example">
+                                    <div class="code-header">Next Steps</div>
+                                    <pre><code># Try writing your own functions and lists!
+def favorite_colors():
+    colors = ["blue", "green", "red"]
+    for color in colors:
+        print(f"I like {color}")
+
+favorite_colors()</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -154,23 +1013,20 @@ print(f"Average: {result}")</code></pre>
         <div class="note-section">
             <h3>Slide 1: Introduction to Functions & Lists</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Functions and lists are fundamental tools for organizing code and data.
+                <strong>Key Message:</strong> Functions and lists are essential building blocks for creating reusable, organized code.
             </div>
             <ul>
-                <li><strong>Opening Hook:</strong> Ask "How do we avoid repeating code?" - introduce functions as the solution</li>
-                <li><strong>Real-world Analogy:</strong> Compare functions to recipes and lists to shopping lists</li>
-                <li><strong>Course Overview:</strong> Give students a clear roadmap of what they'll learn</li>
-                <li><strong>Prerequisites:</strong> Ensure students understand variables, data types, and control flow</li>
-                <li><strong>Interactive Element:</strong> Ask students to identify repetitive tasks in their daily lives</li>
+                <li><strong>Opening Hook:</strong> Ask "What makes code reusable and organized?" - functions and data structures</li>
+                <li><strong>Course Overview:</strong> Emphasize that this builds on control flow concepts</li>
+                <li><strong>Learning Objectives:</strong> Clearly state what students will be able to do</li>
+                <li><strong>Course Structure:</strong> Show the logical progression from functions to lists to advanced topics</li>
+                <li><strong>Real-world Connection:</strong> Connect to how real programs are organized</li>
             </ul>
             <div class="example-code">
-                # Emphasize the power of organization
-                def calculate_area(length, width):
-                    return length * width
-                
-                # Show how functions make code reusable
-                area1 = calculate_area(5, 3)
-                area2 = calculate_area(10, 7)
+                # Point out how functions make code reusable
+                def greet(name):
+                    return f"Hello, {name}!"
+                # Show how this function can be used multiple times
             </div>
         </div>
 
@@ -180,333 +1036,333 @@ print(f"Average: {result}")</code></pre>
                 <strong>Key Message:</strong> Functions are reusable blocks of code that perform specific tasks.
             </div>
             <ul>
-                <li><strong>Definition:</strong> Explain functions as named blocks of code</li>
-                <li><strong>Reusability:</strong> Emphasize the "write once, use many times" concept</li>
-                <li><strong>Organization:</strong> Show how functions help organize code</li>
-                <li><strong>Abstraction:</strong> Explain how functions hide complexity</li>
-                <li><strong>Built-in Functions:</strong> Remind students they've already used functions like print() and len()</li>
+                <li><strong>Reusability Concept:</strong> Explain why functions are essential for good programming</li>
+                <li><strong>Code Organization:</strong> Show how functions help organize code</li>
+                <li><strong>Modularity:</strong> Demonstrate breaking complex problems into smaller parts</li>
+                <li><strong>Real-world Analogy:</strong> Use examples like recipes, tools, or machines</li>
+                <li><strong>Benefits:</strong> Emphasize maintainability, testing, and collaboration</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 3: Function Definition</h3>
+            <h3>Slide 3: Function Syntax</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Defining functions follows a specific syntax and structure.
+                <strong>Key Message:</strong> Understanding function syntax is crucial for creating effective functions.
             </div>
             <ul>
-                <li><strong>def Keyword:</strong> Show how def starts function definition</li>
-                <li><strong>Function Name:</strong> Explain naming conventions and rules</li>
-                <li><strong>Parameters:</strong> Show how to define input parameters</li>
-                <li><strong>Function Body:</strong> Explain the indented code block</li>
-                <li><strong>Colon and Indentation:</strong> Emphasize Python's syntax requirements</li>
+                <li><strong>def Keyword:</strong> Show how to define functions</li>
+                <li><strong>Function Names:</strong> Emphasize descriptive naming conventions</li>
+                <li><strong>Parameters:</strong> Explain how to accept input data</li>
+                <li><strong>Return Statement:</strong> Show how to provide output</li>
+                <li><strong>Indentation:</strong> Reinforce proper code structure</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 4: Function Parameters</h3>
+            <h3>Slide 4: Creating Your First Function</h3>
+            <div class="key-point">
+                <strong>Key Message:</strong> Writing your first function builds confidence and understanding.
+            </div>
+            <ul>
+                <li><strong>Simple Example:</strong> Start with a basic function to build confidence</li>
+                <li><strong>Step-by-step Process:</strong> Walk through function creation</li>
+                <li><strong>Testing:</strong> Show how to test the function</li>
+                <li><strong>Common Errors:</strong> Address typical beginner mistakes</li>
+                <li><strong>Best Practices:</strong> Introduce good function writing habits</li>
+            </ul>
+        </div>
+
+        <div class="note-section">
+            <h3>Slide 5: Function Parameters</h3>
             <div class="key-point">
                 <strong>Key Message:</strong> Parameters allow functions to accept different input data.
             </div>
             <ul>
-                <li><strong>Parameter vs Argument:</strong> Clarify the difference between parameters and arguments</li>
-                <li><strong>Multiple Parameters:</strong> Show functions with multiple parameters</li>
+                <li><strong>Parameter Concept:</strong> Explain how parameters make functions flexible</li>
+                <li><strong>Multiple Parameters:</strong> Show how to accept multiple inputs</li>
                 <li><strong>Parameter Names:</strong> Emphasize descriptive parameter names</li>
-                <li><strong>Default Values:</strong> Show how to provide default parameter values</li>
-                <li><strong>Parameter Order:</strong> Explain how arguments are matched to parameters</li>
+                <li><strong>Order Matters:</strong> Explain positional parameter passing</li>
+                <li><strong>Default Values:</strong> Introduce optional parameters</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 5: Return Values</h3>
+            <h3>Slide 6: Return Values</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Functions can return values that can be used by the calling code.
+                <strong>Key Message:</strong> Return values allow functions to provide output that can be used by other code.
             </div>
             <ul>
-                <li><strong>return Statement:</strong> Show how to return values from functions</li>
-                <li><strong>Multiple Returns:</strong> Show functions with multiple return statements</li>
-                <li><strong>No Return:</strong> Explain functions that don't return anything (None)</li>
-                <li><strong>Using Return Values:</strong> Show how to capture and use returned values</li>
-                <li><strong>Return vs Print:</strong> Clarify the difference between returning and printing</li>
+                <li><strong>Return Concept:</strong> Explain why functions need to return values</li>
+                <li><strong>Multiple Returns:</strong> Show conditional return statements</li>
+                <li><strong>Return Types:</strong> Demonstrate returning different data types</li>
+                <li><strong>Implicit Returns:</strong> Explain when functions return None</li>
+                <li><strong>Using Return Values:</strong> Show how to capture and use returned data</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 6: Function Scope</h3>
+            <h3>Slide 7: Function Scope</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Variables have scope - they're only accessible in certain areas of code.
+                <strong>Key Message:</strong> Understanding scope helps you avoid variable conflicts and write better code.
             </div>
             <ul>
-                <li><strong>Local Variables:</strong> Show variables defined inside functions</li>
-                <li><strong>Global Variables:</strong> Show variables defined outside functions</li>
-                <li><strong>Scope Rules:</strong> Explain how Python determines variable accessibility</li>
-                <li><strong>global Keyword:</strong> Show how to modify global variables</li>
-                <li><strong>Best Practices:</strong> Emphasize avoiding global variables when possible</li>
+                <li><strong>Local vs Global:</strong> Explain the difference between local and global variables</li>
+                <li><strong>Variable Lifetime:</strong> Show when variables exist and are accessible</li>
+                <li><strong>Name Conflicts:</strong> Demonstrate how scope prevents conflicts</li>
+                <li><strong>Best Practices:</strong> Show how to use scope effectively</li>
+                <li><strong>Debugging Scope:</strong> Explain common scope-related errors</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 7: Function Arguments</h3>
+            <h3>Slide 8: Built-in Functions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Arguments are the actual values passed to functions.
+                <strong>Key Message:</strong> Python provides many useful built-in functions that you can use immediately.
             </div>
             <ul>
-                <li><strong>Positional Arguments:</strong> Show arguments matched by position</li>
-                <li><strong>Keyword Arguments:</strong> Show arguments matched by parameter name</li>
-                <li><strong>Mixed Arguments:</strong> Show combining positional and keyword arguments</li>
-                <li><strong>Argument Types:</strong> Show different data types as arguments</li>
-                <li><strong>Common Mistakes:</strong> Address typical argument errors</li>
+                <li><strong>Common Built-ins:</strong> Show frequently used functions like print(), len(), type()</li>
+                <li><strong>Input/Output Functions:</strong> Demonstrate print() and input()</li>
+                <li><strong>Type Functions:</strong> Show int(), str(), float(), bool()</li>
+                <li><strong>Utility Functions:</strong> Introduce len(), max(), min(), sum()</li>
+                <li><strong>When to Use:</strong> Explain when built-ins are better than custom functions</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 8: Default Parameters</h3>
+            <h3>Slide 9: Function Best Practices</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Default parameters provide fallback values when arguments aren't provided.
+                <strong>Key Message:</strong> Following best practices makes your functions more readable and maintainable.
             </div>
             <ul>
-                <li><strong>Default Syntax:</strong> Show parameter=default_value syntax</li>
-                <li><strong>When to Use:</strong> Explain appropriate use cases for default parameters</li>
-                <li><strong>Mutable Defaults:</strong> Warn about using mutable objects as defaults</li>
-                <li><strong>Order Rules:</strong> Show that default parameters must come after non-default ones</li>
-                <li><strong>Best Practices:</strong> Show good default parameter patterns</li>
+                <li><strong>Single Responsibility:</strong> Emphasize one function, one task</li>
+                <li><strong>Descriptive Names:</strong> Show how to name functions clearly</li>
+                <li><strong>Documentation:</strong> Introduce docstrings and comments</li>
+                <li><strong>Parameter Validation:</strong> Show how to check input data</li>
+                <li><strong>Error Handling:</strong> Demonstrate handling potential errors</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 9: Variable Arguments</h3>
+            <h3>Slide 10: Introduction to Lists</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> *args and **kwargs allow functions to accept variable numbers of arguments.
+                <strong>Key Message:</strong> Lists are versatile data structures that can store multiple items in a single variable.
             </div>
             <ul>
-                <li><strong>*args:</strong> Show accepting variable positional arguments</li>
-                <li><strong>**kwargs:</strong> Show accepting variable keyword arguments</li>
-                <li><strong>Unpacking:</strong> Show how to unpack sequences and dictionaries</li>
-                <li><strong>When to Use:</strong> Explain appropriate use cases</li>
-                <li><strong>Advanced Patterns:</strong> Show combining *args and **kwargs</li>
+                <li><strong>Collection Concept:</strong> Explain why we need to store multiple items</li>
+                <li><strong>List Characteristics:</strong> Show ordered, mutable, indexed properties</li>
+                <li><strong>Creating Lists:</strong> Demonstrate different ways to create lists</li>
+                <li><strong>List Elements:</strong> Show how lists can contain different data types</li>
+                <li><strong>Real-world Examples:</strong> Connect to shopping lists, scores, etc.</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 10: Lambda Functions</h3>
+            <h3>Slide 11: List Operations</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Lambda functions are small, anonymous functions for simple operations.
+                <strong>Key Message:</strong> Lists support many operations for adding, removing, and modifying elements.
             </div>
             <ul>
-                <li><strong>Lambda Syntax:</strong> Show lambda parameter: expression syntax</li>
-                <li><strong>Anonymous Nature:</strong> Explain that lambdas are unnamed functions</li>
-                <li><strong>Single Expression:</strong> Emphasize that lambdas can only contain one expression</li>
-                <li><strong>Common Uses:</strong> Show typical lambda applications</li>
-                <li><strong>When to Use:</strong> Explain when lambdas are appropriate vs regular functions</li>
+                <li><strong>Adding Elements:</strong> Show append(), insert(), extend()</li>
+                <li><strong>Removing Elements:</strong> Demonstrate remove(), pop(), del</li>
+                <li><strong>Accessing Elements:</strong> Show indexing and slicing</li>
+                <li><strong>List Length:</strong> Explain len() function with lists</li>
+                <li><strong>Common Patterns:</strong> Show typical list manipulation tasks</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 11: What are Lists?</h3>
+            <h3>Slide 12: List Methods</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Lists are ordered collections that can store multiple items of different types.
+                <strong>Key Message:</strong> List methods provide powerful built-in functionality for list manipulation.
             </div>
             <ul>
-                <li><strong>List Definition:</strong> Show how to create lists with square brackets</li>
-                <li><strong>Ordered Nature:</strong> Emphasize that lists maintain item order</li>
-                <li><strong>Mutable:</strong> Show that lists can be modified after creation</li>
-                <li><strong>Mixed Types:</strong> Show lists containing different data types</li>
-                <li><strong>Empty Lists:</strong> Show how to create empty lists</li>
+                <li><strong>Method Concept:</strong> Explain what methods are and how to use them</li>
+                <li><strong>Modification Methods:</strong> Show sort(), reverse(), clear()</li>
+                <li><strong>Search Methods:</strong> Demonstrate index(), count()</li>
+                <li><strong>Copy Methods:</strong> Show copy() and list() for creating copies</li>
+                <li><strong>Method Chaining:</strong> Introduce combining multiple methods</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 12: List Creation</h3>
+            <h3>Slide 13: List Comprehensions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Lists can be created in multiple ways for different purposes.
+                <strong>Key Message:</strong> List comprehensions provide a concise and efficient way to create lists.
             </div>
             <ul>
-                <li><strong>Literal Creation:</strong> Show creating lists with square brackets</li>
-                <li><strong>list() Function:</strong> Show converting other types to lists</li>
-                <li><strong>List Comprehensions:</strong> Show creating lists from expressions</li>
-                <li><strong>Range Conversion:</strong> Show list(range()) pattern</li>
-                <li><strong>String Conversion:</strong> Show list("string") to get character list</li>
+                <li><strong>Concise Syntax:</strong> Show how comprehensions simplify code</li>
+                <li><strong>Basic Comprehension:</strong> Demonstrate simple list creation</li>
+                <li><strong>Conditional Comprehensions:</strong> Show filtering with conditions</li>
+                <li><strong>Performance Benefits:</strong> Explain why comprehensions are often faster</li>
+                <li><strong>Readability:</strong> Show when comprehensions improve code clarity</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 13: List Indexing</h3>
+            <h3>Slide 14: Iterating Over Lists</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Indexing allows you to access specific items in a list.
+                <strong>Key Message:</strong> Loops and lists work together perfectly for processing data.
             </div>
             <ul>
-                <li><strong>Zero-based Indexing:</strong> Emphasize that indexing starts at 0</li>
-                <li><strong>Positive Indices:</strong> Show accessing items from the beginning</li>
-                <li><strong>Negative Indices:</strong> Show accessing items from the end</li>
-                <li><strong>Index Errors:</strong> Show what happens with invalid indices</li>
-                <li><strong>Bounds Checking:</strong> Show how to safely access list items</li>
+                <li><strong>For Loops with Lists:</strong> Show how to iterate through list elements</li>
+                <li><strong>Enumerate Function:</strong> Demonstrate getting both index and value</li>
+                <li><strong>Range with Lists:</strong> Show using range() for list indices</li>
+                <li><strong>List Comprehension vs Loops:</strong> Compare different approaches</li>
+                <li><strong>Common Patterns:</strong> Show typical list iteration tasks</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 14: List Slicing</h3>
+            <h3>Slide 15: Lists and Functions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Slicing allows you to extract portions of lists.
+                <strong>Key Message:</strong> Functions and lists work together to create powerful data processing capabilities.
             </div>
             <ul>
-                <li><strong>Slicing Syntax:</strong> Show list[start:stop:step] syntax</li>
-                <li><strong>Start and Stop:</strong> Explain how start and stop indices work</li>
-                <li><strong>Step Value:</strong> Show how step controls the stride</li>
-                <li><strong>Negative Step:</strong> Show reverse slicing</li>
-                <li><strong>Common Patterns:</strong> Show typical slicing patterns</li>
+                <li><strong>Lists as Parameters:</strong> Show passing lists to functions</li>
+                <li><strong>Returning Lists:</strong> Demonstrate functions that return lists</li>
+                <li><strong>List Processing Functions:</strong> Show functions that manipulate lists</li>
+                <li><strong>Mutable vs Immutable:</strong> Explain how lists behave as parameters</li>
+                <li><strong>Best Practices:</strong> Show how to design list-processing functions</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 15: List Methods</h3>
+            <h3>Slide 16: Advanced List Operations</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Python provides built-in methods for common list operations.
+                <strong>Key Message:</strong> Advanced list operations provide sophisticated data manipulation capabilities.
             </div>
             <ul>
-                <li><strong>append() and extend():</strong> Show adding items to lists</li>
-                <li><strong>insert() and remove():</strong> Show inserting and removing items</li>
-                <li><strong>pop() and clear():</strong> Show removing items and clearing lists</li>
-                <li><strong>index() and count():</strong> Show finding items and counting occurrences</li>
-                <li><strong>sort() and reverse():</strong> Show sorting and reversing lists</li>
+                <li><strong>Nested Lists:</strong> Show lists containing other lists</li>
+                <li><strong>List Slicing:</strong> Demonstrate advanced slicing techniques</li>
+                <li><strong>List Concatenation:</strong> Show combining lists</li>
+                <li><strong>List Comparison:</strong> Explain how lists are compared</li>
+                <li><strong>Memory Considerations:</strong> Discuss list memory usage</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 16: List Operations</h3>
+            <h3>Slide 17: List Performance</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Lists support various operations for manipulation and combination.
+                <strong>Key Message:</strong> Understanding list performance helps you write efficient code.
             </div>
             <ul>
-                <li><strong>Concatenation:</strong> Show combining lists with + operator</li>
-                <li><strong>Repetition:</strong> Show repeating lists with * operator</li>
-                <li><strong>Membership Testing:</strong> Show using in and not in operators</li>
-                <li><strong>Length and Iteration:</strong> Show len() and for loops with lists</li>
-                <li><strong>Comparison:</strong> Show comparing lists</li>
+                <li><strong>Time Complexity:</strong> Explain common operations and their efficiency</li>
+                <li><strong>Memory Usage:</strong> Show how lists use memory</li>
+                <li><strong>Optimization Techniques:</strong> Demonstrate efficient list operations</li>
+                <li><strong>When to Use Lists:</strong> Explain appropriate use cases</li>
+                <li><strong>Alternative Data Structures:</strong> Introduce when to use other structures</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 17: List Comprehensions</h3>
+            <h3>Slide 18: Error Handling with Functions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> List comprehensions provide a concise way to create lists.
+                <strong>Key Message:</strong> Proper error handling makes your functions robust and reliable.
             </div>
             <ul>
-                <li><strong>Basic Syntax:</strong> Show [expression for item in iterable]</li>
-                <li><strong>With Conditions:</strong> Show filtering with if clauses</li>
-                <li><strong>Nested Comprehensions:</strong> Show complex comprehensions</li>
-                <li><strong>Benefits:</strong> Explain readability and performance advantages</li>
-                <li><strong>When to Use:</strong> Show appropriate use cases</li>
+                <li><strong>Try-Except Blocks:</strong> Show how to catch and handle errors</li>
+                <li><strong>Function-Specific Errors:</strong> Demonstrate handling function errors</li>
+                <li><strong>Input Validation:</strong> Show checking parameters before processing</li>
+                <li><strong>Graceful Degradation:</strong> Explain providing fallback behavior</li>
+                <li><strong>Error Messages:</strong> Show how to provide helpful error information</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 18: List Filtering</h3>
+            <h3>Slide 19: Recursive Functions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Filtering allows you to select items that meet specific criteria.
+                <strong>Key Message:</strong> Recursive functions solve problems by breaking them into smaller subproblems.
             </div>
             <ul>
-                <li><strong>Filter Function:</strong> Show using filter() with functions</li>
-                <li><strong>List Comprehension Filtering:</strong> Show filtering with comprehensions</li>
-                <li><strong>Lambda with Filter:</strong> Show using lambda functions for filtering</li>
-                <li><strong>Multiple Conditions:</strong> Show complex filtering criteria</li>
-                <li><strong>Performance Considerations:</strong> Show when to use different filtering approaches</li>
+                <li><strong>Recursion Concept:</strong> Explain how functions call themselves</li>
+                <li><strong>Base Cases:</strong> Show stopping conditions for recursion</li>
+                <li><strong>Recursive vs Iterative:</strong> Compare different approaches</li>
+                <li><strong>Common Examples:</strong> Demonstrate factorial, Fibonacci, etc.</li>
+                <li><strong>Stack Overflow:</strong> Explain recursion limits and safety</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 19: Lists of Lists (2D Lists)</h3>
+            <h3>Slide 20: Lambda Functions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Lists can contain other lists, creating 2D structures.
+                <strong>Key Message:</strong> Lambda functions provide a concise way to create simple, one-line functions.
             </div>
             <ul>
-                <li><strong>2D List Creation:</strong> Show creating lists containing lists</li>
-                <li><strong>Accessing Elements:</strong> Show using double indexing</li>
-                <li><strong>Matrix Operations:</strong> Show working with 2D data</li>
-                <li><strong>Nested Loops:</strong> Show iterating through 2D lists</li>
-                <li><strong>Common Applications:</strong> Show real-world uses like game boards</li>
+                <li><strong>Lambda Syntax:</strong> Show the lambda keyword and syntax</li>
+                <li><strong>When to Use:</strong> Explain appropriate lambda use cases</li>
+                <li><strong>Lambda with Built-ins:</strong> Show lambda with map(), filter(), sorted()</li>
+                <li><strong>Limitations:</strong> Explain what lambdas can't do</li>
+                <li><strong>Readability Considerations:</strong> Show when to avoid lambdas</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 20: Practical List Applications</h3>
+            <h3>Slide 21: Higher-Order Functions</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Lists are used in many real-world programming scenarios.
+                <strong>Key Message:</strong> Higher-order functions accept other functions as parameters, enabling powerful programming patterns.
             </div>
             <ul>
-                <li><strong>Data Processing:</strong> Show processing collections of data</li>
-                <li><strong>Game Development:</strong> Show storing game state in lists</li>
-                <li><strong>Web Development:</strong> Show handling form data and API responses</li>
-                <li><strong>Data Analysis:</strong> Show working with datasets</li>
-                <li><strong>File Processing:</strong> Show reading and processing file data</li>
+                <li><strong>Function as Parameter:</strong> Show how functions can be passed around</li>
+                <li><strong>map() Function:</strong> Demonstrate transforming data with map()</li>
+                <li><strong>filter() Function:</strong> Show filtering data with filter()</li>
+                <li><strong>sorted() with Key:</strong> Demonstrate custom sorting</li>
+                <li><strong>Functional Programming:</strong> Introduce functional programming concepts</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 21: Functions with Lists</h3>
+            <h3>Slide 22: List Advanced Techniques</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Functions and lists work together to create powerful data processing tools.
+                <strong>Key Message:</strong> Advanced list techniques provide sophisticated data manipulation capabilities.
             </div>
             <ul>
-                <li><strong>List Parameters:</strong> Show functions that accept lists as parameters</li>
-                <li><strong>List Return Values:</strong> Show functions that return lists</li>
-                <li><strong>List Processing Functions:</strong> Show functions that process list data</li>
-                <li><strong>Higher-order Functions:</strong> Show functions that operate on lists</li>
-                <li><strong>Error Handling:</strong> Show handling errors when working with lists</li>
+                <li><strong>List Unpacking:</strong> Show extracting multiple values from lists</li>
+                <li><strong>List Destructuring:</strong> Demonstrate pattern matching with lists</li>
+                <li><strong>List as Stack/Queue:</strong> Show using lists as other data structures</li>
+                <li><strong>List Copying:</strong> Explain shallow vs deep copying</li>
+                <li><strong>List Memory Management:</strong> Show how to optimize list memory usage</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 22: Advanced Function Concepts</h3>
+            <h3>Slide 23: Practical Applications</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Advanced function concepts make code more flexible and powerful.
+                <strong>Key Message:</strong> Functions and lists are used together in countless real-world applications.
             </div>
             <ul>
-                <li><strong>Function Objects:</strong> Show functions as first-class objects</li>
-                <li><strong>Function Assignment:</strong> Show assigning functions to variables</li>
-                <li><strong>Functions as Parameters:</strong> Show passing functions as arguments</li>
-                <li><strong>Closures:</strong> Show functions that remember their environment</li>
-                <li><strong>Decorators:</strong> Introduce the concept of function decorators</li>
+                <li><strong>Data Processing:</strong> Show processing lists of data with functions</li>
+                <li><strong>Game Development:</strong> Demonstrate game logic with functions and lists</li>
+                <li><strong>Business Applications:</strong> Show calculations and data analysis</li>
+                <li><strong>Web Development:</strong> Connect to backend data processing</li>
+                <li><strong>Automation:</strong> Show automating repetitive tasks</li>
             </ul>
         </div>
 
         <div class="note-section">
-            <h3>Slide 23: Best Practices</h3>
+            <h3>Slide 24: Best Practices and Common Mistakes</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Following best practices makes your functions and lists more maintainable.
+                <strong>Key Message:</strong> Understanding best practices and common mistakes helps you write better code.
             </div>
             <ul>
-                <li><strong>Function Design:</strong> Show single responsibility principle</li>
-                <li><strong>Naming Conventions:</strong> Show good naming practices for functions and variables</li>
-                <li><strong>Documentation:</strong> Show how to document functions with docstrings</li>
-                <li><strong>Error Handling:</strong> Show defensive programming with functions</li>
-                <li><strong>Performance Considerations:</strong> Show efficient list operations</li>
-            </ul>
-        </div>
-
-        <div class="note-section">
-            <h3>Slide 24: Common List Mistakes</h3>
-            <div class="key-point">
-                <strong>Key Message:</strong> Learning to recognize and avoid common mistakes improves code quality.
-            </div>
-            <ul>
-                <li><strong>Index Errors:</strong> Show common indexing mistakes</li>
-                <li><strong>Modification During Iteration:</strong> Show dangers of modifying lists while iterating</li>
-                <li><strong>Shallow vs Deep Copy:</strong> Show copying list issues</li>
-                <li><strong>Mutable Default Arguments:</strong> Show the mutable default argument trap</li>
-                <li><strong>Performance Issues:</strong> Show inefficient list operations</li>
+                <li><strong>Function Design:</strong> Show how to design effective functions</li>
+                <li><strong>List Usage:</strong> Demonstrate efficient list operations</li>
+                <li><strong>Common Pitfalls:</strong> Show typical mistakes and how to avoid them</li>
+                <li><strong>Performance Tips:</strong> Provide optimization strategies</li>
+                <li><strong>Debugging Techniques:</strong> Show how to debug function and list issues</li>
             </ul>
         </div>
 
         <div class="note-section">
             <h3>Slide 25: Course Summary</h3>
             <div class="key-point">
-                <strong>Key Message:</strong> Students have learned fundamental tools for organizing code and data.
+                <strong>Key Message:</strong> You now have powerful tools for creating reusable, organized code with functions and lists.
             </div>
             <ul>
-                <li><strong>Key Concepts Review:</strong> Summarize function and list fundamentals</li>
-                <li><strong>Practical Skills:</strong> Emphasize real-world applications</li>
-                <li><strong>Next Steps:</strong> Guide students to object-oriented programming</li>
-                <li><strong>Practice Encouragement:</strong> Encourage continued practice</li>
-                <li><strong>Resources:</strong> Point to additional learning materials</li>
+                <li><strong>Knowledge Review:</strong> Summarize all concepts covered</li>
+                <li><strong>Skills Acquired:</strong> List the practical skills students now have</li>
+                <li><strong>Next Steps:</strong> Guide students to Object-Oriented Programming course</li>
+                <li><strong>Practice Encouragement:</strong> Emphasize the importance of practice</li>
+                <li><strong>Real-world Application:</strong> Show how these skills apply to actual projects</li>
             </ul>
         </div>
     </div>
