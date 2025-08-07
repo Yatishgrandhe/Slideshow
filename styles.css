@@ -1373,6 +1373,172 @@ body:has(.speaker-notes) .slide {
     bottom: 0 !important;
 }
 
+/* Fullscreen mode - increase font sizes for non-speaker notes slides */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide-title {
+    font-size: 3.5em !important;
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide-subtitle {
+    font-size: 1.8em !important;
+    margin-bottom: 20px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content h2 {
+    font-size: 2.2em !important;
+    margin-bottom: 15px !important;
+    margin-top: 20px !important;
+    padding-bottom: 10px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content h3 {
+    font-size: 1.8em !important;
+    margin-bottom: 12px !important;
+    margin-top: 18px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content p {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content ul,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content ol {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content li {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 8px !important;
+    padding: 8px 12px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .text-content strong {
+    font-size: 1.5em !important;
+    font-weight: 700 !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .code-example {
+    font-size: 1.2em !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .code-example pre {
+    font-size: 1.2em !important;
+    line-height: 1.5 !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .code-example code {
+    font-size: 1.2em !important;
+    line-height: 1.5 !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .code-header {
+    font-size: 1.4em !important;
+    padding: 15px 20px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Fullscreen mode - increase spacing and padding for non-speaker notes slides */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide-content {
+    padding: 60px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide-header {
+    margin-bottom: 25px !important;
+    padding-bottom: 15px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide-body {
+    gap: 20px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .content-grid {
+    gap: 30px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .main-content,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .side-content {
+    gap: 20px !important;
+}
+
+/* Fullscreen mode - increase feature list and card sizes */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .feature-item {
+    padding: 25px !important;
+    gap: 20px !important;
+    font-size: 1.4em !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .feature-item i {
+    font-size: 2.5em !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .feature-text h3 {
+    font-size: 1.8em !important;
+    margin-bottom: 10px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .feature-text p {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+}
+
+/* Fullscreen mode - increase type cards and method cards */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .type-card,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .method-card {
+    padding: 25px !important;
+    font-size: 1.4em !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .type-card h3,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .method-card h3 {
+    font-size: 1.8em !important;
+    margin-bottom: 12px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .type-card p,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .method-card p {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+}
+
+/* Fullscreen mode - increase operator cards and math grids */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .operator-card,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .comparison-card,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .logical-card {
+    padding: 25px !important;
+    font-size: 1.4em !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .op-symbol {
+    font-size: 3em !important;
+    margin-bottom: 15px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .operator-card h3,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .comparison-card h3,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .logical-card h3 {
+    font-size: 1.8em !important;
+    margin-bottom: 12px !important;
+}
+
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .operator-card p,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .comparison-card p,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .logical-card p {
+    font-size: 1.4em !important;
+    line-height: 1.6 !important;
+}
+
 /* Responsive Design for Speaker Notes */
 @media (max-width: 1200px) {
     .speaker-notes {
