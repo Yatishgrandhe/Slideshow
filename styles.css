@@ -192,7 +192,7 @@ body {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     overflow: hidden;
     filter: blur(1px);
     will-change: transform, opacity, filter;
@@ -1317,6 +1317,62 @@ body {
     position: relative;
 }
 
+/* When speaker notes are present, push slides to the left */
+.slides-wrapper:has(.speaker-notes) .slide,
+.slides-wrapper + .speaker-notes ~ .slide {
+    justify-content: flex-start;
+}
+
+/* Specific targeting for speaker notes pages */
+.slideshow-container:has(.speaker-notes) .slide {
+    justify-content: flex-start;
+}
+
+/* Override for speaker notes pages - push slides to left */
+.speaker-notes ~ .slides-wrapper .slide,
+.slides-wrapper:has(+ .speaker-notes) .slide {
+    justify-content: flex-start;
+}
+
+/* When speaker notes container exists, align slides to left */
+body:has(.speaker-notes) .slide {
+    justify-content: flex-start;
+}
+
+/* Default centering for non-speaker notes pages */
+.slide {
+    justify-content: center;
+}
+
+/* Fullscreen mode - ensure slides cover entire screen when no speaker notes */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide-content {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 40px !important;
+}
+
+/* Fullscreen mode - ensure slides cover entire screen when no speaker notes */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slide {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fullscreen mode - ensure slides wrapper covers entire screen when no speaker notes */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .slides-wrapper {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
 /* Responsive Design for Speaker Notes */
 @media (max-width: 1200px) {
     .speaker-notes {
@@ -1468,7 +1524,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -1476,7 +1532,7 @@ body {
 
 .slideshow-container.fullscreen .slide-content {
     max-width: none;
-    width: calc(100vw - 400px);
+    width: 100vw;
     height: 100vh;
     max-height: 100vh;
     margin: 0;
@@ -1610,7 +1666,7 @@ body {
     }
     
     .slideshow-container.fullscreen .slide-content {
-        width: calc(100vw - 350px);
+        width: 100vw;
     }
 }
 
@@ -1626,7 +1682,7 @@ body {
     }
     
     .slideshow-container.fullscreen .slide-content {
-        width: calc(100vw - 320px);
+        width: 100vw;
     }
     
     .slideshow-container.fullscreen .speaker-notes h2 {
@@ -1664,7 +1720,7 @@ body {
     }
     
     .slideshow-container.fullscreen .slide-content {
-        width: calc(100vw - 280px);
+        width: 100vw;
     }
     
     .slideshow-container.fullscreen .speaker-notes h2 {
