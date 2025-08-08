@@ -1960,3 +1960,22 @@ body:has(.speaker-notes) .slide {
         right: 300px;
     }
 } 
+
+/* Fullscreen layout optimizations for non speaker-notes slides */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .content-grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 24px;
+}
+
+/* Collapse to single column if no side content or it's empty */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .content-grid:not(:has(.side-content)),
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .content-grid:has(.side-content:empty),
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .content-grid:has(.side-content:not(:has(*))) {
+    grid-template-columns: 1fr;
+}
+
+/* Ensure columns can shrink properly */
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .main-content,
+.slideshow-container.fullscreen:not(:has(.speaker-notes)) .side-content {
+    min-width: 0;
+} 
