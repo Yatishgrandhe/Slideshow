@@ -62,10 +62,17 @@
                                     <h3>Course Structure:</h3>
                                     <ul>
                                         <li><strong>Slides 1-5:</strong> Introduction and Setup</li>
-                                        <li><strong>Slides 6-10:</strong> Variables and Assignment</li>
-                                        <li><strong>Slides 11-15:</strong> String Data Type</li>
-                                        <li><strong>Slides 16-20:</strong> Numeric Data Types</li>
-                                        <li><strong>Slides 21-25:</strong> Advanced Topics and Practice</li>
+                                        <li><strong>Slides 6-7:</strong> Variables and Assignment</li>
+                                        <li><strong>Slides 8-10:</strong> String Data Type</li>
+                                        <li><strong>Slides 11-12:</strong> Numeric Data Types (Integers and Floats)</li>
+                                        <li><strong>Slide 13:</strong> Boolean Data Type</li>
+                                        <li><strong>Slide 14:</strong> Type Conversion</li>
+                                        <li><strong>Slide 15:</strong> User Input</li>
+                                        <li><strong>Slide 16:</strong> Advanced String Operations</li>
+                                        <li><strong>Slide 17:</strong> Mathematical Operations</li>
+                                        <li><strong>Slide 18:</strong> None (Null) Type</li>
+                                        <li><strong>Slide 19:</strong> Type Checking</li>
+                                        <li><strong>Slides 20-25:</strong> Error Handling, Projects, Best Practices, Common Mistakes, Debugging, Summary</li>
                                     </ul>
                                 </div>
                             </div>
@@ -165,62 +172,58 @@ int main() {
             <div class="slide" data-slide="3">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>⚙️ Slide 3: Setting Up Python Environment</h1>
-                        <p class="slide-subtitle">Getting Ready to Code</p>
+                        <h1>⚙️ Slide 3: Setting Up Your Environment (Replit)</h1>
+                        <p class="slide-subtitle">Getting Ready to Code in the Browser</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
-                                    <h2>Setting Up Your Python Environment</h2>
-                                    <p>Before we start coding, you need to have Python installed on your computer. Here's how to get everything set up properly.</p>
-                                    
-                                    <h3>Step 1: Download Python</h3>
-                                    <ul>
-                                        <li>Go to <a href="https://python.org" target="_blank">python.org</a></li>
-                                        <li>Download the latest version (3.11 or newer)</li>
-                                        <li>Make sure to check "Add Python to PATH" during installation</li>
-                                    </ul>
+                                    <h2>Set Up with Replit (Recommended)</h2>
+                                    <p>You can start coding in Python instantly using Replit — no installation required.</p>
 
-                                    <h3>Step 2: Verify Installation</h3>
-                                    <ul>
-                                        <li>Open Command Prompt (Windows) or Terminal (Mac/Linux)</li>
-                                        <li>Type: <code>python --version</code></li>
-                                        <li>You should see: <code>Python 3.11.x</code></li>
-                                    </ul>
+                                    <h3>Steps:</h3>
+                                    <ol>
+                                        <li>Go to <a href="https://replit.com" target="_blank" rel="noopener">replit.com</a> and sign in or create a free account</li>
+                                        <li>Click <strong>Create Repl</strong> and choose <strong>Python</strong></li>
+                                        <li>Name your project (for example, <code>python-basics</code>)</li>
+                                        <li>Click <strong>Run</strong> to execute code right in your browser</li>
+                                    </ol>
 
-                                    <h3>Step 3: Choose an Editor</h3>
+                                    <div style="margin-top: 16px;">
+                                        <a href="https://replit.com/new/python" target="_blank" rel="noopener" class="replit-cta" style="display:inline-block;padding:10px 16px;background:#667eea;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;">
+                                            <i class="fas fa-external-link-alt" style="margin-right:8px;"></i>
+                                            Open Replit (Python)
+                                        </a>
+                                    </div>
+
+                                    <p style="margin-top:12px;color:#6b7280;">
+                                        Prefer offline/local setup? You can still install Python from <a href="https://python.org" target="_blank" rel="noopener">python.org</a> and use an editor like VS Code.
+                                    </p>
+
+                                    <h3 style="margin-top:18px;">Other IDEs (Local/Offline)</h3>
                                     <ul>
-                                        <li><strong>VS Code:</strong> Popular, free, with great Python support</li>
-                                        <li><strong>PyCharm:</strong> Professional IDE with advanced features</li>
-                                        <li><strong>IDLE:</strong> Simple editor that comes with Python</li>
-                                        <li><strong>Jupyter Notebook:</strong> Great for data science</li>
+                                        <li><strong>VS Code</strong>: Free and extensible editor. Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" target="_blank" rel="noopener">Python extension</a> for linting, debugging, and virtual environments. Download at <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">code.visualstudio.com</a>.</li>
+                                        <li><strong>PyCharm</strong>: Full-featured Python IDE (Community Edition is free). Great for larger projects and advanced debugging. Download at <a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">jetbrains.com/pycharm</a>.</li>
+                                        <li><strong>IDLE</strong>: Simple editor that comes bundled with Python. Good for quick scripts and learning without extra setup.</li>
+                                        <li><strong>Jupyter Notebook/Lab</strong>: Ideal for data science and exploratory coding. Install with <code>pip install jupyterlab</code> and run with <code>jupyter lab</code>, or use <a href="https://www.anaconda.com/download" target="_blank" rel="noopener">Anaconda</a>.</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
-                                    <div class="code-header">Testing Your Setup</div>
-                                    <pre><code># Open terminal/command prompt and run:
+                                    <div class="code-header">Run this in Replit</div>
+                                    <pre><code># Click the green Run button in Replit to execute this code
+print("Hello from Replit!")
 
-# Check Python version
-python --version
+# Try editing and running again
+name = input("What's your name? ")
+print(f"Welcome to Python, {name}!")
 
-# Start Python interactive shell
-python
-
-# You should see:
-# Python 3.11.0 (main, Oct 24 2022, 18:26:48)
-# [GCC 12.2.0] on linux
-# Type "help", "copyright", "credits" or "license" for more information.
-# >>>
-
-# Try your first command
->>> print("Hello, Python!")
-Hello, Python!
-
-# Exit the shell
->>> exit()</code></pre>
+# Do a quick calculation
+a = 7
+b = 5
+print(f"{a} + {b} = {a + b}")</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -402,6 +405,15 @@ x = x + 1  # Increment counter for next iteration</code></pre>
                                         <li><strong>Mutability:</strong> Can be changed or updated</li>
                                     </ul>
 
+                                    <h3>Core Data Types (Preview):</h3>
+                                    <ul>
+                                        <li><strong>str</strong>: Text like <code>"hello"</code></li>
+                                        <li><strong>int</strong>: Whole numbers like <code>42</code></li>
+                                        <li><strong>float</strong>: Decimal numbers like <code>3.14</code></li>
+                                        <li><strong>bool</strong>: Logical values <code>True</code>/<code>False</code></li>
+                                        <li><strong>NoneType</strong>: Special “no value” marker <code>None</code></li>
+                                    </ul>
+
                                     <h3>Variable Naming Rules:</h3>
                                     <ul>
                                         <li>Start with a letter or underscore</li>
@@ -579,6 +591,14 @@ print(type(variable))  # &lt;class 'float'&gt;</code></pre>
                                         <li>Case conversion: <code>upper(), lower()</code></li>
                                         <li>Replacement: <code>replace()</code></li>
                                         <li>Splitting: <code>split()</code></li>
+                                    </ul>
+
+                                    <h3>Common Pitfalls:</h3>
+                                    <ul>
+                                        <li>Strings are <strong>immutable</strong> — methods return new strings</li>
+                                        <li>Concatenating numbers requires conversion: <code>str(42)</code></li>
+                                        <li>Indexes start at 0; out-of-range raises <code>IndexError</code></li>
+                                        <li>Use raw strings <code>r"\n"</code> to avoid escape processing when needed</li>
                                     </ul>
                                 </div>
                             </div>
@@ -837,6 +857,13 @@ print(f"Percentage: {0.1234:.1%}")  # Percentage: 12.3%</code></pre>
                                         <li><strong>Comparison:</strong> ==, !=, <, >, <=, >=</li>
                                         <li><strong>Bitwise:</strong> &, |, ^, <<, >></li>
                                     </ul>
+
+                                    <h3>Common Pitfalls:</h3>
+                                    <ul>
+                                        <li><code>/</code> returns float; use <code>//</code> for integer division</li>
+                                        <li>Modulus <code>%</code> follows sign of the divisor in Python</li>
+                                        <li>Beware integer overflow is not an issue in Python 3 (arbitrary precision), but performance can degrade for very large ints</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="side-content">
@@ -920,6 +947,18 @@ print(binary, octal, hexadecimal)  # 10 10 10</code></pre>
                                         <li><strong>Math Module:</strong> Advanced mathematical functions</li>
                                         <li><strong>Rounding:</strong> <code>round(), math.floor(), math.ceil()</code></li>
                                         <li><strong>Formatting:</strong> Control decimal places</li>
+                                    </ul>
+
+                                    <h3>Common Pitfalls:</h3>
+                                    <ul>
+                                        <li>Floating point precision errors (e.g., <code>0.1 + 0.2</code>)</li>
+                                        <li>Use <code>decimal.Decimal</code> for exact decimal arithmetic when needed</li>
+                                        <li>Be careful with equality checks; prefer tolerance checks using <code>math.isclose()</code></li>
+                                    </ul>
+                                    
+                                    <h3>Related Numeric Types:</h3>
+                                    <ul>
+                                        <li><strong>complex</strong>: Complex numbers, e.g., <code>3 + 4j</code>, with <code>.real</code> and <code>.imag</code></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1010,6 +1049,13 @@ print(f"Price: ${price:>10.2f}")  # Right-aligned</code></pre>
                                         <li><strong>Falsy:</strong> False, 0, "", None, [], (), {}</li>
                                         <li><strong>Truthy:</strong> Everything else</li>
                                         <li><strong>bool():</strong> Convert any value to boolean</li>
+                                    </ul>
+
+                                    <h3>Common Pitfalls:</h3>
+                                    <ul>
+                                        <li>Remember <code>True</code>/<code>False</code> must be capitalized</li>
+                                        <li><code>and</code>/<code>or</code> return one of the operands, not strictly booleans</li>
+                                        <li>Empty containers are falsy; non-empty are truthy</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1491,6 +1537,13 @@ print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
                                         <li>Check for None before using a value</li>
                                         <li>Document when functions can return None</li>
                                         <li>Use None for optional parameters</li>
+                                    </ul>
+
+                                    <h3>Common Pitfalls:</h3>
+                                    <ul>
+                                        <li>Using <code>== None</code> instead of <code>is None</code> for identity checks</li>
+                                        <li>Confusing empty values (like <code>""</code>, <code>[]</code>, <code>{}</code>) with <code>None</code></li>
+                                        <li>Not handling possible <code>None</code> return values from functions</li>
                                     </ul>
                                 </div>
                             </div>
