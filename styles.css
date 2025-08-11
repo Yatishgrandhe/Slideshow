@@ -1,42 +1,42 @@
 /* Reset and Base Styles */
 
-/* Slide-specific tweaks to ensure content fits on screen */
-.slide[data-slide="13"] .slide-body {
+/* Slide-specific tweaks to ensure content fits on screen (Fullscreen only) */
+.slideshow-container.fullscreen .slide[data-slide="13"] .slide-body {
     gap: 8px;
 }
-.slide[data-slide="13"] .content-grid {
+.slideshow-container.fullscreen .slide[data-slide="13"] .content-grid {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
-.slide[data-slide="13"] .text-content {
+.slideshow-container.fullscreen .slide[data-slide="13"] .text-content {
     font-size: 0.9em;
     line-height: 1.35;
 }
-.slide[data-slide="13"] .text-content h2 {
+.slideshow-container.fullscreen .slide[data-slide="13"] .text-content h2 {
     font-size: 1.15em;
     margin-top: 6px;
     margin-bottom: 6px;
 }
-.slide[data-slide="13"] .text-content h3 {
+.slideshow-container.fullscreen .slide[data-slide="13"] .text-content h3 {
     font-size: 0.98em;
     margin-top: 6px;
     margin-bottom: 4px;
 }
-.slide[data-slide="13"] .text-content ul,
-.slide[data-slide="13"] .text-content ol {
+.slideshow-container.fullscreen .slide[data-slide="13"] .text-content ul,
+.slideshow-container.fullscreen .slide[data-slide="13"] .text-content ol {
     margin-bottom: 6px;
     padding-left: 20px;
 }
-.slide[data-slide="13"] .text-content li {
+.slideshow-container.fullscreen .slide[data-slide="13"] .text-content li {
     margin-bottom: 4px;
     font-size: 0.88em;
     line-height: 1.25;
 }
-.slide[data-slide="13"] .code-header {
+.slideshow-container.fullscreen .slide[data-slide="13"] .code-header {
     padding: 8px 12px;
     font-size: 0.85em;
 }
-.slide[data-slide="13"] .code-example pre {
+.slideshow-container.fullscreen .slide[data-slide="13"] .code-example pre {
     padding: 12px;
     font-size: 0.75em;
     line-height: 1.3;
