@@ -9,16 +9,16 @@
     gap: 12px;
 }
 .slideshow-container.fullscreen .slide .text-content {
-    font-size: 0.9em;
-    line-height: 1.35;
+    font-size: 1.06em;
+    line-height: 1.45;
 }
 .slideshow-container.fullscreen .slide .text-content h2 {
-    font-size: 1.15em;
+    font-size: 1.28em;
     margin-top: 6px;
     margin-bottom: 6px;
 }
 .slideshow-container.fullscreen .slide .text-content h3 {
-    font-size: 0.98em;
+    font-size: 1.08em;
     margin-top: 6px;
     margin-bottom: 4px;
 }
@@ -287,6 +287,10 @@ body {
 .slides-wrapper .slide .code-example { min-height: 0; flex: 1; }
 .slides-wrapper .slide .text-content { overflow: auto; }
 .slides-wrapper .slide .code-example pre { max-height: 100%; }
+/* Prefer tighter spacing when text grows */
+.slides-wrapper .slide .text-content ul,
+.slides-wrapper .slide .text-content ol { margin-bottom: 8px; }
+.slides-wrapper .slide .text-content li { margin-bottom: 4px; }
 
 /* Compact mode on shorter viewports to keep content within frame */
 @media (max-height: 800px) {
