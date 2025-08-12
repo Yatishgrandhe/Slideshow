@@ -6,6 +6,13 @@
     <title>Python Variables & Data Types - Learning Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Enforce readable fonts across all slides for beginners */
+        .slide-content, .slide-content *:not(code):not(pre) {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        }
+        .code-example pre, .code-example code { font-family: 'Fira Code', Consolas, Monaco, monospace !important; }
+    </style>
 </head>
 <body>
     <div class="slideshow-container">
@@ -759,7 +766,7 @@ print("Name: {}, Age: {}".format(name.title(), age))</code></pre>
                                         <li><strong>f-strings (Python 3.6+):</strong> Most modern and readable</li>
                                         <li><strong>str.format():</strong> Flexible and powerful</li>
                                         <li><strong>% operator:</strong> Old-style formatting</li>
-                                        <li><strong>Template strings:</strong> For complex formatting</li>
+                                        <li><strong>Template strings:</strong> Optional alternative for later learning</li>
                                     </ul>
 
                                     <h3>f-string Features:</h3>
@@ -951,7 +958,7 @@ print(binary, octal, hexadecimal)  # 10 10 10</code></pre>
                                     <h3>Float Operations:</h3>
                                     <ul>
                                         <li><strong>Arithmetic:</strong> Same as integers</li>
-                                        <li><strong>Math Module:</strong> Advanced mathematical functions</li>
+                                        <li><strong>Math Module:</strong> Helpful extra math functions</li>
                                         <li><strong>Rounding:</strong> <code>round(), math.floor(), math.ceil()</code></li>
                                         <li><strong>Formatting:</strong> Control decimal places</li>
                                     </ul>
@@ -965,7 +972,7 @@ print(binary, octal, hexadecimal)  # 10 10 10</code></pre>
                                     
                                     <h3>Related Numeric Types:</h3>
                                     <ul>
-                                        <li><strong>complex</strong>: Complex numbers, e.g., <code>3 + 4j</code>, with <code>.real</code> and <code>.imag</code></li>
+                                        <!-- Removed complex numbers for beginner focus -->
                                     </ul>
                                 </div>
                             </div>
@@ -1355,15 +1362,15 @@ print(f"Your score: {score}")</code></pre>
             <div class="slide" data-slide="16">
                 <div class="slide-content">
                     <div class="slide-header">
-                        <h1>🔧 Slide 16: Advanced String Operations</h1>
-                        <p class="slide-subtitle">Powerful String Manipulation</p>
+                        <h1>🔧 Slide 16: String Practice</h1>
+                        <p class="slide-subtitle">Useful Everyday String Skills</p>
                     </div>
                     <div class="slide-body">
                         <div class="content-grid">
                             <div class="main-content">
                                 <div class="text-content">
-                                    <h2>Advanced String Techniques</h2>
-                                    <p>Python strings offer powerful built-in methods for text processing, validation, and manipulation.</p>
+                                    <h2>Everyday String Techniques</h2>
+                                    <p>Practice the most common string checks and cleanups used in beginner programs.</p>
                                     
                                     <h3>String Validation Methods:</h3>
                                     <ul>
@@ -1375,19 +1382,18 @@ print(f"Your score: {score}")</code></pre>
                                         <li><code>endswith()</code> - Check end of string</li>
                                     </ul>
 
-                                    <h3>String Manipulation:</h3>
+                                    <h3>String Cleanup:</h3>
                                     <ul>
                                         <li><code>strip()</code> - Remove leading/trailing whitespace</li>
                                         <li><code>split()</code> - Split string into list</li>
                                         <li><code>join()</code> - Join list into string</li>
-                                        <li><code>replace()</code> - Replace substrings</li>
-                                        <li><code>partition()</code> - Split at first occurrence</li>
+                                        <li><code>replace()</code> - Replace words or characters</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="side-content">
                                 <div class="code-example">
-                                    <div class="code-header">Advanced String Examples</div>
+                                    <div class="code-header">String Practice Examples</div>
                                     <pre><code># String validation
 text = "Hello123"
 print(text.isalpha())    # False (contains numbers)
@@ -1409,16 +1415,10 @@ print(fruits)  # ['apple', 'banana', 'orange']
 joined = "-".join(fruits)
 print(joined)  # apple-banana-orange
 
-# Advanced replace
+# Replace the first word
 text = "Hello World Hello"
 new_text = text.replace("Hello", "Hi", 1)  # Replace only first occurrence
 print(new_text)  # "Hi World Hello"
-
-# Partition
-text = "user@example.com"
-username, separator, domain = text.partition("@")
-print(f"Username: {username}")
-print(f"Domain: {domain}")
 
 # String formatting with alignment
 name = "Alice"
@@ -1460,7 +1460,7 @@ print(f"{name:>10} {age:>5}")  # Right-aligned columns</code></pre>
                                     <h3>Math Module Functions:</h3>
                                     <ul>
                                         <li><code>math.sqrt()</code> - Square root</li>
-                                        <li><code>math.pow()</code> - Power function</li>
+                                        <li><code>pow()</code> or <code>**</code> - Power function</li>
                                         <li><code>math.floor()</code> - Round down</li>
                                         <li><code>math.ceil()</code> - Round up</li>
                                         <li><code>math.abs()</code> - Absolute value</li>
@@ -1481,10 +1481,10 @@ print(f"Floor division: {a // b}")  # 3
 print(f"Modulo: {a % b}")          # 1
 print(f"Power: {a ** b}")          # 1000
 
-# Math module
+# Math helpers
 import math
 print(f"Square root of 16: {math.sqrt(16)}")  # 4.0
-print(f"2 to the power 3: {math.pow(2, 3)}") # 8.0
+print(f"2 to the power 3: {2 ** 3}") # 8
 print(f"Floor of 3.7: {math.floor(3.7)}")    # 3
 print(f"Ceiling of 3.2: {math.ceil(3.2)}")   # 4
 
