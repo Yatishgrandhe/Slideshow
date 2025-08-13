@@ -26,7 +26,7 @@ body {
     z-index: 1000;
 }
 .site-brand-badge img {
-    height: 26px; /* bigger bottom-left on homepage */
+    height: 52px; /* 2x bigger (26px * 2 = 52px) */
     width: auto;
     opacity: 0.9;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
@@ -62,7 +62,7 @@ body {
 }
 
 .brand-inline-logo {
-    height: 26px;
+    height: 65px; /* 2.5x bigger (26px * 2.5 = 65px) */
     width: auto;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
 }
