@@ -75,23 +75,16 @@
 <div class="side-content">
 <div class="code-example">
 <div class="code-header">Your First Python Code</div>
-<pre><code># This is your first Python program!
- print("Hello, World!")
- 
- # Variables store data
- name = "Alice"
- age = 25
- height = 5.6
- 
- # Different data types
- text = "Python is awesome"
- number = 42
- decimal = 3.14
- is_student = True
- 
- print(f"Name: {name}")
- print(f"Age: {age}")
- print(f"Height: {height}")</code></pre>
+<pre><code># Simple Python program
+print("Hello, World!")
+
+# Variables and data types
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+print(f"Name: {name}, Age: {age}")</code></pre>
 </div>
 </div>
 </div>
@@ -132,26 +125,22 @@
 <div class="side-content">
 <div class="code-example">
 <div class="code-header">Python vs Other Languages</div>
-<pre><code># Python (Simple and Readable)
+<pre><code># Python (Simple)
 name = "Alice"
 age = 25
 print(f"Hello {name}, you are {age} years old")
 
-# Java (More Verbose)
+# Java (Verbose)
 String name = "Alice";
 int age = 25;
-System.out.println("Hello " + name + 
-                  ", you are " + age + " years old");
+System.out.println("Hello " + name + ", you are " + age + " years old");
 
-# C++ (Even More Complex)
+# C++ (Complex)
 #include &lt;iostream&gt;
-#include &lt;string&gt;
 int main() {
     std::string name = "Alice";
     int age = 25;
-    std::cout &lt;&lt; "Hello " &lt;&lt; name 
-              &lt;&lt; ", you are " &lt;&lt; age 
-              &lt;&lt; " years old" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Hello " &lt;&lt; name &lt;&lt; ", you are " &lt;&lt; age &lt;&lt; std::endl;
     return 0;
 }</code></pre>
 </div>
@@ -201,22 +190,15 @@ int main() {
 <div class="side-content">
 <div class="code-example">
 <div class="code-header">Run this in Replit</div>
-<pre><code># Click the green Run button in Replit to execute this code
+<pre><code># Click Run in Replit
 print("Hello from Replit!")
 
-# Try editing and running again
 name = input("What's your name? ")
-print(f"Welcome to Python, {name}!")
+print(f"Welcome, {name}!")
 
-# Do a quick calculation
 a = 7
 b = 5
-print(f"{a} + {b} = {a + b}")
-
-# Output:
-# Hello from Replit!
-# Welcome to Python, Alice!
-# 7 + 5 = 12</code></pre>
+print(f"{a} + {b} = {a + b}")</code></pre>
 </div>
 </div>
 </div>
@@ -262,23 +244,16 @@ print(f"{a} + {b} = {a + b}")
 <div class="side-content">
 <div class="code-example">
 <div class="code-header">Your First Program</div>
-<pre><code># hello.py - Your first Python program
-
-# This is a comment - it explains what the code does
+<pre><code># hello.py
 print("Hello, World!")
 
-# Let's add some more functionality
 name = "Python Learner"
 print(f"Welcome to Python, {name}!")
 
-# Simple calculation
 x = 5
 y = 3
 sum = x + y
-print(f"The sum of {x} and {y} is {sum}")
-
-# Running this program:
-# python hello.py</code></pre>
+print(f"Sum: {sum}")</code></pre>
 </div>
 </div>
 </div>
@@ -324,39 +299,25 @@ print(f"The sum of {x} and {y} is {sum}")
 <div class="side-content">
 <div class="code-example">
 <div class="code-header">Comment Examples</div>
-<pre><code># This is a single-line comment
-name = "Alice"  # This comment is on the same line
+<pre><code># Single-line comment
+name = "Alice"  # Inline comment
 
-# Multi-line comment using #
-# This program calculates the area of a rectangle
-# It takes length and width as inputs
-# Returns the calculated area
+# Multi-line comment
+# This program calculates area
+# Takes length and width
 
 """
-This is a multi-line comment using triple quotes.
-It can span multiple lines and is often used for
-documentation at the top of files.
+Multi-line comment using
+triple quotes
 """
 
 def calculate_area(length, width):
-    """
-    Calculate the area of a rectangle.
-    
-    Args:
-        length (float): Length of rectangle
-        width (float): Width of rectangle
-        
-    Returns:
-        float: Area of rectangle
-    """
+    """Calculate rectangle area"""
     area = length * width  # Calculate area
     return area
 
-# Bad comment (explains what, not why):
-x = x + 1  # Add 1 to x
-
 # Good comment (explains why):
-x = x + 1  # Increment counter for next iteration</code></pre>
+x = x + 1  # Increment counter</code></pre>
 </div>
 </div>
 </div>
@@ -418,24 +379,19 @@ is_student = True
 # Printing variables
 print(name)        # Alice
 print(age)         # 25
-print(height)      # 5.6
-print(is_student)  # True
 
-# Variable naming examples
-user_name = "Bob"      # Good - descriptive
-total_score = 100      # Good - clear purpose
-is_logged_in = False   # Good - boolean naming
+# Good naming
+user_name = "Bob"
+total_score = 100
+is_logged_in = False
 
-# Bad examples (don't do this):
-x = "Alice"           # Too vague
-a = 25               # Not descriptive
-temp = True          # Unclear purpose
+# Bad naming
+x = "Alice"        # Too vague
+a = 25            # Not descriptive
 
-# Checking variable types
+# Check types
 print(type(name))      # &lt;class 'str'&gt;
-print(type(age))       # &lt;class 'int'&gt;
-print(type(height))    # &lt;class 'float'&gt;
-print(type(is_student)) # &lt;class 'bool'&gt;</code></pre>
+print(type(age))       # &lt;class 'int'&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -484,7 +440,6 @@ print(type(is_student)) # &lt;class 'bool'&gt;</code></pre>
 <pre><code># Simple assignment
 name = "Alice"
 age = 25
-price = 19.99
 
 # Multiple assignment
 x, y, z = 1, 2, 3
@@ -492,11 +447,9 @@ print(x, y, z)  # 1 2 3
 
 # Chained assignment
 a = b = c = 0
-print(a, b, c)  # 0 0 0
 
 # Reassignment
 age = 25
-print(age)  # 25
 age = 26    # Reassigning
 print(age)  # 26
 
@@ -505,21 +458,10 @@ count = 5
 count += 1      # Same as count = count + 1
 print(count)    # 6
 
-count -= 2      # Same as count = count - 2
-print(count)    # 4
-
-count *= 3      # Same as count = count * 3
-print(count)    # 12
-
 # Dynamic typing
 variable = "Hello"
-print(type(variable))  # &lt;class 'str'&gt;
-
 variable = 42
-print(type(variable))  # &lt;class 'int'&gt;
-
-variable = 3.14
-print(type(variable))  # &lt;class 'float'&gt;</code></pre>
+print(type(variable))  # &lt;class 'int'&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -575,20 +517,15 @@ print(type(variable))  # &lt;class 'float'&gt;</code></pre>
 <pre><code># Creating strings
 name = "Alice"
 message = 'Hello, World!'
-multi_line = """This is a
-multi-line string"""
 
-# String indexing (starts at 0)
+# String indexing
 text = "Python"
 print(text[0])    # P
-print(text[1])    # y
-print(text[-1])   # n (last character)
+print(text[-1])   # n
 
 # String slicing
 print(text[0:3])  # Pyt
-print(text[:3])   # Pyt
 print(text[3:])   # hon
-print(text[::2])  # Pto (every 2nd character)
 
 # String concatenation
 first = "Hello"
@@ -597,17 +534,14 @@ result = first + " " + second
 print(result)  # Hello World
 
 # String methods
-text = "  Python Programming  "
-print(text.upper())      # PYTHON PROGRAMMING
-print(text.lower())      # python programming
-print(text.strip())      # Python Programming
-print(text.replace("Python", "Java"))
+text = "  Python  "
+print(text.upper())      # PYTHON
+print(text.strip())      # Python
 
 # String formatting
 name = "Alice"
 age = 25
-print(f"{name} is {age} years old")
-print("{} is {} years old".format(name, age))</code></pre>
+print(f"{name} is {age} years old")</code></pre>
 </div>
 </div>
 </div>
@@ -663,37 +597,23 @@ print("{} is {} years old".format(name, age))</code></pre>
 age = 25
 count = 0
 negative = -10
-large_number = 123456789
 
 # Integer operations
 a = 10
 b = 3
-print(a + b)   # 13 (addition)
-print(a - b)   # 7 (subtraction)
-print(a * b)   # 30 (multiplication)
-print(a / b)   # 3.333... (division - returns float)
+print(a + b)   # 13
+print(a / b)   # 3.333... (returns float)
 print(a // b)  # 3 (floor division)
 print(a % b)   # 1 (remainder)
-print(a ** b)  # 1000 (exponentiation)
 
 # Integer conversion
 string_number = "42"
 integer_number = int(string_number)
 print(integer_number)  # 42
 
-float_number = 3.14
-integer_from_float = int(float_number)
-print(integer_from_float)  # 3
-
-# Large integers (no limit in Python 3)
-big_number = 2 ** 100
-print(big_number)  # 1267650600228229401496703205376
-
-# Different number bases
+# Different bases
 binary = 0b1010    # Binary: 10
-octal = 0o12       # Octal: 10
-hexadecimal = 0xA   # Hex: 10
-print(binary, octal, hexadecimal)  # 10 10 10</code></pre>
+hexadecimal = 0xA   # Hex: 10</code></pre>
 </div>
 </div>
 </div>
@@ -753,44 +673,34 @@ print(binary, octal, hexadecimal)  # 10 10 10</code></pre>
 pi = 3.14159
 price = 19.99
 temperature = -5.5
-scientific = 1.23e-4
 
 # Float operations
 a = 10.5
 b = 3.2
 print(a + b)   # 13.7
-print(a - b)   # 7.3
-print(a * b)   # 33.6
 print(a / b)   # 3.28125
 
 # Scientific notation
 large = 1.23e6    # 1,230,000
 small = 1.23e-6   # 0.00000123
-print(large, small)
 
 # Float conversion
 string_float = "3.14"
 float_number = float(string_float)
 print(float_number)  # 3.14
 
-integer_to_float = float(42)
-print(integer_to_float)  # 42.0
-
 # Floating point precision
 result = 0.1 + 0.2
-print(result)  # 0.30000000000000004 (precision error)
+print(result)  # 0.30000000000000004
 
 # Using math module
 import math
 print(math.pi)           # 3.141592653589793
-print(math.floor(3.7))   # 3
-print(math.ceil(3.2))    # 4
 print(round(3.14159, 2)) # 3.14
 
 # Formatting floats
 price = 19.99
-print(f"Price: ${price:.2f}")  # Price: $19.99
-print(f"Price: ${price:&gt;10.2f}")  # Right-aligned</code></pre>
+print(f"Price: ${price:.2f}")  # Price: $19.99</code></pre>
 </div>
 </div>
 </div>
@@ -844,7 +754,6 @@ print(f"Price: ${price:&gt;10.2f}")  # Right-aligned</code></pre>
 <pre><code># Creating booleans
 is_active = True
 is_logged_in = False
-has_permission = True
 
 # Boolean operations
 a = True
@@ -852,45 +761,27 @@ b = False
 print(a and b)   # False
 print(a or b)    # True
 print(not a)     # False
-print(not b)     # True
 
 # Comparison operators
 age = 25
 is_adult = age &gt;= 18
 print(is_adult)  # True
 
-# Complex boolean expressions
-name = "Alice"
-age = 25
-is_valid = name != "" and age &gt;= 18
-print(is_valid)  # True
-
 # Truthy and falsy values
 print(bool(0))       # False
 print(bool(1))       # True
 print(bool(""))      # False
 print(bool("Hello")) # True
-print(bool([]))      # False
-print(bool([1, 2]))  # True
-print(bool(None))    # False
 
 # Boolean conversion
 print(int(True))   # 1
 print(int(False))  # 0
-print(float(True)) # 1.0
 
-# Practical examples
+# Practical example
 user_age = 20
 has_license = True
 can_drive = user_age &gt;= 16 and has_license
-print(f"Can drive: {can_drive}")  # Can drive: True
-
-# Short-circuit evaluation
-name = ""
-age = 25
-# This won't cause an error because of short-circuit
-is_valid = name and len(name) &gt; 0 and age &gt;= 18
-print(is_valid)  # False</code></pre>
+print(f"Can drive: {can_drive}")  # Can drive: True</code></pre>
 </div>
 </div>
 </div>
@@ -950,7 +841,6 @@ print(price_float)  # 19.99
 age = 25
 age_string = str(age)
 print(age_string)  # "25"
-print(type(age_string))  # &lt;class 'str'&gt;
 
 # Float to int
 pi_float = 3.14159
@@ -959,19 +849,10 @@ print(pi_int)  # 3
 
 # Boolean conversion
 print(int(True))   # 1
-print(int(False))  # 0
-print(float(True)) # 1.0
-print(str(True))   # "True"
-
-# Truthy/falsy conversion
-print(bool(0))       # False
-print(bool(1))       # True
-print(bool(""))      # False
+print(bool(0))     # False
 print(bool("Hello")) # True
-print(bool([]))      # False
-print(bool([1, 2]))  # True
 
-# Error handling for conversion
+# Error handling
 try:
     invalid_number = int("abc")
 except ValueError:
@@ -981,27 +862,7 @@ except ValueError:
 user_input = "42"
 if user_input.isdigit():
     number = int(user_input)
-    print(f"Valid number: {number}")
-else:
-    print("Invalid number format")
-
-# Complex conversion
-mixed_data = ["25", "3.14", "True", "Hello"]
-converted = []
-for item in mixed_data:
-    try:
-        if "." in item:
-            converted.append(float(item))
-        elif item.isdigit():
-            converted.append(int(item))
-        elif item in ["True", "False"]:
-            converted.append(bool(item))
-        else:
-            converted.append(item)
-    except ValueError:
-        converted.append(item)
-
-print(converted)  # [25, 3.14, True, 'Hello']</code></pre>
+    print(f"Valid number: {number}")</code></pre>
 </div>
 </div>
 </div>
@@ -1074,37 +935,13 @@ is_student = response in ['yes', 'y', 'true']
 print(f"Student status: {is_student}")
 
 # Multiple inputs
-print("Enter your personal information:")
 name = input("Name: ")
 age = input("Age: ")
-city = input("City: ")
-
 try:
     age_int = int(age)
-    print(f"Name: {name}")
-    print(f"Age: {age_int}")
-    print(f"City: {city}")
+    print(f"Name: {name}, Age: {age_int}")
 except ValueError:
-    print("Invalid age format")
-
-# Input validation function
-def get_valid_number(prompt, min_val=None, max_val=None):
-    while True:
-        try:
-            value = float(input(prompt))
-            if min_val is not None and value &lt; min_val:
-                print(f"Value must be at least {min_val}")
-                continue
-            if max_val is not None and value &gt; max_val:
-                print(f"Value must be at most {max_val}")
-                continue
-            return value
-        except ValueError:
-            print("Please enter a valid number")
-
-# Usage
-score = get_valid_number("Enter your test score (0-100): ", 0, 100)
-print(f"Your score: {score}")</code></pre>
+    print("Invalid age format")</code></pre>
 </div>
 </div>
 </div>
@@ -1152,19 +989,14 @@ print(f"Your score: {score}")</code></pre>
 a = 10
 b = 3
 print(f"Addition: {a + b}")        # 13
-print(f"Subtraction: {a - b}")      # 7
-print(f"Multiplication: {a * b}")   # 30
 print(f"Division: {a / b}")         # 3.333...
 print(f"Floor division: {a // b}")  # 3
-print(f"Modulo: {a % b}")          # 1
 print(f"Power: {a ** b}")          # 1000
 
 # Math helpers
 import math
 print(f"Square root of 16: {math.sqrt(16)}")  # 4.0
-print(f"2 to the power 3: {2 ** 3}") # 8
 print(f"Floor of 3.7: {math.floor(3.7)}")    # 3
-print(f"Ceiling of 3.2: {math.ceil(3.2)}")   # 4
 
 # Complex calculations
 radius = 5
@@ -1173,12 +1005,9 @@ print(f"Circle area: {area:.2f}")
 
 # Order of operations
 result = 2 + 3 * 4
-print(f"2 + 3 * 4 = {result}")  # 14 (multiplication first)
+print(f"2 + 3 * 4 = {result}")  # 14
 
-result = (2 + 3) * 4
-print(f"(2 + 3) * 4 = {result}")  # 20 (parentheses first)
-
-# Practical example: Temperature conversion
+# Temperature conversion
 celsius = 25
 fahrenheit = (celsius * 9/5) + 32
 print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
@@ -1242,13 +1071,10 @@ print(type(empty_value))  # &lt;class 'NoneType'&gt;
 # None comparisons
 x = None
 print(x is None)      # True
-print(x == None)      # True (but not recommended)
 print(x is not None)  # False
 
 # None in boolean context
 print(bool(None))     # False
-if None:
-    print("This won't print")
 
 # Function returning None
 def greet(name):
@@ -1276,25 +1102,10 @@ def process_data(data):
     if data is None:
         print("No data provided")
         return
-    
     print(f"Processing: {data}")
 
 process_data(None)      # No data provided
-process_data("Hello")   # Processing: Hello
-
-# None vs empty values
-empty_string = ""
-empty_list = []
-none_value = None
-
-print(bool(empty_string))  # False
-print(bool(empty_list))    # False
-print(bool(none_value))    # False
-
-# But they're different types
-print(type(empty_string))  # &lt;class 'str'&gt;
-print(type(empty_list))    # &lt;class 'list'&gt;
-print(type(none_value))    # &lt;class 'NoneType'&gt;</code></pre>
+process_data("Hello")   # Processing: Hello</code></pre>
 </div>
 </div>
 </div>
@@ -1347,19 +1158,14 @@ is_student = True
 
 print(type(name))       # &lt;class 'str'&gt;
 print(type(age))        # &lt;class 'int'&gt;
-print(type(height))     # &lt;class 'float'&gt;
-print(type(is_student)) # &lt;class 'bool'&gt;
 
 # Using isinstance()
 print(isinstance(name, str))       # True
 print(isinstance(age, int))        # True
-print(isinstance(height, float))   # True
-print(isinstance(is_student, bool)) # True
 
 # Checking multiple types
 value = 42
 print(isinstance(value, (int, float)))  # True
-print(isinstance(value, (str, list)))   # False
 
 # Type checking in functions
 def process_number(value):
@@ -1373,19 +1179,6 @@ try:
     print(result)  # 20
 except TypeError as e:
     print(f"Error: {e}")
-
-# Checking for specific types
-def validate_user_data(name, age, email):
-    if not isinstance(name, str):
-        raise TypeError("Name must be a string")
-    
-    if not isinstance(age, int):
-        raise TypeError("Age must be an integer")
-    
-    if not isinstance(email, str):
-        raise TypeError("Email must be a string")
-    
-    return True
 
 # Using hasattr()
 class Person:
@@ -1401,26 +1194,7 @@ def my_function():
     pass
 
 print(callable(my_function))  # True
-print(callable("hello"))      # False
-print(callable(len))          # True
-
-# Practical type checking
-def safe_divide(a: float, b: float) -&gt; float:
-    try:
-        return a / b
-    except ZeroDivisionError:
-        raise ValueError("Cannot divide by zero")
-    except TypeError:
-        raise TypeError("Both arguments must be numbers")
-
-# Usage
-result = safe_divide(10, 2)
-print(result)  # 5.0
-
-try:
-    result = safe_divide(10, 0)
-except (TypeError, ValueError) as e:
-    print(f"Error: {e}")</code></pre>
+print(callable("hello"))      # False</code></pre>
 </div>
 </div>
 </div>
@@ -1483,11 +1257,8 @@ try:
     data = file.read()
 except FileNotFoundError:
     print("File not found")
-except PermissionError:
-    print("Permission denied")
 else:
     print("File read successfully")
-    print(data)
 finally:
     if 'file' in locals():
         file.close()
@@ -1499,8 +1270,6 @@ def safe_convert(value, target_type):
             return int(value)
         elif target_type == float:
             return float(value)
-        elif target_type == str:
-            return str(value)
         else:
             raise ValueError(f"Unsupported type: {target_type}")
     except (ValueError, TypeError) as e:
@@ -1509,8 +1278,7 @@ def safe_convert(value, target_type):
 
 # Usage
 result1 = safe_convert("42", int)      # 42
-result2 = safe_convert("3.14", float)  # 3.14
-result3 = safe_convert("abc", int)     # None
+result2 = safe_convert("abc", int)     # None
 
 # Raising exceptions
 def validate_age(age):
@@ -1518,32 +1286,12 @@ def validate_age(age):
         raise TypeError("Age must be an integer")
     if age &lt; 0:
         raise ValueError("Age cannot be negative")
-    if age &gt; 150:
-        raise ValueError("Age seems unrealistic")
     return True
 
 try:
     validate_age("twenty")
 except (TypeError, ValueError) as e:
-    print(f"Validation error: {e}")
-
-# Practical example: User input validation
-def get_valid_input(prompt, min_val=None, max_val=None):
-    while True:
-        try:
-            value = float(input(prompt))
-            if min_val is not None and value &lt; min_val:
-                print(f"Value must be at least {min_val}")
-                continue
-            if max_val is not None and value &gt; max_val:
-                print(f"Value must be at most {max_val}")
-                continue
-            return value
-        except ValueError:
-            print("Please enter a valid number")
-        except KeyboardInterrupt:
-            print("\nOperation cancelled by user")
-            return None</code></pre>
+    print(f"Validation error: {e}")</code></pre>
 </div>
 </div>
 </div>
@@ -1588,9 +1336,6 @@ def get_valid_input(prompt, min_val=None, max_val=None):
 def celsius_to_fahrenheit(celsius):
     return (celsius * 9/5) + 32
 
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5/9
-
 # Grade Calculator
 def calculate_grade(score):
     if score &gt;= 90:
@@ -1610,8 +1355,6 @@ def validate_password(password):
         return False, "Password too short"
     if not any(c.isupper() for c in password):
         return False, "Need uppercase letter"
-    if not any(c.islower() for c in password):
-        return False, "Need lowercase letter"
     if not any(c.isdigit() for c in password):
         return False, "Need a number"
     return True, "Password is strong"
@@ -1628,38 +1371,31 @@ def calculator():
         
         if choice == 1:
             result = num1 + num2
-            operation = "addition"
         elif choice == 2:
             result = num1 - num2
-            operation = "subtraction"
         elif choice == 3:
             result = num1 * num2
-            operation = "multiplication"
         elif choice == 4:
             if num2 == 0:
                 raise ZeroDivisionError("Cannot divide by zero")
             result = num1 / num2
-            operation = "division"
         else:
             raise ValueError("Invalid choice")
         
-        print(f"{operation.capitalize()} result: {result}")
+        print(f"Result: {result}")
         
     except (ValueError, ZeroDivisionError) as e:
         print(f"Error: {e}")
 
 # Usage examples
-print("Temperature Converter:")
 celsius = 25
 fahrenheit = celsius_to_fahrenheit(celsius)
 print(f"{celsius}°C = {fahrenheit:.1f}°F")
 
-print("\nGrade Calculator:")
 score = 85
 grade = calculate_grade(score)
 print(f"Score {score} = Grade {grade}")
 
-print("\nPassword Validator:")
 password = "MyPass123"
 is_valid, message = validate_password(password)
 print(f"Password '{password}': {message}")</code></pre>
@@ -1720,7 +1456,6 @@ MAX_ATTEMPTS = 3             # Constants in uppercase
 # Bad variable naming
 u = "Alice"                  # Too short
 a = 25                       # Not descriptive
-flag = True                  # Vague purpose
 
 # Good code organization
 # User information
@@ -1731,7 +1466,6 @@ user_email = "alice@example.com"
 # Game settings
 MAX_SCORE = 100
 GAME_DURATION = 300
-DIFFICULTY_LEVEL = "medium"
 
 # Data validation
 def validate_user_data(name, age, email):
@@ -1740,9 +1474,6 @@ def validate_user_data(name, age, email):
     
     if not isinstance(age, int) or age &lt; 0:
         raise ValueError("Age must be a positive integer")
-    
-    if not isinstance(email, str) or "@" not in email:
-        raise ValueError("Email must be a valid string")
     
     return True
 
@@ -1754,7 +1485,6 @@ def calculate_area(length: float, width: float) -&gt; float:
 # Constants and configuration
 PI = 3.14159
 GRAVITY = 9.81
-DEFAULT_TIMEOUT = 30
 
 # Error handling with specific exceptions
 def safe_divide(a: float, b: float) -&gt; float:
@@ -1767,19 +1497,7 @@ def safe_divide(a: float, b: float) -&gt; float:
 
 # Documentation
 def format_currency(amount: float, currency: str = "USD") -&gt; str:
-    """
-    Format a number as currency.
-    
-    Args:
-        amount: The amount to format
-        currency: The currency code (default: USD)
-    
-    Returns:
-        Formatted currency string
-    
-    Raises:
-        ValueError: If amount is negative
-    """
+    """Format a number as currency."""
     if amount &lt; 0:
         raise ValueError("Amount cannot be negative")
     
@@ -1863,7 +1581,6 @@ result = age + 5
 # Mistake 5: Comparing with None
 value = None
 # if value == None:  # Works but not recommended
-#     print("Is None")
 
 # Correct:
 if value is None:
@@ -1880,7 +1597,6 @@ result = " ".join(names)
 
 # Mistake 7: Floating point comparison
 # if 0.1 + 0.2 == 0.3:  # False due to precision
-#     print("Equal")
 
 # Correct:
 if abs(0.1 + 0.2 - 0.3) &lt; 1e-10:
@@ -1895,26 +1611,13 @@ try:
 except ValueError:
     number = 0
 
-# Mistake 9: Mutable default arguments
-def add_item(item, items=[]):  # Bad!
-    items.append(item)
-    return items
-
-# Correct:
-def add_item(item, items=None):
-    if items is None:
-        items = []
-    items.append(item)
-    return items
-
-# Mistake 10: String formatting
+# Mistake 9: String formatting
 name = "Alice"
 age = 25
 # print("Name: " + name + ", Age: " + age)  # TypeError
 
 # Correct:
-print(f"Name: {name}, Age: {age}")
-print("Name: {}, Age: {}".format(name, age))</code></pre>
+print(f"Name: {name}, Age: {age}")</code></pre>
 </div>
 </div>
 </div>
@@ -2013,7 +1716,6 @@ def safe_operation(value):
 text = "Hello, World!"
 print("String methods available:")
 print(dir(text))
-
 
 # Debugging complex calculations
 def calculate_grade_percentage(scores):
