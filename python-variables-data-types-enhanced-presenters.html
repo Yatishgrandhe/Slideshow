@@ -1248,19 +1248,17 @@ try:
 except (ValueError, TypeError) as e:
     print(f"Error: {e}")
 
-# Try-except-else-finally
+# Try-except-finally
 try:
     file = open("data.txt", "r")
     data = file.read()
 except FileNotFoundError:
     print("File not found")
-else:
-    print("File read successfully")
 finally:
     if 'file' in locals():
         file.close()
 
-# Custom error handling function
+# Custom error handling
 def safe_convert(value, target_type):
     try:
         if target_type == int:
@@ -1465,7 +1463,7 @@ MAX_SCORE = 100
 GAME_DURATION = 300
 
 # Data validation
-def validate_user_data(name, age, email):
+def validate_user_data(name, age):
     if not isinstance(name, str) or not name.strip():
         raise ValueError("Name must be a non-empty string")
     
@@ -1591,13 +1589,6 @@ names = ["Alice", "Bob", "Charlie"]
 
 # Correct:
 result = " ".join(names)
-
-# Mistake 7: Floating point comparison
-# if 0.1 + 0.2 == 0.3:  # False due to precision
-
-# Correct:
-if abs(0.1 + 0.2 - 0.3) &lt; 1e-10:
-    print("Equal")
 
 # Mistake 8: Not handling exceptions
 # number = int("abc")  # ValueError
@@ -1739,15 +1730,9 @@ def calculate_grade_percentage(scores):
         print(f"ZeroDivisionError: {e}")
         return 0
 
-# Testing with different inputs
-print("Test 1:")
+# Testing
 calculate_grade_percentage([85, 90, 78, 92])
-
-print("\nTest 2:")
-calculate_grade_percentage([])
-
-print("\nTest 3:")
-calculate_grade_percentage([85, "90", 78])  # Mixed types</code></pre>
+calculate_grade_percentage([])</code></pre>
 </div>
 </div>
 </div>
