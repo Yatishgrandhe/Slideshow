@@ -1583,64 +1583,7 @@ print(f"Percentage: {percentage:.2f}%")</code></pre>
 </div>
 </div>
 <div class="side-content">
-<div class="code-example">
-<div class="code-header">Final Practice Exercise</div>
-<pre><code># Complete this exercise to test your knowledge
-
-def student_grade_calculator():
-    """
-    Create a program that:
-    1. Gets student name and scores
-    2. Calculates average grade
-    3. Assigns letter grade
-    4. Handles errors gracefully
-    """
-    try:
-        # Get student information
-        name = input("Enter student name: ").strip()
-        if not name:
-            raise ValueError("Name cannot be empty")
-        
-        # Get scores
-        scores = []
-        num_scores = int(input("How many scores? "))
-        
-        for i in range(num_scores):
-            score = float(input(f"Enter score {i+1}: "))
-            if score &lt; 0 or score &gt; 100:
-                raise ValueError("Score must be between 0 and 100")
-            scores.append(score)
-        
-        # Calculate average
-        average = sum(scores) / len(scores)
-        
-        # Determine letter grade
-        if average &gt;= 90:
-            grade = "A"
-        elif average &gt;= 80:
-            grade = "B"
-        elif average &gt;= 70:
-            grade = "C"
-        elif average &gt;= 60:
-            grade = "D"
-        else:
-            grade = "F"
-        
-        # Display results
-        print(f"\nStudent: {name}")
-        print(f"Scores: {scores}")
-        print(f"Average: {average:.2f}%")
-        print(f"Grade: {grade}")
-        
-    except ValueError as e:
-        print(f"Error: {e}")
-    except ZeroDivisionError:
-        print("Error: No scores provided")
-    except Exception as e:
-        print(f"Unexpected error: {e}")
-
-# Test your skills!
-# student_grade_calculator()</code></pre>
+<!-- Removed Final Practice Exercise block -->
 </div>
 </div>
 </div>
