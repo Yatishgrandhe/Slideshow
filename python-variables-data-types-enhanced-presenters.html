@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Python Variables &amp; Data Types - Learning Hub</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Enforce readable fonts across all slides for beginners */
+        .slide-content, .slide-content *:not(code):not(pre) {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        }
+        .code-example pre, .code-example code { font-family: 'Fira Code', Consolas, Monaco, monospace !important; }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="site-brand-badge"><img src="novakinetix-logo.png" alt="Novakinetix Academy"/></div>
+<!-- Navigation -->
+<div class="slide-nav">
+<div class="slideshow-title">
+<i class="fab fa-python"></i>
+<span>Python Variables &amp; Data Types</span>
+</div>
+<div class="nav-controls">
+<button class="nav-btn home-btn" id="homeBtn" title="Back to Home">
+<i class="fas fa-home"></i>
+</button>
+<button class="nav-btn" id="prevBtn">
+<i class="fas fa-chevron-left"></i>
+</button>
+<span class="slide-counter">1 / 23</span>
+<button class="nav-btn" id="nextBtn">
+<i class="fas fa-chevron-right"></i>
+</button>
+</div>
+</div>
+<!-- Fullscreen Button -->
+<button class="fullscreen-btn" id="fullscreenBtn">
+<i class="fas fa-expand"></i>
+</button>
+<!-- Slides Wrapper -->
+<div class="slides-wrapper">
+<!-- Slide 1: Title -->
+<div class="slide active" data-slide="1">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🎓 Slide 1: Python Variables &amp; Data Types</h1>
+<p class="slide-subtitle">Beginner-friendly course for absolute starters</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;">
+  <img src="novakinetix-logo.png" alt="Novakinetix Academy" style="height:80px;width:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,0.35));"/>
+  <h2 style="margin:0;">Welcome!</h2>
+  <p style="text-align:center;max-width:800px;">In this course, you will learn how to store, transform, and understand data in Python. We keep everything simple and hands-on.</p>
+  <p style="margin-top:8px;font-weight:600;">Presenters: Shaurya Gautham and Yatish Grandhe</p>
+</div>
+<h3>What You'll Learn:</h3>
+<ul>
+<li><strong>Variables:</strong> How to store and reference data</li>
+<li><strong>Data Types:</strong> Understanding different kinds of information</li>
+<li><strong>Type Conversion:</strong> Converting between data types</li>
+<li><strong>User Input:</strong> Getting data from users</li>
+<li><strong>Best Practices:</strong> Writing clean, readable code</li>
+</ul>
+<h3>Course Structure:</h3>
+<ul><li><strong>Slides 2-6:</strong> Introduction and Setup</li><li><strong>Slides 7-8:</strong> Variables and Assignment</li><li><strong>Slide 9:</strong> String Data Type</li><li><strong>Slides 10-11:</strong> Numeric Data Types (Integers and Floats)</li><li><strong>Slide 12:</strong> Boolean Data Type</li><li><strong>Slide 13:</strong> Type Conversion</li><li><strong>Slide 14:</strong> User Input</li><li><strong>Slide 15:</strong> Mathematical Operations</li><li><strong>Slide 16:</strong> None (Null) Type</li><li><strong>Slide 17:</strong> Type Checking</li><li><strong>Slides 18-23:</strong> Error Handling, Projects, Best Practices, Common Mistakes, Debugging, Summary</li></ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Your First Python Code</div>
+<pre><code># This is your first Python program!
+ print("Hello, World!")
+ 
+ # Variables store data
+ name = "Alice"
+ age = 25
+ height = 5.6
+ 
+ # Different data types
+ text = "Python is awesome"
+ number = 42
+ decimal = 3.14
+ is_student = True
+ 
+ print(f"Name: {name}")
+ print(f"Age: {age}")
+ print(f"Height: {height}")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2: What is Python? -->
+<div class="slide" data-slide="2">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🐍 Slide 2: What is Python?</h1>
+<p class="slide-subtitle">Understanding Python Programming Language</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>What is Python?</h2>
+<p>Python is a high-level, interpreted programming language created by Guido van Rossum in 1991. It's designed to be readable, simple, and powerful - making it perfect for beginners and experts alike.</p>
+<h3>Key Features of Python:</h3>
+<ul>
+<li><strong>Readable Syntax:</strong> Python code reads almost like English</li>
+<li><strong>Interpreted Language:</strong> Code runs directly without compilation</li>
+<li><strong>Cross-Platform:</strong> Works on Windows, Mac, and Linux</li>
+<li><strong>Extensive Libraries:</strong> Thousands of pre-built modules</li>
+<li><strong>Dynamic Typing:</strong> Variables can change types automatically</li>
+</ul>
+<h3>Why Python is Popular:</h3>
+<ul>
+<li><strong>Web Development:</strong> Django, Flask frameworks</li>
+<li><strong>Data Science:</strong> Pandas, NumPy, Matplotlib</li>
+<li><strong>Machine Learning:</strong> TensorFlow, Scikit-learn</li>
+<li><strong>Automation:</strong> Scripting and task automation</li>
+<li><strong>Game Development:</strong> Pygame library</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Python vs Other Languages</div>
+<pre><code># Python (Simple and Readable)
+name = "Alice"
+age = 25
+print(f"Hello {name}, you are {age} years old")
+
+# Java (More Verbose)
+String name = "Alice";
+int age = 25;
+System.out.println("Hello " + name + 
+                  ", you are " + age + " years old");
+
+# C++ (Even More Complex)
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+int main() {
+    std::string name = "Alice";
+    int age = 25;
+    std::cout &lt;&lt; "Hello " &lt;&lt; name 
+              &lt;&lt; ", you are " &lt;&lt; age 
+              &lt;&lt; " years old" &lt;&lt; std::endl;
+    return 0;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3: Setting Up Python -->
+<div class="slide" data-slide="3">
+<div class="slide-content">
+<div class="slide-header">
+<h1>⚙️ Slide 3: Setting Up Your Environment (Replit)</h1>
+<p class="slide-subtitle">Getting Ready to Code in the Browser</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Set Up with Replit (Recommended)</h2>
+<p>You can start coding in Python instantly using Replit — no installation required.</p>
+<h3>Steps:</h3>
+<ol>
+<li>Go to <a href="https://replit.com" rel="noopener" target="_blank">replit.com</a> and sign in or create a free account</li>
+<li>Click <strong>Create Repl</strong> and choose <strong>Python</strong></li>
+<li>Name your project (for example, <code>python-basics</code>)</li>
+<li>Click <strong>Run</strong> to execute code right in your browser</li>
+</ol>
+<div style="margin-top: 16px;">
+<a class="replit-cta" href="https://replit.com/new/python" rel="noopener" style="display:inline-block;padding:10px 16px;background:#667eea;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;" target="_blank">
+<i class="fas fa-external-link-alt" style="margin-right:8px;"></i>
+                                            Open Replit (Python)
+                                        </a>
+</div>
+<p style="margin-top:12px;color:#6b7280;">
+                                        Prefer offline/local setup? You can still install Python from <a href="https://python.org" rel="noopener" target="_blank">python.org</a> and use an editor like VS Code.
+                                    </p>
+<h3 style="margin-top:18px;">Other IDEs (Local/Offline)</h3>
+<ul>
+<li><strong>VS Code</strong>: Free and extensible editor. Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" rel="noopener" target="_blank">Python extension</a> for linting, debugging, and virtual environments. Download at <a href="https://code.visualstudio.com/" rel="noopener" target="_blank">code.visualstudio.com</a>.</li>
+<li><strong>PyCharm</strong>: Full-featured Python IDE (Community Edition is free). Great for larger projects and advanced debugging. Download at <a href="https://www.jetbrains.com/pycharm/download/" rel="noopener" target="_blank">jetbrains.com/pycharm</a>.</li>
+<li><strong>IDLE</strong>: Simple editor that comes bundled with Python. Good for quick scripts and learning without extra setup.</li>
+<li><strong>Jupyter Notebook/Lab</strong>: Ideal for data science and exploratory coding. Install with <code>pip install jupyterlab</code> and run with <code>jupyter lab</code>, or use <a href="https://www.anaconda.com/download" rel="noopener" target="_blank">Anaconda</a>.</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Run this in Replit</div>
+<pre><code># Click the green Run button in Replit to execute this code
+print("Hello from Replit!")
+
+# Try editing and running again
+name = input("What's your name? ")
+print(f"Welcome to Python, {name}!")
+
+# Do a quick calculation
+a = 7
+b = 5
+print(f"{a} + {b} = {a + b}")
+
+# Output:
+# Hello from Replit!
+# Welcome to Python, Alice!
+# 7 + 5 = 12</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4: Your First Python Program -->
+<div class="slide" data-slide="4">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🚀 Slide 4: Your First Python Program</h1>
+<p class="slide-subtitle">Writing and Running Code</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Writing Your First Python Program</h2>
+<p>Let's create your very first Python program! We'll start with the classic "Hello, World!" program and then build from there.</p>
+<h3>Creating a Python File:</h3>
+<ol>
+<li>Open your text editor</li>
+<li>Create a new file</li>
+<li>Save it as <code>hello.py</code></li>
+<li>Write your code</li>
+<li>Run the program</li>
+</ol>
+<h3>Running Python Code:</h3>
+<ul>
+<li><strong>Interactive Mode:</strong> Type commands directly in Python shell</li>
+<li><strong>Script Mode:</strong> Save code in a file and run it</li>
+<li><strong>IDE Mode:</strong> Use an integrated development environment</li>
+</ul>
+<h3>Best Practices:</h3>
+<ul>
+<li>Use meaningful file names</li>
+<li>Add comments to explain your code</li>
+<li>Test your code frequently</li>
+<li>Keep your code organized</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Your First Program</div>
+<pre><code># hello.py - Your first Python program
+
+# This is a comment - it explains what the code does
+print("Hello, World!")
+
+# Let's add some more functionality
+name = "Python Learner"
+print(f"Welcome to Python, {name}!")
+
+# Simple calculation
+x = 5
+y = 3
+sum = x + y
+print(f"The sum of {x} and {y} is {sum}")
+
+# Running this program:
+# python hello.py</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 5: Understanding Comments -->
+<div class="slide" data-slide="5">
+<div class="slide-content">
+<div class="slide-header">
+<h1>💬 Slide 5: Understanding Comments</h1>
+<p class="slide-subtitle">Documenting Your Code</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Comments in Python</h2>
+<p>Comments are essential for writing readable and maintainable code. They help you and others understand what your code does.</p>
+<h3>Types of Comments:</h3>
+<ul>
+<li><strong>Single-line Comments:</strong> Start with <code>#</code></li>
+<li><strong>Multi-line Comments:</strong> Use triple quotes <code>"""</code></li>
+<li><strong>Docstrings:</strong> Special comments for functions and classes</li>
+</ul>
+<h3>When to Use Comments:</h3>
+<ul>
+<li>Explain complex logic</li>
+<li>Document function purposes</li>
+<li>Provide context for calculations</li>
+<li>Note important decisions</li>
+<li>Temporarily disable code</li>
+</ul>
+<h3>Comment Best Practices:</h3>
+<ul>
+<li>Write clear, concise comments</li>
+<li>Explain "why" not "what"</li>
+<li>Keep comments up to date</li>
+<li>Use proper grammar and spelling</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Comment Examples</div>
+<pre><code># This is a single-line comment
+name = "Alice"  # This comment is on the same line
+
+# Multi-line comment using #
+# This program calculates the area of a rectangle
+# It takes length and width as inputs
+# Returns the calculated area
+
+"""
+This is a multi-line comment using triple quotes.
+It can span multiple lines and is often used for
+documentation at the top of files.
+"""
+
+def calculate_area(length, width):
+    """
+    Calculate the area of a rectangle.
+    
+    Args:
+        length (float): Length of rectangle
+        width (float): Width of rectangle
+        
+    Returns:
+        float: Area of rectangle
+    """
+    area = length * width  # Calculate area
+    return area
+
+# Bad comment (explains what, not why):
+x = x + 1  # Add 1 to x
+
+# Good comment (explains why):
+x = x + 1  # Increment counter for next iteration</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 6: Introduction to Variables -->
+<div class="slide" data-slide="6">
+<div class="slide-content">
+<div class="slide-header">
+<h1>📦 Slide 6: Introduction to Variables</h1>
+<p class="slide-subtitle">Storing Data in Python</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>What are Variables?</h2>
+<p>Variables are containers that store data in your program. Think of them as labeled boxes where you can put different types of information.</p>
+<h3>Variable Characteristics:</h3>
+<ul>
+<li><strong>Names:</strong> Descriptive labels for your data</li>
+<li><strong>Values:</strong> The actual data stored</li>
+<li><strong>Types:</strong> The kind of data (text, numbers, etc.)</li>
+<li><strong>Mutability:</strong> Can be changed or updated</li>
+</ul>
+<h3>Core Data Types (Preview):</h3>
+<ul>
+<li><strong>str</strong>: Text like <code>"hello"</code></li>
+<li><strong>int</strong>: Whole numbers like <code>42</code></li>
+<li><strong>float</strong>: Decimal numbers like <code>3.14</code></li>
+<li><strong>bool</strong>: Logical values <code>True</code>/<code>False</code></li>
+<li><strong>NoneType</strong>: Special “no value” marker <code>None</code></li>
+</ul>
+<h3>Variable Naming Rules:</h3>
+<ul>
+<li>Start with a letter or underscore</li>
+<li>Can contain letters, numbers, and underscores</li>
+<li>Case-sensitive (age ≠ Age)</li>
+<li>Cannot use Python keywords</li>
+<li>Use descriptive names</li>
+</ul>
+<h3>Good vs Bad Variable Names:</h3>
+<ul>
+<li><strong>Good:</strong> user_name, total_price, is_active</li>
+<li><strong>Bad:</strong> x, a, temp, data</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Variable Examples</div>
+<pre><code># Creating variables
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+# Printing variables
+print(name)        # Alice
+print(age)         # 25
+print(height)      # 5.6
+print(is_student)  # True
+
+# Variable naming examples
+user_name = "Bob"      # Good - descriptive
+total_score = 100      # Good - clear purpose
+is_logged_in = False   # Good - boolean naming
+
+# Bad examples (don't do this):
+x = "Alice"           # Too vague
+a = 25               # Not descriptive
+temp = True          # Unclear purpose
+
+# Checking variable types
+print(type(name))      # &lt;class 'str'&gt;
+print(type(age))       # &lt;class 'int'&gt;
+print(type(height))    # &lt;class 'float'&gt;
+print(type(is_student)) # &lt;class 'bool'&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 7: Variable Assignment -->
+<div class="slide" data-slide="7">
+<div class="slide-content">
+<div class="slide-header">
+<h1>📝 Slide 7: Variable Assignment</h1>
+<p class="slide-subtitle">How to Assign Values to Variables</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Variable Assignment in Python</h2>
+<p>Assignment is the process of giving a value to a variable. Python uses the equals sign (=) for assignment.</p>
+<h3>Assignment Syntax:</h3>
+<ul>
+<li><code>variable_name = value</code></li>
+<li>The equals sign assigns the value on the right to the variable on the left</li>
+<li>You can assign multiple variables at once</li>
+<li>Variables can be reassigned with new values</li>
+</ul>
+<h3>Assignment Types:</h3>
+<ul>
+<li><strong>Simple Assignment:</strong> One variable, one value</li>
+<li><strong>Multiple Assignment:</strong> Multiple variables at once</li>
+<li><strong>Chained Assignment:</strong> Same value to multiple variables</li>
+<li><strong>Augmented Assignment:</strong> Modify existing value</li>
+</ul>
+<h3>Important Notes:</h3>
+<ul>
+<li>Variables must be assigned before use</li>
+<li>Assignment creates a reference to the value</li>
+<li>Python is dynamically typed</li>
+<li>Variables can change types</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Assignment Examples</div>
+<pre><code># Simple assignment
+name = "Alice"
+age = 25
+price = 19.99
+
+# Multiple assignment
+x, y, z = 1, 2, 3
+print(x, y, z)  # 1 2 3
+
+# Chained assignment
+a = b = c = 0
+print(a, b, c)  # 0 0 0
+
+# Reassignment
+age = 25
+print(age)  # 25
+age = 26    # Reassigning
+print(age)  # 26
+
+# Augmented assignment
+count = 5
+count += 1      # Same as count = count + 1
+print(count)    # 6
+
+count -= 2      # Same as count = count - 2
+print(count)    # 4
+
+count *= 3      # Same as count = count * 3
+print(count)    # 12
+
+# Dynamic typing
+variable = "Hello"
+print(type(variable))  # &lt;class 'str'&gt;
+
+variable = 42
+print(type(variable))  # &lt;class 'int'&gt;
+
+variable = 3.14
+print(type(variable))  # &lt;class 'float'&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 8: String Data Type -->
+<div class="slide" data-slide="8">
+<div class="slide-content">
+<div class="slide-header">
+<h1>📝 Slide 8: String Data Type</h1>
+<p class="slide-subtitle">Working with Text in Python</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Strings in Python</h2>
+<p>Strings are sequences of characters used to represent text. They are one of the most commonly used data types in Python.</p>
+<h3>Creating Strings:</h3>
+<ul>
+<li><strong>Single Quotes:</strong> <code>'Hello'</code></li>
+<li><strong>Double Quotes:</strong> <code>"Hello"</code></li>
+<li><strong>Triple Quotes:</strong> <code>"""Multi-line"""</code></li>
+<li><strong>Escape Characters:</strong> <code>\n, \t, \\</code></li>
+</ul>
+<h3>String Properties:</h3>
+<ul>
+<li><strong>Immutable:</strong> Cannot be changed after creation</li>
+<li><strong>Indexed:</strong> Access characters by position</li>
+<li><strong>Sliced:</strong> Extract portions of strings</li>
+<li><strong>Concatenated:</strong> Combined with + operator</li>
+</ul>
+<h3>Common String Operations:</h3>
+<ul>
+<li>Length: <code>len(string)</code></li>
+<li>Case conversion: <code>upper(), lower()</code></li>
+<li>Replacement: <code>replace()</code></li>
+<li>Splitting: <code>split()</code></li>
+</ul>
+<h3>Common Pitfalls:</h3>
+<ul>
+<li>Strings are <strong>immutable</strong> — methods return new strings</li>
+<li>Concatenating numbers requires conversion: <code>str(42)</code></li>
+<li>Indexes start at 0; out-of-range raises <code>IndexError</code></li>
+<li>Use raw strings <code>r"\n"</code> to avoid escape processing when needed</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">String Examples</div>
+<pre><code># Creating strings
+name = "Alice"
+message = 'Hello, World!'
+multi_line = """This is a
+multi-line string"""
+
+# String indexing (starts at 0)
+text = "Python"
+print(text[0])    # P
+print(text[1])    # y
+print(text[-1])   # n (last character)
+
+# String slicing
+print(text[0:3])  # Pyt
+print(text[:3])   # Pyt
+print(text[3:])   # hon
+print(text[::2])  # Pto (every 2nd character)
+
+# String concatenation
+first = "Hello"
+second = "World"
+result = first + " " + second
+print(result)  # Hello World
+
+# String methods
+text = "  Python Programming  "
+print(text.upper())      # PYTHON PROGRAMMING
+print(text.lower())      # python programming
+print(text.strip())      # Python Programming
+print(text.replace("Python", "Java"))
+
+# String formatting
+name = "Alice"
+age = 25
+print(f"{name} is {age} years old")
+print("{} is {} years old".format(name, age))</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 9: String Methods -->
+<!-- Slide 10: String Formatting -->
+<!-- Slide 11: Integer Data Type -->
+<div class="slide" data-slide="9">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🔢 Slide 9: Integer Data Type</h1>
+<p class="slide-subtitle">Working with Whole Numbers</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Integers in Python</h2>
+<p>Integers are whole numbers (positive, negative, or zero) without decimal points. They're used for counting, indexing, and mathematical operations.</p>
+<h3>Integer Characteristics:</h3>
+<ul>
+<li><strong>No Size Limit:</strong> Python 3 has unlimited precision</li>
+<li><strong>No Decimal Points:</strong> Whole numbers only</li>
+<li><strong>Can be Negative:</strong> -1, -100, -999</li>
+<li><strong>Base Representations:</strong> Decimal, binary, octal, hex</li>
+</ul>
+<h3>Creating Integers:</h3>
+<ul>
+<li><strong>Direct Assignment:</strong> <code>age = 25</code></li>
+<li><strong>From Strings:</strong> <code>int("42")</code></li>
+<li><strong>From Floats:</strong> <code>int(3.14)</code></li>
+<li><strong>Mathematical Operations:</strong> <code>5 + 3</code></li>
+</ul>
+<h3>Integer Operations:</h3>
+<ul>
+<li><strong>Arithmetic:</strong> +, -, *, /, //, %, **</li>
+<li><strong>Comparison:</strong> ==, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+</ul>
+<h3>Common Pitfalls:</h3>
+<ul>
+<li><code>/</code> returns float; use <code>//</code> for integer division</li>
+<li>Modulus <code>%</code> follows sign of the divisor in Python</li>
+<li>Beware integer overflow is not an issue in Python 3 (arbitrary precision), but performance can degrade for very large ints</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Integer Examples</div>
+<pre><code># Creating integers
+age = 25
+count = 0
+negative = -10
+large_number = 123456789
+
+# Integer operations
+a = 10
+b = 3
+print(a + b)   # 13 (addition)
+print(a - b)   # 7 (subtraction)
+print(a * b)   # 30 (multiplication)
+print(a / b)   # 3.333... (division - returns float)
+print(a // b)  # 3 (floor division)
+print(a % b)   # 1 (remainder)
+print(a ** b)  # 1000 (exponentiation)
+
+# Integer conversion
+string_number = "42"
+integer_number = int(string_number)
+print(integer_number)  # 42
+
+float_number = 3.14
+integer_from_float = int(float_number)
+print(integer_from_float)  # 3
+
+# Large integers (no limit in Python 3)
+big_number = 2 ** 100
+print(big_number)  # 1267650600228229401496703205376
+
+# Different number bases
+binary = 0b1010    # Binary: 10
+octal = 0o12       # Octal: 10
+hexadecimal = 0xA   # Hex: 10
+print(binary, octal, hexadecimal)  # 10 10 10</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 12: Float Data Type -->
+<div class="slide" data-slide="10">
+<div class="slide-content">
+<div class="slide-header">
+<h1>📊 Slide 10: Float Data Type</h1>
+<p class="slide-subtitle">Working with Decimal Numbers</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Floats in Python</h2>
+<p>Floats represent decimal numbers and are used for precise calculations, measurements, and scientific computations.</p>
+<h3>Float Characteristics:</h3>
+<ul>
+<li><strong>Decimal Points:</strong> Always have decimal representation</li>
+<li><strong>Precision:</strong> Limited by hardware (usually 15-17 digits)</li>
+<li><strong>Scientific Notation:</strong> 1.23e-4 for very large/small numbers</li>
+<li><strong>Floating Point Errors:</strong> Due to binary representation</li>
+</ul>
+<h3>Creating Floats:</h3>
+<ul>
+<li><strong>Direct Assignment:</strong> <code>pi = 3.14159</code></li>
+<li><strong>From Strings:</strong> <code>float("3.14")</code></li>
+<li><strong>From Integers:</strong> <code>float(42)</code></li>
+<li><strong>Division:</strong> <code>10 / 3</code></li>
+</ul>
+<h3>Float Operations:</h3>
+<ul>
+<li><strong>Arithmetic:</strong> Same as integers</li>
+<li><strong>Math Module:</strong> Helpful extra math functions</li>
+<li><strong>Rounding:</strong> <code>round(), math.floor(), math.ceil()</code></li>
+<li><strong>Formatting:</strong> Control decimal places</li>
+</ul>
+<h3>Common Pitfalls:</h3>
+<ul>
+<li>Floating point precision errors (e.g., <code>0.1 + 0.2</code>)</li>
+<li>Use <code>decimal.Decimal</code> for exact decimal arithmetic when needed</li>
+<li>Be careful with equality checks; prefer tolerance checks using <code>math.isclose()</code></li>
+</ul>
+<h3>Related Numeric Types:</h3>
+<ul>
+<!-- Removed complex numbers for beginner focus -->
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Float Examples</div>
+<pre><code># Creating floats
+pi = 3.14159
+price = 19.99
+temperature = -5.5
+scientific = 1.23e-4
+
+# Float operations
+a = 10.5
+b = 3.2
+print(a + b)   # 13.7
+print(a - b)   # 7.3
+print(a * b)   # 33.6
+print(a / b)   # 3.28125
+
+# Scientific notation
+large = 1.23e6    # 1,230,000
+small = 1.23e-6   # 0.00000123
+print(large, small)
+
+# Float conversion
+string_float = "3.14"
+float_number = float(string_float)
+print(float_number)  # 3.14
+
+integer_to_float = float(42)
+print(integer_to_float)  # 42.0
+
+# Floating point precision
+result = 0.1 + 0.2
+print(result)  # 0.30000000000000004 (precision error)
+
+# Using math module
+import math
+print(math.pi)           # 3.141592653589793
+print(math.floor(3.7))   # 3
+print(math.ceil(3.2))    # 4
+print(round(3.14159, 2)) # 3.14
+
+# Formatting floats
+price = 19.99
+print(f"Price: ${price:.2f}")  # Price: $19.99
+print(f"Price: ${price:&gt;10.2f}")  # Right-aligned</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 13: Boolean Data Type -->
+<div class="slide" data-slide="11">
+<div class="slide-content">
+<div class="slide-header">
+<h1>✅ Slide 11: Boolean Data Type</h1>
+<p class="slide-subtitle">True and False Values</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Booleans in Python</h2>
+<p>Booleans represent logical values: True and False. They're essential for decision-making and control flow in programs.</p>
+<h3>Boolean Values:</h3>
+<ul>
+<li><strong>True:</strong> Represents truth, yes, on</li>
+<li><strong>False:</strong> Represents falsehood, no, off</li>
+<li><strong>Case Sensitive:</strong> Must be capitalized</li>
+<li><strong>Subclass of int:</strong> True = 1, False = 0</li>
+</ul>
+<h3>Boolean Operations:</h3>
+<ul>
+<li><strong>and:</strong> Both conditions must be True</li>
+<li><strong>or:</strong> At least one condition must be True</li>
+<li><strong>not:</strong> Inverts the boolean value</li>
+<li><strong>Comparison:</strong> ==, !=, &lt;, &gt;, &lt;=, &gt;=</li>
+</ul>
+<h3>Truthy and Falsy Values:</h3>
+<ul>
+<li><strong>Falsy:</strong> False, 0, "", None, [], (), {}</li>
+<li><strong>Truthy:</strong> Everything else</li>
+<li><strong>bool():</strong> Convert any value to boolean</li>
+</ul>
+<h3>Common Pitfalls:</h3>
+<ul>
+<li>Remember <code>True</code>/<code>False</code> must be capitalized</li>
+<li><code>and</code>/<code>or</code> return one of the operands, not strictly booleans</li>
+<li>Empty containers are falsy; non-empty are truthy</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Boolean Examples</div>
+<pre><code># Creating booleans
+is_active = True
+is_logged_in = False
+has_permission = True
+
+# Boolean operations
+a = True
+b = False
+print(a and b)   # False
+print(a or b)    # True
+print(not a)     # False
+print(not b)     # True
+
+# Comparison operators
+age = 25
+is_adult = age &gt;= 18
+print(is_adult)  # True
+
+# Complex boolean expressions
+name = "Alice"
+age = 25
+is_valid = name != "" and age &gt;= 18
+print(is_valid)  # True
+
+# Truthy and falsy values
+print(bool(0))       # False
+print(bool(1))       # True
+print(bool(""))      # False
+print(bool("Hello")) # True
+print(bool([]))      # False
+print(bool([1, 2]))  # True
+print(bool(None))    # False
+
+# Boolean conversion
+print(int(True))   # 1
+print(int(False))  # 0
+print(float(True)) # 1.0
+
+# Practical examples
+user_age = 20
+has_license = True
+can_drive = user_age &gt;= 16 and has_license
+print(f"Can drive: {can_drive}")  # Can drive: True
+
+# Short-circuit evaluation
+name = ""
+age = 25
+# This won't cause an error because of short-circuit
+is_valid = name and len(name) &gt; 0 and age &gt;= 18
+print(is_valid)  # False</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 14: Type Conversion -->
+<div class="slide" data-slide="12">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🔄 Slide 12: Type Conversion</h1>
+<p class="slide-subtitle">Converting Between Data Types</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Type Conversion in Python</h2>
+<p>Type conversion (casting) allows you to convert values from one data type to another. This is essential when working with different types of data.</p>
+<h3>Conversion Functions:</h3>
+<ul>
+<li><code>int()</code> - Convert to integer</li>
+<li><code>float()</code> - Convert to float</li>
+<li><code>str()</code> - Convert to string</li>
+<li><code>bool()</code> - Convert to boolean</li>
+<li><code>list()</code> - Convert to list</li>
+</ul>
+<h3>Conversion Rules:</h3>
+<ul>
+<li><strong>String to Number:</strong> Must contain valid number</li>
+<li><strong>Float to Int:</strong> Truncates decimal part</li>
+<li><strong>Number to String:</strong> Always possible</li>
+<li><strong>Boolean Conversion:</strong> Based on truthiness</li>
+</ul>
+<h3>Common Conversion Scenarios:</h3>
+<ul>
+<li>User input (always string)</li>
+<li>Mathematical calculations</li>
+<li>Data validation</li>
+<li>Formatting output</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Type Conversion Examples</div>
+<pre><code># String to number
+age_string = "25"
+age_int = int(age_string)
+print(age_int)  # 25
+
+price_string = "19.99"
+price_float = float(price_string)
+print(price_float)  # 19.99
+
+# Number to string
+age = 25
+age_string = str(age)
+print(age_string)  # "25"
+print(type(age_string))  # &lt;class 'str'&gt;
+
+# Float to int
+pi_float = 3.14159
+pi_int = int(pi_float)
+print(pi_int)  # 3
+
+# Boolean conversion
+print(int(True))   # 1
+print(int(False))  # 0
+print(float(True)) # 1.0
+print(str(True))   # "True"
+
+# Truthy/falsy conversion
+print(bool(0))       # False
+print(bool(1))       # True
+print(bool(""))      # False
+print(bool("Hello")) # True
+print(bool([]))      # False
+print(bool([1, 2]))  # True
+
+# Error handling for conversion
+try:
+    invalid_number = int("abc")
+except ValueError:
+    print("Cannot convert 'abc' to integer")
+
+# Practical example
+user_input = "42"
+if user_input.isdigit():
+    number = int(user_input)
+    print(f"Valid number: {number}")
+else:
+    print("Invalid number format")
+
+# Complex conversion
+mixed_data = ["25", "3.14", "True", "Hello"]
+converted = []
+for item in mixed_data:
+    try:
+        if "." in item:
+            converted.append(float(item))
+        elif item.isdigit():
+            converted.append(int(item))
+        elif item in ["True", "False"]:
+            converted.append(bool(item))
+        else:
+            converted.append(item)
+    except ValueError:
+        converted.append(item)
+
+print(converted)  # [25, 3.14, True, 'Hello']</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 15: User Input -->
+<div class="slide" data-slide="13">
+<div class="slide-content">
+<div class="slide-header">
+<h1>📥 Slide 13: User Input</h1>
+<p class="slide-subtitle">Getting Data from Users</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Getting User Input in Python</h2>
+<p>The <code>input()</code> function allows your program to get data from users. All input is received as a string and must be converted to the desired type.</p>
+<h3>input() Function:</h3>
+<ul>
+<li><strong>Syntax:</strong> <code>input(prompt)</code></li>
+<li><strong>Returns:</strong> Always a string</li>
+<li><strong>Prompt:</strong> Optional message to display</li>
+<li><strong>Blocking:</strong> Program waits for user input</li>
+</ul>
+<h3>Input Best Practices:</h3>
+<ul>
+<li>Always provide clear prompts</li>
+<li>Validate user input</li>
+<li>Handle conversion errors</li>
+<li>Provide helpful error messages</li>
+<li>Use try-except for error handling</li>
+</ul>
+<h3>Common Input Patterns:</h3>
+<ul>
+<li>Text input for names, messages</li>
+<li>Numeric input for calculations</li>
+<li>Boolean input for yes/no questions</li>
+<li>Multiple inputs for forms</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">User Input Examples</div>
+<pre><code># Basic input
+name = input("What is your name? ")
+print(f"Hello, {name}!")
+
+# Numeric input with conversion
+age_string = input("What is your age? ")
+try:
+    age = int(age_string)
+    print(f"You are {age} years old")
+except ValueError:
+    print("Please enter a valid number")
+
+# Float input
+height_string = input("What is your height in meters? ")
+try:
+    height = float(height_string)
+    print(f"Your height is {height:.2f} meters")
+except ValueError:
+    print("Please enter a valid number")
+
+# Boolean input
+response = input("Are you a student? (yes/no): ").lower()
+is_student = response in ['yes', 'y', 'true']
+print(f"Student status: {is_student}")
+
+# Multiple inputs
+print("Enter your personal information:")
+name = input("Name: ")
+age = input("Age: ")
+city = input("City: ")
+
+try:
+    age_int = int(age)
+    print(f"Name: {name}")
+    print(f"Age: {age_int}")
+    print(f"City: {city}")
+except ValueError:
+    print("Invalid age format")
+
+# Input validation function
+def get_valid_number(prompt, min_val=None, max_val=None):
+    while True:
+        try:
+            value = float(input(prompt))
+            if min_val is not None and value &lt; min_val:
+                print(f"Value must be at least {min_val}")
+                continue
+            if max_val is not None and value &gt; max_val:
+                print(f"Value must be at most {max_val}")
+                continue
+            return value
+        except ValueError:
+            print("Please enter a valid number")
+
+# Usage
+score = get_valid_number("Enter your test score (0-100): ", 0, 100)
+print(f"Your score: {score}")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 16: Advanced String Operations -->
+<!-- Slide 17: Mathematical Operations -->
+<div class="slide" data-slide="14">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🧮 Slide 14: Mathematical Operations</h1>
+<p class="slide-subtitle">Working with Numbers</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Mathematical Operations in Python</h2>
+<p>Python provides comprehensive mathematical capabilities through built-in operators and the math module.</p>
+<h3>Basic Arithmetic Operators:</h3>
+<ul>
+<li><strong>Addition:</strong> <code>+</code></li>
+<li><strong>Subtraction:</strong> <code>-</code></li>
+<li><strong>Multiplication:</strong> <code>*</code></li>
+<li><strong>Division:</strong> <code>/</code> (always returns float)</li>
+<li><strong>Floor Division:</strong> <code>//</code> (returns integer)</li>
+<li><strong>Modulo:</strong> <code>%</code> (remainder)</li>
+<li><strong>Exponentiation:</strong> <code>**</code></li>
+</ul>
+<h3>Math Module Functions:</h3>
+<ul>
+<li><code>math.sqrt()</code> - Square root</li>
+<li><code>pow()</code> or <code>**</code> - Power function</li>
+<li><code>math.floor()</code> - Round down</li>
+<li><code>math.ceil()</code> - Round up</li>
+<li><code>math.abs()</code> - Absolute value</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Math Operations Examples</div>
+<pre><code># Basic arithmetic
+a = 10
+b = 3
+print(f"Addition: {a + b}")        # 13
+print(f"Subtraction: {a - b}")      # 7
+print(f"Multiplication: {a * b}")   # 30
+print(f"Division: {a / b}")         # 3.333...
+print(f"Floor division: {a // b}")  # 3
+print(f"Modulo: {a % b}")          # 1
+print(f"Power: {a ** b}")          # 1000
+
+# Math helpers
+import math
+print(f"Square root of 16: {math.sqrt(16)}")  # 4.0
+print(f"2 to the power 3: {2 ** 3}") # 8
+print(f"Floor of 3.7: {math.floor(3.7)}")    # 3
+print(f"Ceiling of 3.2: {math.ceil(3.2)}")   # 4
+
+# Complex calculations
+radius = 5
+area = math.pi * radius ** 2
+print(f"Circle area: {area:.2f}")
+
+# Order of operations
+result = 2 + 3 * 4
+print(f"2 + 3 * 4 = {result}")  # 14 (multiplication first)
+
+result = (2 + 3) * 4
+print(f"(2 + 3) * 4 = {result}")  # 20 (parentheses first)
+
+# Practical example: Temperature conversion
+celsius = 25
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 18: Working with None -->
+<div class="slide" data-slide="15">
+<div class="slide-content">
+<div class="slide-header">
+<h1>❌ Slide 15: Working with None</h1>
+<p class="slide-subtitle">Understanding the Null Value</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>None in Python</h2>
+<p>None is a special value in Python that represents the absence of a value or a null value. It's commonly used to indicate that a variable has no meaningful value.</p>
+<h3>None Characteristics:</h3>
+<ul>
+<li><strong>Singleton:</strong> Only one None object exists</li>
+<li><strong>Falsy:</strong> Evaluates to False in boolean context</li>
+<li><strong>Type:</strong> Has its own type (NoneType)</li>
+<li><strong>Comparisons:</strong> Use <code>is</code> or <code>is not</code></li>
+</ul>
+<h3>Common Uses of None:</h3>
+<ul>
+<li>Default function parameters</li>
+<li>Return value for functions that don't return anything</li>
+<li>Initializing variables before assignment</li>
+<li>Checking if a value exists</li>
+<li>Optional function parameters</li>
+</ul>
+<h3>Best Practices:</h3>
+<ul>
+<li>Use <code>is None</code> instead of <code>== None</code></li>
+<li>Check for None before using a value</li>
+<li>Document when functions can return None</li>
+<li>Use None for optional parameters</li>
+</ul>
+<h3>Common Pitfalls:</h3>
+<ul>
+<li>Using <code>== None</code> instead of <code>is None</code> for identity checks</li>
+<li>Confusing empty values (like <code>""</code>, <code>[]</code>, <code>{}</code>) with <code>None</code></li>
+<li>Not handling possible <code>None</code> return values from functions</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">None Examples</div>
+<pre><code># Creating None
+empty_value = None
+print(empty_value)  # None
+print(type(empty_value))  # &lt;class 'NoneType'&gt;
+
+# None comparisons
+x = None
+print(x is None)      # True
+print(x == None)      # True (but not recommended)
+print(x is not None)  # False
+
+# None in boolean context
+print(bool(None))     # False
+if None:
+    print("This won't print")
+
+# Function returning None
+def greet(name):
+    if name:
+        print(f"Hello, {name}!")
+    # No return statement = returns None
+
+result = greet("Alice")
+print(result)  # None
+
+# Default parameters
+def create_user(name, age=None):
+    user = {"name": name}
+    if age is not None:
+        user["age"] = age
+    return user
+
+user1 = create_user("Alice")
+user2 = create_user("Bob", 25)
+print(user1)  # {'name': 'Alice'}
+print(user2)  # {'name': 'Bob', 'age': 25}
+
+# Checking for None
+def process_data(data):
+    if data is None:
+        print("No data provided")
+        return
+    
+    print(f"Processing: {data}")
+
+process_data(None)      # No data provided
+process_data("Hello")   # Processing: Hello
+
+# None vs empty values
+empty_string = ""
+empty_list = []
+none_value = None
+
+print(bool(empty_string))  # False
+print(bool(empty_list))    # False
+print(bool(none_value))    # False
+
+# But they're different types
+print(type(empty_string))  # &lt;class 'str'&gt;
+print(type(empty_list))    # &lt;class 'list'&gt;
+print(type(none_value))    # &lt;class 'NoneType'&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 19: Type Checking -->
+<div class="slide" data-slide="16">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🔍 Slide 16: Type Checking</h1>
+<p class="slide-subtitle">Understanding Data Types</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Type Checking in Python</h2>
+<p>Python provides several ways to check the type of variables and ensure data integrity in your programs.</p>
+<h3>Type Checking Methods:</h3>
+<ul>
+<li><code>type()</code> - Get the type of an object</li>
+<li><code>isinstance()</code> - Check if object is instance of type</li>
+<li><code>hasattr()</code> - Check if object has attribute</li>
+<li><code>callable()</code> - Check if object is callable</li>
+</ul>
+<h3>Built-in Type Functions:</h3>
+<ul>
+<li><code>isinstance(obj, type)</code> - Check specific type</li>
+<li><code>isinstance(obj, (type1, type2))</code> - Check multiple types</li>
+<li><code>issubclass(class, parent)</code> - Check inheritance</li>
+</ul>
+<h3>Type Checking Best Practices:</h3>
+<ul>
+<li>Use <code>isinstance()</code> instead of <code>type()</code></li>
+<li>Check for multiple types when needed</li>
+<li>Handle type errors gracefully</li>
+<li>Document expected types</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Type Checking Examples</div>
+<pre><code># Using type()
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+print(type(name))       # &lt;class 'str'&gt;
+print(type(age))        # &lt;class 'int'&gt;
+print(type(height))     # &lt;class 'float'&gt;
+print(type(is_student)) # &lt;class 'bool'&gt;
+
+# Using isinstance()
+print(isinstance(name, str))       # True
+print(isinstance(age, int))        # True
+print(isinstance(height, float))   # True
+print(isinstance(is_student, bool)) # True
+
+# Checking multiple types
+value = 42
+print(isinstance(value, (int, float)))  # True
+print(isinstance(value, (str, list)))   # False
+
+# Type checking in functions
+def process_number(value):
+    if isinstance(value, (int, float)):
+        return value * 2
+    else:
+        raise TypeError("Value must be a number")
+
+try:
+    result = process_number(10)
+    print(result)  # 20
+except TypeError as e:
+    print(f"Error: {e}")
+
+# Checking for specific types
+def validate_user_data(name, age, email):
+    if not isinstance(name, str):
+        raise TypeError("Name must be a string")
+    
+    if not isinstance(age, int):
+        raise TypeError("Age must be an integer")
+    
+    if not isinstance(email, str):
+        raise TypeError("Email must be a string")
+    
+    return True
+
+# Using hasattr()
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+person = Person("Alice")
+print(hasattr(person, 'name'))     # True
+print(hasattr(person, 'age'))      # False
+
+# Using callable()
+def my_function():
+    pass
+
+print(callable(my_function))  # True
+print(callable("hello"))      # False
+print(callable(len))          # True
+
+# Practical type checking
+def safe_divide(a: float, b: float) -&gt; float:
+    try:
+        return a / b
+    except ZeroDivisionError:
+        raise ValueError("Cannot divide by zero")
+    except TypeError:
+        raise TypeError("Both arguments must be numbers")
+
+# Usage
+result = safe_divide(10, 2)
+print(result)  # 5.0
+
+try:
+    result = safe_divide(10, 0)
+except (TypeError, ValueError) as e:
+    print(f"Error: {e}")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 20: Error Handling -->
+<div class="slide" data-slide="17">
+<div class="slide-content">
+<div class="slide-header">
+<h1>⚠️ Slide 17: Error Handling</h1>
+<p class="slide-subtitle">Managing Exceptions</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Error Handling in Python</h2>
+<p>Error handling allows your program to gracefully handle unexpected situations and continue running even when errors occur.</p>
+<h3>Common Exception Types:</h3>
+<ul>
+<li><code>ValueError</code> - Invalid value for operation</li>
+<li><code>TypeError</code> - Wrong type for operation</li>
+<li><code>NameError</code> - Undefined variable</li>
+<li><code>IndexError</code> - Invalid list index</li>
+<li><code>KeyError</code> - Invalid dictionary key</li>
+<li><code>ZeroDivisionError</code> - Division by zero</li>
+</ul>
+<h3>Best Practices:</h3>
+<ul>
+<li>Catch specific exceptions, not all</li>
+<li>Provide meaningful error messages</li>
+<li>Use finally for cleanup</li>
+<li>Don't suppress exceptions silently</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Error Handling Examples</div>
+<pre><code># Basic try-except
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(f"Result: {result}")
+except ValueError:
+    print("Please enter a valid number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+# Multiple exceptions
+try:
+    value = int("abc")
+except (ValueError, TypeError) as e:
+    print(f"Error: {e}")
+
+# Try-except-else-finally
+try:
+    file = open("data.txt", "r")
+    data = file.read()
+except FileNotFoundError:
+    print("File not found")
+except PermissionError:
+    print("Permission denied")
+else:
+    print("File read successfully")
+    print(data)
+finally:
+    if 'file' in locals():
+        file.close()
+
+# Custom error handling function
+def safe_convert(value, target_type):
+    try:
+        if target_type == int:
+            return int(value)
+        elif target_type == float:
+            return float(value)
+        elif target_type == str:
+            return str(value)
+        else:
+            raise ValueError(f"Unsupported type: {target_type}")
+    except (ValueError, TypeError) as e:
+        print(f"Conversion error: {e}")
+        return None
+
+# Usage
+result1 = safe_convert("42", int)      # 42
+result2 = safe_convert("3.14", float)  # 3.14
+result3 = safe_convert("abc", int)     # None
+
+# Raising exceptions
+def validate_age(age):
+    if not isinstance(age, int):
+        raise TypeError("Age must be an integer")
+    if age &lt; 0:
+        raise ValueError("Age cannot be negative")
+    if age &gt; 150:
+        raise ValueError("Age seems unrealistic")
+    return True
+
+try:
+    validate_age("twenty")
+except (TypeError, ValueError) as e:
+    print(f"Validation error: {e}")
+
+# Practical example: User input validation
+def get_valid_input(prompt, min_val=None, max_val=None):
+    while True:
+        try:
+            value = float(input(prompt))
+            if min_val is not None and value &lt; min_val:
+                print(f"Value must be at least {min_val}")
+                continue
+            if max_val is not None and value &gt; max_val:
+                print(f"Value must be at most {max_val}")
+                continue
+            return value
+        except ValueError:
+            print("Please enter a valid number")
+        except KeyboardInterrupt:
+            print("\nOperation cancelled by user")
+            return None</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 21: Practical Examples -->
+<div class="slide" data-slide="18">
+<div class="slide-content">
+<div class="slide-header">
+<h1>💼 Slide 18: Practical Examples</h1>
+<p class="slide-subtitle">Real-World Applications</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Practical Applications</h2>
+<p>Let's apply what we've learned to solve real-world problems using variables and data types.</p>
+<h3>Example 1: Temperature Converter</h3>
+<p>Create a program that converts between Celsius and Fahrenheit temperatures.</p>
+<h3>Example 2: Grade Calculator</h3>
+<p>Calculate letter grades based on numerical scores with proper validation.</p>
+<h3>Example 3: Password Validator</h3>
+<p>Validate password strength using string methods and boolean logic.</p>
+<h3>Example 4: Simple Calculator</h3>
+<p>Build a basic calculator that handles different data types and operations.</p>
+<h3>Key Learning Points:</h3>
+<ul>
+<li>Combining multiple data types</li>
+<li>Input validation and error handling</li>
+<li>String manipulation and formatting</li>
+<li>Mathematical operations</li>
+<li>Boolean logic for decision making</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Practical Examples</div>
+<pre><code># Temperature Converter
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+# Grade Calculator
+def calculate_grade(score):
+    if score &gt;= 90:
+        return "A"
+    elif score &gt;= 80:
+        return "B"
+    elif score &gt;= 70:
+        return "C"
+    elif score &gt;= 60:
+        return "D"
+    else:
+        return "F"
+
+# Password Validator
+def validate_password(password):
+    if len(password) &lt; 8:
+        return False, "Password too short"
+    if not any(c.isupper() for c in password):
+        return False, "Need uppercase letter"
+    if not any(c.islower() for c in password):
+        return False, "Need lowercase letter"
+    if not any(c.isdigit() for c in password):
+        return False, "Need a number"
+    return True, "Password is strong"
+
+# Simple Calculator
+def calculator():
+    print("Simple Calculator")
+    print("1. Add 2. Subtract 3. Multiply 4. Divide")
+    
+    try:
+        choice = int(input("Enter choice (1-4): "))
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        
+        if choice == 1:
+            result = num1 + num2
+            operation = "addition"
+        elif choice == 2:
+            result = num1 - num2
+            operation = "subtraction"
+        elif choice == 3:
+            result = num1 * num2
+            operation = "multiplication"
+        elif choice == 4:
+            if num2 == 0:
+                raise ZeroDivisionError("Cannot divide by zero")
+            result = num1 / num2
+            operation = "division"
+        else:
+            raise ValueError("Invalid choice")
+        
+        print(f"{operation.capitalize()} result: {result}")
+        
+    except (ValueError, ZeroDivisionError) as e:
+        print(f"Error: {e}")
+
+# Usage examples
+print("Temperature Converter:")
+celsius = 25
+fahrenheit = celsius_to_fahrenheit(celsius)
+print(f"{celsius}°C = {fahrenheit:.1f}°F")
+
+print("\nGrade Calculator:")
+score = 85
+grade = calculate_grade(score)
+print(f"Score {score} = Grade {grade}")
+
+print("\nPassword Validator:")
+password = "MyPass123"
+is_valid, message = validate_password(password)
+print(f"Password '{password}': {message}")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 22: Best Practices -->
+<div class="slide" data-slide="19">
+<div class="slide-content">
+<div class="slide-header">
+<h1>✅ Slide 19: Best Practices</h1>
+<p class="slide-subtitle">Writing Clean Code</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Coding Best Practices</h2>
+<p>Following best practices makes your code more readable, maintainable, and less prone to errors.</p>
+<h3>Variable Naming:</h3>
+<ul>
+<li>Use descriptive names (user_name, not u)</li>
+<li>Use snake_case for variables and functions</li>
+<li>Use UPPER_CASE for constants</li>
+<li>Avoid single letters except for counters</li>
+<li>Don't use reserved keywords</li>
+</ul>
+<h3>Code Organization:</h3>
+<ul>
+<li>Group related variables together</li>
+<li>Use consistent indentation (4 spaces)</li>
+<li>Add comments for complex logic</li>
+<li>Keep lines under 79 characters</li>
+<li>Use blank lines to separate sections</li>
+</ul>
+<h3>Data Type Best Practices:</h3>
+<ul>
+<li>Choose appropriate types for your data</li>
+<li>Validate input data</li>
+<li>Handle type conversions explicitly</li>
+<li>Use type hints when possible</li>
+<li>Document expected data types</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Best Practices Examples</div>
+<pre><code># Good variable naming
+user_name = "Alice"           # Descriptive
+user_age = 25                # Clear purpose
+is_active = True             # Boolean naming
+MAX_ATTEMPTS = 3             # Constants in uppercase
+
+# Bad variable naming
+u = "Alice"                  # Too short
+a = 25                       # Not descriptive
+flag = True                  # Vague purpose
+
+# Good code organization
+# User information
+user_name = "Alice"
+user_age = 25
+user_email = "alice@example.com"
+
+# Game settings
+MAX_SCORE = 100
+GAME_DURATION = 300
+DIFFICULTY_LEVEL = "medium"
+
+# Data validation
+def validate_user_data(name, age, email):
+    if not isinstance(name, str) or not name.strip():
+        raise ValueError("Name must be a non-empty string")
+    
+    if not isinstance(age, int) or age &lt; 0:
+        raise ValueError("Age must be a positive integer")
+    
+    if not isinstance(email, str) or "@" not in email:
+        raise ValueError("Email must be a valid string")
+    
+    return True
+
+# Type hints (Python 3.6+)
+def calculate_area(length: float, width: float) -&gt; float:
+    """Calculate the area of a rectangle."""
+    return length * width
+
+# Constants and configuration
+PI = 3.14159
+GRAVITY = 9.81
+DEFAULT_TIMEOUT = 30
+
+# Error handling with specific exceptions
+def safe_divide(a: float, b: float) -&gt; float:
+    try:
+        return a / b
+    except ZeroDivisionError:
+        raise ValueError("Cannot divide by zero")
+    except TypeError:
+        raise TypeError("Both arguments must be numbers")
+
+# Documentation
+def format_currency(amount: float, currency: str = "USD") -&gt; str:
+    """
+    Format a number as currency.
+    
+    Args:
+        amount: The amount to format
+        currency: The currency code (default: USD)
+    
+    Returns:
+        Formatted currency string
+    
+    Raises:
+        ValueError: If amount is negative
+    """
+    if amount &lt; 0:
+        raise ValueError("Amount cannot be negative")
+    
+    return f"{currency} {amount:.2f}"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 23: Common Mistakes -->
+<div class="slide" data-slide="20">
+<div class="slide-content">
+<div class="slide-header">
+<h1>❌ Slide 20: Common Mistakes</h1>
+<p class="slide-subtitle">Avoiding Pitfalls</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Common Python Mistakes</h2>
+<p>Understanding common mistakes helps you write better code and debug more effectively.</p>
+<h3>Variable Mistakes:</h3>
+<ul>
+<li>Using undefined variables</li>
+<li>Confusing assignment (=) with comparison (==)</li>
+<li>Using reserved keywords as variable names</li>
+<li>Not initializing variables before use</li>
+<li>Using global variables unnecessarily</li>
+</ul>
+<h3>Data Type Mistakes:</h3>
+<ul>
+<li>Forgetting that input() returns strings</li>
+<li>Comparing different types without conversion</li>
+<li>Using == to compare with None</li>
+<li>Ignoring floating-point precision errors</li>
+<li>Not handling type conversion errors</li>
+</ul>
+<h3>String Mistakes:</h3>
+<ul>
+<li>Concatenating strings with numbers</li>
+<li>Using + for string concatenation in loops</li>
+<li>Forgetting that strings are immutable</li>
+<li>Not escaping special characters</li>
+<li>Using wrong string methods</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Common Mistakes Examples</div>
+<pre><code># Mistake 1: Undefined variable
+# print(undefined_variable)  # NameError
+
+# Mistake 2: Assignment vs comparison
+x = 5
+if x = 5:  # SyntaxError: should be ==
+    print("Equal")
+
+# Correct:
+if x == 5:
+    print("Equal")
+
+# Mistake 3: Using reserved keywords
+# class = "Python"  # SyntaxError
+# def = "function"   # SyntaxError
+
+# Correct:
+class_name = "Python"
+function_name = "function"
+
+# Mistake 4: Input type conversion
+age = input("Enter age: ")
+# result = age + 5  # TypeError: can't add str and int
+
+# Correct:
+age = int(input("Enter age: "))
+result = age + 5
+
+# Mistake 5: Comparing with None
+value = None
+# if value == None:  # Works but not recommended
+#     print("Is None")
+
+# Correct:
+if value is None:
+    print("Is None")
+
+# Mistake 6: String concatenation
+names = ["Alice", "Bob", "Charlie"]
+# result = ""  # Inefficient
+# for name in names:
+#     result += name + " "
+
+# Correct:
+result = " ".join(names)
+
+# Mistake 7: Floating point comparison
+# if 0.1 + 0.2 == 0.3:  # False due to precision
+#     print("Equal")
+
+# Correct:
+if abs(0.1 + 0.2 - 0.3) &lt; 1e-10:
+    print("Equal")
+
+# Mistake 8: Not handling exceptions
+# number = int("abc")  # ValueError
+
+# Correct:
+try:
+    number = int("abc")
+except ValueError:
+    number = 0
+
+# Mistake 9: Mutable default arguments
+def add_item(item, items=[]):  # Bad!
+    items.append(item)
+    return items
+
+# Correct:
+def add_item(item, items=None):
+    if items is None:
+        items = []
+    items.append(item)
+    return items
+
+# Mistake 10: String formatting
+name = "Alice"
+age = 25
+# print("Name: " + name + ", Age: " + age)  # TypeError
+
+# Correct:
+print(f"Name: {name}, Age: {age}")
+print("Name: {}, Age: {}".format(name, age))</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 24: Debugging Techniques -->
+<div class="slide" data-slide="21">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🐛 Slide 21: Debugging Techniques</h1>
+<p class="slide-subtitle">Finding and Fixing Errors</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Debugging Your Code</h2>
+<p>Debugging is an essential skill for any programmer. Learn how to find and fix errors in your code.</p>
+<h3>Debugging Tools:</h3>
+<ul>
+<li><code>print()</code> - Simple output debugging</li>
+<li><code>type()</code> - Check variable types</li>
+<li><code>len()</code> - Check sequence lengths</li>
+<li><code>dir()</code> - List object attributes</li>
+</ul>
+<h3>Debugging Strategies:</h3>
+<ul>
+<li>Add print statements to track execution</li>
+<li>Check variable values at key points</li>
+<li>Use try-except to catch specific errors</li>
+<li>Test with different input values</li>
+<li>Break complex problems into smaller parts</li>
+</ul>
+<h3>Common Debugging Steps:</h3>
+<ul>
+<li>Read the error message carefully</li>
+<li>Identify the line causing the error</li>
+<li>Check variable types and values</li>
+<li>Test with simple examples</li>
+<li>Use the Python debugger (pdb)</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Debugging Examples</div>
+<pre><code># Debugging with print statements
+def calculate_average(numbers):
+    print(f"Input: {numbers}")  # Debug print
+    print(f"Type: {type(numbers)}")  # Check type
+    
+    if not numbers:
+        print("Empty list detected")  # Debug print
+        return 0
+    
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    
+    print(f"Total: {total}, Count: {count}")  # Debug print
+    print(f"Average: {average}")  # Debug print
+    
+    return average
+
+# Testing the function
+result = calculate_average([1, 2, 3, 4, 5])
+print(f"Final result: {result}")
+
+# Using type() for debugging
+def process_data(data):
+    print(f"Data type: {type(data)}")
+    print(f"Data value: {data}")
+    
+    if isinstance(data, str):
+        return data.upper()
+    elif isinstance(data, (int, float)):
+        return data * 2
+    else:
+        return str(data)
+
+# Debugging with try-except
+def safe_operation(value):
+    try:
+        result = int(value) * 2
+        print(f"Operation successful: {result}")
+        return result
+    except ValueError as e:
+        print(f"ValueError: {e}")
+        return None
+    except TypeError as e:
+        print(f"TypeError: {e}")
+        return None
+
+# Using dir() to explore objects
+text = "Hello, World!"
+print("String methods available:")
+print(dir(text))
+
+
+# Debugging complex calculations
+def calculate_grade_percentage(scores):
+    print(f"Input scores: {scores}")
+    
+    if not scores:
+        print("No scores provided")
+        return 0
+    
+    try:
+        total = sum(scores)
+        count = len(scores)
+        percentage = (total / count) * 100
+        
+        print(f"Total: {total}")
+        print(f"Count: {count}")
+        print(f"Percentage: {percentage:.2f}%")
+        
+        return percentage
+    except TypeError as e:
+        print(f"TypeError in calculation: {e}")
+        return 0
+    except ZeroDivisionError as e:
+        print(f"ZeroDivisionError: {e}")
+        return 0
+
+# Testing with different inputs
+print("Test 1:")
+calculate_grade_percentage([85, 90, 78, 92])
+
+print("\nTest 2:")
+calculate_grade_percentage([])
+
+print("\nTest 3:")
+calculate_grade_percentage([85, "90", 78])  # Mixed types</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 25: Course Summary -->
+<div class="slide" data-slide="22">
+<div class="slide-content">
+<div class="slide-header">
+<h1>🎓 Slide 22: Course Summary</h1>
+<p class="slide-subtitle">What You've Learned</p>
+</div>
+<div class="slide-body">
+<div class="content-grid">
+<div class="main-content">
+<div class="text-content">
+<h2>Congratulations!</h2>
+<p>You've completed the comprehensive Python Variables &amp; Data Types course. Here's a summary of what you've learned.</p>
+<h3>Core Concepts Mastered:</h3>
+<ul>
+<li><strong>Variables:</strong> Creating, naming, and assigning values</li>
+<li><strong>Data Types:</strong> Strings, integers, floats, booleans</li>
+<li><strong>Type Conversion:</strong> Converting between data types</li>
+<li><strong>User Input:</strong> Getting and validating user data</li>
+<li><strong>Error Handling:</strong> Managing exceptions gracefully</li>
+</ul>
+<h3>Practical Skills:</h3>
+<ul>
+<li>String manipulation and formatting</li>
+<li>Mathematical operations and calculations</li>
+<li>Boolean logic and decision making</li>
+<li>Input validation and error checking</li>
+<li>Debugging and troubleshooting</li>
+</ul>
+<h3>Best Practices Learned:</h3>
+<ul>
+<li>Writing clean, readable code</li>
+<li>Using descriptive variable names</li>
+<li>Handling errors properly</li>
+<li>Validating input data</li>
+<li>Following Python conventions</li>
+</ul>
+<h3>Next Steps:</h3>
+<ul>
+<li>Practice with real-world projects</li>
+<li>Move on to Control Flow &amp; Loops</li>
+<li>Explore Functions &amp; Lists</li>
+<li>Learn Object-Oriented Programming</li>
+<li>Build complete applications</li>
+</ul>
+</div>
+</div>
+<div class="side-content">
+<div class="code-example">
+<div class="code-header">Final Practice Exercise</div>
+<pre><code># Complete this exercise to test your knowledge
+
+def student_grade_calculator():
+    """
+    Create a program that:
+    1. Gets student name and scores
+    2. Calculates average grade
+    3. Assigns letter grade
+    4. Handles errors gracefully
+    """
+    try:
+        # Get student information
+        name = input("Enter student name: ").strip()
+        if not name:
+            raise ValueError("Name cannot be empty")
+        
+        # Get scores
+        scores = []
+        num_scores = int(input("How many scores? "))
+        
+        for i in range(num_scores):
+            score = float(input(f"Enter score {i+1}: "))
+            if score &lt; 0 or score &gt; 100:
+                raise ValueError("Score must be between 0 and 100")
+            scores.append(score)
+        
+        # Calculate average
+        average = sum(scores) / len(scores)
+        
+        # Determine letter grade
+        if average &gt;= 90:
+            grade = "A"
+        elif average &gt;= 80:
+            grade = "B"
+        elif average &gt;= 70:
+            grade = "C"
+        elif average &gt;= 60:
+            grade = "D"
+        else:
+            grade = "F"
+        
+        # Display results
+        print(f"\nStudent: {name}")
+        print(f"Scores: {scores}")
+        print(f"Average: {average:.2f}%")
+        print(f"Grade: {grade}")
+        
+    except ValueError as e:
+        print(f"Error: {e}")
+    except ZeroDivisionError:
+        print("Error: No scores provided")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
+# Test your skills!
+# student_grade_calculator()</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html> 
