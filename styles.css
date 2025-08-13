@@ -2036,13 +2036,13 @@ body:has(.speaker-notes) .slide {
 /* Global fixed brand logo (applies to all pages) */
 .site-brand-badge {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
+  bottom: 12px;
+  left: 12px;
   z-index: 1000;
   display: none; /* hidden until body renders */
 }
 .site-brand-badge img {
-  height: 36px;
+  height: 26px; /* smaller on non-slideshow pages */
   width: auto;
   opacity: 0.9;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
@@ -2051,11 +2051,14 @@ body:has(.speaker-notes) .slide {
 /* Show on all pages by default */
 body .site-brand-badge { display: block; }
 /* In fullscreen without speaker notes, move to bottom-right of slide area */
-.slideshow-container.fullscreen:not(:has(.speaker-notes)) .site-brand-badge {
-  bottom: 18px;
-  right: 18px;
+.slideshow-container .site-brand-badge {
+  top: 12px;         /* move into top-right corner inside slides */
+  right: 12px;
+  bottom: auto;
   left: auto;
 }
+.slideshow-container .site-brand-badge img { height: 44px; }
+.slideshow-container.fullscreen .site-brand-badge img { height: 56px; }
 /* In fullscreen with speaker notes, keep at bottom-left to avoid notes panel */
 .slideshow-container.fullscreen:has(.speaker-notes) .site-brand-badge {
   bottom: 18px;
@@ -2063,7 +2066,9 @@ body .site-brand-badge { display: block; }
   right: auto;
 }
 @media (max-width: 768px) {
-  .site-brand-badge img { height: 28px; }
+  .site-brand-badge img { height: 22px; }
+  .slideshow-container .site-brand-badge img { height: 38px; }
+  .slideshow-container.fullscreen .site-brand-badge img { height: 46px; }
 }
 
 /* Fullscreen layout optimizations for non speaker-notes slides */
