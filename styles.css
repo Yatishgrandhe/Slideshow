@@ -2050,6 +2050,8 @@ body:has(.speaker-notes) .slide {
 }
 /* Show on all pages by default */
 body .site-brand-badge { display: block; }
+/* Make the badge noticeably smaller on general homepage-like pages */
+body:not(:has(.slideshow-container)) .site-brand-badge img { height: 20px; }
 /* In fullscreen without speaker notes, move to bottom-right of slide area */
 .slideshow-container .site-brand-badge {
   top: 12px;         /* move into top-right corner inside slides */
