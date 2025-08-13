@@ -311,12 +311,13 @@ Multi-line comment using
 triple quotes
 """
 
-def calculate_area(length, width):
-    """Calculate rectangle area"""
-    area = length * width  # Calculate area
-    return area
+length = 5
+width = 3
+area = length * width
+print(area)  # 15
 
 # Good comment (explains why):
+x = 1
 x = x + 1  # Increment counter</code></pre>
 </div>
 </div>
@@ -849,17 +850,10 @@ print(int(True))   # 1
 print(bool(0))     # False
 print(bool("Hello")) # True
 
-# Error handling
-try:
-    invalid_number = int("abc")
-except ValueError:
-    print("Cannot convert 'abc' to integer")
-
-# Practical example
+# Practical conversion
 user_input = "42"
-if user_input.isdigit():
-    number = int(user_input)
-    print(f"Valid number: {number}")</code></pre>
+number = int(user_input)
+print(number)  # 42</code></pre>
 </div>
 </div>
 </div>
@@ -912,33 +906,23 @@ print(f"Hello, {name}!")
 
 # Numeric input with conversion
 age_string = input("What is your age? ")
-try:
-    age = int(age_string)
-    print(f"You are {age} years old")
-except ValueError:
-    print("Please enter a valid number")
+age = int(age_string)
+print(f"You are {age} years old")
 
 # Float input
 height_string = input("What is your height in meters? ")
-try:
-    height = float(height_string)
-    print(f"Your height is {height:.2f} meters")
-except ValueError:
-    print("Please enter a valid number")
+height = float(height_string)
+print(f"Your height is {height:.2f} meters")
 
-# Boolean input
+# Boolean-like input (simple)
 response = input("Are you a student? (yes/no): ").lower()
 is_student = response in ['yes', 'y', 'true']
 print(f"Student status: {is_student}")
 
 # Multiple inputs
 name = input("Name: ")
-age = input("Age: ")
-try:
-    age_int = int(age)
-    print(f"Name: {name}, Age: {age_int}")
-except ValueError:
-    print("Invalid age format")</code></pre>
+age = int(input("Age: "))
+print(f"Name: {name}, Age: {age}")</code></pre>
 </div>
 </div>
 </div>
@@ -1063,7 +1047,7 @@ print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
 <pre><code># Creating None
 empty_value = None
 print(empty_value)  # None
-print(type(empty_value))  # &lt;class 'NoneType'&gt;
+print(type(empty_value))  # <class 'NoneType'>
 
 # None comparisons
 x = None
@@ -1073,36 +1057,14 @@ print(x is not None)  # False
 # None in boolean context
 print(bool(None))     # False
 
-# Function returning None
-def greet(name):
-    if name:
-        print(f"Hello, {name}!")
-    # No return statement = returns None
+# Using None in data
+user = {"name": "Alice", "age": None}
+print(user)
 
-result = greet("Alice")
-print(result)  # None
-
-# Default parameters
-def create_user(name, age=None):
-    user = {"name": name}
-    if age is not None:
-        user["age"] = age
-    return user
-
-user1 = create_user("Alice")
-user2 = create_user("Bob", 25)
-print(user1)  # {'name': 'Alice'}
-print(user2)  # {'name': 'Bob', 'age': 25}
-
-# Checking for None
-def process_data(data):
-    if data is None:
-        print("No data provided")
-        return
-    print(f"Processing: {data}")
-
-process_data(None)      # No data provided
-process_data("Hello")   # Processing: Hello</code></pre>
+# Overwriting a value with None
+value = 10
+value = None
+print(value)  # None</code></pre>
 </div>
 </div>
 </div>
@@ -1150,11 +1112,8 @@ process_data("Hello")   # Processing: Hello</code></pre>
 <pre><code># Using type()
 name = "Alice"
 age = 25
-height = 5.6
-is_student = True
-
-print(type(name))       # &lt;class 'str'&gt;
-print(type(age))        # &lt;class 'int'&gt;
+print(type(name))       # <class 'str'>
+print(type(age))        # <class 'int'>
 
 # Using isinstance()
 print(isinstance(name, str))       # True
@@ -1164,34 +1123,15 @@ print(isinstance(age, int))        # True
 value = 42
 print(isinstance(value, (int, float)))  # True
 
-# Type checking in functions
-def process_number(value):
-    if isinstance(value, (int, float)):
-        return value * 2
-    else:
-        raise TypeError("Value must be a number")
-
-try:
-    result = process_number(10)
-    print(result)  # 20
-except TypeError as e:
-    print(f"Error: {e}")
-
-# Using hasattr()
+# hasattr and callable
 class Person:
     def __init__(self, name):
         self.name = name
 
 person = Person("Alice")
 print(hasattr(person, 'name'))     # True
-print(hasattr(person, 'age'))      # False
-
-# Using callable()
-def my_function():
-    pass
-
-print(callable(my_function))  # True
-print(callable("hello"))      # False</code></pre>
+print(callable(len))               # True
+print(callable("hello"))          # False</code></pre>
 </div>
 </div>
 </div>
@@ -1232,61 +1172,20 @@ print(callable("hello"))      # False</code></pre>
 <div class="side-content">
 <div class="code-example">
 <div class="code-header">Error Handling Examples</div>
-<pre><code># Basic try-except
-try:
-    number = int(input("Enter a number: "))
-    result = 10 / number
-    print(f"Result: {result}")
-except ValueError:
-    print("Please enter a valid number")
-except ZeroDivisionError:
-    print("Cannot divide by zero")
+<pre><code># Common exceptions (concept overview)
+print("ValueError -> invalid value")
+print("TypeError -> wrong type")
+print("ZeroDivisionError -> divide by zero")
 
-# Multiple exceptions
-try:
-    value = int("abc")
-except (ValueError, TypeError) as e:
-    print(f"Error: {e}")
+# Example without try/except (for concept only)
+number = 5
+result = 10 / number
+print(result)  # 2.0
 
-# Try-except-finally
-try:
-    file = open("data.txt", "r")
-    data = file.read()
-except FileNotFoundError:
-    print("File not found")
-finally:
-    if 'file' in locals():
-        file.close()
-
-# Custom error handling
-def safe_convert(value, target_type):
-    try:
-        if target_type == int:
-            return int(value)
-        elif target_type == float:
-            return float(value)
-        else:
-            raise ValueError(f"Unsupported type: {target_type}")
-    except (ValueError, TypeError) as e:
-        print(f"Conversion error: {e}")
-        return None
-
-# Usage
-result1 = safe_convert("42", int)      # 42
-result2 = safe_convert("abc", int)     # None
-
-# Raising exceptions
-def validate_age(age):
-    if not isinstance(age, int):
-        raise TypeError("Age must be an integer")
-    if age &lt; 0:
-        raise ValueError("Age cannot be negative")
-    return True
-
-try:
-    validate_age("twenty")
-except (TypeError, ValueError) as e:
-    print(f"Validation error: {e}")</code></pre>
+# Show conversion idea
+value = "42"
+converted = int(value)
+print(converted)  # 42</code></pre>
 </div>
 </div>
 </div>
@@ -1452,51 +1351,28 @@ MAX_ATTEMPTS = 3             # Constants in uppercase
 u = "Alice"                  # Too short
 a = 25                       # Not descriptive
 
-# Good code organization
-# User information
+# Group related values
 user_name = "Alice"
 user_age = 25
 user_email = "alice@example.com"
 
-# Game settings
 MAX_SCORE = 100
 GAME_DURATION = 300
 
-# Data validation
-def validate_user_data(name, age):
-    if not isinstance(name, str) or not name.strip():
-        raise ValueError("Name must be a non-empty string")
-    
-    if not isinstance(age, int) or age &lt; 0:
-        raise ValueError("Age must be a positive integer")
-    
-    return True
-
-# Type hints (Python 3.6+)
-def calculate_area(length: float, width: float) -&gt; float:
-    """Calculate the area of a rectangle."""
-    return length * width
+# Type hints example (kept minimal)
+length: float = 5.0
+width: float = 3.0
+area: float = length * width
+print(area)
 
 # Constants and configuration
 PI = 3.14159
 GRAVITY = 9.81
 
-# Error handling with specific exceptions
-def safe_divide(a: float, b: float) -&gt; float:
-    try:
-        return a / b
-    except ZeroDivisionError:
-        raise ValueError("Cannot divide by zero")
-    except TypeError:
-        raise TypeError("Both arguments must be numbers")
-
-# Documentation
-def format_currency(amount: float, currency: str = "USD") -&gt; str:
-    """Format a number as currency."""
-    if amount &lt; 0:
-        raise ValueError("Amount cannot be negative")
-    
-    return f"{currency} {amount:.2f}"</code></pre>
+# Simple formatting
+amount = 12.5
+currency = "USD"
+print(f"{currency} {amount:.2f}")</code></pre>
 </div>
 </div>
 </div>
@@ -1550,62 +1426,34 @@ def format_currency(amount: float, currency: str = "USD") -&gt; str:
 
 # Mistake 2: Assignment vs comparison
 x = 5
-if x = 5:  # SyntaxError: should be ==
-    print("Equal")
-
-# Correct:
-if x == 5:
+# if x = 5:  # Wrong
+if x == 5:   # Correct
     print("Equal")
 
 # Mistake 3: Using reserved keywords
-# class = "Python"  # SyntaxError
-# def = "function"   # SyntaxError
-
-# Correct:
-class_name = "Python"
-function_name = "function"
+# class = "Python"  # Wrong
+class_name = "Python"  # Correct
 
 # Mistake 4: Input type conversion
 age = input("Enter age: ")
-# result = age + 5  # TypeError: can't add str and int
-
-# Correct:
-age = int(input("Enter age: "))
-result = age + 5
+# result = age + 5  # Wrong
+result = int(age) + 5  # Correct
 
 # Mistake 5: Comparing with None
 value = None
-# if value == None:  # Works but not recommended
-
-# Correct:
-if value is None:
+# if value == None:  # Not recommended
+if value is None:    # Correct
     print("Is None")
 
-# Mistake 6: String concatenation
+# Mistake 6: String concatenation in loops
 names = ["Alice", "Bob", "Charlie"]
-# result = ""  # Inefficient
-# for name in names:
-#     result += name + " "
-
-# Correct:
-result = " ".join(names)
-
-# Mistake 8: Not handling exceptions
-# number = int("abc")  # ValueError
-
-# Correct:
-try:
-    number = int("abc")
-except ValueError:
-    number = 0
+# result = ""; for n in names: result += n + " "  # Wrong
+result = " ".join(names)  # Correct
 
 # Mistake 9: String formatting
-name = "Alice"
-age = 25
-# print("Name: " + name + ", Age: " + age)  # TypeError
-
-# Correct:
-print(f"Name: {name}, Age: {age}")</code></pre>
+name = "Alice"; age = 25
+# print("Name: " + name + ", Age: " + age)  # Wrong
+print(f"Name: {name}, Age: {age}")  # Correct</code></pre>
 </div>
 </div>
 </div>
@@ -1654,85 +1502,33 @@ print(f"Name: {name}, Age: {age}")</code></pre>
 <div class="code-example">
 <div class="code-header">Debugging Examples</div>
 <pre><code># Debugging with print statements
-def calculate_average(numbers):
-    print(f"Input: {numbers}")  # Debug print
-    print(f"Type: {type(numbers)}")  # Check type
-    
-    if not numbers:
-        print("Empty list detected")  # Debug print
-        return 0
-    
+numbers = [1, 2, 3, 4, 5]
+print(f"Input: {numbers}")
+print(f"Type: {type(numbers)}")
+
+if not numbers:
+    print("Empty list")
+else:
     total = sum(numbers)
     count = len(numbers)
     average = total / count
-    
-    print(f"Total: {total}, Count: {count}")  # Debug print
-    print(f"Average: {average}")  # Debug print
-    
-    return average
-
-# Testing the function
-result = calculate_average([1, 2, 3, 4, 5])
-print(f"Final result: {result}")
+    print(f"Total: {total}, Count: {count}")
+    print(f"Average: {average}")
 
 # Using type() for debugging
-def process_data(data):
-    print(f"Data type: {type(data)}")
-    print(f"Data value: {data}")
-    
-    if isinstance(data, str):
-        return data.upper()
-    elif isinstance(data, (int, float)):
-        return data * 2
-    else:
-        return str(data)
+data = "hello"
+print(type(data))  # <class 'str'>
 
-# Debugging with try-except
-def safe_operation(value):
-    try:
-        result = int(value) * 2
-        print(f"Operation successful: {result}")
-        return result
-    except ValueError as e:
-        print(f"ValueError: {e}")
-        return None
-    except TypeError as e:
-        print(f"TypeError: {e}")
-        return None
-
-# Using dir() to explore objects
+# callable and dir
 text = "Hello, World!"
-print("String methods available:")
+print(callable(len))  # True
+print(callable(text)) # False
 print(dir(text))
 
-# Debugging complex calculations
-def calculate_grade_percentage(scores):
-    print(f"Input scores: {scores}")
-    
-    if not scores:
-        print("No scores provided")
-        return 0
-    
-    try:
-        total = sum(scores)
-        count = len(scores)
-        percentage = (total / count) * 100
-        
-        print(f"Total: {total}")
-        print(f"Count: {count}")
-        print(f"Percentage: {percentage:.2f}%")
-        
-        return percentage
-    except TypeError as e:
-        print(f"TypeError in calculation: {e}")
-        return 0
-    except ZeroDivisionError as e:
-        print(f"ZeroDivisionError: {e}")
-        return 0
-
-# Testing
-calculate_grade_percentage([85, 90, 78, 92])
-calculate_grade_percentage([])</code></pre>
+# Simple percentage calc
+scores = [85, 90, 78, 92]
+percentage = (sum(scores) / len(scores)) * 100
+print(f"Percentage: {percentage:.2f}%")</code></pre>
 </div>
 </div>
 </div>
@@ -1845,8 +1641,6 @@ def student_grade_calculator():
 
 # Test your skills!
 # student_grade_calculator()</code></pre>
-</div>
-</div>
 </div>
 </div>
 </div>
