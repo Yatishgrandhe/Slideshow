@@ -9,16 +9,16 @@
     gap: 12px;
 }
 .slideshow-container.fullscreen .slide .text-content {
-    font-size: 0.66em;
+    font-size: 1.06em;
     line-height: 1.45;
 }
 .slideshow-container.fullscreen .slide .text-content h2 {
-    font-size: 0.88em;
+    font-size: 1.28em;
     margin-top: 6px;
     margin-bottom: 6px;
 }
 .slideshow-container.fullscreen .slide .text-content h3 {
-    font-size: 0.68em;
+    font-size: 1.08em;
     margin-top: 6px;
     margin-bottom: 4px;
 }
@@ -29,7 +29,7 @@
 }
 .slideshow-container.fullscreen .slide .text-content li {
     margin-bottom: 4px;
-    font-size: 0.68em;
+    font-size: 0.88em;
     line-height: 1.25;
 }
 .slideshow-container.fullscreen .slide .code-header {
@@ -294,18 +294,18 @@ body {
 
 /* Compact mode on shorter viewports to keep content within frame */
 @media (max-height: 800px) {
-  .slide-subtitle { font-size: 0.8em; }
-  .slides-wrapper .slide .text-content { font-size: 0.75em; line-height: 1.35; }
-  .slides-wrapper .slide .text-content h2 { font-size: 1em; }
-  .slides-wrapper .slide .text-content h3 { font-size: 0.8em; }
+  .slide-subtitle { font-size: 1em; }
+  .slides-wrapper .slide .text-content { font-size: 0.95em; line-height: 1.35; }
+  .slides-wrapper .slide .text-content h2 { font-size: 1.2em; }
+  .slides-wrapper .slide .text-content h3 { font-size: 1em; }
   .slides-wrapper .slide .code-example pre { font-size: 0.75em; line-height: 1.3; }
 }
 
 @media (max-height: 700px) {
-  .slide-subtitle { font-size: 0.75em; }
-  .slides-wrapper .slide .text-content { font-size: 0.7em; line-height: 1.3; }
-  .slides-wrapper .slide .text-content h2 { font-size: 0.9em; }
-  .slides-wrapper .slide .text-content h3 { font-size: 0.75em; }
+  .slide-subtitle { font-size: 0.95em; }
+  .slides-wrapper .slide .text-content { font-size: 0.9em; line-height: 1.3; }
+  .slides-wrapper .slide .text-content h2 { font-size: 1.1em; }
+  .slides-wrapper .slide .text-content h3 { font-size: 0.95em; }
   .slides-wrapper .slide .code-example pre { font-size: 0.72em; line-height: 1.25; }
 }
 
@@ -331,7 +331,7 @@ body {
 }
 
 .slide-subtitle {
-    font-size: 0.9em;
+    font-size: 1.1em;
     color: #cbd5e0;
     font-weight: 500;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -366,14 +366,14 @@ body {
 .text-content {
     color: #e2e8f0;
     line-height: 1.5;
-    font-size: 0.6em;
+    font-size: 1em;
     overflow: visible;
     width: 100%;
 }
 
 .text-content h2 {
     color: #64ffda;
-    font-size: 0.9em;
+    font-size: 1.3em;
     margin-bottom: 8px;
     margin-top: 12px;
     font-weight: 600;
@@ -384,7 +384,7 @@ body {
 
 .text-content h3 {
     color: #4299e1;
-    font-size: 0.65em;
+    font-size: 1.05em;
     margin-bottom: 6px;
     margin-top: 10px;
     font-weight: 600;
@@ -394,7 +394,7 @@ body {
 .text-content p {
     margin-bottom: 10px;
     color: #e2e8f0;
-    font-size: 0.55em;
+    font-size: 0.95em;
     line-height: 1.4;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -410,7 +410,7 @@ body {
     color: #e2e8f0;
     line-height: 1.3;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 0.5em;
+    font-size: 0.9em;
     padding-left: 5px;
     position: relative;
 }

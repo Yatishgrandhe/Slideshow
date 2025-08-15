@@ -314,7 +314,7 @@ triple quotes
 length = 5
 width = 3
 area = length * width
-print(area)  # 15
+print(area)
 
 # Good comment (explains why):
 x = 1
@@ -378,8 +378,8 @@ height = 5.6
 is_student = True
 
 # Printing variables
-print(name)        # Alice
-print(age)         # 25
+print(name)
+print(age)
 
 # Good naming
 user_name = "Bob"
@@ -391,8 +391,8 @@ x = "Alice"        # Too vague
 a = 25            # Not descriptive
 
 # Check types
-print(type(name))      # &lt;class 'str'&gt;
-print(type(age))       # &lt;class 'int'&gt;</code></pre>
+print(type(name))
+print(type(age))</code></pre>
 </div>
 </div>
 </div>
@@ -444,7 +444,7 @@ age = 25
 
 # Multiple assignment
 x, y, z = 1, 2, 3
-print(x, y, z)  # 1 2 3
+print(x, y, z)
 
 # Chained assignment
 a = b = c = 0
@@ -452,17 +452,17 @@ a = b = c = 0
 # Reassignment
 age = 25
 age = 26    # Reassigning
-print(age)  # 26
+print(age)
 
 # Augmented assignment
 count = 5
 count += 1      # Same as count = count + 1
-print(count)    # 6
+print(count)
 
 # Dynamic typing
 variable = "Hello"
 variable = 42
-print(type(variable))  # &lt;class 'int'&gt;</code></pre>
+print(type(variable))</code></pre>
 </div>
 </div>
 </div>
@@ -521,23 +521,23 @@ message = 'Hello, World!'
 
 # String indexing
 text = "Python"
-print(text[0])    # P
-print(text[-1])   # n
+print(text[0])
+print(text[-1])
 
 # String slicing
-print(text[0:3])  # Pyt
-print(text[3:])   # hon
+print(text[0:3])
+print(text[3:])
 
 # String concatenation
 first = "Hello"
 second = "World"
 result = first + " " + second
-print(result)  # Hello World
+print(result)
 
 # String methods
 text = "  Python  "
-print(text.upper())      # PYTHON
-print(text.strip())      # Python
+print(text.upper())
+print(text.strip())
 
 # String formatting
 name = "Alice"
@@ -602,15 +602,15 @@ negative = -10
 # Integer operations
 a = 10
 b = 3
-print(a + b)   # 13
-print(a / b)   # 3.333... (returns float)
-print(a // b)  # 3 (floor division)
-print(a % b)   # 1 (remainder)
+print(a + b)
+print(a / b)
+print(a // b)
+print(a % b)
 
 # Integer conversion
 string_number = "42"
 integer_number = int(string_number)
-print(integer_number)  # 42
+print(integer_number)
 
 # Different bases
 binary = 0b1010    # Binary: 10
@@ -675,8 +675,8 @@ temperature = -5.5
 # Float operations
 a = 10.5
 b = 3.2
-print(a + b)   # 13.7
-print(a / b)   # 3.28125
+print(a + b)
+print(a / b)
 
 # Scientific notation
 large = 1.23e6    # 1,230,000
@@ -685,20 +685,20 @@ small = 1.23e-6   # 0.00000123
 # Float conversion
 string_float = "3.14"
 float_number = float(string_float)
-print(float_number)  # 3.14
+print(float_number)
 
 # Floating point precision
 result = 0.1 + 0.2
-print(result)  # 0.30000000000000004
+print(result)
 
 # Using math module
 import math
-print(math.pi)           # 3.141592653589793
-print(round(3.14159, 2)) # 3.14
+print(math.pi)
+print(round(3.14159, 2))
 
 # Formatting floats
 price = 19.99
-print(f"Price: ${price:.2f}")  # Price: $19.99</code></pre>
+print(f"Price: ${price:.2f}")</code></pre>
 </div>
 </div>
 </div>
@@ -756,30 +756,30 @@ is_logged_in = False
 # Boolean operations
 a = True
 b = False
-print(a and b)   # False
-print(a or b)    # True
-print(not a)     # False
+print(a and b)
+print(a or b)
+print(not a)
 
 # Comparison operators
 age = 25
 is_adult = age &gt;= 18
-print(is_adult)  # True
+print(is_adult)
 
 # Truthy and falsy values
-print(bool(0))       # False
-print(bool(1))       # True
-print(bool(""))      # False
-print(bool("Hello")) # True
+print(bool(0))
+print(bool(1))
+print(bool(""))
+print(bool("Hello"))
 
 # Boolean conversion
-print(int(True))   # 1
-print(int(False))  # 0
+print(int(True))
+print(int(False))
 
 # Practical example
 user_age = 20
 has_license = True
 can_drive = user_age &gt;= 16 and has_license
-print(f"Can drive: {can_drive}")  # Can drive: True</code></pre>
+print(f"Can drive: {can_drive}")</code></pre>
 </div>
 </div>
 </div>
@@ -829,31 +829,31 @@ print(f"Can drive: {can_drive}")  # Can drive: True</code></pre>
 <pre><code># String to number
 age_string = "25"
 age_int = int(age_string)
-print(age_int)  # 25
+print(age_int)
 
 price_string = "19.99"
 price_float = float(price_string)
-print(price_float)  # 19.99
+print(price_float)
 
 # Number to string
 age = 25
 age_string = str(age)
-print(age_string)  # "25"
+print(age_string)
 
 # Float to int
 pi_float = 3.14159
 pi_int = int(pi_float)
-print(pi_int)  # 3
+print(pi_int)
 
 # Boolean conversion
-print(int(True))   # 1
-print(bool(0))     # False
-print(bool("Hello")) # True
+print(int(True))
+print(bool(0))
+print(bool("Hello"))
 
 # Practical conversion
 user_input = "42"
 number = int(user_input)
-print(number)  # 42</code></pre>
+print(number)</code></pre>
 </div>
 </div>
 </div>
@@ -969,15 +969,15 @@ print(f"Name: {name}, Age: {age}")</code></pre>
 <pre><code># Basic arithmetic
 a = 10
 b = 3
-print(f"Addition: {a + b}")        # 13
-print(f"Division: {a / b}")         # 3.333...
-print(f"Floor division: {a // b}")  # 3
-print(f"Power: {a ** b}")          # 1000
+print(f"Addition: {a + b}")
+print(f"Division: {a / b}")
+print(f"Floor division: {a // b}")
+print(f"Power: {a ** b}")
 
 # Math helpers
 import math
-print(f"Square root of 16: {math.sqrt(16)}")  # 4.0
-print(f"Floor of 3.7: {math.floor(3.7)}")    # 3
+print(f"Square root of 16: {math.sqrt(16)}")
+print(f"Floor of 3.7: {math.floor(3.7)}")
 
 # Complex calculations
 radius = 5
@@ -986,7 +986,7 @@ print(f"Circle area: {area:.2f}")
 
 # Order of operations
 result = 2 + 3 * 4
-print(f"2 + 3 * 4 = {result}")  # 14
+print(f"2 + 3 * 4 = {result}")
 
 # Temperature conversion
 celsius = 25
@@ -1046,16 +1046,16 @@ print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
 <div class="code-header">None Examples</div>
 <pre><code># Creating None
 empty_value = None
-print(empty_value)  # None
+print(empty_value)
 print(type(empty_value))  # <class 'NoneType'>
 
 # None comparisons
 x = None
-print(x is None)      # True
-print(x is not None)  # False
+print(x is None)
+print(x is not None)
 
 # None in boolean context
-print(bool(None))     # False
+print(bool(None))
 
 # Using None in data
 user = {"name": "Alice", "age": None}
@@ -1064,7 +1064,7 @@ print(user)
 # Overwriting a value with None
 value = 10
 value = None
-print(value)  # None</code></pre>
+print(value)</code></pre>
 </div>
 </div>
 </div>
@@ -1116,12 +1116,12 @@ print(type(name))       # <class 'str'>
 print(type(age))        # <class 'int'>
 
 # Using isinstance()
-print(isinstance(name, str))       # True
-print(isinstance(age, int))        # True
+print(isinstance(name, str))
+print(isinstance(age, int))
 
 # Checking multiple types
 value = 42
-print(isinstance(value, (int, float)))  # True
+print(isinstance(value, (int, float)))
 
 # hasattr and callable
 class Person:
@@ -1129,9 +1129,9 @@ class Person:
         self.name = name
 
 person = Person("Alice")
-print(hasattr(person, 'name'))     # True
-print(callable(len))               # True
-print(callable("hello"))          # False</code></pre>
+print(hasattr(person, 'name'))
+print(callable(len))
+print(callable("hello"))</code></pre>
 </div>
 </div>
 </div>
@@ -1180,12 +1180,12 @@ print("ZeroDivisionError -> divide by zero")
 # Example without try/except (for concept only)
 number = 5
 result = 10 / number
-print(result)  # 2.0
+print(result)
 
 # Show conversion idea
 value = "42"
 converted = int(value)
-print(converted)  # 42</code></pre>
+print(converted)</code></pre>
 </div>
 </div>
 </div>
