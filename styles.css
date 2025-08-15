@@ -9,16 +9,16 @@
     gap: 12px;
 }
 .slideshow-container.fullscreen .slide .text-content {
-    font-size: 0.86em;
+    font-size: 0.66em;
     line-height: 1.45;
 }
 .slideshow-container.fullscreen .slide .text-content h2 {
-    font-size: 1.08em;
+    font-size: 0.88em;
     margin-top: 6px;
     margin-bottom: 6px;
 }
 .slideshow-container.fullscreen .slide .text-content h3 {
-    font-size: 0.88em;
+    font-size: 0.68em;
     margin-top: 6px;
     margin-bottom: 4px;
 }
@@ -384,7 +384,7 @@ body {
 
 .text-content h3 {
     color: #4299e1;
-    font-size: 0.85em;
+    font-size: 0.65em;
     margin-bottom: 6px;
     margin-top: 10px;
     font-weight: 600;
@@ -394,7 +394,7 @@ body {
 .text-content p {
     margin-bottom: 10px;
     color: #e2e8f0;
-    font-size: 0.75em;
+    font-size: 0.55em;
     line-height: 1.4;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -410,7 +410,7 @@ body {
     color: #e2e8f0;
     line-height: 1.3;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 0.7em;
+    font-size: 0.5em;
     padding-left: 5px;
     position: relative;
 }
